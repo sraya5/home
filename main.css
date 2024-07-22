@@ -1,2 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
 body {font-family: Heebo, Arial, sans-serif;}
+
+mjx-container { % works for live preview and reading mode
+	line-height: 0px; 
+	font-size: calc(1.25 * var(--editor-font-size));
+              }
