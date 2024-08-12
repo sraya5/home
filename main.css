@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
-body {font-family: Heebo, Arial, sans-serif; margin-top: 4ex; max-width: 20cm;}
+body {font-family: Heebo, Arial, sans-serif; margin-top: 4ex; max-width: 25cm; object-position: center;}
 
 h2 {cursor: pointer}
 
