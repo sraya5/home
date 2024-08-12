@@ -157,6 +157,14 @@ span.claim_label {
   font-variant: normal;
   font-size: medium;}
 
+div.proof {
+  font-style: normal;
+  font-variant: normal;
+  font-size: medium;
+  margin-top: 0.7ex;
+  margin-bottom: 0.7ex;
+  text-align: right;}
+
 div.theorem_ {
   font-size: medium;
   margin-top: 0.7ex;
