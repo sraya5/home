@@ -1,329 +1,18 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="he-IL">
 <head>
-<meta name="generator" content="LyX 2.4.0" />
-<meta name="viewport" content="width=device-width">
-<title>המספרים הממשיים - הגדרות בלבד</title>
 <link rel="stylesheet" type="text/css" href="main.css" />
-<style>
-/* Layout-provided Styles */
-del.strikeout {
-  text-decoration: line-through;
-}
-div.standard {
-	margin-bottom: 2ex;
-}
-div.right_header {
-text-align: right;
-
-}
-span.right_header_label {
-
-
-}
-div.plain_layout {
-text-align: right;
-
-}
-div.left_header {
-text-align: right;
-
-}
-span.left_header_label {
-
-
-}
-div.center_footer {
-text-align: right;
-
-}
-span.center_footer_label {
-
-
-}
-h1.title {
-font-size: x-large;
-margin-bottom: 1ex;
-text-align: center;
-
-}
-h2.section {
-font-weight: bold;
-font-style: normal;
-font-variant: small-caps;
-font-size: x-large;
-margin-top: 1.3ex;
-margin-bottom: 0.7ex;
-text-align: right;
-
-}
-div.theorem {
-font-size: medium;
-margin-top: 0.7ex;
-margin-bottom: 0.7ex;
-text-align: right;
-
-}
-span.theorem_label {
-font-weight: bold;
-font-style: normal;
-font-variant: normal;
-font-size: medium;
-
-}
-div.definition {
-font-size: medium;
-margin-top: 0.7ex;
-margin-bottom: 0.7ex;
-text-align: right;
-
-}
-span.definition_label {
-font-weight: bold;
-font-style: normal;
-font-variant: normal;
-font-size: medium;
-
-}
-ol.enumi   { list-style-type: decimal; }
-ol.enumii  { list-style-type: lower-latin; }
-ol.enumiii { list-style-type: lower-roman; }
-ol.enumiv  { list-style-type: upper-latin; }
-ol.lyxlist {
-	list-style-type: none;
-}
-li.labeling_item {
-	text-indent: -3em;
-	margin-left: 5em;
-}
-span.lyxlist {
-	margin-right: 1em;
-}
-ul.itemize {
-margin-top: 0.7ex;
-margin-bottom: 0.7ex;
-margin-left: 3ex;
-text-align: right;
-
-}
-h3.subsection {
-font-weight: bold;
-font-size: large;
-margin-top: 0.9ex;
-margin-bottom: 0.5ex;
-text-align: right;
-
-}
-div.corollary {
-font-size: medium;
-margin-top: 0.7ex;
-margin-bottom: 0.7ex;
-text-align: right;
-
-}
-span.corollary_label {
-font-weight: bold;
-font-style: normal;
-font-variant: normal;
-font-size: medium;
-
-}
-div.lemma_ {
-font-size: medium;
-margin-top: 0.7ex;
-margin-bottom: 0.7ex;
-text-align: right;
-
-}
-span.lemma__label {
-font-weight: normal;
-font-style: normal;
-font-variant: normal;
-font-size: medium;
-
-}
-div.lemma {
-font-size: medium;
-margin-top: 0.7ex;
-margin-bottom: 0.7ex;
-text-align: right;
-
-}
-span.lemma_label {
-font-weight: normal;
-font-style: normal;
-font-variant: normal;
-font-size: medium;
-
-}
-div.claim_ {
-font-size: medium;
-margin-top: 0.7ex;
-margin-bottom: 0.7ex;
-text-align: right;
-
-}
-span.claim__label {
-font-weight: bold;
-font-style: normal;
-font-variant: normal;
-font-size: medium;
-
-}
-div.claim {
-font-size: medium;
-margin-top: 0.7ex;
-margin-bottom: 0.7ex;
-text-align: right;
-
-}
-span.claim_label {
-font-weight: bold;
-font-style: normal;
-font-variant: normal;
-font-size: medium;
-
-}
-div.theorem_ {
-font-size: medium;
-margin-top: 0.7ex;
-margin-bottom: 0.7ex;
-text-align: right;
-
-}
-span.theorem__label {
-font-weight: bold;
-font-style: normal;
-font-variant: normal;
-font-size: medium;
-
-}
-div.toc {
-  margin: 2em 0em;
-  border-style: solid;
-  border-width: 2px 0px;
-  padding: 1em 0em;
-}
-h2.tochead { font-size: x-large; font-weight: bold; }
-div.lyxtoc-0 {
-  margin: 2em 0em 0em 0em;
-  font-size: xx-large;
-  font-weight: bold;
-}
-div.lyxtoc-1 {
-  margin: 1em 0em 0em 0em;
-  font-size: x-large;
-  font-weight: bold;
-}
-div.lyxtoc-2 {
-  margin: 0.5em 0.1em 0em 1em;
-  font-size: large;
-  font-weight: normal;
-}
-div.lyxtoc-3 { margin: 0.2em 0.1em 0em 0.5em; font-size: medium; }
-div.lyxtoc-4 { margin: 0em 0.1em 0em 0.5em; }
-div.lyxtoc-5 { margin: 0em 0.1em 0em 0.5em; }
-div.lyxtoc-6 { margin: 0em 0.1em 0em 0.5em; }
-a.tocentry {
-  text-decoration: none;
-  color: black;
-}
-a.tocentry:visited { color: black; }
-span.foot_label {
-	vertical-align: super;
-	font-size: smaller;
-	font-weight: bold;
-	text-decoration: underline;
-}
-div.foot {
-	display: inline;
-	font-size: small;
-	font-weight: normal;
-	font-family: serif;
-	font-variant: normal;
-	font-style: normal;
-}
-div.foot_inner { display: none; }
-div.foot:hover div.foot_inner {
-	display: block;
-	border: 1px double black;
-	margin: 0em 1em;
-	padding: 1em;
-}
-div.float {
-	border: 2px solid black;
-	text-align: center;
-}
-div.float-caption {
-	text-align: center;
-	border: 2px solid black;
-	padding: 1ex;
-	margin: 1ex;
-}
-
-
-</style>
+<meta name="viewport" content="width=device-width" />
+<meta name="generator" content="LyX 2.4.1" />
+<title>המספרים הממשיים - הגדרות בלבד</title>
 <script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body dir="auto">
-<div class='standard' id='magicparlabel-1848'> </div>
-<h1 class='title' id='magicparlabel-1465'><b><span style='font-size:xx-large;'>המספרים הממשיים - הגדרות בלבד</span></b></h1>
-<div class='standard' style='text-align: center;' id='magicparlabel-1466'>חשבון אינפיניטסימלי )1( - 80131 </div>
-
-<div class='standard' style='text-align: center;' id='magicparlabel-1467'>מרצה: רז קופרמן</div>
-
-<div class='standard' style='text-align: center;' id='magicparlabel-1468'>מתרגלים: אור יער ודניאל רוזנבלט</div>
-
-<div class='standard' style='text-align: center;' id='magicparlabel-1469'>סוכם ע&#8221;י: שריה אנסבכר</div>
-
-<div class='standard' style='text-align: center;' id='magicparlabel-1470'>סמסטר ב&#8217; תשפ&#8221;ב, האונ&#8217; העברית</div>
-
-<div class='standard' id='magicparlabel-1471'><br /></div>
-
-
-<div class='toc'><h2 class='tochead section'>תוכן עניינים</h2>
-<div class='lyxtoc-1'>
-<div class='lyxtoc-2'>
-<a href='#magicparlabel-1477' class='tocentry'>1 שדה סדור</a>
-</div>
-<div class='lyxtoc-2'>
-<a href='#magicparlabel-1500' class='tocentry'>2 הערך המוחלט</a>
-</div>
-<div class='lyxtoc-2'>
-<a href='#magicparlabel-1505' class='tocentry'>3 קבוצות מיוחדות בשדה סדור</a>
-
-<div class='lyxtoc-3'>
-<a href='#magicparlabel-1508' class='tocentry'>3.1 המספרים הטבעיים</a>
-</div>
-<div class='lyxtoc-3'>
-<a href='#magicparlabel-1513' class='tocentry'>3.2 המספרים השלמים והמספרים הרציונליים</a>
-</div>
-</div>
-<div class='lyxtoc-2'>
-<a href='#magicparlabel-1529' class='tocentry'>4 חסמים וארכימדיות</a>
-
-<div class='lyxtoc-3'>
-<a href='#magicparlabel-1538' class='tocentry'>4.1 ארכימדיות</a>
-</div>
-</div>
-<div class='lyxtoc-2'>
-<a href='#magicparlabel-1541' class='tocentry'>5 השדה הסדור השלם )המספרים הממשיים(</a>
-</div>
-<div class='lyxtoc-2'>
-<a href='#magicparlabel-1596' class='tocentry'>6 חסם עליון וחסם תחתון</a>
-</div>
-<div class='lyxtoc-2'>
-<a href='#magicparlabel-1612' class='tocentry'>7 חזקות</a>
-</div>
-</div>
-</div>
-
-
-<div class='standard' id='magicparlabel-1476'><br /></div>
 <section>
-<h2 class='section' id='magicparlabel-1477'><span class="section_label">1</span> שדה סדור</h2>
-<div class='definition' id='magicparlabel-1478'>
-<div class="definition_item"><span class="definition_label">‫הגדרה 1.1.</span>
+<h2 class='section' id='magicparlabel-612'><span class="section_label">1</span> שדה סדור</h2>
+<ul class='nested'>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-613'><span class="definition_label">‫הגדרה 1.1.</span>
 <b>שדה סדור</b>
 <br />
 <u>שדה סדור</u> הוא שדה <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -331,15 +20,15 @@ div.float-caption {
  <mi>F</mi>
 </mstyle>
 </math>
- שעליו מוגדר יחס בינארי )נקרא לו &#8220;קטן מ-&#8221; ונסמן אותו ב-&#8221;<math xmlns='http://www.w3.org/1998/Math/MathML'>
+ שעליו מוגדר יחס בינארי (נקרא לו &#8220;קטן מ-&#8221; ונסמן אותו ב-&#8221;<math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mo stretchy='false'>&lt;</mo>
 </math>
-&#8221;( המקיים את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+&#8221;) המקיים את <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mn>4</mn>
 </math>
- התכונות הבאות )נקראות יחד עם אקסיומות השדה &#8220;אקסיומות השדה הסדור&#8221;(:</div>
-<ol class='lyxenum enumi' id='magicparlabel-1479'>
-<li class="enumerate_item">טריכוטומיה: לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+ התכונות הבאות (נקראות יחד עם אקסיומות השדה &#8220;אקסיומות השדה הסדור&#8221;):</div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-614'>טריכוטומיה: לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>a</mi>
  <mo stretchy='false'>,</mo>
@@ -372,7 +61,7 @@ div.float-caption {
 </mrow>
 </math>
 .</li>
-<li class="enumerate_item">טרנזיטיביות: לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="enumerate_item" id='magicparlabel-615'>טרנזיטיביות: לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>a</mi>
  <mo stretchy='false'>,</mo>
@@ -407,7 +96,7 @@ div.float-caption {
 </mrow>
 </math>
 .</li>
-<li class="enumerate_item">הלימה לחיבור: לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="enumerate_item" id='magicparlabel-616'>הלימה לחיבור: לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>a</mi>
  <mo stretchy='false'>,</mo>
@@ -438,7 +127,7 @@ div.float-caption {
  <mi>c</mi>
 </mrow>
 </math>
- )מחוק החילוף של חיבור נסיק שגם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+ (מחוק החילוף של חיבור נסיק שגם <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>c</mi>
  <mo stretchy='false'>+</mo>
@@ -449,8 +138,8 @@ div.float-caption {
  <mi>b</mi>
 </mrow>
 </math>
-(.</li>
-<li class="enumerate_item">הלימה לכפל בחיובי<div class='foot'><span class="foot_label">1</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-1486'>המושג &#8220;חיובי&#8221; יוגדר בהמשך.</div>
+).</li>
+<li class="enumerate_item" id='magicparlabel-617'>הלימה לכפל בחיובי<div class='foot'><span class="foot_label">1</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-621'>המושג &#8220;חיובי&#8221; יוגדר בהמשך.</div>
 </div></div>: לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>a</mi>
@@ -489,7 +178,7 @@ div.float-caption {
  <mi>c</mi>
 </mrow>
 </math>
- )מחוק החילוף של כפל נסיק שגם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+ (מחוק החילוף של כפל נסיק שגם <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>c</mi>
  <mo>&#x22C5;</mo>
@@ -500,17 +189,17 @@ div.float-caption {
  <mi>b</mi>
 </mrow>
 </math>
-(.</li>
+).</li>
 </ol>
 </div>
-<ol class='lyxlist' id='magicparlabel-1487'>
-<li class="labeling_item"><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-622'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>&#x2663;</mi>
 </math>
 </span>
  שתי התכונות הראשונות שקולות לכך שמדובר ביחס סדר חזק ומלא.</li>
 </ol>
-<div class='standard' id='magicparlabel-1488'>יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class='standard' id='magicparlabel-623'>יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mstyle mathvariant='double-struck'>
  <mi>F</mi>
 </mstyle>
@@ -527,11 +216,11 @@ div.float-caption {
 </mrow>
 </math>
 .</div>
-<div class='definition' id='magicparlabel-1489'>
-<div class="definition_item"><span class="definition_label">‫הגדרה 1.2.</span>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-624'><span class="definition_label">‫הגדרה 1.2.</span>
 <b>&#8220;גדול מ-&#8221;, &#8220;קטן/גדול ו/או שווה ל-&#8221;</b></div>
-<ul class='lyxitem lyxitemi' id='magicparlabel-1490'>
-<li class="itemize_item">נאמר ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-625'>נאמר ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>a</mi>
 </math>
  <u>גדול מ-</u><math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -552,7 +241,7 @@ div.float-caption {
 </mrow>
 </math>
 .</li>
-<li class="itemize_item">נאמר ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="itemize_item" id='magicparlabel-626'>נאמר ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>a</mi>
 </math>
  <u>קטן ו/או שווה ל-</u><math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -580,7 +269,7 @@ div.float-caption {
 </mrow>
 </math>
 .</li>
-<li class="itemize_item">נאמר ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="itemize_item" id='magicparlabel-627'>נאמר ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>a</mi>
 </math>
  <u>גדול ו/או שווה ל-</u><math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -610,14 +299,11 @@ div.float-caption {
 .</li>
 </ul>
 </div>
-<div class='standard' id='magicparlabel-1493'>
-<br />
-</div>
-<div class='definition' id='magicparlabel-1494'>
-<div class="definition_item"><span class="definition_label">‫הגדרה 1.3.</span>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-629'><span class="definition_label">‫הגדרה 1.3.</span>
 <b>החיוביים והשליליים</b></div>
-<ul class='lyxitem lyxitemi' id='magicparlabel-1495'>
-<li class="itemize_item">נאמר ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-630'>נאמר ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>a</mi>
 </math>
  <u>חיובי</u> אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -628,7 +314,7 @@ div.float-caption {
 </mrow>
 </math>
 .</li>
-<li class="itemize_item">נאמר ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="itemize_item" id='magicparlabel-631'>נאמר ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>a</mi>
 </math>
  <u>שלילי</u> אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -639,7 +325,7 @@ div.float-caption {
 </mrow>
 </math>
 .</li>
-<li class="itemize_item">נאמר ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="itemize_item" id='magicparlabel-632'>נאמר ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>a</mi>
 </math>
  <u>אי-שלילי</u> אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -650,7 +336,7 @@ div.float-caption {
 </mrow>
 </math>
 .</li>
-<li class="itemize_item">נאמר ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="itemize_item" id='magicparlabel-633'>נאמר ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>a</mi>
 </math>
  <u>אי-חיובי</u> אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -663,11 +349,13 @@ div.float-caption {
 .</li>
 </ul>
 </div>
-<div class='standard' id='magicparlabel-1499'> </div>
+<div class='standard' style='text-align: left' id='magicparlabel-634'> </div>
+</ul>
 </section>
 <section>
-<h2 class='section' id='magicparlabel-1500'><span class="section_label">2</span> הערך המוחלט</h2>
-<div class='standard' id='magicparlabel-1501'>יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<h2 class='section' id='magicparlabel-635'><span class="section_label">2</span> הערך המוחלט</h2>
+<ul class='nested'>
+<div class='standard' id='magicparlabel-636'>יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mstyle mathvariant='double-struck'>
  <mi>F</mi>
 </mstyle>
@@ -682,8 +370,8 @@ div.float-caption {
 </mrow>
 </math>
 .</div>
-<div class='definition' id='magicparlabel-1502'>
-<div class="definition_item"><span class="definition_label">‫הגדרה 2.1.</span>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-637'><span class="definition_label">‫הגדרה 2.1.</span>
 <b>הערך המוחלט</b>
 <br />
 נסמן את <u>הערך המוחלט</u> של <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -740,25 +428,26 @@ div.float-caption {
 </math>
 </div>
 </div>
-<ol class='lyxlist' id='magicparlabel-1503'>
-<li class="labeling_item"><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-638'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>&#x2663;</mi>
 </math>
 </span>
  כמובן שהערך המוחלט מוגדר אך ורק בשדות סדורים.</li>
 </ol>
-<div class='standard' id='magicparlabel-1504'><br /></div>
+</ul>
 </section>
 <section>
-<h2 class='section' id='magicparlabel-1505'><span class="section_label">3</span> קבוצות מיוחדות בשדה סדור</h2>
-<div class='standard' id='magicparlabel-1506'>יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<h2 class='section' id='magicparlabel-640'><span class="section_label">3</span> קבוצות מיוחדות בשדה סדור</h2>
+<ul class='nested'>
+<div class='standard' id='magicparlabel-641'>יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mstyle mathvariant='double-struck'>
  <mi>F</mi>
 </mstyle>
 </math>
  שדה סדור.</div>
-<ol class='lyxlist' id='magicparlabel-1507'>
-<li class="labeling_item"><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-642'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>&#x2663;</mi>
 </math>
 </span>
@@ -770,20 +459,20 @@ div.float-caption {
  <mi>P</mi>
 </msub>
 </math>
- )כאשר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+ (כאשר <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>P</mi>
 </math>
- ראשוני( כל אחת מהן כוללת את כל איברי השדה, לעומתם ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+ ראשוני) כל אחת מהן כוללת את כל איברי השדה, לעומתם ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mstyle mathvariant='double-struck'>
  <mi>C</mi>
 </mstyle>
 </math>
- )שדה המרוכבים( ניתן להגדירן מבלי לכלול את כל השדה.</li>
+ (שדה המרוכבים) ניתן להגדירן מבלי לכלול את כל השדה.</li>
 </ol>
 <section>
-<h3 class='subsection' id='magicparlabel-1508'><span class="subsection_label">3.1</span> המספרים הטבעיים</h3>
-<div class='definition' id='magicparlabel-1509'>
-<div class="definition_item"><span class="definition_label">‫הגדרה 3.1.</span>
+<h3 class='subsection' id='magicparlabel-643'><span class="subsection_label">3.1</span> המספרים הטבעיים</h3>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-644'><span class="definition_label">‫הגדרה 3.1.</span>
 <b>קבוצה אינדוקטיבית</b>
 <br />
 נאמר שקבוצה <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -820,11 +509,8 @@ div.float-caption {
 </math>
 .</div>
 </div>
-<div class='standard' id='magicparlabel-1510'>
-<br />
-</div>
-<div class='definition' id='magicparlabel-1511'>
-<div class="definition_item"><span class="definition_label">‫הגדרה 3.2.</span>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-646'><span class="definition_label">‫הגדרה 3.2.</span>
 <b>קבוצת המספרים הטבעיים</b>
 <br />
 נסמן את קבוצת המספרים הטבעיים ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -868,8 +554,8 @@ div.float-caption {
 </math>
 </div>
 </div>
-<ol class='lyxlist' id='magicparlabel-1512'>
-<li class="labeling_item"><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-647'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>&#x2663;</mi>
 </math>
 </span>
@@ -898,9 +584,9 @@ div.float-caption {
 </ol>
 </section>
 <section>
-<h3 class='subsection' id='magicparlabel-1513'><span class="subsection_label">3.2</span> המספרים השלמים והמספרים הרציונליים</h3>
-<div class='definition' id='magicparlabel-1514'>
-<div class="definition_item"><span class="definition_label">‫הגדרה 3.3.</span>
+<h3 class='subsection' id='magicparlabel-648'><span class="subsection_label">3.2</span> המספרים השלמים והמספרים הרציונליים</h3>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-649'><span class="definition_label">‫הגדרה 3.3.</span>
 <b>קבוצת המספרים השלמים</b>
 <br />
 נסמן את <u>קבוצת המספרים השלמים</u> ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -948,12 +634,12 @@ div.float-caption {
 </math>
 </div>
 </div>
-<div class='corollary' id='magicparlabel-1515'>
-<div class="corollary_item"><span class="corollary_label">‫מסקנה 3.4.</span>
+<div class='corollary'>
+<div class="corollary_item" id='magicparlabel-650'><span class="corollary_label">‫מסקנה 3.4.</span>
 מספר שלם הוא טבעי אם&#8221;ם הוא חיובי.</div>
 </div>
-<div class='definition' id='magicparlabel-1516'>
-<div class="definition_item"><span class="definition_label">‫הגדרה 3.5.</span>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-651'><span class="definition_label">‫הגדרה 3.5.</span>
 <b>יחס החלוקה</b>
 <br />
 יהיו <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -973,13 +659,13 @@ div.float-caption {
  <u>מחלק</u> את <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>m</mi>
 </math>
- )או ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+ (או ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>m</mi>
 </math>
  הוא <u>כפולה</u> של <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>n</mi>
 </math>
-( ונסמן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+) ונסמן <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>n</mi>
  <mo>&#x2223;</mo>
@@ -1006,11 +692,8 @@ div.float-caption {
 </math>
 .</div>
 </div>
-<div class='standard' id='magicparlabel-1517'>
-<br />
-</div>
-<div class='definition' id='magicparlabel-1518'>
-<div class="definition_item"><span class="definition_label">‫הגדרה 3.6.</span>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-653'><span class="definition_label">‫הגדרה 3.6.</span>
 <b>קבוצת הזוגיים וקבוצת האי-זוגיים</b>
 <br />
 נסמן:
@@ -1082,8 +765,8 @@ div.float-caption {
 </math>
  תיקרא <u>קבוצת האי-זוגיים</u>.</div>
 </div>
-<div class='corollary' id='magicparlabel-1519'>
-<div class="corollary_item"><span class="corollary_label">‫מסקנה 3.7.</span>
+<div class='corollary'>
+<div class="corollary_item" id='magicparlabel-654'><span class="corollary_label">‫מסקנה 3.7.</span>
 מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mtext>Even</mtext>
@@ -1130,11 +813,8 @@ div.float-caption {
 </math>
 .</div>
 </div>
-<div class='standard' id='magicparlabel-1520'>
-<br />
-</div>
-<div class='corollary' id='magicparlabel-1521'>
-<div class="corollary_item"><span class="corollary_label">‫מסקנה 3.8.</span>
+<div class='corollary'>
+<div class="corollary_item" id='magicparlabel-656'><span class="corollary_label">‫מסקנה 3.8.</span>
 <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mtext>Even</mtext>
@@ -1157,8 +837,8 @@ div.float-caption {
 </math>
 .</div>
 </div>
-<div class='definition' id='magicparlabel-1522'>
-<div class="definition_item"><span class="definition_label">‫הגדרה 3.9.</span>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-657'><span class="definition_label">‫הגדרה 3.9.</span>
 <b>קבוצת המספרים הרציונליים</b>
 <br />
 נסמן את <u>קבוצת המספרים הרציונליים</u> ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -1211,9 +891,8 @@ div.float-caption {
 </math>
 </div>
 </div>
-<div class='standard' id='magicparlabel-1523'><br /></div>
-<div class='lemma_' id='magicparlabel-1524'>
-<div class="lemma__item"><span class="lemma__label">למה.</span>
+<div class='lemma_'>
+<div class="lemma__item" id='magicparlabel-659'><span class="lemma__label">למה.</span>
 יהיו <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>a</mi>
@@ -1264,15 +943,15 @@ div.float-caption {
 </math>
 .</div>
 </div>
-<ol class='lyxlist' id='magicparlabel-1525'>
-<li class="labeling_item"><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-660'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>&#x2663;</mi>
 </math>
 </span>
- כלומר לכל מספר רציונלי יש יותר מהצגה אחת כמנה של שלם וטבעי )למעשה יש אין-סוף(.</li>
+ כלומר לכל מספר רציונלי יש יותר מהצגה אחת כמנה של שלם וטבעי (למעשה יש אין-סוף).</li>
 </ol>
-<div class='lemma' id='magicparlabel-1526'>
-<div class="lemma_item"><span class="lemma_label">‫למה 3.10.</span>
+<div class='lemma'>
+<div class="lemma_item" id='magicparlabel-661'><span class="lemma_label">‫למה 3.10.</span>
 לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>q</mi>
@@ -1336,16 +1015,16 @@ div.float-caption {
  <mi>m</mi>
 </mrow>
 </math>
- )כלומר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+ (כלומר <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>n</mi>
 </math>
  ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>m</mi>
 </math>
- <a href="https://he.wikipedia.org/wiki/%D7%9E%D7%A1%D7%A4%D7%A8%D7%99%D7%9D_%D7%96%D7%A8%D7%99%D7%9D">זרים</a> זה לזה(.</div>
+ <a href="https://he.wikipedia.org/wiki/%D7%9E%D7%A1%D7%A4%D7%A8%D7%99%D7%9D_%D7%96%D7%A8%D7%99%D7%9D">זרים</a> זה לזה).</div>
 </div>
-<div class='definition' id='magicparlabel-1527'>
-<div class="definition_item"><span class="definition_label">‫הגדרה 3.11.</span>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-662'><span class="definition_label">‫הגדרה 3.11.</span>
 במונחי הלמה הקודמת נגדיר את <u>ההצגה המצומצמת</u> של <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>q</mi>
 </math>
@@ -1373,7 +1052,7 @@ div.float-caption {
  </mstyle>
 </mrow>
 </math>
- יחידים המקיימים את הלמה )וזאת לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+ יחידים המקיימים את הלמה (וזאת לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>q</mi>
  <mo>&#x2208;</mo>
@@ -1382,24 +1061,26 @@ div.float-caption {
  </mstyle>
 </mrow>
 </math>
-(.</div>
+).</div>
 </div>
-<div class='standard' id='magicparlabel-1528'> </div>
+<div class='standard' style='text-align: left' id='magicparlabel-663'> </div>
 </section>
+</ul>
 </section>
 <section>
-<h2 class='section' id='magicparlabel-1529'><span class="section_label">4</span> חסמים וארכימדיות</h2>
-<div class='standard' id='magicparlabel-1530'>יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<h2 class='section' id='magicparlabel-664'><span class="section_label">4</span> חסמים וארכימדיות</h2>
+<ul class='nested'>
+<div class='standard' id='magicparlabel-665'>יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mstyle mathvariant='double-struck'>
  <mi>F</mi>
 </mstyle>
 </math>
  שדה סדור.</div>
-<div class='definition' id='magicparlabel-1531'>
-<div class="definition_item"><span class="definition_label">‫הגדרה 4.1.</span>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-666'><span class="definition_label">‫הגדרה 4.1.</span>
 <b>חסמים וקבוצות חסומות</b></div>
-<ul class='lyxitem lyxitemi' id='magicparlabel-1532'>
-<li class="itemize_item">קבוצה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-667'>קבוצה <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>A</mi>
  <mo>&#x2286;</mo>
@@ -1432,8 +1113,8 @@ div.float-caption {
 </mrow>
 </math>
 .
-<ul class='lyxitem lyxitemii' id='magicparlabel-1533'>
-<li class="itemize_item">איבר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<ul class='lyxitem lyxitemii'>
+<li class="itemize_item" id='magicparlabel-668'>איבר <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>M</mi>
  <mo>&#x2208;</mo>
@@ -1467,7 +1148,7 @@ div.float-caption {
 </math>
 .</li>
 </ul>
-</li><li class="itemize_item">קבוצה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+</li><li class="itemize_item" id='magicparlabel-669'>קבוצה <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>A</mi>
  <mo>&#x2286;</mo>
@@ -1500,8 +1181,8 @@ div.float-caption {
 </mrow>
 </math>
 .
-<ul class='lyxitem lyxitemii' id='magicparlabel-1535'>
-<li class="itemize_item">איבר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<ul class='lyxitem lyxitemii'>
+<li class="itemize_item" id='magicparlabel-670'>איבר <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>m</mi>
  <mo>&#x2208;</mo>
@@ -1535,7 +1216,7 @@ div.float-caption {
 </math>
 .</li>
 </ul>
-</li><li class="itemize_item">קבוצה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+</li><li class="itemize_item" id='magicparlabel-671'>קבוצה <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>A</mi>
  <mo>&#x2286;</mo>
@@ -1547,13 +1228,10 @@ div.float-caption {
  תיקרא <u>חסומה</u> אם היא חסומה מלעיל ומלרע.</li>
 </ul>
 </div>
-<div class='standard' id='magicparlabel-1537'>
-<br />
-</div>
 <section>
-<h3 class='subsection' id='magicparlabel-1538'><span class="subsection_label">4.1</span> ארכימדיות</h3>
-<div class='definition' id='magicparlabel-1539'>
-<div class="definition_item"><span class="definition_label">‫הגדרה 4.2.</span>
+<h3 class='subsection' id='magicparlabel-673'><span class="subsection_label">4.1</span> ארכימדיות</h3>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-674'><span class="definition_label">‫הגדרה 4.2.</span>
 שדה סדור <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mstyle mathvariant='double-struck'>
  <mi>F</mi>
@@ -1586,19 +1264,21 @@ div.float-caption {
 </math>
 .</div>
 </div>
-<div class='standard' id='magicparlabel-1540'> </div>
+<div class='standard' style='text-align: left' id='magicparlabel-675'> </div>
 </section>
+</ul>
 </section>
 <section>
-<h2 class='section' id='magicparlabel-1541'><span class="section_label">5</span> השדה הסדור השלם )המספרים הממשיים(</h2>
-<div class='standard' id='magicparlabel-1542'>יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<h2 class='section' id='magicparlabel-676'><span class="section_label">5</span> השדה הסדור השלם (המספרים הממשיים)</h2>
+<ul class='nested'>
+<div class='standard' id='magicparlabel-677'>יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mstyle mathvariant='double-struck'>
  <mi>F</mi>
 </mstyle>
 </math>
  שדה סדור.</div>
-<div class='lemma_' id='magicparlabel-1543'>
-<div class="lemma__item"><span class="lemma__label">למה.</span>
+<div class='lemma_'>
+<div class="lemma__item" id='magicparlabel-678'><span class="lemma__label">למה.</span>
 נסמן <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mn>4</mn>
@@ -1610,8 +1290,8 @@ div.float-caption {
 </mrow>
 </math>
 , מתקיים:</div>
-<ul class='lyxitem lyxitemi' id='magicparlabel-1544'>
-<li class="itemize_item">לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-679'>לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>m</mi>
  <mo stretchy='false'>,</mo>
@@ -1640,7 +1320,7 @@ div.float-caption {
 </mrow>
 </math>
 .</li>
-<li class="itemize_item">אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="itemize_item" id='magicparlabel-680'>אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>m</mi>
  <mo stretchy='false'>,</mo>
@@ -1661,8 +1341,8 @@ div.float-caption {
 .</li>
 </ul>
 </div>
-<div class='claim_' id='magicparlabel-1546'>
-<div class="claim__item"><span class="claim__label">טענה.</span>
+<div class='claim_'>
+<div class="claim__item" id='magicparlabel-681'><span class="claim__label">טענה.</span>
 לא קיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>q</mi>
@@ -1682,7 +1362,7 @@ div.float-caption {
  <mn>2</mn>
 </mrow>
 </math>
-<div class='foot'><span class="foot_label">2</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-1550'>לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class='foot'><span class="foot_label">2</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-685'>לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>x</mi>
  <mo>&#x2208;</mo>
@@ -1707,24 +1387,23 @@ div.float-caption {
 .</div>
 </div></div>.</div>
 </div>
-<ol class='lyxlist' id='magicparlabel-1551'>
-<li class="labeling_item"><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-686'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>&#x2663;</mi>
 </math>
 </span>
  זהו המובן שבו שדה הרציונליים &#8220;מלא חורים&#8221;, אם ניקח את ההמחשה שהבאנו בקובץ ההגדרות, ניתן לחלק את הקרש שאנו רוצים להפוך ליתר של המשולש לשני חלקים: החלק שאנו רוצים להפוך ליתר והאחר שאנו רוצים להיפטר ממנו, אם נשאר עם מספרים רציונליים בלבד לא נוכל להצביע על הנקודה שבין שני החלקים כדי שנוכל להעביר בה את המסור.</li>
 </ol>
-<div class='standard' id='magicparlabel-1552'><br /></div>
-<div class='definition' id='magicparlabel-1553'>
-<div class="definition_item"><span class="definition_label">‫הגדרה 5.1.</span>
-<b>השדה הסדור השלם )אקסיומת השלמות(</b>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-688'><span class="definition_label">‫הגדרה 5.1.</span>
+<b>השדה הסדור השלם (אקסיומת השלמות)</b>
 <br />
 שדה סדור <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mstyle mathvariant='double-struck'>
  <mi>F</mi>
 </mstyle>
 </math>
- ייקרא <u>שלם</u> אם יקיים את הפסוק הבא )נקרא &#8220;אקסיומת השלמות&#8221;(:
+ ייקרא <u>שלם</u> אם יקיים את הפסוק הבא (נקרא &#8220;אקסיומת השלמות&#8221;):
 <br />
 לכל שתי קבוצות <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
@@ -1794,7 +1473,7 @@ div.float-caption {
 </math>
 .
 <br />
-נסמן את השדה הסדור השלם<div class='foot'><span class="foot_label">3</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-1557'>ניתן להוכיח שקיים רק שדה סדור שלם אחד )כל השדות הסדורים השלמים דומים עד כדי איזומורפיזם( ולכן מוצדק לקרוא לו &#8220;שדה הממשיים&#8221; בה&#8221;א הידיעה ותת לו סימון.</div>
+נסמן את השדה הסדור השלם<div class='foot'><span class="foot_label">3</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-692'>ניתן להוכיח שקיים רק שדה סדור שלם אחד (כל השדות הסדורים השלמים דומים עד כדי איזומורפיזם) ולכן מוצדק לקרוא לו &#8220;שדה הממשיים&#8221; בה&#8221;א הידיעה ותת לו סימון.</div>
 </div></div> ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mstyle mathvariant='double-struck'>
  <mi>R</mi>
@@ -1807,25 +1486,26 @@ div.float-caption {
 </math>
  נקרא <u>מספרים ממשיים</u> או <u>נקודות</u>.</div>
 </div>
-<ol class='lyxlist' id='magicparlabel-1558'>
-<li class="labeling_item"><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-693'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>&#x2663;</mi>
 </math>
 </span>
- נשים לב ליופי שבדבר: המתמטיקאים הצליחו לשים את האצבע על התכונה שעושה את המספרים הממשיים למה שהם, על מהותם )!(.
+ נשים לב ליופי שבדבר: המתמטיקאים הצליחו לשים את האצבע על התכונה שעושה את המספרים הממשיים למה שהם, על מהותם (!).
 <br />
-נניח למשל שאני רוצה לבנות משולש ישר זווית שאורכי ניצביו שווים, אקח קרש אחד, אשים אותו ליד אחר )גדול יותר( ואחתוך את הקרש השני לפי הראשון )כך שיהיו שווים(; כעת אניח את אחד הקרשים על הקרקע, אמדוד זווית ישרה )ניתן לעשות זאת עם סרגל ומחוגה( ואניח את הקרש השני כך שיהיה אנך לראשון וקצותיהם יגעו זה בזה. וכעת לעצם העניין: אני צריך צלע שלישית, תאמרו &#8220;מה הבעיה? קח קרש שלישי שיהיה ארוך יותר מהמרחק שבין קצות הקרשים הראשונים שאינם נוגעים זה בזה, הנח אותו על הישר שקצוות אלו מגדירים כך שאחד מקצותיו יגע באחד הקצוות הללו, חתוך את החלק הבולט של הקרש וחסל!&#8221;, אבל... מי אמר שקיימת נקודה שנמצאת בדיוק בין החלק שאני רוצה לחלק המיותר???
+נניח למשל שאני רוצה לבנות משולש ישר זווית שאורכי ניצביו שווים, אקח קרש אחד, אשים אותו ליד אחר (גדול יותר) ואחתוך את הקרש השני לפי הראשון (כך שיהיו שווים); כעת אניח את אחד הקרשים על הקרקע, אמדוד זווית ישרה (ניתן לעשות זאת עם סרגל ומחוגה) ואניח את הקרש השני כך שיהיה אנך לראשון וקצותיהם יגעו זה בזה. וכעת לעצם העניין: אני צריך צלע שלישית, תאמרו &#8220;מה הבעיה? קח קרש שלישי שיהיה ארוך יותר מהמרחק שבין קצות הקרשים הראשונים שאינם נוגעים זה בזה, הנח אותו על הישר שקצוות אלו מגדירים כך שאחד מקצותיו יגע באחד הקצוות הללו, חתוך את החלק הבולט של הקרש וחסל!&#8221;, אבל... מי אמר שקיימת נקודה שנמצאת בדיוק בין החלק שאני רוצה לחלק המיותר???
 <br />
 - זוהי אקסיומת השלמות!</li>
 </ol>
 
-<div class='float-figure'><div class='plain_layout' style='text-align: center;' id='magicparlabel-1563'><img style='width:60%;' src='e_5a032c630138____________________________.png' alt='image: e_5a032c630138____________________________.png' /><span class='float-caption-Standard float-caption float-caption-standard'>איור 1  מי אמר שניתן לחתוך את הקרש במקום הרצוי???</span></div>
+<div class='float-figure'><div class='plain_layout' style='text-align: center;' id='magicparlabel-698'><img style='width:60%;' src='e_5a032c630138____________________________.png' alt='image: e_5a032c630138____________________________.png' /><span class='float-caption-Standard float-caption float-caption-standard'>
+<br />
+איור 1  מי אמר שניתן לחתוך את הקרש במקום הרצוי???</span></div>
 </div>
 
 
-<div class='standard' id='magicparlabel-1568'><br /></div>
-<div class='definition' id='magicparlabel-1569'>
-<div class="definition_item"><span class="definition_label">‫הגדרה 5.2.</span>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-704'><span class="definition_label">‫הגדרה 5.2.</span>
 קבוצה <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>I</mi>
@@ -1878,13 +1558,10 @@ div.float-caption {
 </math>
 .</div>
 </div>
-<div class='standard' id='magicparlabel-1570'>
-<br />
-</div>
-<div class='definition' id='magicparlabel-1571'>
-<div class="definition_item"><span class="definition_label">‫הגדרה 5.3.</span>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-706'><span class="definition_label">‫הגדרה 5.3.</span>
 <b>מקטעים שונים</b></div>
-<div class='standard' id='magicparlabel-1572'>יהיו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class='standard' id='magicparlabel-707'>יהיו <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>a</mi>
  <mo stretchy='false'>,</mo>
@@ -1903,8 +1580,8 @@ div.float-caption {
 </mrow>
 </math>
 .</div>
-<ul class='lyxitem lyxitemi' id='magicparlabel-1573'>
-<li class="itemize_item"><u>קטע פתוח</u> הוא קבוצה מהצורה: <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-708'><u>קטע פתוח</u> הוא קבוצה מהצורה: <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mrow>
   <mo>(</mo>
@@ -1937,7 +1614,7 @@ div.float-caption {
 </mrow>
 </math>
 .</li>
-<li class="itemize_item"><u>קטע סגור</u> הוא קבוצה מהצורה: <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="itemize_item" id='magicparlabel-709'><u>קטע סגור</u> הוא קבוצה מהצורה: <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mrow>
   <mo>[</mo>
@@ -1970,9 +1647,9 @@ div.float-caption {
 </mrow>
 </math>
 .</li>
-<li class="itemize_item">קטעים חצי פתוחים-חצי סגורים )שני סוגים(:
-<ul class='lyxitem lyxitemii' id='magicparlabel-1576'>
-<li class="itemize_item"><u>קטע פתוח משמאל וסגור מימין</u> הוא קבוצה מהצורה: <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="itemize_item" id='magicparlabel-710'>קטעים חצי פתוחים-חצי סגורים (שני סוגים):
+<ul class='lyxitem lyxitemii'>
+<li class="itemize_item" id='magicparlabel-711'><u>קטע פתוח משמאל וסגור מימין</u> הוא קבוצה מהצורה: <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mrow>
   <mo>(</mo>
@@ -2005,7 +1682,7 @@ div.float-caption {
 </mrow>
 </math>
 .</li>
-<li class="itemize_item"><u>קטע סגור משמאל ופתוח מימין</u> הוא קבוצה מהצורה: <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="itemize_item" id='magicparlabel-712'><u>קטע סגור משמאל ופתוח מימין</u> הוא קבוצה מהצורה: <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mrow>
   <mo>[</mo>
@@ -2039,9 +1716,9 @@ div.float-caption {
 </math>
 .</li>
 </ul>
-</li><li class="itemize_item">קרניים שונות )ארבעה סוגים(:
-<ul class='lyxitem lyxitemii' id='magicparlabel-1579'>
-<li class="itemize_item"><u>קרן ימנית פתוחה</u> היא קבוצה מהצורה: <math xmlns='http://www.w3.org/1998/Math/MathML'>
+</li><li class="itemize_item" id='magicparlabel-713'>קרניים שונות (ארבעה סוגים):
+<ul class='lyxitem lyxitemii'>
+<li class="itemize_item" id='magicparlabel-714'><u>קרן ימנית פתוחה</u> היא קבוצה מהצורה: <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mrow>
   <mo>(</mo>
@@ -2072,7 +1749,7 @@ div.float-caption {
 </mrow>
 </math>
 .</li>
-<li class="itemize_item"><u>קרן ימנית סגורה</u> היא קבוצה מהצורה: <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="itemize_item" id='magicparlabel-715'><u>קרן ימנית סגורה</u> היא קבוצה מהצורה: <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mrow>
   <mo>[</mo>
@@ -2103,7 +1780,7 @@ div.float-caption {
 </mrow>
 </math>
 .</li>
-<li class="itemize_item"><u>קרן שמאלית פתוחה</u> היא קבוצה מהצורה: <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="itemize_item" id='magicparlabel-716'><u>קרן שמאלית פתוחה</u> היא קבוצה מהצורה: <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mrow>
   <mo>(</mo>
@@ -2135,7 +1812,7 @@ div.float-caption {
 </mrow>
 </math>
 .</li>
-<li class="itemize_item"><u>קרן שמאלית סגורה</u> היא קבוצה מהצורה: <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="itemize_item" id='magicparlabel-717'><u>קרן שמאלית סגורה</u> היא קבוצה מהצורה: <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mrow>
   <mo>(</mo>
@@ -2170,15 +1847,15 @@ div.float-caption {
 </ul>
 </li></ul>
 </div>
-<ol class='lyxlist' id='magicparlabel-1583'>
-<li class="labeling_item"><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-718'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>&#x2663;</mi>
 </math>
 </span>
  גם הקבוצה הריקה והשדה כולו הם מקטעים.</li>
 </ol>
-<div class='definition' id='magicparlabel-1584'>
-<div class="definition_item"><span class="definition_label">‫הגדרה 5.4.</span>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-719'><span class="definition_label">‫הגדרה 5.4.</span>
 <b>סביבה וסביבה מנוקבת</b>
 <br />
 יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -2191,10 +1868,10 @@ div.float-caption {
 </mrow>
 </math>
 .</div>
-<ul class='lyxitem lyxitemi' id='magicparlabel-1585'>
-<li class="itemize_item">סביבות דו-צדדיות:
-<ul class='lyxitem lyxitemii' id='magicparlabel-1586'>
-<li class="itemize_item"><u>סביבה</u> של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-720'>סביבות דו-צדדיות:
+<ul class='lyxitem lyxitemii'>
+<li class="itemize_item" id='magicparlabel-721'><u>סביבה</u> של <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>x</mi>
 </math>
  היא קטע פתוח <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -2208,7 +1885,7 @@ div.float-caption {
  <mo>)</mo>
 </mrow>
 </math>
- )כאשר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+ (כאשר <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>a</mi>
  <mo stretchy='false'>,</mo>
@@ -2219,7 +1896,7 @@ div.float-caption {
  </mstyle>
 </mrow>
 </math>
-( המקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+) המקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>x</mi>
  <mo>&#x2208;</mo>
@@ -2235,7 +1912,7 @@ div.float-caption {
 </mrow>
 </math>
 .</li>
-<li class="itemize_item"><u>סביבה מנוקבת</u> של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="itemize_item" id='magicparlabel-722'><u>סביבה מנוקבת</u> של <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>x</mi>
 </math>
  היא קבוצה מהצורה <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -2257,7 +1934,7 @@ div.float-caption {
  </mrow>
 </mrow>
 </math>
- )כאשר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+ (כאשר <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>a</mi>
  <mo stretchy='false'>,</mo>
@@ -2268,7 +1945,7 @@ div.float-caption {
  </mstyle>
 </mrow>
 </math>
-( המקיימת <math xmlns='http://www.w3.org/1998/Math/MathML'>
+) המקיימת <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>x</mi>
  <mo>&#x2208;</mo>
@@ -2285,9 +1962,9 @@ div.float-caption {
 </math>
 .</li>
 </ul>
-</li><li class="itemize_item">סביבות חד-צדדיות:
-<ul class='lyxitem lyxitemii' id='magicparlabel-1589'>
-<li class="itemize_item"><u>סביבה חד-צדדית ימנית</u> של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+</li><li class="itemize_item" id='magicparlabel-723'>סביבות חד-צדדיות:
+<ul class='lyxitem lyxitemii'>
+<li class="itemize_item" id='magicparlabel-724'><u>סביבה חד-צדדית ימנית</u> של <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>x</mi>
 </math>
  היא קטע פתוח מהצורה <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -2313,7 +1990,7 @@ div.float-caption {
 </mrow>
 </math>
 .</li>
-<li class="itemize_item"><u>סביבה חד-צדדית שמאלית</u> של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="itemize_item" id='magicparlabel-725'><u>סביבה חד-צדדית שמאלית</u> של <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>x</mi>
 </math>
  היא קטע פתוח מהצורה <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -2342,11 +2019,8 @@ div.float-caption {
 </ul>
 </li></ul>
 </div>
-<div class='standard' id='magicparlabel-1591'>
-<br />
-</div>
-<div class='definition' id='magicparlabel-1592'>
-<div class="definition_item"><span class="definition_label">‫הגדרה 5.5.</span>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-727'><span class="definition_label">‫הגדרה 5.5.</span>
 יהיו <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mn>0</mn>
@@ -2368,8 +2042,8 @@ div.float-caption {
 </mrow>
 </math>
 .</div>
-<ul class='lyxitem lyxitemi' id='magicparlabel-1593'>
-<li class="itemize_item">נסמן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-728'>נסמן <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msub>
   <mi>B</mi>
@@ -2441,7 +2115,7 @@ div.float-caption {
 <mi>a</mi>
 </math>
  וגם <u>סביבה סימטרית</u>.</li>
-<li class="itemize_item">נסמן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="itemize_item" id='magicparlabel-729'>נסמן <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msubsup>
   <mi>B</mi>
@@ -2517,18 +2191,19 @@ div.float-caption {
  וגם <u>סביבה סימטרית מנוקבת</u>.</li>
 </ul>
 </div>
-<div class='standard' id='magicparlabel-1595'><br /></div>
+</ul>
 </section>
 <section>
-<h2 class='section' id='magicparlabel-1596'><span class="section_label">6</span> חסם עליון וחסם תחתון</h2>
-<div class='standard' id='magicparlabel-1597'>יהא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<h2 class='section' id='magicparlabel-731'><span class="section_label">6</span> חסם עליון וחסם תחתון</h2>
+<ul class='nested'>
+<div class='standard' id='magicparlabel-732'>יהא <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mstyle mathvariant='double-struck'>
  <mi>F</mi>
 </mstyle>
 </math>
  שדה סדור.</div>
-<div class='definition' id='magicparlabel-1598'>
-<div class="definition_item"><span class="definition_label">‫הגדרה 6.1.</span>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-733'><span class="definition_label">‫הגדרה 6.1.</span>
 <b>חסם עליון וחסם תחתון</b>
 <br />
 תהא <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -2541,8 +2216,8 @@ div.float-caption {
 </mrow>
 </math>
  קבוצה לא ריקה.</div>
-<ul class='lyxitem lyxitemi' id='magicparlabel-1599'>
-<li class="itemize_item">נאמר ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-734'>נאמר ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>M</mi>
  <mo>&#x2208;</mo>
@@ -2551,19 +2226,19 @@ div.float-caption {
  </mstyle>
 </mrow>
 </math>
- הוא <u>חסם עליון</u> )נקרא גם <u>סופרמום</u>( של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+ הוא <u>חסם עליון</u> (נקרא גם <u>סופרמום</u>) של <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>A</mi>
 </math>
  אם מתקיימים שני התנאים הבאים:
-<ol class='lyxenum enumi' id='magicparlabel-1600'>
-<li class="enumerate_item"><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-735'><math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>M</mi>
 </math>
  הוא חסם מלעיל של <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>A</mi>
 </math>
 .</li>
-<li class="enumerate_item">לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="enumerate_item" id='magicparlabel-736'>לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>M</mi>
  <mo stretchy='false'>'</mo>
@@ -2586,14 +2261,14 @@ div.float-caption {
 </math>
 .</li>
 </ol>
-<div class='standard' id='magicparlabel-1602'>מכיוון שניתן להוכיח שאם יש לקבוצה סופרמום אז הוא יחיד נסמן אותו ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class='standard' id='magicparlabel-737'>מכיוון שניתן להוכיח שאם יש לקבוצה סופרמום אז הוא יחיד נסמן אותו ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mo>sup</mo>
  <mi>A</mi>
 </mrow>
 </math>
 .</div>
-</li><li class="itemize_item">נאמר ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+</li><li class="itemize_item" id='magicparlabel-738'>נאמר ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>m</mi>
  <mo>&#x2208;</mo>
@@ -2602,19 +2277,19 @@ div.float-caption {
  </mstyle>
 </mrow>
 </math>
- הוא <u>חסם תחתון</u> )נקרא גם <u>אינפימום</u>( של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+ הוא <u>חסם תחתון</u> (נקרא גם <u>אינפימום</u>) של <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>A</mi>
 </math>
  אם מתקיימים שני התנאים הבאים:
-<ol class='lyxenum enumi' id='magicparlabel-1604'>
-<li class="enumerate_item"><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-739'><math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>m</mi>
 </math>
  הוא חסם מלרע של <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>A</mi>
 </math>
 .</li>
-<li class="enumerate_item">לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="enumerate_item" id='magicparlabel-740'>לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>m</mi>
  <mo stretchy='false'>'</mo>
@@ -2637,7 +2312,7 @@ div.float-caption {
 </math>
 .</li>
 </ol>
-<div class='standard' id='magicparlabel-1606'>מכיוון שניתן להוכיח שאם יש לקבוצה סופרמום אז הוא יחיד נסמן אותו ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class='standard' id='magicparlabel-741'>מכיוון שניתן להוכיח שאם יש לקבוצה סופרמום אז הוא יחיד נסמן אותו ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mo>inf</mo>
  <mi>A</mi>
@@ -2646,11 +2321,8 @@ div.float-caption {
 .</div>
 </li></ul>
 </div>
-<div class='standard' id='magicparlabel-1607'>
-<br />
-</div>
-<div class='definition' id='magicparlabel-1608'>
-<div class="definition_item"><span class="definition_label">‫הגדרה 6.2.</span>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-743'><span class="definition_label">‫הגדרה 6.2.</span>
 <b>מינימום ומקסימום</b>
 <br />
 תהא <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -2663,8 +2335,8 @@ div.float-caption {
 </mrow>
 </math>
  קבוצה.</div>
-<ul class='lyxitem lyxitemi' id='magicparlabel-1609'>
-<li class="itemize_item">נאמר שיש ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-744'>נאמר שיש ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>A</mi>
 </math>
  <u>מקסימום</u> אם קיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -2692,7 +2364,7 @@ div.float-caption {
 </mrow>
 </math>
 .</li>
-<li class="itemize_item">נאמר שיש ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="itemize_item" id='magicparlabel-745'>נאמר שיש ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>A</mi>
 </math>
  <u>מינימום</u> אם קיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -2722,18 +2394,19 @@ div.float-caption {
 .</li>
 </ul>
 </div>
-<div class='standard' id='magicparlabel-1611'><br /></div>
+</ul>
 </section>
 <section>
-<h2 class='section' id='magicparlabel-1612'><span class="section_label">7</span> חזקות</h2>
-<div class='standard' id='magicparlabel-1613'>יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<h2 class='section' id='magicparlabel-747'><span class="section_label">7</span> חזקות</h2>
+<ul class='nested'>
+<div class='standard' id='magicparlabel-748'>יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mstyle mathvariant='double-struck'>
  <mi>F</mi>
 </mstyle>
 </math>
  שדה סדור.</div>
-<div class='definition' id='magicparlabel-1614'>
-<div class="definition_item"><span class="definition_label">‫הגדרה 7.1.</span>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-749'><span class="definition_label">‫הגדרה 7.1.</span>
 <b>חזקה טבעית</b>
 <br />
 לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -2756,13 +2429,13 @@ div.float-caption {
  <mi>x</mi>
 </mrow>
 </math>
- )קרי: <math xmlns='http://www.w3.org/1998/Math/MathML'>
+ (קרי: <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>x</mi>
 </math>
  בחזקת <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mn>1</mn>
 </math>
-( ולכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+) ולכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>k</mi>
  <mo>&#x2208;</mo>
@@ -2791,7 +2464,7 @@ div.float-caption {
  <mi>x</mi>
 </mrow>
 </math>
- )קרי: <math xmlns='http://www.w3.org/1998/Math/MathML'>
+ (קרי: <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>x</mi>
 </math>
  בחזקת <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -2801,7 +2474,7 @@ div.float-caption {
  <mn>1</mn>
 </mrow>
 </math>
-(<div class='foot'><span class="foot_label">4</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-1618'>הוכחנו באינדוקציה שכך <math xmlns='http://www.w3.org/1998/Math/MathML'>
+)<div class='foot'><span class="foot_label">4</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-753'>הוכחנו באינדוקציה שכך <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msup>
  <mi>x</mi>
  <mi>k</mi>
@@ -2819,8 +2492,8 @@ div.float-caption {
 .</div>
 </div></div>.</div>
 </div>
-<div class='claim' id='magicparlabel-1619'>
-<div class="claim_item"><span class="claim_label">טענה 7.2.</span>
+<div class='claim'>
+<div class="claim_item" id='magicparlabel-754'><span class="claim_label">טענה 7.2.</span>
 לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>a</mi>
@@ -2845,19 +2518,16 @@ div.float-caption {
 -ית של <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>a</mi>
 </math>
- )<math xmlns='http://www.w3.org/1998/Math/MathML'>
+ (<math xmlns='http://www.w3.org/1998/Math/MathML'>
 <msup>
  <mi>a</mi>
  <mi>n</mi>
 </msup>
 </math>
-( מוגדרת היטב.</div>
+) מוגדרת היטב.</div>
 </div>
-<div class='standard' id='magicparlabel-1620'>
-<br />
-</div>
-<div class='definition' id='magicparlabel-1621'>
-<div class="definition_item"><span class="definition_label">‫הגדרה 7.3.</span>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-756'><span class="definition_label">‫הגדרה 7.3.</span>
 <b>חזקה שלמה</b>
 <br />
 לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -2880,13 +2550,13 @@ div.float-caption {
  <mn>1</mn>
 </mrow>
 </math>
- )קרי: <math xmlns='http://www.w3.org/1998/Math/MathML'>
+ (קרי: <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>x</mi>
 </math>
  בחזקת <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mn>0</mn>
 </math>
-(.
+).
 <br />
 לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
@@ -2931,8 +2601,8 @@ div.float-caption {
 </math>
 </div>
 </div>
-<ol class='lyxlist' id='magicparlabel-1622'>
-<li class="labeling_item"><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-757'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>&#x2663;</mi>
 </math>
 </span>
@@ -2987,7 +2657,7 @@ div.float-caption {
 </msup>
 </math>
 .</li>
-<li class="labeling_item"><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="labeling_item" id='magicparlabel-758'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>&#x2663;</mi>
 </math>
 </span>
@@ -3003,7 +2673,7 @@ div.float-caption {
  או <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mn>0</mn>
 </math>
- כרצוננו )מבלי לקבל סתירה(, אנו בחרנו להגדיר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+ כרצוננו (מבלי לקבל סתירה), אנו בחרנו להגדיר <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msup>
   <mn>0</mn>
@@ -3015,11 +2685,11 @@ div.float-caption {
 </mrow>
 </math>
  מפני שהדבר יקל עלינו בנוסחאות רבות בהמשך.</li>
-<li class="labeling_item"><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="labeling_item" id='magicparlabel-759'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>&#x2663;</mi>
 </math>
 </span>
- ניתן להגדיר חזקות טבעיות ושלמות בכל שדה )לאו דווקא סדור( ומכיוון שההוכחות לכל חוקי החזקות שלא כללו אי-שוויונים משתמשות אך ורק באקסיומות השדה חוקים אלו חלים בכל שדה<div class='foot'><span class="foot_label">5</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-1628'>למעשה, שני חוקי החזקות הראשונים במעריך טבעי )<math xmlns='http://www.w3.org/1998/Math/MathML'>
+ ניתן להגדיר חזקות טבעיות ושלמות בכל שדה (לאו דווקא סדור) ומכיוון שההוכחות לכל חוקי החזקות שלא כללו אי-שוויונים משתמשות אך ורק באקסיומות השדה חוקים אלו חלים בכל שדה<div class='foot'><span class="foot_label">5</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-763'>למעשה, שני חוקי החזקות הראשונים במעריך טבעי (<math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msup>
   <mi>x</mi>
@@ -3065,7 +2735,7 @@ div.float-caption {
  </msup>
 </mrow>
 </math>
-( השתמשו רק בקיבוץ של הכפל והחוק השלישי )<math xmlns='http://www.w3.org/1998/Math/MathML'>
+) השתמשו רק בקיבוץ של הכפל והחוק השלישי (<math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <msup>
   <mrow>
@@ -3091,11 +2761,11 @@ div.float-caption {
  </msup>
 </mrow>
 </math>
-( השתמש גם בחילוף; מסיבה זו הם תקפים אפילו בקבוצות שאינן שדות אך מוגדרת עליהן פעולת כפל המקיימת את התכונות הללו.</div>
+) השתמש גם בחילוף; מסיבה זו הם תקפים אפילו בקבוצות שאינן שדות אך מוגדרת עליהן פעולת כפל המקיימת את התכונות הללו.</div>
 </div></div>.</li>
 </ol>
-<div class='theorem_' id='magicparlabel-1629'>
-<div class="theorem__item"><span class="theorem__label">משפט.</span>
+<div class='theorem_'>
+<div class="theorem__item" id='magicparlabel-764'><span class="theorem__label">משפט.</span>
 <b>קיום ויחידות השורש</b>
 <br />
 לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -3141,8 +2811,8 @@ div.float-caption {
 </math>
 .</div>
 </div>
-<div class='definition' id='magicparlabel-1630'>
-<div class="definition_item"><span class="definition_label">‫הגדרה 7.4.</span>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-765'><span class="definition_label">‫הגדרה 7.4.</span>
 <b>שורש</b>
 <br />
 יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -3215,7 +2885,7 @@ div.float-caption {
 </msup>
 </math>
 .</div>
-<div class='standard' id='magicparlabel-1631'>כמו כן לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<div class='standard' id='magicparlabel-766'>כמו כן לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>n</mi>
  <mo>&#x2208;</mo>
@@ -3235,11 +2905,10 @@ div.float-caption {
  <mn>0</mn>
 </mrow>
 </math>
- )המוטיבציה להגדרה ברורה(.</div>
+ (המוטיבציה להגדרה ברורה).</div>
 </div>
-<div class='standard' id='magicparlabel-1632'><br /></div>
-<div class='lemma_' id='magicparlabel-1633'>
-<div class="lemma__item"><span class="lemma__label">למה.</span>
+<div class='lemma_'>
+<div class="lemma__item" id='magicparlabel-768'><span class="lemma__label">למה.</span>
 יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mn>0</mn>
@@ -3321,8 +2990,8 @@ div.float-caption {
 </math>
 .</div>
 </div>
-<div class='definition' id='magicparlabel-1634'>
-<div class="definition_item"><span class="definition_label">‫הגדרה 7.5.</span>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-769'><span class="definition_label">‫הגדרה 7.5.</span>
 <b>חזקה רציונלית</b>
 <br />
 יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
@@ -3376,7 +3045,7 @@ div.float-caption {
  ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>n</mi>
 </math>
- הם שלם וטבעי )<math xmlns='http://www.w3.org/1998/Math/MathML'>
+ הם שלם וטבעי (<math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>m</mi>
  <mo>&#x2208;</mo>
@@ -3394,7 +3063,7 @@ div.float-caption {
  </mstyle>
 </mrow>
 </math>
-( המקיימים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+) המקיימים <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mi>q</mi>
  <mo stretchy='false'>=</mo>
@@ -3406,8 +3075,8 @@ div.float-caption {
 </math>
 .</div>
 </div>
-<ol class='lyxlist' id='magicparlabel-1635'>
-<li class="labeling_item"><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-770'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>&#x2663;</mi>
 </math>
 </span>
@@ -3571,11 +3240,11 @@ div.float-caption {
 </mrow>
 </math>
 </li>
-<li class="labeling_item"><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<li class="labeling_item" id='magicparlabel-771'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mi>&#x2663;</mi>
 </math>
 </span>
- ניתן להגדיר חזקות ממשיות כבר כעת אולם אנו נעשה זאת רק בקובץ שיעסוק בפונקציות כדי להקל על הוכחת חוקי חזקות כשהמעריך ממשי, להלן ההגדרה שניתן להגדיר כבר כעת )כמובן שהגדרה זו וההגדרה שתובא בהמשך שקולות(: לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+ ניתן להגדיר חזקות ממשיות כבר כעת אולם אנו נעשה זאת רק בקובץ שיעסוק בפונקציות כדי להקל על הוכחת חוקי חזקות כשהמעריך ממשי, להלן ההגדרה שניתן להגדיר כבר כעת (כמובן שהגדרה זו וההגדרה שתובא בהמשך שקולות): לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mn>0</mn>
  <mo stretchy='false'>&lt;</mo>
@@ -3683,6 +3352,8 @@ div.float-caption {
 </math>
 </li>
 </ol>
+</ul>
 </section>
+<script src="tree_view.js"></script>
 </body>
 </html>
