@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
-body {font-family: Heebo, Arial, sans-serif; margin-top: 4ex; max-width: 25cm; margin: 0 auto;}
+
+:root {color-scheme: light dark;}
+
+
+body {font-family: Heebo, Arial, sans-serif;
+      margin-top: 4ex;
+      max-width: 21cm;
+      margin: 0 auto;
+      color: light-dark(black, white);
+      background-color: light-dark(white, black);
+      /* text-align: right; */}
+
+
+a {color: light-dark(rgb(0, 0, 142), rgb(0, 150, 255));}
+
 
 h2 {cursor: pointer}
 
@@ -15,8 +29,8 @@ del.strikeout {
 div.standard {
   margin-bottom: 0.7ex;}
 
-div.plain_layout {
-  text-align: right;}
+/* div.plain_layout {
+  text-align: right;} */
 
 h1.title {
   font-size: x-large;
@@ -30,7 +44,7 @@ h2.section {
   font-size: x-large;
   margin-top: 0.7ex;
   margin-bottom: 0.7ex;
-  text-align: right;}
+  /* text-align: right; */}
 
 .open {
   border-bottom-style: solid;}
@@ -45,7 +59,7 @@ div.theorem {
   font-size: medium;
   margin-top: 0.7ex;
   margin-bottom: 0.7ex;
-  text-align: right;}
+  /* text-align: right; */}
 
 span.theorem_label {
   font-weight: bold;
@@ -57,7 +71,7 @@ div.definition {
   font-size: medium;
   margin-top: 0.7ex;
   margin-bottom: 0.7ex;
-  text-align: right;}
+  /* text-align: right; */}
 
 span.definition_label {
   font-weight: bold;
@@ -88,20 +102,20 @@ ul.itemize {
   margin-top: 0.7ex;
   margin-bottom: 0.7ex;
   margin-left: 3ex;
-  text-align: right;}
+  /* text-align: right; */}
 
 h3.subsection {
   font-weight: bold;
   font-size: large;
   margin-top: 0.7ex;
   margin-bottom: 0.7ex;
-  text-align: right;}
+  /* text-align: right; */}
 
 div.corollary {
   font-size: medium;
   margin-top: 0.7ex;
   margin-bottom: 0.7ex;
-  text-align: right;}
+  /* text-align: right; */}
 
 span.corollary_label {
   font-weight: bold;
@@ -113,7 +127,7 @@ div.lemma_ {
   font-size: medium;
   margin-top: 0.7ex;
   margin-bottom: 0.7ex;
-  text-align: right;}
+  /* text-align: right; */}
 
 span.lemma__label {
   font-weight: normal;
@@ -125,7 +139,7 @@ div.lemma {
   font-size: medium;
   margin-top: 0.7ex;
   margin-bottom: 0.7ex;
-  text-align: right;}
+  /* text-align: right; */}
 
 span.lemma_label {
   font-weight: normal;
@@ -137,7 +151,7 @@ div.claim_ {
   font-size: medium;
   margin-top: 0.7ex;
   margin-bottom: 0.7ex;
-  text-align: right;}
+  /* text-align: right; */}
 
 span.claim__label {
   font-weight: bold;
@@ -149,7 +163,7 @@ div.claim {
   font-size: medium;
   margin-top: 0.7ex;
   margin-bottom: 0.7ex;
-  text-align: right;}
+  /* text-align: right; */}
 
 span.claim_label {
   font-weight: bold;
@@ -163,13 +177,13 @@ div.proof {
   font-size: medium;
   margin-top: 0.7ex;
   margin-bottom: 0.7ex;
-  text-align: right;}
+  /* text-align: right; */}
 
 div.theorem_ {
   font-size: medium;
   margin-top: 0.7ex;
   margin-bottom: 0.7ex;
-  text-align: right;}
+  /* text-align: right; */}
 
 span.theorem__label {
   font-weight: bold;
@@ -197,7 +211,7 @@ div.foot:hover div.foot_inner {
   z-index: 1;
   position: absolute;
   display: inline;
-  background-color: lightgray;
+  background-color: light-dark(lightgray, rgb(50, 50, 50));
   padding: 0.5em;}
 
 div.float-figure {

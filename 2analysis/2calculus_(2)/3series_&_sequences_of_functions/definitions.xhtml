@@ -1,0 +1,1797 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="he-IL">
+<head>
+<link rel="stylesheet" type="text/css" href="../../../main.css" />
+<meta name="viewport" content="width=device-width" />
+<meta name="generator" content="LyX 2.4.1" />
+<title>סדרות וטורים של פונקציות - הגדרות בלבד</title>
+<script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body dir="auto">
+<section>
+<h2 class='section' id='magicparlabel-616'><span class="section_label">1</span> התחלה</h2>
+<ul class='nested'>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-617'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ אתם רוצים לחשב את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>sin</mo>
+ <mrow>
+  <mo>(</mo>
+  <mn>1</mn>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+, מה עושים? פותחים מחשבון ומקישים את החישוב המבוקש ובן רגע מופיעה התשובה על מסך המחשבון בדיוק של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>10</mn>
+</math>
+ ספרות אחרי הנקודה.
+<br />
+שאלתם את עצמכם איך המחשבון עושה את זה? כשההורים שלנו למדו מתמטיקה לבגרות הייתה להם טבלה ובה הערכים של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mo>sin</mo>
+</math>
+ עבור עשרות זוויות (וכמו כן עבור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mo>cos</mo>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mo>tan</mo>
+</math>
+) אך לא יתכן שזה המצב במחשבון שהרי הוא נותן תשובה לכל זווית, טבלה גדולה כזו הייתה דורשת נפח אחסון גדול מאד, אז איך בכל זאת החשבון יודע כמה שווה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>sin</mo>
+ <mrow>
+  <mo>(</mo>
+  <mn>1</mn>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+?
+<br />
+התשובה היא הנושא הבא בקורס שלנו וכאן אני רוצה לתת הבהרה חשובה: <b>סדרות וטורים של פונקציות זה נושא לא מעניין</b>, לפחות לא בפני עצמו, הסיבה שאנחנו בכל זאת מתעניינים בו היא שבתנאים מסוימים ניתן ליצור סדרת פונקציות פשוטות לחישוב שמתקרבת לפונקציה קשה לחישוב (כמו סינוס) כך שנדע בדיוק עבור כל טווח טעות רצוי כמה אנחנו צריכים להתקדם בסדרה ע&#8221;מ למצוא קירוב טוב מספיק. זהו, ניגש לעבודה.</li>
+</ol>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-618'><span class="definition_label">‫הגדרה 1.1.</span>
+<b>נקודת התכנסות, תחום התכנסות ופונקציה גבולית</b>
+<br />
+תהא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msubsup>
+ <mrow>
+  <mo>(</mo>
+  <msub>
+   <mi>f</mi>
+   <mi>n</mi>
+  </msub>
+  <mo>)</mo>
+ </mrow>
+ <mrow>
+  <mi>n</mi>
+  <mo stretchy='false'>=</mo>
+  <mn>1</mn>
+ </mrow>
+ <mi>&#x221E;</mi>
+</msubsup>
+</math>
+ סדרת פונקציות ונסמן ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>D</mi>
+</math>
+ את החיתוך של תחומי ההגדרה שלהן, נאמר שנקודה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>x</mi>
+  <mn>0</mn>
+ </msub>
+ <mo>&#x2208;</mo>
+ <mi>D</mi>
+</mrow>
+</math>
+ היא <u>נקודת התכנסות</u> של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msubsup>
+ <mrow>
+  <mo>(</mo>
+  <msub>
+   <mi>f</mi>
+   <mi>n</mi>
+  </msub>
+  <mo>)</mo>
+ </mrow>
+ <mrow>
+  <mi>n</mi>
+  <mo stretchy='false'>=</mo>
+  <mn>1</mn>
+ </mrow>
+ <mi>&#x221E;</mi>
+</msubsup>
+</math>
+ אם הגבול <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <munder>
+  <mo>lim</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo>&#x2192;</mo>
+   <mi>&#x221E;</mi>
+  </mrow>
+ </munder>
+ <msub>
+  <mi>f</mi>
+  <mi>n</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <msub>
+   <mi>x</mi>
+   <mn>0</mn>
+  </msub>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ קיים.
+<br />
+קבוצת נקודות ההתכנסות של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msubsup>
+ <mrow>
+  <mo>(</mo>
+  <msub>
+   <mi>f</mi>
+   <mi>n</mi>
+  </msub>
+  <mo>)</mo>
+ </mrow>
+ <mrow>
+  <mi>n</mi>
+  <mo stretchy='false'>=</mo>
+  <mn>1</mn>
+ </mrow>
+ <mi>&#x221E;</mi>
+</msubsup>
+</math>
+ תקרא <u>תחום ההתכנסות</u> של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msubsup>
+ <mrow>
+  <mo>(</mo>
+  <msub>
+   <mi>f</mi>
+   <mi>n</mi>
+  </msub>
+  <mo>)</mo>
+ </mrow>
+ <mrow>
+  <mi>n</mi>
+  <mo stretchy='false'>=</mo>
+  <mn>1</mn>
+ </mrow>
+ <mi>&#x221E;</mi>
+</msubsup>
+</math>
+ ונאמר גם ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msubsup>
+ <mrow>
+  <mo>(</mo>
+  <msub>
+   <mi>f</mi>
+   <mi>n</mi>
+  </msub>
+  <mo>)</mo>
+ </mrow>
+ <mrow>
+  <mi>n</mi>
+  <mo stretchy='false'>=</mo>
+  <mn>1</mn>
+ </mrow>
+ <mi>&#x221E;</mi>
+</msubsup>
+</math>
+ מתכנסת נקודתית בקבוצה זו ובכל תת-קבוצה שלה.
+<br />
+יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>D</mi>
+ <mo stretchy='false'>'</mo>
+</mrow>
+</math>
+ תחום ההתכנסות של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msubsup>
+ <mrow>
+  <mo>(</mo>
+  <msub>
+   <mi>f</mi>
+   <mi>n</mi>
+  </msub>
+  <mo>)</mo>
+ </mrow>
+ <mrow>
+  <mi>n</mi>
+  <mo stretchy='false'>=</mo>
+  <mn>1</mn>
+ </mrow>
+ <mi>&#x221E;</mi>
+</msubsup>
+</math>
+ הפונקציה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mo stretchy='false'>:</mo>
+ <mi>D</mi>
+ <mo stretchy='false'>'</mo>
+ <mo>&#x2192;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+ המוגדרת ע&#8221;י (לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>x</mi>
+ <mo>&#x2208;</mo>
+ <mi>D</mi>
+ <mo stretchy='false'>'</mo>
+</mrow>
+</math>
+):
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <munder>
+  <mo>lim</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo>&#x2192;</mo>
+   <mi>&#x221E;</mi>
+  </mrow>
+ </munder>
+ <msub>
+  <mi>f</mi>
+  <mi>n</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+תיקרא <u>הפונקציה הגבולית</u> של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>f</mi>
+ <mi>n</mi>
+</msub>
+</math>
+.</div>
+</div>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-620'><span class="definition_label">‫הגדרה 1.2.</span>
+<b>התכנסות טור פונקציות</b>
+<br />
+תהא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msubsup>
+ <mrow>
+  <mo>(</mo>
+  <msub>
+   <mi>u</mi>
+   <mi>n</mi>
+  </msub>
+  <mo>)</mo>
+ </mrow>
+ <mrow>
+  <mi>n</mi>
+  <mo stretchy='false'>=</mo>
+  <mn>1</mn>
+ </mrow>
+ <mi>&#x221E;</mi>
+</msubsup>
+</math>
+ סדרת פונקציות ממשיות ונסמן ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>D</mi>
+</math>
+ את החיתוך של תחומי ההגדרה שלהן.
+<br />
+תהא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msubsup>
+ <mrow>
+  <mo>(</mo>
+  <msub>
+   <mi>S</mi>
+   <mi>N</mi>
+  </msub>
+  <mo>)</mo>
+ </mrow>
+ <mrow>
+  <mi>N</mi>
+  <mo stretchy='false'>=</mo>
+  <mn>1</mn>
+ </mrow>
+ <mi>&#x221E;</mi>
+</msubsup>
+</math>
+ סדרת פונקציות מ-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>D</mi>
+</math>
+ ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='double-struck'>
+ <mi>R</mi>
+</mstyle>
+</math>
+ המוגדרת ע&#8221;י (לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>N</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>N</mi>
+ </mstyle>
+</mrow>
+</math>
+ ולכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>x</mi>
+ <mo>&#x2208;</mo>
+ <mi>D</mi>
+</mrow>
+</math>
+):
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mi>S</mi>
+  <mi>N</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>N</mi>
+ </munderover>
+ <msub>
+  <mi>u</mi>
+  <mi>n</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+נאמר שנקודה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>x</mi>
+  <mn>0</mn>
+ </msub>
+ <mo>&#x2208;</mo>
+ <mi>D</mi>
+</mrow>
+</math>
+ היא <u>נקודת התכנסות</u> של טור הפונקציות <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>&#x221E;</mi>
+ </munderover>
+ <msub>
+  <mi>u</mi>
+  <mi>n</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ אם הגבול <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <munder>
+  <mo>lim</mo>
+  <mrow>
+   <mi>N</mi>
+   <mo>&#x2192;</mo>
+   <mi>&#x221E;</mi>
+  </mrow>
+ </munder>
+ <msub>
+  <mi>S</mi>
+  <mi>N</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <msub>
+   <mi>x</mi>
+   <mn>0</mn>
+  </msub>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ קיים (כלומר הטור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>&#x221E;</mi>
+ </munderover>
+ <msub>
+  <mi>u</mi>
+  <mi>n</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <msub>
+   <mi>x</mi>
+   <mn>0</mn>
+  </msub>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ מתכנס).
+<br />
+קבוצת נקודות ההתכנסות של טור הפונקציות <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>&#x221E;</mi>
+ </munderover>
+ <msub>
+  <mi>u</mi>
+  <mi>n</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ תקרא <u>תחום ההתכנסות</u> שלו ונאמר גם שהוא מתכנס בקבוצה זו ובכל תת-קבוצה שלה.
+<br />
+יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>D</mi>
+ <mo stretchy='false'>'</mo>
+</mrow>
+</math>
+ תחום ההתכנסות של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>&#x221E;</mi>
+ </munderover>
+ <msub>
+  <mi>u</mi>
+  <mi>n</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ הפונקציה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>S</mi>
+ <mo stretchy='false'>:</mo>
+ <mi>D</mi>
+ <mo stretchy='false'>'</mo>
+ <mo>&#x2192;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+ המוגדרת ע&#8221;י (לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>x</mi>
+ <mo>&#x2208;</mo>
+ <mi>D</mi>
+ <mo stretchy='false'>'</mo>
+</mrow>
+</math>
+):
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>S</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>&#x221E;</mi>
+ </munderover>
+ <msub>
+  <mi>u</mi>
+  <mi>n</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+תיקרא <u>הפונקציה הגבולית</u> של טור הפונקציות <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>&#x221E;</mi>
+ </munderover>
+ <msub>
+  <mi>u</mi>
+  <mi>n</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</div>
+</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-621'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ נשים לב שההגדרה עבור טור של פונקציות כלולה בהגדרה של סדרת פונקציות שהרי טור הוא בסך הכל גבול של סדרה (סדרת הסכומים החלקיים).</li>
+</ol>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-623'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ בהינתן סדרת פונקציות <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msubsup>
+ <mrow>
+  <mo>(</mo>
+  <msub>
+   <mi>f</mi>
+   <mi>n</mi>
+  </msub>
+  <mo>)</mo>
+ </mrow>
+ <mrow>
+  <mi>n</mi>
+  <mo stretchy='false'>=</mo>
+  <mn>1</mn>
+ </mrow>
+ <mi>&#x221E;</mi>
+</msubsup>
+</math>
+ כך ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>D</mi>
+</math>
+ הוא חיתוך תחומי ההגדרה של הפונקציות, נוכל להגדיר סדרת פונקציות <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msubsup>
+ <mrow>
+  <mo>(</mo>
+  <msub>
+   <mi>u</mi>
+   <mi>n</mi>
+  </msub>
+  <mo>)</mo>
+ </mrow>
+ <mrow>
+  <mi>n</mi>
+  <mo stretchy='false'>=</mo>
+  <mn>1</mn>
+ </mrow>
+ <mi>&#x221E;</mi>
+</msubsup>
+</math>
+ ע&#8221;י <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>u</mi>
+  <mi>n</mi>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mi>f</mi>
+  <mi>n</mi>
+ </msub>
+ <mo stretchy='false'>-</mo>
+ <msub>
+  <mi>f</mi>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>-</mo>
+   <mn>1</mn>
+  </mrow>
+ </msub>
+</mrow>
+</math>
+ לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>1</mn>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>n</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>N</mi>
+ </mstyle>
+</mrow>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>u</mi>
+  <mn>1</mn>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mi>f</mi>
+  <mn>1</mn>
+ </msub>
+</mrow>
+</math>
+ ואז נקבל שלכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>N</mi>
+ </mstyle>
+</mrow>
+</math>
+ מתקיים:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mi>S</mi>
+  <mi>N</mi>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>N</mi>
+ </munderover>
+ <msub>
+  <mi>u</mi>
+  <mi>n</mi>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mi>f</mi>
+  <mi>N</mi>
+ </msub>
+</mrow>
+</math>
+ומכאן שגם (מדובר בשוויון פורמלי בלבד):
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>S</mi>
+ <mo stretchy='false'>=</mo>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>&#x221E;</mi>
+ </munderover>
+ <msub>
+  <mi>u</mi>
+  <mi>n</mi>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <munder>
+  <mo>lim</mo>
+  <mrow>
+   <mi>N</mi>
+   <mo>&#x2192;</mo>
+   <mi>&#x221E;</mi>
+  </mrow>
+ </munder>
+ <msub>
+  <mi>S</mi>
+  <mi>N</mi>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <munder>
+  <mo>lim</mo>
+  <mrow>
+   <mi>N</mi>
+   <mo>&#x2192;</mo>
+   <mi>&#x221E;</mi>
+  </mrow>
+ </munder>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>N</mi>
+ </munderover>
+ <msub>
+  <mi>u</mi>
+  <mi>n</mi>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <munder>
+  <mo>lim</mo>
+  <mrow>
+   <mi>N</mi>
+   <mo>&#x2192;</mo>
+   <mi>&#x221E;</mi>
+  </mrow>
+ </munder>
+ <msub>
+  <mi>f</mi>
+  <mi>N</mi>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <mi>f</mi>
+</mrow>
+</math>
+כלומר הסדרה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msubsup>
+ <mrow>
+  <mo>(</mo>
+  <msub>
+   <mi>f</mi>
+   <mi>n</mi>
+  </msub>
+  <mo>)</mo>
+ </mrow>
+ <mrow>
+  <mi>n</mi>
+  <mo stretchy='false'>=</mo>
+  <mn>1</mn>
+ </mrow>
+ <mi>&#x221E;</mi>
+</msubsup>
+</math>
+ מתלכדת עם סדרת הסכומים החלקיים של הטור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>&#x221E;</mi>
+ </munderover>
+ <msub>
+  <mi>u</mi>
+  <mi>n</mi>
+ </msub>
+</mrow>
+</math>
+ ובפרט הם מתכנסים ומתבדרים ביחד, זוהי התאמה חח&#8221;ע ועל בין סדרות של פונקציות לטורי פונקציות השומרת על תכונת ההתכנסות.</li>
+</ol>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-624'><span class="definition_label">‫הגדרה 1.3.</span>
+<b>התכנסות במידה שווה של סדרות וטורי פונקציות</b>
+<br />
+נאמר שסדרת פונקציות <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msubsup>
+ <mrow>
+  <mo>(</mo>
+  <msub>
+   <mi>f</mi>
+   <mi>n</mi>
+  </msub>
+  <mo>)</mo>
+ </mrow>
+ <mrow>
+  <mi>n</mi>
+  <mo stretchy='false'>=</mo>
+  <mn>1</mn>
+ </mrow>
+ <mi>&#x221E;</mi>
+</msubsup>
+</math>
+ <u>מתכנסת במידה שווה</u> לפונקציה גבולית <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>f</mi>
+</math>
+ ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>D</mi>
+</math>
+<div class='foot'><span class="foot_label">1</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-628'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>D</mi>
+</math>
+ מוכל בחיתוך תחומי ההגדרה של הפונקציות וכן לגבי טורים ובכלל בסיכום זה.</div>
+</div></div> אם לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>0</mn>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>&#x3B5;</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+ קיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>N</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>N</mi>
+ </mstyle>
+</mrow>
+</math>
+ כך שלכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>x</mi>
+ <mo>&#x2208;</mo>
+ <mi>D</mi>
+</mrow>
+</math>
+ ולכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>N</mi>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>n</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>N</mi>
+ </mstyle>
+</mrow>
+</math>
+ מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mo>|</mo>
+  <mrow>
+   <msub>
+    <mi>f</mi>
+    <mi>n</mi>
+   </msub>
+   <mrow>
+    <mo>(</mo>
+    <mi>x</mi>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>-</mo>
+   <mi>f</mi>
+   <mrow>
+    <mo>(</mo>
+    <mi>x</mi>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>|</mo>
+ </mrow>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>&#x3B5;</mi>
+</mrow>
+</math>
+.
+<br />
+כמו כן נאמר שטור פונקציות <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>&#x221E;</mi>
+ </munderover>
+ <msub>
+  <mi>u</mi>
+  <mi>n</mi>
+ </msub>
+</mrow>
+</math>
+ <u>מתכנס במידה שווה</u> לפונקציה גבולית <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>S</mi>
+</math>
+ ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>D</mi>
+</math>
+ אם לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>0</mn>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>&#x3B5;</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+ קיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>N</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>N</mi>
+ </mstyle>
+</mrow>
+</math>
+ כך שלכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>x</mi>
+ <mo>&#x2208;</mo>
+ <mi>D</mi>
+</mrow>
+</math>
+ ולכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>N</mi>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>n</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>N</mi>
+ </mstyle>
+</mrow>
+</math>
+ מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mo>|</mo>
+  <mrow>
+   <msub>
+    <mi>S</mi>
+    <mi>n</mi>
+   </msub>
+   <mrow>
+    <mo>(</mo>
+    <mi>x</mi>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>-</mo>
+   <mi>S</mi>
+   <mrow>
+    <mo>(</mo>
+    <mi>x</mi>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>|</mo>
+ </mrow>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>&#x3B5;</mi>
+</mrow>
+</math>
+.</div>
+</div>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-630'><span class="definition_label">‫הגדרה 1.4.</span>
+<b>התכנסות בהחלט של טור פונקציות בנקודה</b>
+<br />
+יהא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>&#x221E;</mi>
+ </munderover>
+ <msub>
+  <mi>u</mi>
+  <mi>n</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ טור פונקציות המוגדרות בתחום <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>D</mi>
+</math>
+, נאמר ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>&#x221E;</mi>
+ </munderover>
+ <msub>
+  <mi>u</mi>
+  <mi>n</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ <u>מתכנס בהחלט</u> בנקודה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>x</mi>
+  <mn>0</mn>
+ </msub>
+ <mo>&#x2208;</mo>
+ <mi>D</mi>
+</mrow>
+</math>
+ אם הטור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>&#x221E;</mi>
+ </munderover>
+ <msub>
+  <mi>u</mi>
+  <mi>n</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <msub>
+   <mi>x</mi>
+   <mn>0</mn>
+  </msub>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ מתכנס בהחלט, כמו כן נאמר ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>&#x221E;</mi>
+ </munderover>
+ <msub>
+  <mi>u</mi>
+  <mi>n</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ <u>מתכנס בהחלט</u> ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>D</mi>
+</math>
+ אם לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>x</mi>
+ <mo>&#x2208;</mo>
+ <mi>D</mi>
+</mrow>
+</math>
+ הטור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>&#x221E;</mi>
+ </munderover>
+ <msub>
+  <mi>u</mi>
+  <mi>n</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ מתכנס בהחלט. אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>&#x221E;</mi>
+ </munderover>
+ <msub>
+  <mi>u</mi>
+  <mi>n</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ מתכנס בנקודה/בקבוצת נקודות אך אינו מתכנס בהן בהחלט נאמר שהוא <u>מתכנס בתנאי</u> בנקודה/בקבוצת הנקודות (בהתאמה).</div>
+</div>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-632'><span class="definition_label">‫הגדרה 1.5.</span>
+<b>התכנסות בהחלט במידה שווה של טור פונקציות</b>
+<br />
+יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>&#x221E;</mi>
+ </munderover>
+ <msub>
+  <mi>u</mi>
+  <mi>n</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ טור פונקציות המוגדרות בתחום <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>D</mi>
+</math>
+, נאמר ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>&#x221E;</mi>
+ </munderover>
+ <msub>
+  <mi>u</mi>
+  <mi>n</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ <u>מתכנס בהחלט במידה שווה</u> ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>D</mi>
+</math>
+ אם הטור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>&#x221E;</mi>
+ </munderover>
+ <mrow>
+  <mo>|</mo>
+  <mrow>
+   <msub>
+    <mi>u</mi>
+    <mi>n</mi>
+   </msub>
+   <mrow>
+    <mo>(</mo>
+    <msub>
+     <mi>x</mi>
+     <mn>0</mn>
+    </msub>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>|</mo>
+ </mrow>
+</mrow>
+</math>
+ מתכנס במ&#8221;ש ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>D</mi>
+</math>
+.</div>
+</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-633'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ ההיררכיה היא כזו: התכנסות בהחלט במ&#8221;ש גוררת התכנסות בהחלט והתכנסות במ&#8221;ש בנפרד, והתכנסות במ&#8221;ש גוררת התכנסות נקודתית; הגרירות ההפוכות אינן נכונות בהכרח.</li>
+</ol>
+</ul>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-635'><span class="section_label">2</span> טורי חזקות</h2>
+<ul class='nested'>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-636'><span class="definition_label">‫הגדרה 2.1.</span>
+<b>טור חזקות</b>
+<br />
+<u>טור חזקות סביב נקודה</u> <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>x</mi>
+  <mn>0</mn>
+ </msub>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+ הוא טור פונקציות מהצורה:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>0</mn>
+  </mrow>
+  <mi>&#x221E;</mi>
+ </munderover>
+ <msub>
+  <mi>a</mi>
+  <mi>n</mi>
+ </msub>
+ <mo>&#x22C5;</mo>
+ <msup>
+  <mrow>
+   <mo>(</mo>
+   <mrow>
+    <mi>x</mi>
+    <mo stretchy='false'>-</mo>
+    <msub>
+     <mi>x</mi>
+     <mn>0</mn>
+    </msub>
+   </mrow>
+   <mo>)</mo>
+  </mrow>
+  <mi>n</mi>
+ </msup>
+</mrow>
+</math>
+עבור סדרה ממשית <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msubsup>
+ <mrow>
+  <mo>(</mo>
+  <msub>
+   <mi>a</mi>
+   <mi>n</mi>
+  </msub>
+  <mo>)</mo>
+ </mrow>
+ <mrow>
+  <mi>n</mi>
+  <mo stretchy='false'>=</mo>
+  <mn>0</mn>
+ </mrow>
+ <mi>&#x221E;</mi>
+</msubsup>
+</math>
+ כלשהי.</div>
+</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-637'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ נשים לב שכל סדרת פולינומי טיילור היא טור חזקות, עוד נשים לב שכל טור חזקות סביב נקודה כשלהי מתכנס באותה נקודה לפונקציית האפס.</li>
+</ol>
+<div class='theorem_'>
+<div class="theorem__item" id='magicparlabel-638'><span class="theorem__label">משפט.</span>
+יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>0</mn>
+  </mrow>
+  <mi>&#x221E;</mi>
+ </munderover>
+ <msub>
+  <mi>a</mi>
+  <mi>n</mi>
+ </msub>
+ <mo>&#x22C5;</mo>
+ <msup>
+  <mrow>
+   <mo>(</mo>
+   <mrow>
+    <mi>x</mi>
+    <mo stretchy='false'>-</mo>
+    <msub>
+     <mi>x</mi>
+     <mn>0</mn>
+    </msub>
+   </mrow>
+   <mo>)</mo>
+  </mrow>
+  <mi>n</mi>
+ </msup>
+</mrow>
+</math>
+ טור חזקות סביב נקודה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>x</mi>
+  <mn>0</mn>
+ </msub>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+<div class='foot'><span class="foot_label">2</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-642'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msubsup>
+ <mrow>
+  <mo>(</mo>
+  <msub>
+   <mi>a</mi>
+   <mi>n</mi>
+  </msub>
+  <mo>)</mo>
+ </mrow>
+ <mrow>
+  <mi>n</mi>
+  <mo stretchy='false'>=</mo>
+  <mn>0</mn>
+ </mrow>
+ <mi>&#x221E;</mi>
+</msubsup>
+</math>
+ היא סדרה כלשהי.</div>
+</div></div> מתקיימת אחת משלוש האפשרויות הבאות:</div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-643'>הטור מתכנס נקודתית על כל הישר.</li>
+<li class="enumerate_item" id='magicparlabel-644'>קיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>0</mn>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>R</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+ יחיד כך שהטור מתכנס נקודתית ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>(</mo>
+ <mrow>
+  <msub>
+   <mi>x</mi>
+   <mn>0</mn>
+  </msub>
+  <mo stretchy='false'>-</mo>
+  <mi>R</mi>
+  <mo stretchy='false'>,</mo>
+  <msub>
+   <mi>x</mi>
+   <mn>0</mn>
+  </msub>
+  <mo stretchy='false'>+</mo>
+  <mi>R</mi>
+ </mrow>
+ <mo>)</mo>
+</mrow>
+</math>
+ ואולי גם ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>x</mi>
+  <mn>0</mn>
+ </msub>
+ <mo stretchy='false'>+</mo>
+ <mi>R</mi>
+</mrow>
+</math>
+ ו/או ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>x</mi>
+  <mn>0</mn>
+ </msub>
+ <mo stretchy='false'>-</mo>
+ <mi>R</mi>
+</mrow>
+</math>
+ אך לא בשום נקודה אחרת.</li>
+<li class="enumerate_item" id='magicparlabel-645'>הטור מתכנס נקודתית אך ורק ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>x</mi>
+ <mn>0</mn>
+</msub>
+</math>
+.</li>
+</ol>
+</div>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-646'><span class="definition_label">‫הגדרה 2.2.</span>
+<b>רדיוס התכנסות וקטע התכנסות</b>
+<br />
+במונחי המשפט שלעיל וע&#8221;פ החלוקה למקרים שבו:</div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-647'>אם מתקיימת האפשרות הראשונה נאמר ש<u>רדיוס ההתכנסות</u> של הטור הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x221E;</mi>
+</math>
+ ו<u>קטע ההתכנסות</u> הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mi>&#x221E;</mi>
+   <mo stretchy='false'>,</mo>
+   <mi>&#x221E;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</li>
+<li class="enumerate_item" id='magicparlabel-648'>אם מתקיימת האפשרות השנייה נאמר ש<u>רדיוס ההתכנסות</u> הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>R</mi>
+</math>
+ ו<u>קטע ההתכנסות</u> הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>(</mo>
+ <mrow>
+  <msub>
+   <mi>x</mi>
+   <mn>0</mn>
+  </msub>
+  <mo stretchy='false'>-</mo>
+  <mi>R</mi>
+  <mo stretchy='false'>,</mo>
+  <msub>
+   <mi>x</mi>
+   <mn>0</mn>
+  </msub>
+  <mo stretchy='false'>+</mo>
+  <mi>R</mi>
+ </mrow>
+ <mo>)</mo>
+</mrow>
+</math>
+.</li>
+<li class="enumerate_item" id='magicparlabel-649'>אם מתקיימת האפשרות השלישית נאמר ש<u>רדיוס ההתכנסות</u> הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ ו<u>קטע ההתכנסות</u> הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x2205;</mi>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+   </msub>
+   <mo stretchy='false'>-</mo>
+   <mn>0</mn>
+   <mo stretchy='false'>,</mo>
+   <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+   </msub>
+   <mo stretchy='false'>+</mo>
+   <mn>0</mn>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</li>
+</ol>
+</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-650'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ קטע ההתכנסות אינו שווה בהכרח לתחום ההתכנסות של הטור, אמנם ניתן לראות זאת בבירור במקרה השלישי אולם הדבר נכון גם עבור האפשרות השנייה (ראו את ניסוח המשפט עבורה).</li>
+</ol>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-651'><span class="definition_label">‫הגדרה 2.3.</span>
+נאמר שלפונקציה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>f</mi>
+</math>
+ <u>יש פיתוח לטור חזקות סביב נקודה</u> <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>x</mi>
+  <mn>0</mn>
+ </msub>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+ אם קיים טור חזקות <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>0</mn>
+  </mrow>
+  <mi>&#x221E;</mi>
+ </munderover>
+ <msub>
+  <mi>a</mi>
+  <mi>n</mi>
+ </msub>
+ <mo>&#x22C5;</mo>
+ <msup>
+  <mrow>
+   <mo>(</mo>
+   <mrow>
+    <mi>x</mi>
+    <mo stretchy='false'>-</mo>
+    <msub>
+     <mi>x</mi>
+     <mn>0</mn>
+    </msub>
+   </mrow>
+   <mo>)</mo>
+  </mrow>
+  <mi>n</mi>
+ </msup>
+</mrow>
+</math>
+ כך שלכל
+<br />
+<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>x</mi>
+ <mo>&#x2208;</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+   </msub>
+   <mo stretchy='false'>-</mo>
+   <mi>R</mi>
+   <mo stretchy='false'>,</mo>
+   <msub>
+    <mi>x</mi>
+    <mn>0</mn>
+   </msub>
+   <mo stretchy='false'>+</mo>
+   <mi>R</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ מתקיים השוויון (עבור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>0</mn>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>R</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+<div class='foot'><span class="foot_label">3</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-655'>בחלק העוסק בפונקציות אנליטיות )בקובץ הטענות( נראה שאם קיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>R</mi>
+</math>
+ חיובי כזה אז הגדול ביותר מביניהם הוא רדיוס ההתכנסות, כולל המקרה שבו אין גדול ביותר ואז רדיוס ההתכנסות הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x221E;</mi>
+</math>
+.</div>
+</div></div>):
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>0</mn>
+  </mrow>
+  <mi>&#x221E;</mi>
+ </munderover>
+ <msub>
+  <mi>a</mi>
+  <mi>n</mi>
+ </msub>
+ <mo>&#x22C5;</mo>
+ <msup>
+  <mrow>
+   <mo>(</mo>
+   <mrow>
+    <mi>x</mi>
+    <mo stretchy='false'>-</mo>
+    <msub>
+     <mi>x</mi>
+     <mn>0</mn>
+    </msub>
+   </mrow>
+   <mo>)</mo>
+  </mrow>
+  <mi>n</mi>
+ </msup>
+</mrow>
+</math>
+</div>
+</div>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-657'><span class="definition_label">‫הגדרה 2.4.</span>
+<b>פונקציה אנליטית</b>
+<br />
+נאמר שפונקציה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>f</mi>
+</math>
+ היא <u>פונקציה אנליטית בנקודה</u> <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>x</mi>
+  <mn>0</mn>
+ </msub>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+ אם יש ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>f</mi>
+</math>
+ פיתוח לטור חזקות סביב <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>x</mi>
+ <mn>0</mn>
+</msub>
+</math>
+, נאמר ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>f</mi>
+</math>
+ היא <u>פונקציה אנליטית בקטע פתוח</u> <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>(</mo>
+ <mrow>
+  <mi>a</mi>
+  <mo stretchy='false'>,</mo>
+  <mi>b</mi>
+ </mrow>
+ <mo>)</mo>
+</mrow>
+</math>
+ אם לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>x</mi>
+  <mn>0</mn>
+ </msub>
+ <mo>&#x2208;</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>a</mi>
+   <mo stretchy='false'>,</mo>
+   <mi>b</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ הפונקציה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>f</mi>
+</math>
+ אנליטית ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>x</mi>
+ <mn>0</mn>
+</msub>
+</math>
+.</div>
+</div>
+</ul>
+</section>
+<script src="../../../tree_view.js"></script>
+</body>
+</html>

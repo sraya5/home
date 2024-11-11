@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="he-IL">
+<head>
+<link rel="stylesheet" type="text/css" href="../../main.css" />
+<meta name="viewport" content="width=device-width" />
+<meta name="generator" content="LyX 2.4.1" />
+<title>רקורסיה</title>
+<script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body dir="auto">
+<section>
+<h2 class='section' id='magicparlabel-611'><span class="section_label">1</span> מבנה</h2>
+<ul class='nested'>
+<div class='standard' id='magicparlabel-612'>המבנה הכללי של פונקציה רקורסיבית הוא כדלהלן:</div>
+
+
+<div class='float-algorithm'><div class='plain_layout' id='magicparlabel-617'><span class='float-caption-Standard float-caption float-caption-standard'>
+<br />
+אלגוריתם 1  פונקציה רקורסיבית</span></div>
+
+<div class='plain_layout' id='magicparlabel-622'>הקלט יכול להיות כל דבר.</div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-623'>אם הקלט מקיים את אחד מתנאי ההתחלה (ייתכן שיהיה יותר מתנאי התחלה אחד):
+<ul class='lyxitem lyxitemii'>
+<li class="itemize_item" id='magicparlabel-624'>החזר ערך שנקבע מראש עבור תנאי זה.</li>
+</ul>
+</li><li class="itemize_item" id='magicparlabel-625'>אחרת:
+<ul class='lyxitem lyxitemii'>
+<li class="itemize_item" id='magicparlabel-626'>בצע פעולה כלשהי על מספר קריאות של הפונקציה הרקורסיבית עם קלטים &#8220;קרובים&#8221; יותר לאחד מתנאי ההתחלה (בנפרד).</li>
+</ul>
+</li></ul>
+</div>
+
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-627'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ נשים לב שהקלט מוכרח להיות אחד מתנאי ההתחלה או כזה שקיימים עבורו מספיק קלטים קרובים יותר לתנאי ההתחלה שעוזרים במתן תשובה עבור קלט זה.</li>
+<li class="labeling_item" id='magicparlabel-628'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ ניתן להמיר כל פונקציה רקורסיבית לפונקציה המשתמשת בלולאות ולהפך, החיסרון העיקרי של פונקציות רקורסיביות ביחס ללולאות הוא כמות הזיכרון הנדרשת להפעלתן (הסיבוכיות זהה) שכן כל שלב של הרקורסיה דורש מקום בזיכרון כל עוד להא הגענו למקרה הבסיס, יתרונן של פונקציות רקורסיביות הוא שלעיתים קל יותר לכתוב, לקרוא ולהבין את הקוד בצורה רקורסיבית.</li>
+<li class="labeling_item" id='magicparlabel-629'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ לפעמים הקלט משמש בכמה תפקידים עבור הפונקציה ואם עבור חלקם צריך להכניס בכל שלב של הרקורסיה ערך שונה בעוד שבאחרים יש להכניס ערך קבוע<div class='foot'><span class="foot_label">1</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-633'>דוגמה: אנחנו רוצים לבדוק אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>1</mn>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>x</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>N</mi>
+ </mstyle>
+</mrow>
+</math>
+ הוא חזקה של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>1</mn>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>b</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>N</mi>
+ </mstyle>
+</mrow>
+</math>
+, בכל שלב נכפיל את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+ בעצמו ונבדוק אם הגענו ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+ או עברנו אותו, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+ משמש גם בתור הבסיס של הסדרה ההנדסית וגם המנה שלה ולכן אם נעשה זאת בצורה רקורסיבית נעבור רק על החזקות <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>b</mi>
+ <mo stretchy='false'>,</mo>
+ <msup>
+  <mi>b</mi>
+  <mn>2</mn>
+ </msup>
+ <mo stretchy='false'>,</mo>
+ <msup>
+  <mi>b</mi>
+  <mn>4</mn>
+ </msup>
+ <mo stretchy='false'>,</mo>
+ <msup>
+  <mi>b</mi>
+  <mn>8</mn>
+ </msup>
+ <mo stretchy='false'>,</mo>
+ <mi>&#x2026;</mi>
+ <msup>
+  <mi>b</mi>
+  <msup>
+   <mn>2</mn>
+   <mi>n</mi>
+  </msup>
+ </msup>
+ <mo stretchy='false'>,</mo>
+ <mi>&#x2026;</mi>
+</mrow>
+</math>
+ כך שנוכל לעבור את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+ אפילו אם הוא באמת חזקה של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+.</div>
+</div></div> אז אי אפשר לבצע את הפונקציה בצורה רקורסיבית, במקרים כאלה יש ליצור פונקציית עזר רקורסיבית המתייחסת לכל היבט של הקלט בנפרד ובפונקציה העיקרית לבצע רק את הפיצול של הקלט לתפקידים השונים ולהכניס אותם לפונקציית העזר<div class='foot'><span class="foot_label">2</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-637'>במקרה של הדוגמה שבהערה הקודמת נבנה פונקציית עזר המקבלת שלושה קלטים שהם הבסיס, המנה והיעד (<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+) ובודקת אם הבסיס גדול מ-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+ או שווה לו ואם לא אז נכפול את הבסיס במנה ונבצע את הפונקציה שוב, בפונקציה העיקרית נכניס את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+ לפונקציית העזר גם בתור הבסיס וגם בתור המנה.</div>
+</div></div>.</li>
+<li class="labeling_item" id='magicparlabel-638'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ יותר מזה אין לי מה להגיד מלבד העובדה שכמו תמיד דוגמאות עוזרות להבנת הנושא.</li>
+</ol>
+<section>
+<h3 class='subsection' id='magicparlabel-639'><span class="subsection_label">1.1</span> דוגמאות</h3>
+<div class='example'>
+<div class="example_item" id='magicparlabel-640'><span class="example_label">‫דוגמה 1.1.</span>
+<b><a href="https://he.wikipedia.org/wiki/%D7%A2%D7%A6%D7%A8%D7%AA_(%D7%9E%D7%AA%D7%9E%D7%98%D7%99%D7%A7%D7%94)">עצרת</a> (<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>!</mo>
+</mrow>
+</math>
+)</b></div>
+
+<div class='float-algorithm'><div class='plain_layout' id='magicparlabel-645'><span class='float-caption-Standard float-caption float-caption-standard'>
+<br />
+אלגוריתם 2  עצרת</span></div>
+
+<div class='plain_layout' id='magicparlabel-650'>הקלט הוא מספר טבעי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo>&#x2208;</mo>
+ <msub>
+  <mstyle mathvariant='double-struck'>
+   <mi>N</mi>
+  </mstyle>
+  <mn>0</mn>
+ </msub>
+</mrow>
+</math>
+ (כולל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+).</div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-651'>אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>=</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+:
+<ul class='lyxitem lyxitemii'>
+<li class="itemize_item" id='magicparlabel-652'>החזר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+.</li>
+</ul>
+</li><li class="itemize_item" id='magicparlabel-653'>אחרת:
+<ul class='lyxitem lyxitemii'>
+<li class="itemize_item" id='magicparlabel-654'>החזר את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ כפול <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>-</mo>
+   <mn>1</mn>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>!</mo>
+</mrow>
+</math>
+ (כלומר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ כפול הפלט עבור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>-</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+).</li>
+</ul>
+</li></ul>
+</div>
+
+</div>
+<div class='example'>
+<div class="example_item" id='magicparlabel-656'><span class="example_label">‫דוגמה 1.2.</span>
+<b><a href="https://he.wikipedia.org/wiki/%D7%A1%D7%93%D7%A8%D7%AA_%D7%A4%D7%99%D7%91%D7%95%D7%A0%D7%90%D7%A6%27%D7%99">פיבונאצ'י סדרת</a><div class='foot'><span class="foot_label">3</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-660'>ערך בוויקיפדיה: <a href="https://he.wikipedia.org/wiki/%D7%A4%D7%99%D7%91%D7%95%D7%A0%D7%90%D7%A6%27%D7%99">פיבונאצ'י</a>.</div>
+</div></div></b></div>
+
+<div class='float-algorithm'><div class='plain_layout' id='magicparlabel-665'><span class='float-caption-Standard float-caption float-caption-standard'>
+<br />
+אלגוריתם 3  סדרת פיבונאצ&#8217;י</span></div>
+
+<div class='plain_layout' id='magicparlabel-670'>הקלט הוא מספר טבעי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo>&#x2208;</mo>
+ <msub>
+  <mstyle mathvariant='double-struck'>
+   <mi>N</mi>
+  </mstyle>
+  <mn>0</mn>
+ </msub>
+</mrow>
+</math>
+ (כולל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+).</div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-671'>אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>=</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+:
+<ul class='lyxitem lyxitemii'>
+<li class="itemize_item" id='magicparlabel-672'>החזר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+.</li>
+</ul>
+</li><li class="itemize_item" id='magicparlabel-673'>אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+:
+<ul class='lyxitem lyxitemii'>
+<li class="itemize_item" id='magicparlabel-674'>החזר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+.</li>
+</ul>
+</li><li class="itemize_item" id='magicparlabel-675'>אחרת:
+<ul class='lyxitem lyxitemii'>
+<li class="itemize_item" id='magicparlabel-676'>החזר את הסכום של מספר פיבונאצ&#8217;י ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>-</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+ ומספר פיבונאצ&#8217;י ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>-</mo>
+ <mn>2</mn>
+</mrow>
+</math>
+ (כלומר את הסכום של הפלטים עבור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>-</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>-</mo>
+ <mn>2</mn>
+</mrow>
+</math>
+).</li>
+</ul>
+</li></ul>
+</div>
+
+</div>
+<div class='standard' style='text-align: left' id='magicparlabel-677'> </div>
+</section>
+</ul>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-678'><span class="section_label">2</span> גישוש נסוג (Backtracking)</h2>
+<ul class='nested'>
+<div class='example'>
+<div class="example_item" id='magicparlabel-679'><span class="example_label">‫דוגמה 2.1.</span>
+איך פותרים מבוך? נתקדם מנקודת ההתחלה לצומת הקרובה (אם אין צומת קרובה אז יצאנו מהמבוך או שאין לו פתרון), נבחר אחת מהאפשרויות בצומת ונחזור על אותה הפעולה כאשר אם הצלחנו לצאת מן המבוך נחזיר שיש למבוך פתרון ואם נתקענו אז נחזור אחורה ונבחר באפשרות אחרת; אם נגמרו האפשרויות נחזור עוד אחורה לצומת שלפניה ואם הגענו לנקודת ההתחלה המקורית נחזיר שאין למבוך פתרון.</div>
+</div>
+<div class='standard' id='magicparlabel-680'>בדוגמה זו ראינו מקרה קלאסי של פתרון בעיה באמצעות &#8220;גישוש נסוג&#8221; (Backtracking), זוהי שיטה רקורסיבית לפתרון בעיות שעבורן ייתכן שיש לרקורסיה יותר מענף אחד: בדוגמה של המבוך בכל צומת ייתכן שיש יותר מפנייה אחת שאפשר לקחת בעוד שבפונקציית העצרת יש רק &#8220;פנייה&#8221; אחת שבה אפשר לבחור, גם בפונקציה של סדרת פיבונאצ&#8217;י יש רק דרך אחת לבחור בה בגלל שאנחנו מוכרחים לחשב את שני האיברים הקודמים בסדרה ואין לנו את היכולת לבחור לחשב רק אחד מהם.</div>
+
+<div class='standard' id='magicparlabel-681'>לגישוש נסוג ישנן שתי גרסאות: באחת אנחנו רוצים לקבל פתרון אחד ולא מעניין אותנו אם יש יותר מאחד ולכן ברגע שמצאנו פתרון אנחנו עוצרים את ריצת הפונקציה ומחזירים אותו, לעומת זאת ישנם מקרים שבהם כל הפתרונות האפשריים של הבעיה מעניינים אותנו (אולי כי אנחנו רוצים לבחור את הפתרון הטוב ביותר או לספור את הפתרונות) ולכן לא נעצור את הפונקציה עד שנדע בוודאות שלא קיימים פתרונות נוספים מלבד אלו שכבר ראינו.</div>
+
+<div class='standard' id='magicparlabel-682'>ניתן לתאר באופן ציורי את פעולת הפונקציה באמצעות התחלה בצומת נתון של <a href="https://he.wikipedia.org/wiki/%D7%A2%D7%A5_(%D7%AA%D7%95%D7%A8%D7%AA_%D7%94%D7%92%D7%A8%D7%A4%D7%99%D7%9D)">עץ</a><div class='foot'><span class="foot_label">4</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-686'>ייתכן שישנם כמה צמתים שבהם ניתן להתחיל ואז ייתכן שנצטרך לעבור על כולם.</div>
+</div></div> ומעבר על כל הצמתים המקושרים לצומת בזו אחר זו (כאשר לכל אחת מהן עושים את אותה הפעולה) עד שמגיעים לצומת שממנו ודאי שכבר אין פתרון בענף הזה או שמגיעים לצומת שממנו א&#8221;א להמשיך לשום כיוון מלבד זה שבאנו בו<div class='foot'><span class="foot_label">5</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-690'>בתורת הגרפים נקרא &#8220;עלה&#8221;.</div>
+</div></div> שהוא פתרון; אם אף אחד מן הקצוות אינו מהווה פתרון אז לבעיה אין פתרון ואם אחד מהם אכן מהווה פתרון אז הדבר תלוי בגרסה של הגישוש הנסוג: אם אנחנו מחפשים פתרון יחיד נפסיק את החיפוש ונחזיר אותו ואם אנחנו מעוניינים בכל הפתרונות האפשריים נמשיך לחפש פתרונות (כלומר נשמור את הנתונים שאנחנו צריכים מהפתרון שמצאנו ואז נחזור חזרה אחורה כאילו לא מצאנו פתרון ונמשיך לחפש במקומות אחרים).</div>
+
+<div class='standard' style='text-align: left' id='magicparlabel-691'><b>תמונה הייתה שווה כאן אלף מילים.</b></div>
+
+
+<div class='standard' style='text-align: left' id='magicparlabel-693'><b>גישוש נסוג - גרסה ראשונה:</b></div>
+
+
+<div class='float-algorithm'><div class='plain_layout' id='magicparlabel-698'><span class='float-caption-Standard float-caption float-caption-standard'>
+<br />
+אלגוריתם 4  גישוש נסוג - גרסה 1</span></div>
+
+<div class='plain_layout' id='magicparlabel-703'>הקלט יכול להיות כל דבר.</div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-704'>אם הקלט הוא פתרון ודאי:
+<ul class='lyxitem lyxitemii'>
+<li class="itemize_item" id='magicparlabel-705'>החזר את הפתרון.</li>
+</ul>
+</li><li class="itemize_item" id='magicparlabel-706'>אחרת, אם לכל אפשרות להמשיך מן הקלט ודאי שאין פתרון (כי כל אפשרויות ההתקדמות נבדקו והן לא מובילות לפתרון או שאין אפשרויות התקדמות והקלט עצמו אינו פתרון):
+<ul class='lyxitem lyxitemii'>
+<li class="itemize_item" id='magicparlabel-707'>אם הקלט הוא הקלט המקורי (הראשון שהתקבל ברקורסיה):
+<ul class='lyxitem lyxitemiii'>
+<li class="itemize_item" id='magicparlabel-708'>החזר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtext>False</mtext>
+</math>
+.</li>
+</ul>
+</li><li class="itemize_item" id='magicparlabel-709'>אחרת:
+<ul class='lyxitem lyxitemiii'>
+<li class="itemize_item" id='magicparlabel-710'>חזור אחורה לקלט הקודם והפעל עליו את הפונקציה המקורית (קריאה רקורסיבית).</li>
+</ul>
+</li></ul>
+</li><li class="itemize_item" id='magicparlabel-711'>אחרת, אם ישנן אפשרויות התקדמות שלא נבדקו:
+<ul class='lyxitem lyxitemii'>
+<li class="itemize_item" id='magicparlabel-712'>בחר אחת מהן והפעל עליה את הפונקציה המקורית (קריאה רקורסיבית).</li>
+</ul>
+</li></ul>
+</div>
+
+
+<div class='standard' style='text-align: left' id='magicparlabel-713'> </div>
+
+<div class='standard' style='text-align: left' id='magicparlabel-714'><b>גישוש נסוג - גרסה שנייה:</b></div>
+
+
+<div class='float-algorithm'><div class='plain_layout' id='magicparlabel-719'><span class='float-caption-Standard float-caption float-caption-standard'>
+<br />
+אלגוריתם 5  גישוש נסוג - גרסה 2</span></div>
+
+<div class='plain_layout' id='magicparlabel-724'>הקלט יכול להיות כל דבר.</div>
+
+<div class='plain_layout' id='magicparlabel-725'>צור אובייקט ריק <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+ שישמור את הנתונים הנדרשים מכל הפתרונות שנמצא בהמשך.</div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-726'>אם כל אפשרות להמשיך מן הקלט כבר נבדקה:
+<ul class='lyxitem lyxitemii'>
+<li class="itemize_item" id='magicparlabel-727'>אם הקלט הוא הקלט המקורי (הראשון שהתקבל ברקורסיה):
+<ul class='lyxitem lyxitemiii'>
+<li class="itemize_item" id='magicparlabel-728'>החזר את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+.</li>
+</ul>
+</li><li class="itemize_item" id='magicparlabel-729'>אחרת, אם הקלט הוא פתרון:
+<ul class='lyxitem lyxitemiii'>
+<li class="itemize_item" id='magicparlabel-730'>עדכן את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+ ע&#8221;פ קלט זה, חזור אחורה לקלט הקודם והפעל עליו את הפונקציה המקורית (קריאה רקורסיבית).</li>
+</ul>
+</li><li class="itemize_item" id='magicparlabel-731'>אחרת (אם הקלט אינו פתרון):
+<ul class='lyxitem lyxitemiii'>
+<li class="itemize_item" id='magicparlabel-732'>חזור אחורה לקלט הקודם והפעל עליו את הפונקציה המקורית (קריאה רקורסיבית).</li>
+</ul>
+</li></ul>
+</li><li class="itemize_item" id='magicparlabel-733'>אחרת (אם ישנן אפשרויות התקדמות שלא נבדקו):
+<ul class='lyxitem lyxitemii'>
+<li class="itemize_item" id='magicparlabel-734'>בחר אחת מהן והפעל עליה את הפונקציה המקורית (קריאה רקורסיבית).</li>
+</ul>
+</li></ul>
+</div>
+
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-735'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ כמובן שניתן לחלק למקרים בסדר אחר<div class='foot'><span class="foot_label">6</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-739'>למשל להכניס בגרסה הראשונה את האפשרות שהקלט הוא פתרון למקרה שבו כל האפשרויות נבדקו כפי שעשינו בגרסה השנייה או להפך: להוציא בגרסה השנייה את המקרה שהקלט הוא פתרון מתוך המקרה שכל האפשרויות נבדקו ולשים אותו בנפרד כפי שעשינו בגרסה הראשונה.</div>
+</div></div> אך יש לעבור על כולם.</li>
+<li class="labeling_item" id='magicparlabel-740'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ החלק הכי מסובך בגישוש נסוג הוא החזרה לאחור, פעמים רבות ההתקדמות שלנו מתבטאת ע&#8221;י שינוי הקלט<div class='foot'><span class="foot_label">7</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-744'>או העתק שלו אם אסור לנו לשנות את הקלט.</div>
+</div></div> (למשל בפתרון סודוקו) ואז כדי שהחזרה לאחור תתבצע בצורה מוצלחת עלינו &#8220;לנקות&#8221; אחרינו את השטח ולוודא שלא השארנו עקבות, כלומר עלינו להחזיר את המצב לקדמותו ולבטל כל שינוי שעשינו בקלט עד לנקודה שאליה אנחנו חוזרים, זה לא כל כך פשוט.</li>
+</ol>
+</ul>
+</section>
+<script src="../../tree_view.js"></script>
+</body>
+</html>

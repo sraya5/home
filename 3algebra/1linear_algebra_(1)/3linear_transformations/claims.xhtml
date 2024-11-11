@@ -1,0 +1,4094 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="he-IL">
+<head>
+<link rel="stylesheet" type="text/css" href="../../../main.css" />
+<meta name="viewport" content="width=device-width" />
+<meta name="generator" content="LyX 2.4.1" />
+<title>העתקות ליניאריות - טענות בלבד</title>
+<script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body dir="auto">
+<section>
+<h2 class='section' id='magicparlabel-612'><span class="section_label">1</span> התחלה</h2>
+<ul class='nested'>
+<div class='standard' id='magicparlabel-613'>יהיו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>W</mi>
+</math>
+ מרחבים וקטוריים מעל לשדה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='double-struck'>
+ <mi>F</mi>
+</mstyle>
+</math>
+.</div>
+<div class='theorem'>
+<div class="theorem_item" id='magicparlabel-614'><span class="theorem_label">משפט 1.1:</span>
+<b>תכונות של העתקות ליניאריות</b>
+<br />
+תהא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>T</mi>
+ <mo stretchy='false'>:</mo>
+ <mi>V</mi>
+ <mo>&#x2192;</mo>
+ <mi>W</mi>
+</mrow>
+</math>
+ העתקה ליניארית, מתקיימים שלושת הפסוקים הבאים:</div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-615'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>T</mi>
+ <mrow>
+  <mo>(</mo>
+  <msub>
+   <mn>0</mn>
+   <mi>V</mi>
+  </msub>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mn>0</mn>
+  <mi>W</mi>
+ </msub>
+</mrow>
+</math>
+.</li>
+<li class="enumerate_item" id='magicparlabel-616'>לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>v</mi>
+ <mo>&#x2208;</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+ מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>T</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mi>v</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mo stretchy='false'>-</mo>
+ <mi>T</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>v</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</li>
+<li class="enumerate_item" id='magicparlabel-617'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>T</mi>
+</math>
+ מכבדת צירופים ליניאריים - לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>v</mi>
+  <mn>1</mn>
+ </msub>
+ <mo stretchy='false'>,</mo>
+ <msub>
+  <mi>v</mi>
+  <mn>2</mn>
+ </msub>
+ <mo stretchy='false'>,</mo>
+ <mi>&#x2026;</mi>
+ <mo stretchy='false'>,</mo>
+ <msub>
+  <mi>v</mi>
+  <mi>n</mi>
+ </msub>
+ <mo>&#x2208;</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+ ולכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>a</mi>
+  <mn>1</mn>
+ </msub>
+ <mo stretchy='false'>,</mo>
+ <msub>
+  <mi>a</mi>
+  <mn>2</mn>
+ </msub>
+ <mo stretchy='false'>,</mo>
+ <mi>&#x2026;</mi>
+ <mo stretchy='false'>,</mo>
+ <msub>
+  <mi>a</mi>
+  <mi>n</mi>
+ </msub>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>F</mi>
+ </mstyle>
+</mrow>
+</math>
+ מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>T</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <munderover>
+    <mo>&#x2211;</mo>
+    <mrow>
+     <mi>i</mi>
+     <mo stretchy='false'>=</mo>
+     <mn>1</mn>
+    </mrow>
+    <mi>n</mi>
+   </munderover>
+   <msub>
+    <mi>a</mi>
+    <mi>i</mi>
+   </msub>
+   <mo>&#x22C5;</mo>
+   <msub>
+    <mi>v</mi>
+    <mi>i</mi>
+   </msub>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>i</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>1</mn>
+  </mrow>
+  <mi>n</mi>
+ </munderover>
+ <msub>
+  <mi>a</mi>
+  <mi>i</mi>
+ </msub>
+ <mo>&#x22C5;</mo>
+ <mi>T</mi>
+ <mrow>
+  <mo>(</mo>
+  <msub>
+   <mi>v</mi>
+   <mi>i</mi>
+  </msub>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</li>
+</ol>
+</div>
+<div class='theorem'>
+<div class="theorem_item" id='magicparlabel-619'><span class="theorem_label">משפט 1.2:</span>
+נניח ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ נ&#8221;ס ויהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>B</mi>
+ </mstyle>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mi>v</mi>
+    <mn>1</mn>
+   </msub>
+   <mo stretchy='false'>,</mo>
+   <msub>
+    <mi>v</mi>
+    <mn>2</mn>
+   </msub>
+   <mo stretchy='false'>,</mo>
+   <mi>&#x2026;</mi>
+   <mo stretchy='false'>,</mo>
+   <msub>
+    <mi>v</mi>
+    <mi>n</mi>
+   </msub>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ בסיס של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+, לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>w</mi>
+  <mn>1</mn>
+ </msub>
+ <mo stretchy='false'>,</mo>
+ <msub>
+  <mi>w</mi>
+  <mn>2</mn>
+ </msub>
+ <mo stretchy='false'>,</mo>
+ <mi>&#x2026;</mi>
+ <mo stretchy='false'>,</mo>
+ <msub>
+  <mi>w</mi>
+  <mi>n</mi>
+ </msub>
+ <mo>&#x2208;</mo>
+ <mi>W</mi>
+</mrow>
+</math>
+ קיימת העתקה ליניארית <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>T</mi>
+ <mo stretchy='false'>:</mo>
+ <mi>V</mi>
+ <mo>&#x2192;</mo>
+ <mi>W</mi>
+</mrow>
+</math>
+ יחידה כך ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>T</mi>
+ <mrow>
+  <mo>(</mo>
+  <msub>
+   <mi>v</mi>
+   <mi>i</mi>
+  </msub>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mi>w</mi>
+  <mi>i</mi>
+ </msub>
+</mrow>
+</math>
+ לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo>&#x2265;</mo>
+ <mi>i</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>N</mi>
+ </mstyle>
+</mrow>
+</math>
+.</div>
+</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-620'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ כלומר ניתן להגדיר העתקה ליניארית ע&#8221;י הגדרת פעולתה על איברי בסיס בלבד.</li>
+</ol>
+<div class='corollary'>
+<div class="corollary_item" id='magicparlabel-621'><span class="corollary_label">‫מסקנה 1.3.</span>
+תהא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>T</mi>
+ <mo stretchy='false'>:</mo>
+ <msup>
+  <mstyle mathvariant='double-struck'>
+   <mi>F</mi>
+  </mstyle>
+  <mi>n</mi>
+ </msup>
+ <mo>&#x2192;</mo>
+ <msup>
+  <mstyle mathvariant='double-struck'>
+   <mi>F</mi>
+  </mstyle>
+  <mi>m</mi>
+ </msup>
+</mrow>
+</math>
+ העתקה ליניארית, קיימת <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>A</mi>
+ <mo>&#x2208;</mo>
+ <msub>
+  <mi>M</mi>
+  <mrow>
+   <mi>m</mi>
+   <mo>&#x00D7;</mo>
+   <mi>n</mi>
+  </mrow>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='double-struck'>
+   <mi>F</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ יחידה כך ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>T</mi>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mi>T</mi>
+  <mi>A</mi>
+ </msub>
+</mrow>
+</math>
+.</div>
+</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-622'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ כבר ראינו שהעמודה ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>j</mi>
+</math>
+ של מטריצה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>A</mi>
+ <mo>&#x2208;</mo>
+ <msub>
+  <mi>M</mi>
+  <mrow>
+   <mi>m</mi>
+   <mo>&#x00D7;</mo>
+   <mi>n</mi>
+  </mrow>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='double-struck'>
+   <mi>F</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ היא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>T</mi>
+  <mi>A</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <msub>
+   <mi>e</mi>
+   <mi>j</mi>
+  </msub>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mi>A</mi>
+ <mo>&#x22C5;</mo>
+ <msub>
+  <mi>e</mi>
+  <mi>j</mi>
+ </msub>
+</mrow>
+</math>
+ ולכן ניתן למצוא את המטריצה המתאימה ע&#8221;י הפעלת <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>T</mi>
+</math>
+ על איברי הבסיס הסטנדרטי.</li>
+</ol>
+<div class='claim'>
+<div class="claim_item" id='magicparlabel-623'><span class="claim_label">טענה 1.4.</span>
+לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>A</mi>
+ <mo stretchy='false'>,</mo>
+ <mi>B</mi>
+ <mo>&#x2208;</mo>
+ <msub>
+  <mi>M</mi>
+  <mi>n</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='double-struck'>
+   <mi>F</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mtext>tr</mtext>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>A</mi>
+   <mi>B</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mtext>tr</mtext>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>B</mi>
+   <mi>A</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</div>
+</div>
+<div class='standard' style='text-align: left' id='magicparlabel-624'> </div>
+</ul>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-625'><span class="section_label">2</span> גרעין ותמונה, הרכבה והפיכות</h2>
+<ul class='nested'>
+<div class='standard' id='magicparlabel-626'>יהיו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>W</mi>
+</math>
+ מרחבים וקטוריים מעל לשדה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='double-struck'>
+ <mi>F</mi>
+</mstyle>
+</math>
+, ותהא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>T</mi>
+ <mo stretchy='false'>:</mo>
+ <mi>V</mi>
+ <mo>&#x2192;</mo>
+ <mi>W</mi>
+</mrow>
+</math>
+ העתקה ליניארית.</div>
+<div class='claim'>
+<div class="claim_item" id='magicparlabel-627'><span class="claim_label">טענה 2.1.</span>
+הגרעין והתמונה של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>T</mi>
+</math>
+ הם תתי-מרחבים של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>W</mi>
+</math>
+ בהתאמה.</div>
+</div>
+<dl class='description'>
+<dt class="description_label">תזכורת:</dt>
+<dd class="description_item" id='magicparlabel-628'> עבור פונקציה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mo stretchy='false'>:</mo>
+ <mi>A</mi>
+ <mo>&#x2192;</mo>
+ <mi>B</mi>
+</mrow>
+</math>
+ ותת-קבוצה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>S</mi>
+ <mo>&#x2286;</mo>
+ <mi>B</mi>
+</mrow>
+</math>
+ אנו מגדירים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mi>f</mi>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mn>1</mn>
+  </mrow>
+ </msup>
+ <mrow>
+  <mo>(</mo>
+  <mi>S</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <mi>a</mi>
+   <mo>&#x2208;</mo>
+   <mi>A</mi>
+   <mo>&#x2223;</mo>
+   <mi>f</mi>
+   <mrow>
+    <mo>(</mo>
+    <mi>a</mi>
+    <mo>)</mo>
+   </mrow>
+   <mo>&#x2208;</mo>
+   <mi>S</mi>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+, גם אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>f</mi>
+</math>
+ אינה הפיכה.</dd>
+</dl>
+<div class='claim'>
+<div class="claim_item" id='magicparlabel-629'><span class="claim_label">טענה 2.2.</span>
+לכל תמ&#8221;ו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>U</mi>
+ <mo>&#x2286;</mo>
+ <mi>W</mi>
+</mrow>
+</math>
+ גם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mi>T</mi>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mn>1</mn>
+  </mrow>
+ </msup>
+ <mrow>
+  <mo>(</mo>
+  <mi>U</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ הוא תמ&#8221;ו (של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+), כמו כן לכל ישריה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>S</mi>
+ <mo>&#x2286;</mo>
+ <mi>W</mi>
+</mrow>
+</math>
+ הקבוצה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mi>T</mi>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mn>1</mn>
+  </mrow>
+ </msup>
+ <mrow>
+  <mo>(</mo>
+  <mi>S</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ היא ישריה או הקבוצה הריקה.</div>
+</div>
+<div class='claim'>
+<div class="claim_item" id='magicparlabel-631'><span class="claim_label">טענה 2.3.</span>
+<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>T</mi>
+</math>
+ חח&#8221;ע אם&#8221;ם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>ker</mo>
+ <mi>T</mi>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>{</mo>
+  <msub>
+   <mn>0</mn>
+   <mi>V</mi>
+  </msub>
+  <mo>}</mo>
+ </mrow>
+</mrow>
+</math>
+.</div>
+</div>
+<div class='corollary'>
+<div class="corollary_item" id='magicparlabel-632'><span class="corollary_label">‫מסקנה 2.4.</span>
+<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>T</mi>
+</math>
+ חח&#8221;ע אם&#8221;ם לכל תת-קבוצה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>S</mi>
+ <mo>&#x2286;</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+ בת&#8221;ל גם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>T</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>S</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ בת&#8221;ל.</div>
+</div>
+<div class='claim'>
+<div class="claim_item" id='magicparlabel-633'><span class="claim_label">טענה 2.5.</span>
+תהא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>S</mi>
+ <mo>&#x2286;</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+ תת-קבוצה, אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>T</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>S</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ בת&#8221;ל אז גם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>S</mi>
+</math>
+ בת&#8221;ל.</div>
+</div>
+<div class='claim'>
+<div class="claim_item" id='magicparlabel-635'><span class="claim_label">טענה 2.6.</span>
+תהא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>S</mi>
+ <mo>&#x2286;</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+ תת-קבוצה פורשת (<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mtext>span</mtext>
+ <mi>S</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+), הקבוצה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>T</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>S</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ פורשת את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mtext>Im</mtext>
+ <mi>T</mi>
+</mrow>
+</math>
+ (<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mtext>span</mtext>
+ <mi>T</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>S</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mtext>Im</mtext>
+ <mi>T</mi>
+</mrow>
+</math>
+).</div>
+</div>
+<div class='corollary'>
+<div class="corollary_item" id='magicparlabel-636'><span class="corollary_label">‫מסקנה 2.7.</span>
+אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ נ&#8221;ס אז גם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mtext>Im</mtext>
+ <mi>T</mi>
+</mrow>
+</math>
+ נ&#8221;ס.</div>
+</div>
+<div class='corollary'>
+<div class="corollary_item" id='magicparlabel-638'><span class="corollary_label">‫מסקנה 2.8.</span>
+נניח ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>W</mi>
+</math>
+ נ&#8221;ס, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>T</mi>
+</math>
+ חח&#8221;ע ועל אם&#8221;ם לכל בסיס <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>B</mi>
+ </mstyle>
+ <mo>&#x2286;</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+ (של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+) גם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>T</mi>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='script'>
+   <mi>B</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ בסיס (של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>W</mi>
+</math>
+).</div>
+</div>
+<div class='claim'>
+<div class="claim_item" id='magicparlabel-639'><span class="claim_label">טענה 2.9.</span>
+לכל מטריצה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>A</mi>
+ <mo>&#x2208;</mo>
+ <msub>
+  <mi>M</mi>
+  <mrow>
+   <mi>m</mi>
+   <mo>&#x00D7;</mo>
+   <mi>n</mi>
+  </mrow>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='double-struck'>
+   <mi>F</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mtext>rk</mtext>
+ <msub>
+  <mi>T</mi>
+  <mi>A</mi>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <mtext>rk</mtext>
+ <mi>A</mi>
+</mrow>
+</math>
+.</div>
+</div>
+<div class='theorem'>
+<div class="theorem_item" id='magicparlabel-640'><span class="theorem_label">משפט 2.10:</span>
+<b>משפט הדרגה (משפט הממדים השני)</b>
+<br />
+מתקיים:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mo>dim</mo>
+ <mi>V</mi>
+ <mo stretchy='false'>=</mo>
+ <mo>dim</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mo>ker</mo>
+   <mi>T</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>+</mo>
+ <mo>dim</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mtext>Im</mtext>
+   <mi>T</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mtext>null</mtext>
+ <mi>T</mi>
+ <mo stretchy='false'>+</mo>
+ <mtext>rk</mtext>
+ <mi>T</mi>
+</mrow>
+</math>
+</div>
+</div>
+<div class='corollary'>
+<div class="corollary_item" id='magicparlabel-641'><span class="corollary_label">‫מסקנה 2.11.</span>
+אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ נ&#8221;ס ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>T</mi>
+</math>
+ חח&#8221;ע ועל אז <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>W</mi>
+</math>
+ נ&#8221;ס ומתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>dim</mo>
+ <mi>V</mi>
+ <mo stretchy='false'>=</mo>
+ <mo>dim</mo>
+ <mi>W</mi>
+</mrow>
+</math>
+.</div>
+</div>
+<div class='corollary'>
+<div class="corollary_item" id='magicparlabel-643'><span class="corollary_label">‫מסקנה 2.12.</span>
+נניח ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ נ&#8221;ס, מתקיימים ארבעת הפסוקים הבאים:</div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-644'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>dim</mo>
+ <mi>V</mi>
+ <mo>&#x2265;</mo>
+ <mo>dim</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mtext>Im</mtext>
+   <mi>T</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</li>
+<li class="enumerate_item" id='magicparlabel-645'>אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>T</mi>
+</math>
+ על אז <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>dim</mo>
+ <mi>V</mi>
+ <mo>&#x2265;</mo>
+ <mo>dim</mo>
+ <mi>W</mi>
+</mrow>
+</math>
+.</li>
+<li class="enumerate_item" id='magicparlabel-646'>אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>T</mi>
+</math>
+ חח&#8221;ע אז <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>dim</mo>
+ <mi>V</mi>
+ <mo stretchy='false'>=</mo>
+ <mo>dim</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mtext>Im</mtext>
+   <mi>T</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ ומכאן שאם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>W</mi>
+</math>
+ נ&#8221;ס אז <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>dim</mo>
+ <mi>V</mi>
+ <mo>&#x2264;</mo>
+ <mo>dim</mo>
+ <mi>W</mi>
+</mrow>
+</math>
+.</li>
+<li class="enumerate_item" id='magicparlabel-647'>נניח ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>W</mi>
+</math>
+ נ&#8221;ס וש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>dim</mo>
+ <mi>V</mi>
+ <mo stretchy='false'>=</mo>
+ <mo>dim</mo>
+ <mi>W</mi>
+</mrow>
+</math>
+, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>T</mi>
+</math>
+ על אם&#8221;ם היא חח&#8221;ע.</li>
+</ol>
+</div>
+<div class='claim'>
+<div class="claim_item" id='magicparlabel-648'><span class="claim_label">טענה 2.13.</span>
+נניח שקיימת העתקה ליניארית הפיכה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>S</mi>
+ <mo stretchy='false'>:</mo>
+ <mi>V</mi>
+ <mo>&#x2192;</mo>
+ <mi>W</mi>
+</mrow>
+</math>
+, גם ההופכית שלה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mi>S</mi>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mn>1</mn>
+  </mrow>
+ </msup>
+ <mo stretchy='false'>:</mo>
+ <mi>W</mi>
+ <mo>&#x2192;</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+ היא העתקה ליניארית.</div>
+</div>
+<div class='claim'>
+<div class="claim_item" id='magicparlabel-650'><span class="claim_label">טענה 2.14.</span>
+יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>U</mi>
+</math>
+ מרחב וקטורי מעל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='double-struck'>
+ <mi>F</mi>
+</mstyle>
+</math>
+ ותהא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>S</mi>
+ <mo stretchy='false'>:</mo>
+ <mi>W</mi>
+ <mo>&#x2192;</mo>
+ <mi>U</mi>
+</mrow>
+</math>
+ העתקה ליניארית, גם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>S</mi>
+ <mo>&#x25CB;</mo>
+ <mi>T</mi>
+</mrow>
+</math>
+ היא העתקה ליניארית.</div>
+</div>
+<div class='claim'>
+<div class="claim_item" id='magicparlabel-652'><span class="claim_label">טענה 2.15.</span>
+יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>U</mi>
+</math>
+ מרחב וקטורי מעל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='double-struck'>
+ <mi>F</mi>
+</mstyle>
+</math>
+ ותהא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>S</mi>
+ <mo stretchy='false'>:</mo>
+ <mi>W</mi>
+ <mo>&#x2192;</mo>
+ <mi>U</mi>
+</mrow>
+</math>
+ העתקות ליניאריות, מתקיים:</div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-653'>אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>T</mi>
+</math>
+ על אז <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mtext>rk</mtext>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>S</mi>
+   <mo>&#x25CB;</mo>
+   <mi>T</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mtext>rk</mtext>
+ <mi>S</mi>
+</mrow>
+</math>
+.</li>
+<li class="itemize_item" id='magicparlabel-654'>אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>S</mi>
+</math>
+ חח&#8221;ע אז <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mtext>rk</mtext>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>S</mi>
+   <mo>&#x25CB;</mo>
+   <mi>T</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mtext>rk</mtext>
+ <mi>T</mi>
+</mrow>
+</math>
+.</li>
+</ul>
+</div>
+<div class='standard' style='text-align: left' id='magicparlabel-655'> </div>
+</ul>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-656'><span class="section_label">3</span> המטריצה המייצגת</h2>
+<ul class='nested'>
+<div class='standard' id='magicparlabel-657'>יהיו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>W</mi>
+</math>
+ מרחבים וקטוריים נוצרים סופית מעל לשדה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='double-struck'>
+ <mi>F</mi>
+</mstyle>
+</math>
+, יהיו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>B</mi>
+</mstyle>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>C</mi>
+</mstyle>
+</math>
+ בסיסים סדורים של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>W</mi>
+</math>
+ בהתאמה ותהא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>T</mi>
+ <mo stretchy='false'>:</mo>
+ <mi>V</mi>
+ <mo>&#x2192;</mo>
+ <mi>W</mi>
+</mrow>
+</math>
+ העתקה ליניארית.</div>
+<section>
+<h3 class='subsection' id='magicparlabel-658'><span class="subsection_label">3.1</span> התחלה</h3>
+<div class='claim'>
+<div class="claim_item" id='magicparlabel-659'><span class="claim_label">טענה 3.1.</span>
+תהא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>A</mi>
+ <mo>&#x2208;</mo>
+ <msub>
+  <mi>M</mi>
+  <mrow>
+   <mi>m</mi>
+   <mo>&#x00D7;</mo>
+   <mi>n</mi>
+  </mrow>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='double-struck'>
+   <mi>F</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ ויהיו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>E</mi>
+ <mn>1</mn>
+</msub>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>E</mi>
+ <mn>2</mn>
+</msub>
+</math>
+ הבסיסים הסטנדרטיים של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mstyle mathvariant='double-struck'>
+  <mi>F</mi>
+ </mstyle>
+ <mi>n</mi>
+</msup>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mstyle mathvariant='double-struck'>
+  <mi>F</mi>
+ </mstyle>
+ <mi>m</mi>
+</msup>
+</math>
+ בהתאמה, מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msubsup>
+  <mrow>
+   <mo>[</mo>
+   <msub>
+    <mi>T</mi>
+    <mi>A</mi>
+   </msub>
+   <mo>]</mo>
+  </mrow>
+  <msub>
+   <mi>E</mi>
+   <mn>2</mn>
+  </msub>
+  <msub>
+   <mi>E</mi>
+   <mn>1</mn>
+  </msub>
+ </msubsup>
+ <mo stretchy='false'>=</mo>
+ <mi>A</mi>
+</mrow>
+</math>
+.</div>
+</div>
+<div class='claim'>
+<div class="claim_item" id='magicparlabel-661'><span class="claim_label">טענה 3.2.</span>
+נסמן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mo>dim</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>m</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mo>dim</mo>
+ <mi>W</mi>
+</mrow>
+</math>
+ ותהא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>A</mi>
+ <mo>&#x2208;</mo>
+ <msub>
+  <mi>M</mi>
+  <mrow>
+   <mi>m</mi>
+   <mo>&#x00D7;</mo>
+   <mi>n</mi>
+  </mrow>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='double-struck'>
+   <mi>F</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+, קיימת ה&#8221;ל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>S</mi>
+ <mo stretchy='false'>:</mo>
+ <mi>V</mi>
+ <mo>&#x2192;</mo>
+ <mi>W</mi>
+</mrow>
+</math>
+ יחידה כך ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>A</mi>
+ <mo stretchy='false'>=</mo>
+ <msubsup>
+  <mrow>
+   <mo>[</mo>
+   <mi>S</mi>
+   <mo>]</mo>
+  </mrow>
+  <mstyle mathvariant='script'>
+   <mi>C</mi>
+  </mstyle>
+  <mstyle mathvariant='script'>
+   <mi>B</mi>
+  </mstyle>
+ </msubsup>
+</mrow>
+</math>
+.</div>
+</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-662'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ בהינתן מטריצה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>A</mi>
+ <mo>&#x2208;</mo>
+ <msub>
+  <mi>M</mi>
+  <mrow>
+   <mi>m</mi>
+   <mo>&#x00D7;</mo>
+   <mi>n</mi>
+  </mrow>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='double-struck'>
+   <mi>F</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ נוכל למצוא את אותה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>S</mi>
+</math>
+ יחידה ע&#8221;י הפעלת <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>&#x3C4;</mi>
+ <mstyle mathvariant='script'>
+  <mi>C</mi>
+ </mstyle>
+</msub>
+</math>
+ על כל אחת מעמודות <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>A</mi>
+</math>
+ בנפרד ובכך למצוא לאן מעתיקה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>T</mi>
+</math>
+ את איברי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>B</mi>
+</mstyle>
+</math>
+ (מה שמגדיר ה&#8221;ל יחידה).</li>
+</ol>
+<div class='theorem'>
+<div class="theorem_item" id='magicparlabel-663'><span class="theorem_label">משפט 3.3:</span>
+לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>v</mi>
+ <mo>&#x2208;</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+ מתקיים:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msubsup>
+  <mrow>
+   <mo>[</mo>
+   <mi>T</mi>
+   <mo>]</mo>
+  </mrow>
+  <mstyle mathvariant='script'>
+   <mi>C</mi>
+  </mstyle>
+  <mstyle mathvariant='script'>
+   <mi>B</mi>
+  </mstyle>
+ </msubsup>
+ <mo>&#x22C5;</mo>
+ <msub>
+  <mrow>
+   <mo>[</mo>
+   <mi>v</mi>
+   <mo>]</mo>
+  </mrow>
+  <mstyle mathvariant='script'>
+   <mi>B</mi>
+  </mstyle>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mrow>
+   <mo>[</mo>
+   <mrow>
+    <mi>T</mi>
+    <mrow>
+     <mo>(</mo>
+     <mi>v</mi>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+   <mo>]</mo>
+  </mrow>
+  <mstyle mathvariant='script'>
+   <mi>C</mi>
+  </mstyle>
+ </msub>
+</mrow>
+</math>
+</div>
+</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-664'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ משפט זה הוא הסיבה העיקרית לכך שהמטריצה המייצגת נקראת בשם זה.</li>
+</ol>
+<div class='corollary'>
+<div class="corollary_item" id='magicparlabel-665'><span class="corollary_label">‫מסקנה 3.4.</span>
+יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>U</mi>
+</math>
+ מ&#8221;ו נ&#8221;ס מעל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='double-struck'>
+ <mi>F</mi>
+</mstyle>
+</math>
+, יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>A</mi>
+</mstyle>
+</math>
+ בסיס סדור של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>U</mi>
+</math>
+ ותהא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>S</mi>
+ <mo stretchy='false'>:</mo>
+ <mi>W</mi>
+ <mo>&#x2192;</mo>
+ <mi>U</mi>
+</mrow>
+</math>
+ העתקה ליניארית; מתקיים:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msubsup>
+  <mrow>
+   <mo>[</mo>
+   <mrow>
+    <mi>S</mi>
+    <mo>&#x25CB;</mo>
+    <mi>T</mi>
+   </mrow>
+   <mo>]</mo>
+  </mrow>
+  <mstyle mathvariant='script'>
+   <mi>A</mi>
+  </mstyle>
+  <mstyle mathvariant='script'>
+   <mi>B</mi>
+  </mstyle>
+ </msubsup>
+ <mo stretchy='false'>=</mo>
+ <msubsup>
+  <mrow>
+   <mo>[</mo>
+   <mi>S</mi>
+   <mo>]</mo>
+  </mrow>
+  <mstyle mathvariant='script'>
+   <mi>A</mi>
+  </mstyle>
+  <mstyle mathvariant='script'>
+   <mi>C</mi>
+  </mstyle>
+ </msubsup>
+ <mo>&#x22C5;</mo>
+ <msubsup>
+  <mrow>
+   <mo>[</mo>
+   <mi>T</mi>
+   <mo>]</mo>
+  </mrow>
+  <mstyle mathvariant='script'>
+   <mi>C</mi>
+  </mstyle>
+  <mstyle mathvariant='script'>
+   <mi>B</mi>
+  </mstyle>
+ </msubsup>
+</mrow>
+</math>
+</div>
+</div>
+<div class='corollary'>
+<div class="corollary_item" id='magicparlabel-667'><span class="corollary_label">‫מסקנה 3.5.</span>
+נסמן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>A</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <msubsup>
+  <mrow>
+   <mo>[</mo>
+   <mi>T</mi>
+   <mo>]</mo>
+  </mrow>
+  <mstyle mathvariant='script'>
+   <mi>C</mi>
+  </mstyle>
+  <mstyle mathvariant='script'>
+   <mi>B</mi>
+  </mstyle>
+ </msubsup>
+</mrow>
+</math>
+, מתקיים:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true' columnalign='right left '>
+ <mtr>
+  <mtd>
+   <mi>T</mi>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <msub>
+     <mi>&#x3C4;</mi>
+     <mstyle mathvariant='script'>
+      <mi>C</mi>
+     </mstyle>
+    </msub>
+    <mo>&#x25CB;</mo>
+    <msub>
+     <mi>T</mi>
+     <mi>A</mi>
+    </msub>
+    <mo>&#x25CB;</mo>
+    <msub>
+     <mi>&#x3C9;</mi>
+     <mstyle mathvariant='script'>
+      <mi>B</mi>
+     </mstyle>
+    </msub>
+   </mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <msub>
+    <mi>T</mi>
+    <mi>A</mi>
+   </msub>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <msub>
+     <mi>&#x3C9;</mi>
+     <mstyle mathvariant='script'>
+      <mi>C</mi>
+     </mstyle>
+    </msub>
+    <mo>&#x25CB;</mo>
+    <mi>T</mi>
+    <mo>&#x25CB;</mo>
+    <msub>
+     <mi>&#x3C4;</mi>
+     <mstyle mathvariant='script'>
+      <mi>B</mi>
+     </mstyle>
+    </msub>
+   </mrow>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+</div>
+</div>
+<div class='corollary'>
+<div class="corollary_item" id='magicparlabel-669'><span class="corollary_label">‫מסקנה 3.6.</span>
+מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mtext>rk</mtext>
+ <msubsup>
+  <mrow>
+   <mo>[</mo>
+   <mi>T</mi>
+   <mo>]</mo>
+  </mrow>
+  <mstyle mathvariant='script'>
+   <mi>C</mi>
+  </mstyle>
+  <mstyle mathvariant='script'>
+   <mi>B</mi>
+  </mstyle>
+ </msubsup>
+ <mo stretchy='false'>=</mo>
+ <mtext>rk</mtext>
+ <mi>T</mi>
+</mrow>
+</math>
+.</div>
+</div>
+<div class='corollary'>
+<div class="corollary_item" id='magicparlabel-671'><span class="corollary_label">‫מסקנה 3.7.</span>
+שלושת הפסוקים הבאים שקולים.</div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-672'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>T</mi>
+</math>
+ הפיכה.</li>
+<li class="itemize_item" id='magicparlabel-673'><b>קיים</b> זוג בסיסים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>B</mi>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>C</mi>
+</math>
+ (של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>W</mi>
+</math>
+ בהתאמה) כך ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msubsup>
+ <mrow>
+  <mo>[</mo>
+  <mi>T</mi>
+  <mo>]</mo>
+ </mrow>
+ <mi>C</mi>
+ <mi>B</mi>
+</msubsup>
+</math>
+ הפיכה.</li>
+<li class="itemize_item" id='magicparlabel-674'><b>לכל</b> זוג בסיסים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>B</mi>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>C</mi>
+</math>
+ (של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>W</mi>
+</math>
+ בהתאמה) המטריצה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msubsup>
+ <mrow>
+  <mo>[</mo>
+  <mi>T</mi>
+  <mo>]</mo>
+ </mrow>
+ <mi>C</mi>
+ <mi>B</mi>
+</msubsup>
+</math>
+ הפיכה.</li>
+</ul>
+</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-675'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ נשים לב לכך שכל אחד מהתנאים דורש שיתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>dim</mo>
+ <mi>V</mi>
+ <mo stretchy='false'>=</mo>
+ <mo>dim</mo>
+ <mi>W</mi>
+</mrow>
+</math>
+.</li>
+</ol>
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-676'><span class="subsection_label">3.2</span> מטריצת מעבר בסיס</h3>
+<div class='corollary'>
+<div class="corollary_item" id='magicparlabel-677'><span class="corollary_label">‫מסקנה 3.8.</span>
+<b>תכונות של מטריצת מעבר בסיס</b>
+<br />
+יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>A</mi>
+</mstyle>
+</math>
+ בסיס סדור של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ ונסמן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mo>dim</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+,</div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-678'>מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msubsup>
+  <mrow>
+   <mo>[</mo>
+   <msub>
+    <mtext>Id</mtext>
+    <mi>V</mi>
+   </msub>
+   <mo>]</mo>
+  </mrow>
+  <mstyle mathvariant='script'>
+   <mi>B</mi>
+  </mstyle>
+  <mstyle mathvariant='script'>
+   <mi>B</mi>
+  </mstyle>
+ </msubsup>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mi>I</mi>
+  <mi>n</mi>
+ </msub>
+</mrow>
+</math>
+.</li>
+<li class="enumerate_item" id='magicparlabel-679'>לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>v</mi>
+ <mo>&#x2208;</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+ מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msubsup>
+  <mrow>
+   <mo>[</mo>
+   <msub>
+    <mtext>Id</mtext>
+    <mi>V</mi>
+   </msub>
+   <mo>]</mo>
+  </mrow>
+  <mstyle mathvariant='script'>
+   <mi>B</mi>
+  </mstyle>
+  <mstyle mathvariant='script'>
+   <mi>A</mi>
+  </mstyle>
+ </msubsup>
+ <mo>&#x22C5;</mo>
+ <msub>
+  <mrow>
+   <mo>[</mo>
+   <mi>v</mi>
+   <mo>]</mo>
+  </mrow>
+  <mstyle mathvariant='script'>
+   <mi>A</mi>
+  </mstyle>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mrow>
+   <mo>[</mo>
+   <mi>v</mi>
+   <mo>]</mo>
+  </mrow>
+  <mstyle mathvariant='script'>
+   <mi>B</mi>
+  </mstyle>
+ </msub>
+</mrow>
+</math>
+.</li>
+<li class="enumerate_item" id='magicparlabel-680'>יהי <span class='math'>\SrayaDBasis</span>
+ בסיס סדור של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+, מתקיים <span class='math'>\left[\kaliId_{V}\right]_{\SrayaDBasis}^{\kaliBBasis}\cdot\left[\kaliId_{V}\right]_{\kaliBBasis}^{\kaliABasis}=\left[\kaliId\right]_{\SrayaDBasis}^{\kaliABasis}</span>
+.</li>
+<li class="enumerate_item" id='magicparlabel-681'>מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msubsup>
+  <mrow>
+   <mo>[</mo>
+   <msub>
+    <mtext>Id</mtext>
+    <mi>V</mi>
+   </msub>
+   <mo>]</mo>
+  </mrow>
+  <mstyle mathvariant='script'>
+   <mi>A</mi>
+  </mstyle>
+  <mstyle mathvariant='script'>
+   <mi>B</mi>
+  </mstyle>
+ </msubsup>
+ <mo>&#x22C5;</mo>
+ <msubsup>
+  <mrow>
+   <mo>[</mo>
+   <msub>
+    <mtext>Id</mtext>
+    <mi>V</mi>
+   </msub>
+   <mo>]</mo>
+  </mrow>
+  <mstyle mathvariant='script'>
+   <mi>B</mi>
+  </mstyle>
+  <mstyle mathvariant='script'>
+   <mi>A</mi>
+  </mstyle>
+ </msubsup>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mi>I</mi>
+  <mi>n</mi>
+ </msub>
+</mrow>
+</math>
+, כלומר אלו מטריצות הפיכות והופכיות זו לזו.</li>
+<li class="enumerate_item" id='magicparlabel-682'>יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>B</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mi>b</mi>
+    <mn>1</mn>
+   </msub>
+   <mo stretchy='false'>,</mo>
+   <msub>
+    <mi>b</mi>
+    <mn>2</mn>
+   </msub>
+   <mo stretchy='false'>,</mo>
+   <mi>&#x2026;</mi>
+   <mo stretchy='false'>,</mo>
+   <msub>
+    <mi>b</mi>
+    <mi>k</mi>
+   </msub>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ בסיס סדור של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mstyle mathvariant='double-struck'>
+  <mi>F</mi>
+ </mstyle>
+ <mi>k</mi>
+</msup>
+</math>
+ ונסמן ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>E</mi>
+</math>
+ את הבסיס הסטנדרטי של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mstyle mathvariant='double-struck'>
+  <mi>F</mi>
+ </mstyle>
+ <mi>n</mi>
+</msup>
+</math>
+, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msubsup>
+ <mrow>
+  <mo>[</mo>
+  <mtext>Id</mtext>
+  <mo>]</mo>
+ </mrow>
+ <mi>E</mi>
+ <mi>B</mi>
+</msubsup>
+</math>
+ היא מטריצה שהעמודה ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>j</mi>
+</math>
+ שלה היא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>b</mi>
+ <mi>j</mi>
+</msub>
+</math>
+ (לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>k</mi>
+ <mo>&#x2265;</mo>
+ <mi>j</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>N</mi>
+ </mstyle>
+</mrow>
+</math>
+).</li>
+</ol>
+</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-683'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ ראינו כבר שמטריצה הפיכה היא מטריצה שהעמודות שלה מהוות בסיס למרחב הקואורדינטות, כעת (לאחר שראינו את סעיפים 4 ו-5) אנו יכולים לומר שכל המטריצות ההפיכות הן מהצורה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msubsup>
+ <mrow>
+  <mo>[</mo>
+  <mtext>Id</mtext>
+  <mo>]</mo>
+ </mrow>
+ <mi>E</mi>
+ <mi>B</mi>
+</msubsup>
+</math>
+ כאשר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>B</mi>
+</math>
+ הוא בסיס של מרחב הקואורדינטות המתאים ולכל אחת מהן המטריצה ההופכית היא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msubsup>
+ <mrow>
+  <mo>[</mo>
+  <mtext>Id</mtext>
+  <mo>]</mo>
+ </mrow>
+ <mi>B</mi>
+ <mi>E</mi>
+</msubsup>
+</math>
+.</li>
+</ol>
+<div class='corollary'>
+<div class="corollary_item" id='magicparlabel-685'><span class="corollary_label">‫מסקנה 3.9.</span>
+יהיו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>B</mi>
+ </mstyle>
+ <mo stretchy='false'>'</mo>
+</mrow>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>C</mi>
+ </mstyle>
+ <mo stretchy='false'>'</mo>
+</mrow>
+</math>
+ בסיסים סדורים של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>W</mi>
+</math>
+ בהתאמה, מתקיים:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msubsup>
+  <mrow>
+   <mo>[</mo>
+   <mi>T</mi>
+   <mo>]</mo>
+  </mrow>
+  <mrow>
+   <mstyle mathvariant='script'>
+    <mi>C</mi>
+   </mstyle>
+   <mo stretchy='false'>'</mo>
+  </mrow>
+  <mrow>
+   <mstyle mathvariant='script'>
+    <mi>B</mi>
+   </mstyle>
+   <mo stretchy='false'>'</mo>
+  </mrow>
+ </msubsup>
+ <mo stretchy='false'>=</mo>
+ <msubsup>
+  <mrow>
+   <mo>[</mo>
+   <msub>
+    <mtext>Id</mtext>
+    <mi>W</mi>
+   </msub>
+   <mo>]</mo>
+  </mrow>
+  <mrow>
+   <mstyle mathvariant='script'>
+    <mi>C</mi>
+   </mstyle>
+   <mo stretchy='false'>'</mo>
+  </mrow>
+  <mstyle mathvariant='script'>
+   <mi>C</mi>
+  </mstyle>
+ </msubsup>
+ <mo>&#x22C5;</mo>
+ <msubsup>
+  <mrow>
+   <mo>[</mo>
+   <mi>T</mi>
+   <mo>]</mo>
+  </mrow>
+  <mstyle mathvariant='script'>
+   <mi>C</mi>
+  </mstyle>
+  <mstyle mathvariant='script'>
+   <mi>B</mi>
+  </mstyle>
+ </msubsup>
+ <mo>&#x22C5;</mo>
+ <msubsup>
+  <mrow>
+   <mo>[</mo>
+   <msub>
+    <mtext>Id</mtext>
+    <mi>V</mi>
+   </msub>
+   <mo>]</mo>
+  </mrow>
+  <mstyle mathvariant='script'>
+   <mi>B</mi>
+  </mstyle>
+  <mrow>
+   <mstyle mathvariant='script'>
+    <mi>B</mi>
+   </mstyle>
+   <mo stretchy='false'>'</mo>
+  </mrow>
+ </msubsup>
+</mrow>
+</math>
+</div>
+</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-686'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ כלומר ניתן לעבור ממטריצה מייצגת אחת של העתקה ליניארית להצגה אחרת ע&#8221;י כפל במטריצות מעבר בסיס מתאימות.</li>
+</ol>
+<div class='corollary'>
+<div class="corollary_item" id='magicparlabel-687'><span class="corollary_label">‫מסקנה 3.10.</span>
+תהא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mo stretchy='false'>:</mo>
+ <mi>V</mi>
+ <mo>&#x2192;</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+ העתקה לינארית ויהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>B</mi>
+ </mstyle>
+ <mo stretchy='false'>'</mo>
+</mrow>
+</math>
+ בסיס סדור של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+, מתקיים:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true' columnalign='right left '>
+ <mtr>
+  <mtd>
+   <msubsup>
+    <mrow>
+     <mo>[</mo>
+     <mi>f</mi>
+     <mo>]</mo>
+    </mrow>
+    <mrow>
+     <mstyle mathvariant='script'>
+      <mi>B</mi>
+     </mstyle>
+     <mo stretchy='false'>'</mo>
+    </mrow>
+    <mrow>
+     <mstyle mathvariant='script'>
+      <mi>B</mi>
+     </mstyle>
+     <mo stretchy='false'>'</mo>
+    </mrow>
+   </msubsup>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <msubsup>
+     <mrow>
+      <mo>[</mo>
+      <msub>
+       <mtext>Id</mtext>
+       <mi>V</mi>
+      </msub>
+      <mo>]</mo>
+     </mrow>
+     <mrow>
+      <mstyle mathvariant='script'>
+       <mi>B</mi>
+      </mstyle>
+      <mo stretchy='false'>'</mo>
+     </mrow>
+     <mstyle mathvariant='script'>
+      <mi>B</mi>
+     </mstyle>
+    </msubsup>
+    <mo>&#x22C5;</mo>
+    <msubsup>
+     <mrow>
+      <mo>[</mo>
+      <mi>f</mi>
+      <mo>]</mo>
+     </mrow>
+     <mstyle mathvariant='script'>
+      <mi>B</mi>
+     </mstyle>
+     <mstyle mathvariant='script'>
+      <mi>B</mi>
+     </mstyle>
+    </msubsup>
+    <mo>&#x22C5;</mo>
+    <msubsup>
+     <mrow>
+      <mo>[</mo>
+      <msub>
+       <mtext>Id</mtext>
+       <mi>V</mi>
+      </msub>
+      <mo>]</mo>
+     </mrow>
+     <mstyle mathvariant='script'>
+      <mi>B</mi>
+     </mstyle>
+     <mrow>
+      <mstyle mathvariant='script'>
+       <mi>B</mi>
+      </mstyle>
+      <mo stretchy='false'>'</mo>
+     </mrow>
+    </msubsup>
+   </mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow/>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <msup>
+     <mrow>
+      <mo>(</mo>
+      <msubsup>
+       <mrow>
+        <mo>[</mo>
+        <msub>
+         <mtext>Id</mtext>
+         <mi>V</mi>
+        </msub>
+        <mo>]</mo>
+       </mrow>
+       <mstyle mathvariant='script'>
+        <mi>B</mi>
+       </mstyle>
+       <mrow>
+        <mstyle mathvariant='script'>
+         <mi>B</mi>
+        </mstyle>
+        <mo stretchy='false'>'</mo>
+       </mrow>
+      </msubsup>
+      <mo>)</mo>
+     </mrow>
+     <mrow>
+      <mo stretchy='false'>-</mo>
+      <mn>1</mn>
+     </mrow>
+    </msup>
+    <mo>&#x22C5;</mo>
+    <msubsup>
+     <mrow>
+      <mo>[</mo>
+      <mi>f</mi>
+      <mo>]</mo>
+     </mrow>
+     <mstyle mathvariant='script'>
+      <mi>B</mi>
+     </mstyle>
+     <mstyle mathvariant='script'>
+      <mi>B</mi>
+     </mstyle>
+    </msubsup>
+    <mo>&#x22C5;</mo>
+    <msubsup>
+     <mrow>
+      <mo>[</mo>
+      <msub>
+       <mtext>Id</mtext>
+       <mi>V</mi>
+      </msub>
+      <mo>]</mo>
+     </mrow>
+     <mstyle mathvariant='script'>
+      <mi>B</mi>
+     </mstyle>
+     <mrow>
+      <mstyle mathvariant='script'>
+       <mi>B</mi>
+      </mstyle>
+      <mo stretchy='false'>'</mo>
+     </mrow>
+    </msubsup>
+   </mrow>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+</div>
+</div>
+<div class='standard' style='text-align: left' id='magicparlabel-688'> </div>
+</section>
+</ul>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-689'><span class="section_label">4</span> דמיון מטריצות</h2>
+<ul class='nested'>
+<div class='standard' id='magicparlabel-690'>יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ מ&#8221;ו נ&#8221;ס מעל לשדה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='double-struck'>
+ <mi>F</mi>
+</mstyle>
+</math>
+ ונסמן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mo>dim</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+.</div>
+<div class='claim'>
+<div class="claim_item" id='magicparlabel-691'><span class="claim_label">טענה 4.1.</span>
+לכל בסיס <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>B</mi>
+</mstyle>
+</math>
+ של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ ולכל מטריצה הפיכה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>P</mi>
+ <mo>&#x2208;</mo>
+ <msub>
+  <mi>M</mi>
+  <mi>n</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='double-struck'>
+   <mi>F</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+, קיים בסיס יחיד <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>C</mi>
+</mstyle>
+</math>
+ של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ כך ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msubsup>
+  <mrow>
+   <mo>[</mo>
+   <msub>
+    <mtext>Id</mtext>
+    <mi>V</mi>
+   </msub>
+   <mo>]</mo>
+  </mrow>
+  <mstyle mathvariant='script'>
+   <mi>B</mi>
+  </mstyle>
+  <mstyle mathvariant='script'>
+   <mi>C</mi>
+  </mstyle>
+ </msubsup>
+ <mo stretchy='false'>=</mo>
+ <mi>P</mi>
+</mrow>
+</math>
+.</div>
+</div>
+<div class='corollary'>
+<div class="corollary_item" id='magicparlabel-692'><span class="corollary_label">‫מסקנה 4.2.</span>
+תהא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mo stretchy='false'>:</mo>
+ <mi>V</mi>
+ <mo>&#x2192;</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+ העתקה ליניארית, לכל בסיס <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>B</mi>
+</mstyle>
+</math>
+ של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ ולכל מטריצה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>A</mi>
+ <mo>&#x2208;</mo>
+ <msub>
+  <mi>M</mi>
+  <mi>n</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='double-struck'>
+   <mi>F</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ כך ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>A</mi>
+ <mo>&#x223C;</mo>
+ <msubsup>
+  <mrow>
+   <mo>[</mo>
+   <mi>f</mi>
+   <mo>]</mo>
+  </mrow>
+  <mstyle mathvariant='script'>
+   <mi>B</mi>
+  </mstyle>
+  <mstyle mathvariant='script'>
+   <mi>B</mi>
+  </mstyle>
+ </msubsup>
+</mrow>
+</math>
+ קיים בסיס <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>C</mi>
+</mstyle>
+</math>
+ של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ כך ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msubsup>
+  <mrow>
+   <mo>[</mo>
+   <mi>f</mi>
+   <mo>]</mo>
+  </mrow>
+  <mstyle mathvariant='script'>
+   <mi>C</mi>
+  </mstyle>
+  <mstyle mathvariant='script'>
+   <mi>C</mi>
+  </mstyle>
+ </msubsup>
+ <mo stretchy='false'>=</mo>
+ <mi>A</mi>
+</mrow>
+</math>
+.</div>
+</div>
+<div class='corollary'>
+<div class="corollary_item" id='magicparlabel-694'><span class="corollary_label">‫מסקנה 4.3.</span>
+תהא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mo stretchy='false'>:</mo>
+ <mi>V</mi>
+ <mo>&#x2192;</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+ העתקה ליניארית, לכל זוג בסיסים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>B</mi>
+</mstyle>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>C</mi>
+</mstyle>
+</math>
+ של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msubsup>
+  <mrow>
+   <mo>[</mo>
+   <mi>f</mi>
+   <mo>]</mo>
+  </mrow>
+  <mstyle mathvariant='script'>
+   <mi>B</mi>
+  </mstyle>
+  <mstyle mathvariant='script'>
+   <mi>B</mi>
+  </mstyle>
+ </msubsup>
+ <mo>&#x223C;</mo>
+ <msubsup>
+  <mrow>
+   <mo>[</mo>
+   <mi>f</mi>
+   <mo>]</mo>
+  </mrow>
+  <mstyle mathvariant='script'>
+   <mi>C</mi>
+  </mstyle>
+  <mstyle mathvariant='script'>
+   <mi>C</mi>
+  </mstyle>
+ </msubsup>
+</mrow>
+</math>
+.</div>
+</div>
+<div class='theorem'>
+<div class="theorem_item" id='magicparlabel-695'><span class="theorem_label">משפט 4.4:</span>
+<b>תכונות של מטריצות דומות</b>
+<br />
+תהיינה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>A</mi>
+ <mo stretchy='false'>,</mo>
+ <mi>B</mi>
+ <mo>&#x2208;</mo>
+ <msub>
+  <mi>M</mi>
+  <mi>n</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='double-struck'>
+   <mi>F</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ כך ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>A</mi>
+ <mo>&#x223C;</mo>
+ <mi>B</mi>
+</mrow>
+</math>
+, מתקיימים כל הפסוקים הבאים:</div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-696'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mtext>rk</mtext>
+ <mi>A</mi>
+ <mo stretchy='false'>=</mo>
+ <mtext>rk</mtext>
+ <mi>B</mi>
+</mrow>
+</math>
+.</li>
+<li class="enumerate_item" id='magicparlabel-697'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mtext>tr</mtext>
+ <mi>A</mi>
+ <mo stretchy='false'>=</mo>
+ <mtext>tr</mtext>
+ <mi>B</mi>
+</mrow>
+</math>
+.</li>
+<li class="enumerate_item" id='magicparlabel-698'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mo>&#x22C5;</mo>
+ <mi>A</mi>
+ <mo>&#x223C;</mo>
+ <mi>c</mi>
+ <mo>&#x22C5;</mo>
+ <mi>B</mi>
+</mrow>
+</math>
+ לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>F</mi>
+ </mstyle>
+</mrow>
+</math>
+.</li>
+<li class="enumerate_item" id='magicparlabel-699'>לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>F</mi>
+ </mstyle>
+</mrow>
+</math>
+ מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>A</mi>
+ <mo stretchy='false'>+</mo>
+ <mi>c</mi>
+ <mo>&#x22C5;</mo>
+ <msub>
+  <mi>I</mi>
+  <mi>n</mi>
+ </msub>
+ <mo>&#x223C;</mo>
+ <mi>B</mi>
+ <mo stretchy='false'>+</mo>
+ <mi>c</mi>
+ <mo>&#x22C5;</mo>
+ <msub>
+  <mi>I</mi>
+  <mi>n</mi>
+ </msub>
+</mrow>
+</math>
+.</li>
+<li class="enumerate_item" id='magicparlabel-700'>אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>A</mi>
+</math>
+ היא מטריצה סקלרית<div class='foot'><span class="foot_label">1</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-704'>כזכור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>A</mi>
+</math>
+ היא מטריצה סקלרית אם&#8221;ם קיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>F</mi>
+ </mstyle>
+</mrow>
+</math>
+ כך ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>A</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>c</mi>
+ <mo>&#x22C5;</mo>
+ <msub>
+  <mi>I</mi>
+  <mi>n</mi>
+ </msub>
+</mrow>
+</math>
+.</div>
+</div></div> אז <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>A</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>B</mi>
+</mrow>
+</math>
+.</li>
+<li class="enumerate_item" id='magicparlabel-705'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mi>A</mi>
+  <mi>m</mi>
+ </msup>
+ <mo>&#x223C;</mo>
+ <msup>
+  <mi>B</mi>
+  <mi>m</mi>
+ </msup>
+</mrow>
+</math>
+ לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>m</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>N</mi>
+ </mstyle>
+</mrow>
+</math>
+.</li>
+<li class="enumerate_item" id='magicparlabel-706'>אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mi>A</mi>
+  <mn>2</mn>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <mi>A</mi>
+</mrow>
+</math>
+ אז <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mi>B</mi>
+  <mn>2</mn>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <mi>B</mi>
+</mrow>
+</math>
+<div class='foot'><span class="foot_label">2</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-710'>כלומר אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>A</mi>
+</math>
+ מייצגת הטלה (בפרק הבא) אז גם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>B</mi>
+</math>
+ מייצגת הטלה.</div>
+</div></div>.</li>
+</ol>
+</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-711'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ כשנלמד על הדטרמיננטה נראה שגם הדטרמיננטות של מטריצות דומות הן שוות.</li>
+<li class="labeling_item" id='magicparlabel-712'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ כל התכונות הללו יכולות לקבוע ששתי מטריצות <b>אינן</b> דומות (אם אחת התכונות אינה מתקיימת) אך אינן יכולות לומר ששתי מטריצות נתונות דומות זו לזו, בקורס הבא אנחנו נראה כיצד ניתן (בתנאים מסוימים) לקבוע באופן חד משמעי אם שתי מטריצות דומות זו לזו אם לאו.</li>
+</ol>
+</ul>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-714'><span class="section_label">5</span> נספחים</h2>
+<ul class='nested'>
+<div class='standard' id='magicparlabel-715'>יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ מרחב וקטורי מעל לשדה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='double-struck'>
+ <mi>F</mi>
+</mstyle>
+</math>
+.</div>
+<section>
+<h3 class='subsection' id='magicparlabel-716'><span class="subsection_label">5.1</span> הטלות ושיקופים</h3>
+<div class='standard' id='magicparlabel-717'>נניח שניתן להציג את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ כסכום ישר של שני תמ&#8221;וים שלו.</div>
+<div class='claim'>
+<div class="claim_item" id='magicparlabel-718'><span class="claim_label">טענה 5.1.</span>
+תהא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>p</mi>
+ <mo stretchy='false'>:</mo>
+ <mi>V</mi>
+ <mo>&#x2192;</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+ העתקה ליניארית, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>p</mi>
+</math>
+ היא הטלה אם&#8221;ם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mi>p</mi>
+  <mn>2</mn>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <mi>p</mi>
+</mrow>
+</math>
+.</div>
+</div>
+<div class='theorem'>
+<div class="theorem_item" id='magicparlabel-719'><span class="theorem_label">משפט 5.2:</span>
+<b>תכונות של הטלות</b>
+<br />
+תהא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>p</mi>
+ <mo stretchy='false'>:</mo>
+ <mi>V</mi>
+ <mo>&#x2192;</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+ הטלה על תמ&#8221;ו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>W</mi>
+</math>
+ במקביל לתמ&#8221;ו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>U</mi>
+</math>
+ (<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>V</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>W</mi>
+ <mo>&#x2295;</mo>
+ <mi>U</mi>
+</mrow>
+</math>
+), מתקיימים כל הפסוקים הבאים:</div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-720'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mtext>Id</mtext>
+  <mi>V</mi>
+ </msub>
+ <mo stretchy='false'>-</mo>
+ <mi>p</mi>
+</mrow>
+</math>
+ היא ההטלה על <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>U</mi>
+</math>
+ במקביל ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>W</mi>
+</math>
+.</li>
+<li class="itemize_item" id='magicparlabel-721'>נסמן ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>q</mi>
+</math>
+ את ההטלה על <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>U</mi>
+</math>
+ במקביל ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>W</mi>
+</math>
+, מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>p</mi>
+ <mo stretchy='false'>+</mo>
+ <mi>q</mi>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mtext>Id</mtext>
+  <mi>V</mi>
+ </msub>
+</mrow>
+</math>
+.</li>
+<li class="itemize_item" id='magicparlabel-722'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>p</mi>
+ <mo>&#x25CB;</mo>
+ <mi>q</mi>
+ <mo stretchy='false'>=</mo>
+ <mn>0</mn>
+ <mo stretchy='false'>=</mo>
+ <mi>q</mi>
+ <mo>&#x25CB;</mo>
+ <mi>p</mi>
+</mrow>
+</math>
+.</li>
+</ul>
+</div>
+<div class='claim'>
+<div class="claim_item" id='magicparlabel-723'><span class="claim_label">טענה 5.3.</span>
+כל שיקוף <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>r</mi>
+ <mo stretchy='false'>:</mo>
+ <mi>V</mi>
+ <mo>&#x2192;</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+ הוא העתקה הפיכה ובנוסף הוא ההעתקה ההופכית של עצמו.</div>
+</div>
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-724'><span class="subsection_label">5.2</span> סיבובים</h3>
+<div class='claim'>
+<div class="claim_item" id='magicparlabel-725'><span class="claim_label">טענה 5.4.</span>
+כל מטריצת סיבוב היא מטריצה הפיכה וההופכית שלה היא מטריצת הסיבוב בזווית הנגדית, כלומר ההופכית של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>R</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>&#x3B8;</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ היא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>R</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mi>&#x3B8;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ (לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3B8;</mi>
+</math>
+).</div>
+</div>
+<div class='corollary'>
+<div class="corollary_item" id='magicparlabel-726'><span class="corollary_label">‫מסקנה 5.5.</span>
+כל מטריצת סיבוב ומתיחה שאינה מטריצת האפס היא מטריצה הפיכה, וההופכית שלה היא מטריצת הסיבוב והמתיחה המהווה את מטריצת הסיבוב בזווית הנגדית כשהיא מוכפלת בסקלר ההופכי, כלומר המטריצה ההופכית של מטריצת סיבוב ומתיחה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mo>&#x22C5;</mo>
+ <mi>R</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>&#x3B8;</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ היא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mi>c</mi>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mn>1</mn>
+  </mrow>
+ </msup>
+ <mo>&#x22C5;</mo>
+ <mi>R</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mi>&#x3B8;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ (לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mo stretchy='false'>,</mo>
+ <mi>&#x3B8;</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+ כך ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mo>&#x2260;</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+).</div>
+</div>
+<div class='claim'>
+<div class="claim_item" id='magicparlabel-727'><span class="claim_label">טענה 5.6.</span>
+יהיו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>a</mi>
+ <mo stretchy='false'>,</mo>
+ <mi>b</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+, המטריצה:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>[</mo>
+<mtable>
+ <mtr>
+  <mtd>
+   <mi>a</mi>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>-</mo>
+    <mi>b</mi>
+   </mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mi>b</mi>
+  </mtd>
+  <mtd>
+   <mi>a</mi>
+  </mtd>
+ </mtr>
+</mtable>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>]</mo>
+</math>
+היא מטריצת סיבוב ומתיחה, כלומר קיימים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mo stretchy='false'>,</mo>
+ <mi>&#x3B8;</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+ כך שמתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>a</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>c</mi>
+ <mo>&#x22C5;</mo>
+ <mo>cos</mo>
+ <mi>&#x3B8;</mi>
+</mrow>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>b</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>c</mi>
+ <mo>&#x22C5;</mo>
+ <mo>sin</mo>
+ <mi>&#x3B8;</mi>
+</mrow>
+</math>
+.</div>
+</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-728'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ כמובן שגם הכיוון ההפוך נכון: כל מטריצת סיבוב ומתיחה היא מהצורה הנ&#8221;ל.</li>
+</ol>
+<div class='claim'>
+<div class="claim_item" id='magicparlabel-729'><span class="claim_label">טענה 5.7.</span>
+לכל שתי מטריצות סיבוב ומתיחה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>A</mi>
+ <mo stretchy='false'>,</mo>
+ <mi>B</mi>
+ <mo>&#x2208;</mo>
+ <msub>
+  <mi>M</mi>
+  <mn>2</mn>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='double-struck'>
+   <mi>R</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>A</mi>
+ <mo>&#x22C5;</mo>
+ <mi>B</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>B</mi>
+ <mo>&#x22C5;</mo>
+ <mi>A</mi>
+</mrow>
+</math>
+, כלומר כפל מטריצות סיבוב ומתיחה מקיים את חוק החילוף.</div>
+</div>
+<div class='corollary'>
+<div class="corollary_item" id='magicparlabel-730'><span class="corollary_label">‫מסקנה 5.8.</span>
+קבוצת מטריצות הסיבוב והמתיחה היא שדה.</div>
+</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-731'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ למעשה מדובר בשדה מוכר למדי - זהו שדה המרוכבים!
+<br />
+לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>a</mi>
+ <mo stretchy='false'>,</mo>
+ <mi>b</mi>
+ <mo stretchy='false'>,</mo>
+ <mi>c</mi>
+ <mo stretchy='false'>,</mo>
+ <mi>d</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+ מתקיים:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>[</mo>
+ <mtable>
+  <mtr>
+   <mtd>
+    <mi>a</mi>
+   </mtd>
+   <mtd>
+    <mrow>
+     <mo stretchy='false'>-</mo>
+     <mi>b</mi>
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd>
+    <mi>b</mi>
+   </mtd>
+   <mtd>
+    <mi>a</mi>
+   </mtd>
+  </mtr>
+ </mtable>
+ <mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>]</mo>
+ <mo>&#x22C5;</mo>
+ <mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>[</mo>
+ <mtable>
+  <mtr>
+   <mtd>
+    <mi>c</mi>
+   </mtd>
+   <mtd>
+    <mrow>
+     <mo stretchy='false'>-</mo>
+     <mi>d</mi>
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd>
+    <mi>d</mi>
+   </mtd>
+   <mtd>
+    <mi>c</mi>
+   </mtd>
+  </mtr>
+ </mtable>
+ <mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>]</mo>
+ <mo stretchy='false'>=</mo>
+ <mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>[</mo>
+ <mtable>
+  <mtr>
+   <mtd>
+    <mrow>
+     <mi>a</mi>
+     <mi>c</mi>
+     <mo stretchy='false'>-</mo>
+     <mi>b</mi>
+     <mi>d</mi>
+    </mrow>
+   </mtd>
+   <mtd>
+    <mrow>
+     <mo stretchy='false'>-</mo>
+     <mi>a</mi>
+     <mi>d</mi>
+     <mo stretchy='false'>-</mo>
+     <mi>b</mi>
+     <mi>c</mi>
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd>
+    <mrow>
+     <mi>b</mi>
+     <mi>c</mi>
+     <mo stretchy='false'>+</mo>
+     <mi>a</mi>
+     <mi>d</mi>
+    </mrow>
+   </mtd>
+   <mtd>
+    <mrow>
+     <mo stretchy='false'>-</mo>
+     <mi>b</mi>
+     <mi>d</mi>
+     <mo stretchy='false'>+</mo>
+     <mi>a</mi>
+     <mi>c</mi>
+    </mrow>
+   </mtd>
+  </mtr>
+ </mtable>
+ <mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>]</mo>
+ <mo stretchy='false'>=</mo>
+ <mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>[</mo>
+ <mtable>
+  <mtr>
+   <mtd>
+   </mtd>
+   <mtd>
+    <mrow>
+     <mo stretchy='false'>-</mo>
+     <mrow>
+      <mo>(</mo>
+      <mo>)</mo>
+     </mrow>
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd>
+   </mtd>
+   <mtd>
+   </mtd>
+  </mtr>
+ </mtable>
+ <mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>]</mo>
+</mrow>
+</math>
+וגם: <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>a</mi>
+   <mo stretchy='false'>+</mo>
+   <mi>b</mi>
+   <mi>i</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x22C5;</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>c</mi>
+   <mo stretchy='false'>+</mo>
+   <mi>d</mi>
+   <mi>i</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>(</mo>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>+</mo>
+ <mrow>
+  <mo>(</mo>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x22C5;</mo>
+ <mi>i</mi>
+</mrow>
+</math>
+.</li>
+</ol>
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-732'><span class="subsection_label">5.3</span> מרחב ההעתקות</h3>
+<div class='claim'>
+<div class="claim_item" id='magicparlabel-733'><span class="claim_label">טענה 5.9.</span>
+יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>W</mi>
+</math>
+ גם הוא מ&#8221;ו מעל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='double-struck'>
+ <mi>F</mi>
+</mstyle>
+</math>
+, קבוצת ההעתקות הליניאריות <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mtext>Hom</mtext>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>V</mi>
+   <mo stretchy='false'>,</mo>
+   <mi>W</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+, יחד עם פעולות החיבור והכפל בסקלר שלה<div class='foot'><span class="foot_label">3</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-737'>לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mo stretchy='false'>,</mo>
+ <mi>g</mi>
+ <mo stretchy='false'>:</mo>
+ <mi>A</mi>
+ <mo>&#x2192;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>F</mi>
+ </mstyle>
+</mrow>
+</math>
+ הגדרנו את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mo stretchy='false'>+</mo>
+ <mi>g</mi>
+</mrow>
+</math>
+ ע&#8221;י <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>f</mi>
+   <mo stretchy='false'>+</mo>
+   <mi>g</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>+</mo>
+ <mi>g</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ (לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>x</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>F</mi>
+ </mstyle>
+</mrow>
+</math>
+), ולכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mo stretchy='false'>:</mo>
+ <mi>A</mi>
+ <mo>&#x2192;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>F</mi>
+ </mstyle>
+</mrow>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>F</mi>
+ </mstyle>
+</mrow>
+</math>
+ הגדרנו את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mo>&#x22C5;</mo>
+ <mi>f</mi>
+</mrow>
+</math>
+ ע&#8221;י <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>c</mi>
+   <mo>&#x22C5;</mo>
+   <mi>f</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mi>c</mi>
+ <mo>&#x22C5;</mo>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</div>
+</div></div>, היא מרחב וקטורי מעל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='double-struck'>
+ <mi>F</mi>
+</mstyle>
+</math>
+ (לכל מ&#8221;ו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>W</mi>
+</math>
+ מעל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='double-struck'>
+ <mi>F</mi>
+</mstyle>
+</math>
+).</div>
+</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-738'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ כלומר סכום של העתקות ליניאריות וכפל העתקה ליניארית בסקלר הם העתקות ליניאריות, ובנוסף, מתקיימות <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>8</mn>
+</math>
+ האקסיומות של מרחב וקטורי.</li>
+</ol>
+<div class='claim'>
+<div class="claim_item" id='magicparlabel-739'><span class="claim_label">טענה 5.10.</span>
+נניח ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ נ&#8221;ס ויהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>W</mi>
+</math>
+ גם הוא מ&#8221;ו נ&#8221;ס מעל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='double-struck'>
+ <mi>F</mi>
+</mstyle>
+</math>
+, ונסמן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mo>dim</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>m</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mo>dim</mo>
+ <mi>W</mi>
+</mrow>
+</math>
+.
+<br />
+יהיו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>B</mi>
+</mstyle>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>C</mi>
+</mstyle>
+</math>
+ בסיסים של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>W</mi>
+</math>
+ בהתאמה ותהא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>&#x3C9;</mi>
+  <mrow>
+   <mstyle mathvariant='script'>
+    <mi>B</mi>
+   </mstyle>
+   <mo stretchy='false'>,</mo>
+   <mstyle mathvariant='script'>
+    <mi>C</mi>
+   </mstyle>
+  </mrow>
+ </msub>
+ <mo stretchy='false'>:</mo>
+ <mtext>Hom</mtext>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>V</mi>
+   <mo stretchy='false'>,</mo>
+   <mi>W</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2192;</mo>
+ <msub>
+  <mi>M</mi>
+  <mrow>
+   <mi>m</mi>
+   <mo>&#x00D7;</mo>
+   <mi>n</mi>
+  </mrow>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='double-struck'>
+   <mi>F</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ פונקציה המוגדרת ע&#8221;י <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>&#x3C9;</mi>
+  <mrow>
+   <mstyle mathvariant='script'>
+    <mi>B</mi>
+   </mstyle>
+   <mo stretchy='false'>,</mo>
+   <mstyle mathvariant='script'>
+    <mi>C</mi>
+   </mstyle>
+  </mrow>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>T</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <msubsup>
+  <mrow>
+   <mo>[</mo>
+   <mi>T</mi>
+   <mo>]</mo>
+  </mrow>
+  <mstyle mathvariant='script'>
+   <mi>B</mi>
+  </mstyle>
+  <mstyle mathvariant='script'>
+   <mi>C</mi>
+  </mstyle>
+ </msubsup>
+</mrow>
+</math>
+ (לכל ה&#8221;ל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>T</mi>
+ <mo stretchy='false'>:</mo>
+ <mi>V</mi>
+ <mo>&#x2192;</mo>
+ <mi>W</mi>
+</mrow>
+</math>
+).
+<br />
+המרחבים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mtext>Hom</mtext>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>V</mi>
+   <mo stretchy='false'>,</mo>
+   <mi>W</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>M</mi>
+  <mrow>
+   <mi>m</mi>
+   <mo>&#x00D7;</mo>
+   <mi>n</mi>
+  </mrow>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='double-struck'>
+   <mi>F</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ איזומורפיים זה לזה ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>&#x3C9;</mi>
+ <mrow>
+  <mstyle mathvariant='script'>
+   <mi>B</mi>
+  </mstyle>
+  <mo stretchy='false'>,</mo>
+  <mstyle mathvariant='script'>
+   <mi>C</mi>
+  </mstyle>
+ </mrow>
+</msub>
+</math>
+ היא איזומורפיזם ביניהם ובפרט היא העתקה ליניארית.</div>
+</div>
+<div class='corollary'>
+<div class="corollary_item" id='magicparlabel-740'><span class="corollary_label">‫מסקנה 5.11.</span>
+נניח ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ נ&#8221;ס ויהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>W</mi>
+</math>
+ גם הוא מ&#8221;ו נ&#8221;ס מעל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='double-struck'>
+ <mi>F</mi>
+</mstyle>
+</math>
+, ונסמן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mo>dim</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>m</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mo>dim</mo>
+ <mi>W</mi>
+</mrow>
+</math>
+.
+<br />
+מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>dim</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mtext>Hom</mtext>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mi>V</mi>
+     <mo stretchy='false'>,</mo>
+     <mi>W</mi>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mo>dim</mo>
+ <msub>
+  <mi>M</mi>
+  <mrow>
+   <mi>m</mi>
+   <mo>&#x00D7;</mo>
+   <mi>n</mi>
+  </mrow>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='double-struck'>
+   <mi>F</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mi>m</mi>
+ <mo>&#x22C5;</mo>
+ <mi>n</mi>
+</mrow>
+</math>
+.</div>
+</div>
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-741'><span class="subsection_label">5.4</span> מרחבי מנה</h3>
+<div class='claim'>
+<div class="claim_item" id='magicparlabel-742'><span class="claim_label">טענה 5.12.</span>
+יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>W</mi>
+ <mo>&#x2286;</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+ תמ&#8221;ו, מחלקת השקילות של וקטור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>v</mi>
+ <mo>&#x2208;</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+ ביחס ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>W</mi>
+</math>
+ היא הישרייה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mo>{</mo>
+  <mi>v</mi>
+  <mo>}</mo>
+ </mrow>
+ <mo stretchy='false'>+</mo>
+ <mi>W</mi>
+</mrow>
+</math>
+.</div>
+</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-743'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ כלומר מה שיחס המנה עושה הוא &#8220;לפרוס&#8221; את המרחב <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ לפרוסות שכל אחת מהן היא ישרייה שמרחב הכיוונים שלה הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>W</mi>
+</math>
+.</li>
+</ol>
+<div class='claim'>
+<div class="claim_item" id='magicparlabel-744'><span class="claim_label">טענה 5.13.</span>
+יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>W</mi>
+ <mo>&#x2286;</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+ תמ&#8221;ו, לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>v</mi>
+ <mo stretchy='false'>,</mo>
+ <mi>u</mi>
+ <mo>&#x2208;</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+ ולכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>F</mi>
+ </mstyle>
+</mrow>
+</math>
+ מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mo>[</mo>
+  <mi>v</mi>
+  <mo>]</mo>
+ </mrow>
+ <mo stretchy='false'>+</mo>
+ <mrow>
+  <mo>[</mo>
+  <mi>u</mi>
+  <mo>]</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>[</mo>
+  <mrow>
+   <mi>v</mi>
+   <mo stretchy='false'>+</mo>
+   <mi>u</mi>
+  </mrow>
+  <mo>]</mo>
+ </mrow>
+</mrow>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mo>&#x22C5;</mo>
+ <mrow>
+  <mo>[</mo>
+  <mi>v</mi>
+  <mo>]</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>[</mo>
+  <mrow>
+   <mi>c</mi>
+   <mo>&#x22C5;</mo>
+   <mi>v</mi>
+  </mrow>
+  <mo>]</mo>
+ </mrow>
+</mrow>
+</math>
+.</div>
+</div>
+<div class='corollary'>
+<div class="corollary_item" id='magicparlabel-745'><span class="corollary_label">‫מסקנה 5.14.</span>
+יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>W</mi>
+ <mo>&#x2286;</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+ תמ&#8221;ו, קבוצת מחלקות השקילות (שתסומן ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>V</mi>
+ <mo stretchy='false'>/</mo>
+ <mi>W</mi>
+</mrow>
+</math>
+), יחד עם פעולות החיבור והכפל בסקלר שלה, היא מרחב וקטורי מעל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='double-struck'>
+ <mi>F</mi>
+</mstyle>
+</math>
+.</div>
+</div>
+<div class='claim'>
+<div class="claim_item" id='magicparlabel-746'><span class="claim_label">טענה 5.15.</span>
+העתקת המנה של תמ&#8221;ו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>W</mi>
+ <mo>&#x2286;</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+ היא פונקציה על וגרעינה הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>W</mi>
+</math>
+.</div>
+</div>
+<div class='corollary'>
+<div class="corollary_item" id='magicparlabel-747'><span class="corollary_label">‫מסקנה 5.16.</span>
+יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>W</mi>
+ <mo>&#x2286;</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+ תמ&#8221;ו, לכל תמ&#8221;ו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>U</mi>
+ <mo>&#x2286;</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+ כך ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>V</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>W</mi>
+ <mo>&#x2295;</mo>
+ <mi>U</mi>
+</mrow>
+</math>
+ הצמצום של העתקת המנה ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>U</mi>
+</math>
+ הוא איזומורפיזם בין <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>U</mi>
+</math>
+ ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>V</mi>
+ <mo stretchy='false'>/</mo>
+ <mi>W</mi>
+</mrow>
+</math>
+.</div>
+</div>
+<div class='corollary'>
+<div class="corollary_item" id='magicparlabel-749'><span class="corollary_label">‫מסקנה 5.17.</span>
+נניח ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ נ&#8221;ס ויהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>W</mi>
+ <mo>&#x2286;</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+ תמ&#8221;ו, מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>dim</mo>
+ <mi>V</mi>
+ <mo stretchy='false'>=</mo>
+ <mo>dim</mo>
+ <mi>W</mi>
+ <mo stretchy='false'>+</mo>
+ <mo>dim</mo>
+ <mi>V</mi>
+ <mo stretchy='false'>/</mo>
+ <mi>W</mi>
+</mrow>
+</math>
+.</div>
+</div>
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-750'><span class="subsection_label">5.5</span> כפל סדרות וקטורים בווקטורים ממרחב הקואורדינטות ובמטריצות</h3>
+<div class='claim'>
+<div class="claim_item" id='magicparlabel-751'><span class="claim_label">טענה 5.18.</span>
+נניח ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ נ&#8221;ס.</div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-752'>לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>v</mi>
+ <mo>&#x2208;</mo>
+ <mi>V</mi>
+</mrow>
+</math>
+ ולכל בסיס סדור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>B</mi>
+</mstyle>
+</math>
+ (של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+) מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>v</mi>
+ <mo stretchy='false'>=</mo>
+ <mstyle mathvariant='script'>
+  <mi>B</mi>
+ </mstyle>
+ <mo>&#x22C5;</mo>
+ <msub>
+  <mrow>
+   <mo>[</mo>
+   <mi>v</mi>
+   <mo>]</mo>
+  </mrow>
+  <mstyle mathvariant='script'>
+   <mi>B</mi>
+  </mstyle>
+ </msub>
+</mrow>
+</math>
+.</li>
+<li class="itemize_item" id='magicparlabel-753'>לכל שני בסיסים סדורים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>B</mi>
+</mstyle>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>C</mi>
+</mstyle>
+</math>
+ (של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+) מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>C</mi>
+ </mstyle>
+ <mo stretchy='false'>=</mo>
+ <mstyle mathvariant='script'>
+  <mi>B</mi>
+ </mstyle>
+ <mo>&#x22C5;</mo>
+ <msubsup>
+  <mrow>
+   <mo>[</mo>
+   <msub>
+    <mtext>Id</mtext>
+    <mi>V</mi>
+   </msub>
+   <mo>]</mo>
+  </mrow>
+  <mstyle mathvariant='script'>
+   <mi>B</mi>
+  </mstyle>
+  <mstyle mathvariant='script'>
+   <mi>C</mi>
+  </mstyle>
+ </msubsup>
+</mrow>
+</math>
+.</li>
+<li class="itemize_item" id='magicparlabel-754'>תהא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>A</mi>
+ <mo>&#x2208;</mo>
+ <msub>
+  <mi>M</mi>
+  <mi>n</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='double-struck'>
+   <mi>F</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ מטריצה ותהא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>S</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mi>v</mi>
+    <mn>1</mn>
+   </msub>
+   <mo stretchy='false'>,</mo>
+   <msub>
+    <mi>v</mi>
+    <mn>2</mn>
+   </msub>
+   <mo stretchy='false'>,</mo>
+   <mi>&#x2026;</mi>
+   <mo stretchy='false'>,</mo>
+   <msub>
+    <mi>v</mi>
+    <mi>n</mi>
+   </msub>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ סדרת וקטורים ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+, אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>A</mi>
+</math>
+ אינה הפיכה אז <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>S</mi>
+ <mo>&#x22C5;</mo>
+ <mi>A</mi>
+</mrow>
+</math>
+ תלויה ליניארית.</li>
+<li class="itemize_item" id='magicparlabel-755'>תהא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>A</mi>
+ <mo>&#x2208;</mo>
+ <msub>
+  <mi>M</mi>
+  <mi>n</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='double-struck'>
+   <mi>F</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ מטריצה, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>A</mi>
+</math>
+ הפיכה אם&#8221;ם <b>קיים</b> בסיס סדור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>B</mi>
+</mstyle>
+</math>
+ (של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+) כך ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>B</mi>
+ </mstyle>
+ <mo>&#x22C5;</mo>
+ <mi>A</mi>
+</mrow>
+</math>
+ בת&#8221;ל (וממילא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>B</mi>
+ </mstyle>
+ <mo>&#x22C5;</mo>
+ <mi>A</mi>
+</mrow>
+</math>
+ בסיס).</li>
+<li class="itemize_item" id='magicparlabel-756'>תהא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>A</mi>
+ <mo>&#x2208;</mo>
+ <msub>
+  <mi>M</mi>
+  <mi>n</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mstyle mathvariant='double-struck'>
+   <mi>F</mi>
+  </mstyle>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ מטריצה, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>A</mi>
+</math>
+ הפיכה אם&#8221;ם <b>לכל</b> בסיס סדור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='script'>
+ <mi>B</mi>
+</mstyle>
+</math>
+ (של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+) הסדרה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>B</mi>
+ </mstyle>
+ <mo>&#x22C5;</mo>
+ <mi>A</mi>
+</mrow>
+</math>
+ בת&#8221;ל (וממילא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='script'>
+  <mi>B</mi>
+ </mstyle>
+ <mo>&#x22C5;</mo>
+ <mi>A</mi>
+</mrow>
+</math>
+ בסיס).</li>
+</ul>
+</div>
+</section>
+</ul>
+</section>
+<script src="../../../tree_view.js"></script>
+</body>
+</html>

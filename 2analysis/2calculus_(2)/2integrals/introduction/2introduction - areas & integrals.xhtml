@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="he-IL">
+<head>
+<link rel="stylesheet" type="text/css" href="../../../../main.css" />
+<meta name="viewport" content="width=device-width" />
+<meta name="generator" content="LyX 2.4.1" />
+<title>על שטחים ואינטגרלים</title>
+<script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body dir="auto">
+<section>
+<h2 class='section' id='magicparlabel-611'><span class="section_label">1</span> מהו שטח?</h2>
+<ul class='nested'>
+<div class='standard' id='magicparlabel-612'>מה עובר לכם בראש (מבחינה אינטואיטיבית) כשאנחנו מדברים על &#8220;שטח&#8221;?</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-613'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ לפני שאוכל להמשיך אצטרך להסביר למה אני מתכוון שאני מדבר על &#8220;הזחה&#8221;<div class='foot'><span class="foot_label">1</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-617'>לא מצאתי שום מקור שמדבר על &#8220;הזחה&#8221; באופן דומה, קרוב לוודאי שקראתי ספר יחיד שדיבר בשפה זו או שהמצאתי את המושג בעצמי.</div>
+</div></div> ולשם כך אתן כמה דוגמאות:
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-618'>ישר הוא <b>הזחה</b> של נקודה בשיפוע קבוע</li>
+<li class="enumerate_item" id='magicparlabel-619'>מלבן הוא <b>הזחה</b> של קטע אחד לאורך קטע אחר המאונך לו</li>
+<li class="enumerate_item" id='magicparlabel-620'>מקבילית היא <b>הזחה</b> של ישר אחד לאורך קטע אחר ללא תלות בזווית שביניהם ובלבד שלא יהיו מקבילים</li>
+<li class="enumerate_item" id='magicparlabel-621'>עיגול הוא <b>הזחה</b> של &#8220;מחוג&#8221; באורך הרדיוס של העיגול כשאחד מקצותיו נותר קבוע במקומו והאחר מסתובב סביבו סיבוב שלם</li>
+<li class="enumerate_item" id='magicparlabel-622'>תיבה היא <b>הזחה</b> של מלבן לאורך קטע המאונך למישורים שבהם עובר המלבן בתהליך ההזחה</li>
+<li class="enumerate_item" id='magicparlabel-623'>פירמידה היא <b>הזחה</b> של מצולע לאורך קטע המאונך לו כאשר המצולע קטן ביחס ישר למרחק שנשאר עד לסיום ההזחה</li>
+</ol>
+</li><li class="labeling_item" id='magicparlabel-624'><span class='lyxlist'> </span>
+ כלומר <b>הזחה</b> של צורה (קבוצת נקודות כלשהי) במרחב לאורך עקומה כלשהי היא קבוצת כל הנקודות שהצורה &#8220;עוברת&#8221; בהן שמזיזים אותה לאורך העקומה.</li>
+<li class="labeling_item" id='magicparlabel-625'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ לא מדובר במושג מתמטי מוגדר היטב (למרות שאולי ניתן לפרמל אותו) וכפי שציינתי בהערה לא מצאתי אך אחד אחר שמדבר על הזחה באופן דומה.</li>
+</ol>
+<div class='standard' id='magicparlabel-626'>כשאנחנו מדברים על &#8220;שטח&#8221; עוברת אצלי מחשבה על מין &#8220;סכימה רציפה&#8221; של כל הנקודות שבתוך היקף הצורה הנתונה<div class='foot'><span class="foot_label">2</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-630'>וכפי שאתם יכולים לנחש מהדוגמה הראשונה שנתתי, יש לי מחשבה דומה גם כשאנחנו מדברים על &#8220;אורך&#8221;.</div>
+</div></div>, כמובן שאי אפשר לבצע זאת באמת ובכל זאת יש לזה משמעות:
+<br />
+זוכרים שביסודי, כשלמדנו על פעולת הכפל, קראנו את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>7</mn>
+ <mo>&#x22C5;</mo>
+ <mn>4</mn>
+</mrow>
+</math>
+ כ-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>7</mn>
+</math>
+ <b>פעמים</b> <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>4</mn>
+</math>
+? האמירה הזו בעצם מרמזת על כך שאנו חושבים על פעולת הכפל כקיצור לכתיבה של סכום<div class='foot'><span class="foot_label">3</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-634'>ואכן, עבור כפל של שני מספרים שלפחות אחד מהם שלם ניתן להגדיר את הכפל כחיבור כך וכך פעמים (בדומה לצורה שבה הגדרנו את הקשר בין חזקה טבעית לכפל), אולם כבר עבור מכפלה של שני רציונליים א&#8221;א לעשות זאת ולכן נזקקו המתמטיקאים להגדיר שתי פעולות על השדה ולא אחת בלבד.</div>
+</div></div>,
+<br />
+כשאני רוצה לחשב את שטחו של מלבן שאורכי צלעותיו הם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>4</mn>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>7</mn>
+</math>
+ אני בעצם חושב על קטע באורך <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>4</mn>
+</math>
+ שאותו אני <b>מזיח</b> לאורך קטע באורך <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>7</mn>
+</math>
+;
+<br />
+כלומר אני מבצע &#8220;סכימה רציפה&#8221; של קטע באורך <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>4</mn>
+</math>
+ שבע &#8220;פעמים&#8221;, כאשר כאן המילה &#8220;פעמים&#8221; אינה מתייחסת לסכום עם שישה סימני &#8220;<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mo stretchy='false'>+</mo>
+</math>
+&#8221; אלא למה שכיניתי &#8220;סכימה רציפה&#8221; - אני &#8220;סוכם&#8221; את כל הקטעים באורך <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>4</mn>
+</math>
+ שמופיעים בתוך המלבן וכאלה ישנם &#8220;שבעה&#8221;. זו הסיבה (האינטואיטיבית) לכך שברור לכולנו ששטח מלבן הוא מכפלת אורכי צלעותיו.
+<br />
+בעצם ניתן לחשוב על &#8220;הסכימה הרציפה&#8221; בצורה הבאה: אני &#8220;שם&#8221; את המלבן במערכת צירים ומעביר ישר על פני המישור מקצה אחד של המלבן עד לקצהו השני ובכל נקודה אני &#8220;שומר&#8221; את כמות הנקודות בישר שנמצאות בתוך המלבן ו&#8221;מוסיף&#8221; את ה&#8221;מספר&#8221; הזה למה ש&#8221;סכמתי&#8221; עד כה, את האינטואיציה הזו ניתן להכליל עבור כל צורה שהיא (שימו אותה במערכת צירים והעבירו ישר...) ובהמשך אנחנו נראה שההגדרה של אינטגרביליות לפי רימן מפרמלת בדיוק את זה.</div>
+
+</ul>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-636'><span class="section_label">2</span> איך מחשבים שטח של צורה נתונה?</h2>
+<ul class='nested'>
+<div class='standard' id='magicparlabel-637'>אנחנו יודעים לחשב שטח של מלבן בצורה ישירה ע&#8221;י הכפלת אורכי שתיים מצלעותיו הניצבות זו לזו אך מה בדבר צורות אחרות?
+<br />
+ע&#8221;פ עיקרון הסימטריה ניתן לחשב את השטח של משולש ישר זווית: ניתן להציג שני עותקים של כל משולש ישר זווית ע&#8221;י סרטוט מלבן יחיד<div class='foot'><span class="foot_label">4</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-641'>לכל משולש ישר זווית קיים מלבן יחיד כזה.</div>
+</div></div> ואחד מאלכסוניו, לכן השטח של כל משולש ישר זווית הוא חצי משטחו של המלבן המתאים.
+<br />
+ניתן להכליל את השיטה הזו גם עבור משולש חד זוויות (מורידים אנך בתוך המשולש...), ואפילו עבור משולש קהה זווית (קצת יותר מסובך ואין זה מענייננו כעת), ומכאן לכל מצולע מפני שניתן לחלק כל מצולע למשולשים.
+<br />
+עד כאן היה לנו מזל אבל לא לכל צורה ניתן למצוא קשר ישיר למלבן או למשולש, מה נעשה במקרים כאלה?</div>
+
+<div class='standard' id='magicparlabel-642'>כאן בא לעזרתנו מושג הגבול, נניח שאנו רוצים לחשב שטח של עיגול, ודאי ששטח העיגול קטן משטח הריבוע שחוסם אותו וגדול משטח הריבוע הנחסם על ידו; ניתן להוסיף לריבוע החסום עוד ועוד מלבנים קטנים יותר בתוך שטח העיגול או לחסר מהריבוע החוסם את העיגול עוד ועוד מלבנים קטנים יותר מחוץ לשטח העיגול<div class='foot'><span class="foot_label">5</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-646'>ניתן כמובן לשלב בין שתי השיטות כך שיהיו שטחים שאינם חלק מהעיגול ויכוסו ע&#8221;י מלבנים ויהיו במקביל חלקים מהעיגול שלא יכוסו ע&#8221;י מלבנים.</div>
+</div></div>. הנקודה היא שככל שגדלי המלבנים הללו קטנים יותר<div class='foot'><span class="foot_label">6</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-650'>ובהנחה שכאשר אנו מוסיפים מלבנים איננו יכולים להוסיף מלבן שכל שטחו אינו בתוך העיגול, ובהתאמה, כאשר אנו מחסרים מלבנים איננו יכולים לחסר מלבן שכל שטחו בתוך העיגול.</div>
+</div></div> אנו נתקרב יותר ויותר אל מה שמבחינה אינטואיטיבית הוא &#8220;שטח העיגול&#8221;, לכן ניתן להגדיר את השטח של העיגול כ<b>גבול</b> של סכום שטחי המלבנים כאשר גודל כל אחד מהם בנפרד שואף לאפס.</div>
+
+<div class='standard' style='text-align: left' id='magicparlabel-651'> </div>
+</ul>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-652'><span class="section_label">3</span> מה הקשר בין שטח לאינטגרלים?</h2>
+<ul class='nested'>
+<div class='standard' id='magicparlabel-653'>בואו נניח שאני נוסע בקו ישר מנקודה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>x</mi>
+ <mn>0</mn>
+</msub>
+</math>
+ במהירות קבועה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>v</mi>
+</math>
+, איפה אהיה בעוד שעה? כולנו מכירים את הנוסחה מהתיכון &#8220;מהירות כפול זמן שווה דרך&#8221;<div class='foot'><span class="foot_label">7</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-657'>למעשה ההגדרה הבסיסית ביותר של מהירות היא &#8220;דרך חלקי זמן&#8221;.</div>
+</div></div>, מכאן שלכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>t</mi>
+ <mo>&#x2208;</mo>
+ <mrow>
+  <mo>[</mo>
+  <mrow>
+   <mn>0</mn>
+   <mo stretchy='false'>,</mo>
+   <mi>&#x221E;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ המיקום שלי בזמן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>t</mi>
+</math>
+ יהיה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>X</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>t</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mi>x</mi>
+  <mn>0</mn>
+ </msub>
+ <mo stretchy='false'>+</mo>
+ <mi>v</mi>
+ <mo>&#x22C5;</mo>
+ <mi>t</mi>
+</mrow>
+</math>
+ לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>t</mi>
+ <mo>&#x2208;</mo>
+ <mrow>
+  <mo>[</mo>
+  <mrow>
+   <mn>0</mn>
+   <mo stretchy='false'>,</mo>
+   <mi>&#x221E;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.
+<br />
+כעת נגדיר את הפונקציה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ להיות הפונקציה של המהירות כתלות בזמן, במקרה זה מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>V</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>t</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mi>v</mi>
+</mrow>
+</math>
+ לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>t</mi>
+ <mo>&#x2208;</mo>
+ <mrow>
+  <mo>[</mo>
+  <mrow>
+   <mn>0</mn>
+   <mo stretchy='false'>,</mo>
+   <mi>&#x221E;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+; ניזכר שהמהירות היא הנגזרת של המיקום כתלות בזמן ואכן לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>t</mi>
+ <mo>&#x2208;</mo>
+ <mrow>
+  <mo>[</mo>
+  <mrow>
+   <mn>0</mn>
+   <mo stretchy='false'>,</mo>
+   <mi>&#x221E;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>X</mi>
+ <mo stretchy='false'>'</mo>
+ <mrow>
+  <mo>(</mo>
+  <mi>t</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mi>v</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>V</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>t</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ ומכאן ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>&#x222B;</mo>
+ <mi>V</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>t</mi>
+  <mo>)</mo>
+ </mrow>
+ <mi>d</mi>
+ <mi>t</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>X</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>t</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>+</mo>
+ <mi>C</mi>
+</mrow>
+</math>
+.
+<br />
+נסמן ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>V</mi>
+  <mi>S</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>t</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ את השטח מתחת לגרף הפונקציה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+ על הקטע <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>[</mo>
+ <mrow>
+  <mn>0</mn>
+  <mo stretchy='false'>,</mo>
+  <mi>t</mi>
+ </mrow>
+ <mo>]</mo>
+</mrow>
+</math>
+ וראו איזה פלא: מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>V</mi>
+  <mi>S</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>t</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mi>v</mi>
+ <mo>&#x22C5;</mo>
+ <mi>t</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>X</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>t</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>-</mo>
+ <msub>
+  <mi>x</mi>
+  <mn>0</mn>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <mo>&#x222B;</mo>
+ <mi>V</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>t</mi>
+  <mo>)</mo>
+ </mrow>
+ <mi>d</mi>
+ <mi>t</mi>
+</mrow>
+</math>
+.</div>
+
+<div class='standard' id='magicparlabel-658'>לקחתי מקרה פשוט מדי, נכון? מה קורה אם אני נוסע בתאוצה קבועה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+? במקרה כזה נקבל שלכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>t</mi>
+ <mo>&#x2208;</mo>
+ <mrow>
+  <mo>[</mo>
+  <mrow>
+   <mn>0</mn>
+   <mo stretchy='false'>,</mo>
+   <mi>&#x221E;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>V</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>t</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mi>v</mi>
+  <mn>0</mn>
+ </msub>
+ <mo stretchy='false'>+</mo>
+ <mi>a</mi>
+ <mo>&#x22C5;</mo>
+ <mi>t</mi>
+</mrow>
+</math>
+, כאשר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>v</mi>
+ <mn>0</mn>
+</msub>
+</math>
+ היא המהירות ההתחלתית (כאשר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>t</mi>
+ <mo stretchy='false'>=</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+);
+<br />
+במקרה כזה השטח מתחת לגרף של פונקציית המהירות הוא שטח המלבן שאורכו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>t</mi>
+</math>
+ ורוחבו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>v</mi>
+ <mn>0</mn>
+</msub>
+</math>
+ ועוד שטח המשולש ישר הזווית שאורך צלעותיו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>t</mi>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>a</mi>
+ <mo>&#x22C5;</mo>
+ <mi>t</mi>
+</mrow>
+</math>
+, א&#8221;כ השטח שמתחת לגרף הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>v</mi>
+  <mn>0</mn>
+ </msub>
+ <mo>&#x22C5;</mo>
+ <mi>t</mi>
+ <mo stretchy='false'>+</mo>
+ <mfrac>
+  <mi>a</mi>
+  <mn>2</mn>
+ </mfrac>
+ <mo>&#x22C5;</mo>
+ <msup>
+  <mi>t</mi>
+  <mn>2</mn>
+ </msup>
+</mrow>
+</math>
+.
+<br />
+מי שלמד פיזיקה בתיכון אולי ייזכר כעת שבמקרה כזה הנוסחה של המיקום היא<div class='foot'><span class="foot_label">8</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-662'>האמת היא שכאן אני בעצם מרמה, הנוסחה הזו התקבלה ע&#8221;י אינטגרציה של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>V</mi>
+</math>
+: <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>&#x222B;</mo>
+ <mi>V</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>t</mi>
+  <mo>)</mo>
+ </mrow>
+ <mi>d</mi>
+ <mi>t</mi>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mi>v</mi>
+  <mn>0</mn>
+ </msub>
+ <mo>&#x22C5;</mo>
+ <mi>t</mi>
+ <mo stretchy='false'>+</mo>
+ <mfrac>
+  <mi>a</mi>
+  <mn>2</mn>
+ </mfrac>
+ <mo>&#x22C5;</mo>
+ <msup>
+  <mi>t</mi>
+  <mn>2</mn>
+ </msup>
+ <mo stretchy='false'>+</mo>
+ <mi>C</mi>
+</mrow>
+</math>
+.</div>
+</div></div>:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>X</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>t</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mi>x</mi>
+  <mn>0</mn>
+ </msub>
+ <mo stretchy='false'>+</mo>
+ <msub>
+  <mi>v</mi>
+  <mn>0</mn>
+ </msub>
+ <mo>&#x22C5;</mo>
+ <mi>t</mi>
+ <mo stretchy='false'>+</mo>
+ <mfrac>
+  <mi>a</mi>
+  <mn>2</mn>
+ </mfrac>
+ <mo>&#x22C5;</mo>
+ <msup>
+  <mi>t</mi>
+  <mn>2</mn>
+ </msup>
+</mrow>
+</math>
+ואכן לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>t</mi>
+ <mo>&#x2208;</mo>
+ <mrow>
+  <mo>[</mo>
+  <mrow>
+   <mn>0</mn>
+   <mo stretchy='false'>,</mo>
+   <mi>&#x221E;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>X</mi>
+ <mo stretchy='false'>'</mo>
+ <mrow>
+  <mo>(</mo>
+  <mi>t</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mi>v</mi>
+  <mn>0</mn>
+ </msub>
+ <mo stretchy='false'>+</mo>
+ <mi>a</mi>
+ <mi>t</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>V</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>t</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ ושוב מתקיים גם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>V</mi>
+  <mi>S</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>t</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mi>v</mi>
+  <mn>0</mn>
+ </msub>
+ <mo>&#x22C5;</mo>
+ <mi>t</mi>
+ <mo stretchy='false'>+</mo>
+ <mfrac>
+  <mn>1</mn>
+  <mn>2</mn>
+ </mfrac>
+ <mo>&#x22C5;</mo>
+ <mi>a</mi>
+ <mi>t</mi>
+ <mo>&#x22C5;</mo>
+ <mi>t</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>X</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>t</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>-</mo>
+ <msub>
+  <mi>x</mi>
+  <mn>0</mn>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <mo>&#x222B;</mo>
+ <mi>V</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>t</mi>
+  <mo>)</mo>
+ </mrow>
+ <mi>d</mi>
+ <mi>t</mi>
+</mrow>
+</math>
+.</div>
+
+
+<div class='standard' id='magicparlabel-664'>למה זה עובד? נשים לב שלכל פונקציה גזירה, פונקציית הנגזרת שלה עושה בדיוק את מה שתיארתי בפרק הראשון של הקדמה זו: בכל נקודה פונקציית הנגזרת &#8220;שומרת&#8221; את השינוי בערכה של הפונקציה הקדומה (כמו שהישר שהעברנו על פני הצורה הנתונה &#8220;שמר&#8221; את תוספת<div class='foot'><span class="foot_label">9</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-668'>במקרה של חישוב שטח צורה כל השינויים הם אי-שליליים ואפילו חיוביים ממש, במקרה של פונקציה השינוי יכול להיות גם שלילי עד כדי כך שאולי אפילו נקבל &#8220;שטח שלילי&#8221;.</div>
+</div></div> השטח בכל נקודה), כדי לבצע &#8220;סכימה רציפה&#8221; על כל ה&#8221;מספרים&#8221; השמורים הללו כל שעלינו לעשות הוא להעביר את את הישר שלנו על פני הגרף של הנגזרת ובכל נקודה &#8220;לשמור&#8221; את ערך הנגזרת ו&#8221;להוסיף&#8221; אותו למה ש&#8221;נסכם&#8221; עד כה - זהו בדיוק השטח שבין גרף הנגזרת לציר ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+!</div>
+
+<div class='standard' id='magicparlabel-669'>כמובן, כפי שראינו בחלק השני של הקדמה זו, הצורה הפורמלית לחשב את השטח הזה היא לקרב את השטח ע&#8221;י מלבנים שגובהם חותך את גרף הפונקציה ואז להשאיף את גודל הצלע השנייה ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ ובכך להשאיף גם את גודל המלבנים ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+, זוהי בדיוק ההגדרה של אינטגרל רימן.</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-670'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ לו הייתי יכול להכניס את <a href="https://commons.wikimedia.org/wiki/File:Riemann_integral_irregular.gif">הזו האנימציה</a> לקובץ PDF הייתי מוסיף אותה כאן שכן היא מסכמת את הנאמר בצורה נהדרת.</li>
+</ol>
+<div class='standard' style='text-align: left' id='magicparlabel-671'> </div>
+</ul>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-672'><span class="section_label">4</span> דוגמאות</h2>
+<ul class='nested'>
+<div class='example'>
+<div class="example_item" id='magicparlabel-673'><span class="example_label">דוגמה.</span>
+לאחר שנוכיח את הקשר בין האינטגרל הלא מסוים לבין השטח שמתחת לגרף הפונקציה נוכל לחשב את הנפח של פירמידה ששטח בסיסה הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>S</mi>
+</math>
+ וגובהה הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>h</mi>
+</math>
+:
+<br />
+נשים לב שלכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>x</mi>
+ <mo>&#x2208;</mo>
+ <mrow>
+  <mo>[</mo>
+  <mrow>
+   <mn>0</mn>
+   <mo stretchy='false'>,</mo>
+   <mi>h</mi>
+  </mrow>
+  <mo>]</mo>
+ </mrow>
+</mrow>
+</math>
+ שטח החתך המתאים הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mrow>
+   <mo>(</mo>
+   <mfrac>
+    <mi>x</mi>
+    <mi>h</mi>
+   </mfrac>
+   <mo>)</mo>
+  </mrow>
+  <mn>2</mn>
+ </msup>
+ <mo>&#x22C5;</mo>
+ <mi>S</mi>
+</mrow>
+</math>
+ (היקף המלבן<div class='foot'><span class="foot_label">10</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-677'>או כל צורה אחרת של הבסיס, כולל עיגול ואז נקבל נפח של חרוט.</div>
+</div></div> המהווה את החתך עולה בקצב ליניארי ולכן שטחו גדל בקצב ריבועי),
+<br />
+כאשר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>x</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>h</mi>
+</mrow>
+</math>
+ פירושו החתך בגובה בסיס הפירמידה ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>x</mi>
+ <mo stretchy='false'>=</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+ פירושו החתך בקודקוד הפירמידה.
+<br />
+נגדיר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>V</mi>
+ <mo stretchy='false'>:</mo>
+ <mrow>
+  <mo>[</mo>
+  <mrow>
+   <mn>0</mn>
+   <mo stretchy='false'>,</mo>
+   <mi>h</mi>
+  </mrow>
+  <mo>]</mo>
+ </mrow>
+ <mo>&#x2192;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+ ע&#8221;י <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>V</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <msup>
+  <mrow>
+   <mo>(</mo>
+   <mfrac>
+    <mi>x</mi>
+    <mi>h</mi>
+   </mfrac>
+   <mo>)</mo>
+  </mrow>
+  <mn>2</mn>
+ </msup>
+ <mo>&#x22C5;</mo>
+ <mi>S</mi>
+</mrow>
+</math>
+ ומכאן שנפח הפירמידה מתקבל ע&#8221;י החישוב הבא:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mo>&#x222B;</mo>
+ <mi>V</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+ <mi>d</mi>
+ <mi>x</mi>
+ <mo stretchy='false'>=</mo>
+ <mo>&#x222B;</mo>
+ <mfrac>
+  <msup>
+   <mi>x</mi>
+   <mn>2</mn>
+  </msup>
+  <msup>
+   <mi>h</mi>
+   <mn>2</mn>
+  </msup>
+ </mfrac>
+ <mo>&#x22C5;</mo>
+ <mi>S</mi>
+ <mspace width="10px"/>
+ <mi>d</mi>
+ <mi>x</mi>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mi>S</mi>
+  <msup>
+   <mi>h</mi>
+   <mn>2</mn>
+  </msup>
+ </mfrac>
+ <mo>&#x22C5;</mo>
+ <mo>&#x222B;</mo>
+ <msup>
+  <mi>x</mi>
+  <mn>2</mn>
+ </msup>
+ <mspace width="10px"/>
+ <mi>d</mi>
+ <mi>x</mi>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mi>S</mi>
+  <msup>
+   <mi>h</mi>
+   <mn>2</mn>
+  </msup>
+ </mfrac>
+ <mo>&#x22C5;</mo>
+ <mfrac>
+  <msup>
+   <mi>x</mi>
+   <mn>3</mn>
+  </msup>
+  <mn>3</mn>
+ </mfrac>
+ <mo stretchy='false'>+</mo>
+ <mi>C</mi>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mi>S</mi>
+  <mrow>
+   <mn>3</mn>
+   <msup>
+    <mi>h</mi>
+    <mn>2</mn>
+   </msup>
+  </mrow>
+ </mfrac>
+ <mo>&#x22C5;</mo>
+ <msup>
+  <mi>x</mi>
+  <mn>3</mn>
+ </msup>
+ <mo stretchy='false'>+</mo>
+ <mi>C</mi>
+</mrow>
+</math>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mo>&#x21D2;</mo>
+ <msub>
+  <mi>V</mi>
+  <mi>&#x394;</mi>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <munderover>
+  <mo>&#x222B;</mo>
+  <mn>0</mn>
+  <mi>h</mi>
+ </munderover>
+ <mi>V</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+ <mi>d</mi>
+ <mi>x</mi>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mi>S</mi>
+  <mrow>
+   <mn>3</mn>
+   <msup>
+    <mi>h</mi>
+    <mn>2</mn>
+   </msup>
+  </mrow>
+ </mfrac>
+ <mo>&#x22C5;</mo>
+ <msup>
+  <mi>h</mi>
+  <mn>3</mn>
+ </msup>
+ <mo stretchy='false'>-</mo>
+ <mfrac>
+  <mi>S</mi>
+  <mrow>
+   <mn>3</mn>
+   <msup>
+    <mi>h</mi>
+    <mn>2</mn>
+   </msup>
+  </mrow>
+ </mfrac>
+ <mo>&#x22C5;</mo>
+ <msup>
+  <mn>0</mn>
+  <mn>3</mn>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mrow>
+   <mi>S</mi>
+   <mo>&#x22C5;</mo>
+   <mi>h</mi>
+  </mrow>
+  <mn>3</mn>
+ </mfrac>
+</mrow>
+</math>
+וקיבלנו את הנוסחה המוכרת מהתיכון.</div>
+</div>
+<div class='example'>
+<div class="example_item" id='magicparlabel-679'><span class="example_label">דוגמה.</span>
+בצורה דומה נוכל לחשב נפח של כדור שרדיוסו הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>r</mi>
+</math>
+:
+<br />
+נשים לב שלכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>x</mi>
+ <mo>&#x2208;</mo>
+ <mrow>
+  <mo>[</mo>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mi>r</mi>
+   <mo stretchy='false'>,</mo>
+   <mi>r</mi>
+  </mrow>
+  <mo>]</mo>
+ </mrow>
+</mrow>
+</math>
+ שטח החתך המתאים הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3C0;</mi>
+ <mo>&#x22C5;</mo>
+ <msup>
+  <mrow>
+   <mo>(</mo>
+   <msqrt>
+    <mrow>
+     <msup>
+      <mi>r</mi>
+      <mn>2</mn>
+     </msup>
+     <mo stretchy='false'>-</mo>
+     <msup>
+      <mi>x</mi>
+      <mn>2</mn>
+     </msup>
+    </mrow>
+   </msqrt>
+   <mo>)</mo>
+  </mrow>
+  <mn>2</mn>
+ </msup>
+</mrow>
+</math>
+<div class='foot'><span class="foot_label">11</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-683'>הנוסחה של חצי מעגל שמרכזו בנקודה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>(</mo>
+ <mrow>
+  <mn>0</mn>
+  <mo stretchy='false'>,</mo>
+  <mn>0</mn>
+ </mrow>
+ <mo>)</mo>
+</mrow>
+</math>
+ ורדיוסו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>r</mi>
+</math>
+ היא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msqrt>
+ <mrow>
+  <msup>
+   <mi>r</mi>
+   <mn>2</mn>
+  </msup>
+  <mo stretchy='false'>-</mo>
+  <msup>
+   <mi>x</mi>
+   <mn>2</mn>
+  </msup>
+ </mrow>
+</msqrt>
+</math>
+, כעת, לאחר שקיבלנו את אורך הרדיוס של החתך נעלה אותו בריבוע ונכפיל ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3C0;</mi>
+</math>
+ כדי לקבל את שטח החתך.</div>
+</div></div> נגדיר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>V</mi>
+ <mo stretchy='false'>:</mo>
+ <mrow>
+  <mo>[</mo>
+  <mrow>
+   <mn>0</mn>
+   <mo stretchy='false'>,</mo>
+   <mi>r</mi>
+  </mrow>
+  <mo>]</mo>
+ </mrow>
+ <mo>&#x2192;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+ ע&#8221;י <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>V</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mi>&#x3C0;</mi>
+ <mo>&#x22C5;</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msup>
+    <mi>r</mi>
+    <mn>2</mn>
+   </msup>
+   <mo stretchy='false'>-</mo>
+   <msup>
+    <mi>x</mi>
+    <mn>2</mn>
+   </msup>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+<div class='foot'><span class="foot_label">12</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-687'>אנו מסתכלים רק על החלק שבצד החיובי כדי שלא נקבל שהוא מתאפס יחד עם השלילי, אח&#8221;כ נכפיל את התוצאה ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>2</mn>
+</math>
+.</div>
+</div></div> ומכאן שנפח הכדור מתקבל ע&#8221;י החישוב הבא:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true' columnalign='right left '>
+ <mtr>
+  <mtd>
+   <mrow>
+    <mo>&#x222B;</mo>
+    <mi>V</mi>
+    <mrow>
+     <mo>(</mo>
+     <mi>x</mi>
+     <mo>)</mo>
+    </mrow>
+    <mi>d</mi>
+    <mi>x</mi>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <mo>&#x222B;</mo>
+    <mi>&#x3C0;</mi>
+    <mo>&#x22C5;</mo>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msup>
+       <mi>r</mi>
+       <mn>2</mn>
+      </msup>
+      <mo stretchy='false'>-</mo>
+      <msup>
+       <mi>x</mi>
+       <mn>2</mn>
+      </msup>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mi>d</mi>
+    <mi>x</mi>
+   </mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow/>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <mi>&#x3C0;</mi>
+    <mo>&#x22C5;</mo>
+    <mo>&#x222B;</mo>
+    <msup>
+     <mi>r</mi>
+     <mn>2</mn>
+    </msup>
+    <mo stretchy='false'>-</mo>
+    <msup>
+     <mi>x</mi>
+     <mn>2</mn>
+    </msup>
+    <mi>d</mi>
+    <mi>x</mi>
+   </mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow/>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <mi>&#x3C0;</mi>
+    <mo>&#x22C5;</mo>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msup>
+       <mi>r</mi>
+       <mn>2</mn>
+      </msup>
+      <mi>x</mi>
+      <mo stretchy='false'>-</mo>
+      <mfrac>
+       <msup>
+        <mi>x</mi>
+        <mn>3</mn>
+       </msup>
+       <mn>3</mn>
+      </mfrac>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>+</mo>
+    <mi>C</mi>
+   </mrow>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true' columnalign='right left '>
+ <mtr>
+  <mtd>
+   <mrow>
+    <mo>&#x21D2;</mo>
+    <msub>
+     <mi>V</mi>
+     <mo>&#x2A00;</mo>
+    </msub>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <mn>2</mn>
+    <mo>&#x22C5;</mo>
+    <munderover>
+     <mo>&#x222B;</mo>
+     <mn>0</mn>
+     <mi>r</mi>
+    </munderover>
+    <mi>V</mi>
+    <mrow>
+     <mo>(</mo>
+     <mi>x</mi>
+     <mo>)</mo>
+    </mrow>
+    <mi>d</mi>
+    <mi>x</mi>
+    <mo stretchy='false'>=</mo>
+    <mn>2</mn>
+    <mi>&#x3C0;</mi>
+    <mo>&#x22C5;</mo>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msup>
+       <mi>r</mi>
+       <mn>2</mn>
+      </msup>
+      <mo>&#x22C5;</mo>
+      <mi>r</mi>
+      <mo stretchy='false'>-</mo>
+      <mfrac>
+       <msup>
+        <mi>r</mi>
+        <mn>3</mn>
+       </msup>
+       <mn>3</mn>
+      </mfrac>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>-</mo>
+    <mn>2</mn>
+    <mi>&#x3C0;</mi>
+    <mo>&#x22C5;</mo>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msup>
+       <mi>r</mi>
+       <mn>2</mn>
+      </msup>
+      <mo>&#x22C5;</mo>
+      <mn>0</mn>
+      <mo stretchy='false'>-</mo>
+      <mfrac>
+       <msup>
+        <mn>0</mn>
+        <mn>3</mn>
+       </msup>
+       <mn>3</mn>
+      </mfrac>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow/>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <mn>2</mn>
+    <mi>&#x3C0;</mi>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msup>
+       <mi>r</mi>
+       <mn>3</mn>
+      </msup>
+      <mo stretchy='false'>-</mo>
+      <mfrac>
+       <msup>
+        <mi>r</mi>
+        <mn>3</mn>
+       </msup>
+       <mn>3</mn>
+      </mfrac>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>=</mo>
+    <mn>2</mn>
+    <mi>&#x3C0;</mi>
+    <mo>&#x22C5;</mo>
+    <mfrac>
+     <mrow>
+      <mn>2</mn>
+      <msup>
+       <mi>r</mi>
+       <mn>3</mn>
+      </msup>
+     </mrow>
+     <mn>3</mn>
+    </mfrac>
+    <mo stretchy='false'>=</mo>
+    <mfrac>
+     <mrow>
+      <mn>4</mn>
+      <mi>&#x3C0;</mi>
+      <msup>
+       <mi>r</mi>
+       <mn>3</mn>
+      </msup>
+     </mrow>
+     <mn>3</mn>
+    </mfrac>
+   </mrow>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+וקיבלנו עוד נוסחה מדף הנוסחאות של התיכון.</div>
+</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-688'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ אנחנו יודעים גם ששטח עיגול שרדיוסו הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>r</mi>
+</math>
+ שווה ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>4</mn>
+ <mo>&#x22C5;</mo>
+ <munderover>
+  <mo>&#x222B;</mo>
+  <mn>0</mn>
+  <mi>r</mi>
+ </munderover>
+ <msqrt>
+  <mrow>
+   <msup>
+    <mi>r</mi>
+    <mn>2</mn>
+   </msup>
+   <mo stretchy='false'>-</mo>
+   <msup>
+    <mi>x</mi>
+    <mn>2</mn>
+   </msup>
+  </mrow>
+ </msqrt>
+ <mspace width="10px"/>
+ <mi>d</mi>
+ <mi>x</mi>
+</mrow>
+</math>
+ אך מכיוון ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3C0;</mi>
+</math>
+ הוא מספר טרנסצנדנטי לא נוכל להציג את האינטגרל בצורה טובה יותר לעת עתה, זו הסיבה לכך שהתחלתי לחשב נפחים במקום להראות חישוב &#8220;בסיסי יותר&#8221; של שטח עיגול או אליפסה.</li>
+</ol>
+<div class='example'>
+<div class="example_item" id='magicparlabel-689'><span class="example_label">דוגמה.</span>
+תהיתם פעם למה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3C0;</mi>
+</math>
+ של היקף העיגול הוא אותו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3C0;</mi>
+</math>
+ של שטחו? כלומר למה היחס בין שטח עיגול לריבוע הרדיוס שלו שווה ליחס בין היקף העיגול לקוטרו?
+<br />
+לפני שנמשיך נסכים על כך ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3C0;</mi>
+</math>
+ מוגדר להיות היחס בין היקף היקף העיגול לקוטרו, כלומר ההיקף של עיגול שרדיוסו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>r</mi>
+</math>
+ הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>2</mn>
+ <mi>&#x3C0;</mi>
+ <mi>r</mi>
+</mrow>
+</math>
+, זוהי ההגדרה של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3C0;</mi>
+</math>
+ ואנחנו עדיין לא יודעים ששטחו הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3C0;</mi>
+ <msup>
+  <mi>r</mi>
+  <mn>2</mn>
+ </msup>
+</mrow>
+</math>
+ - זה בדיוק מה שעלינו להוכיח.
+<br />
+במסכת סוכה דף ח.<div class='foot'><span class="foot_label">13</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-693'>האות חי&#8221;ת מתייחסת לדף השמיני של המסכת (כשהדף הראשון הוא השער של הספר ולא הדף הראשון של הטקסט), והנקודה הבודדת אומרת שמדובר בעמוד הראשון של הדף (לדף יש שני צדדים וכל אחד מהם נקרא &#8220;עמוד&#8221;), אם היינו רוצים לדבר על הדף השני היינו כותבים &#8220;ח:&#8221;.</div>
+</div></div> דנה הגמרא מה צריך להיות גודלה של סוכה עגולה כדי שתיחשב כשרה וכחלק מהדיון מזכירה ששטח עיגול הוא (בקירוב) <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <mn>3</mn>
+ <mn>4</mn>
+</mfrac>
+</math>
+ משטח הריבוע החוסם אותו, ה<a href="https://he.wikipedia.org/wiki/%D7%91%D7%A2%D7%9C%D7%99_%D7%94%D7%AA%D7%95%D7%A1%D7%A4%D7%95%D7%AA">תוספות</a> שם<div class='foot'><span class="foot_label">14</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-697'>ב<a href="https://he.wikipedia.org/wiki/%D7%93%D7%99%D7%91%D7%95%D7%A8_%D7%94%D7%9E%D7%AA%D7%97%D7%99%D7%9C">המתחיל דיבור</a> &#8220;כמה מרובע יתר על העיגול רביע&#8221;.</div>
+</div></div> מראים כיצד ניתן להגיע למסקנה זו<div class='foot'><span class="foot_label">15</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-701'>מקור ההוכחה בספר &#8220;חיבור המשיחה והתשבורת&#8221; שכתב <a href="https://he.wikipedia.org/wiki/%D7%90%D7%91%D7%A8%D7%94%D7%9D_%D7%91%D7%A8_%D7%97%D7%99%D7%99%D7%90#%D7%94%D7%95%D7%9B%D7%97%D7%94_%D7%9C%D7%A7%D7%A9%D7%A8_%D7%91%D7%99%D7%9F_%D7%94%D7%99%D7%A7%D7%A3_%D7%9C%D7%A9%D7%98%D7%97_%D7%A2%D7%99%D7%92%D7%95%D7%9C">חייא בר אברהם רבי</a> (המאות ה-11<span style='font-size:small;'> </span>וה-12) שהיה הראשון להביא את האלגברה הערבית לאירופה הנבערת של תקופתו (בתוך תחומים מדעיים נוספים) ובכך מילא תפקיד חשוב בהתפתחות המתמטיקה (מקור: ויקיפדיה העברית בערך הנ&#8221;ל).</div>
+</div></div>, בעמוד הבא מופיע ציטוט<div class='foot'><span class="foot_label">16</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-705'>הציטוט נלקח מוויקיטקסט (ראו <a href="https://he.wikisource.org/wiki/%D7%A1%D7%95%D7%9B%D7%94_%D7%97_%D7%90#%D7%AA%D7%95%D7%A1%D7%A4%D7%95%D7%AA">כאן</a>), ההערות בסוגריים והפיסוק הם משלי.</div>
+</div></div> סוף דבריהם<div class='foot'><span class="foot_label">17</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-709'>לפני כן הם טורחים לבטל את הסברה שיש קשר ליניארי בין ההיקף של ריבוע לשטחו.</div>
+</div></div> והסבר שלי.</div>
+<div class="example_item" id='magicparlabel-710'><br /></div>
+<div class="example_item" id='magicparlabel-711'><div class='Frameless' style='width: 40%; '><div class='plain_layout' id='magicparlabel-715'>&#8220;...ואם באנו לכוין החשבון דמרובע יתר על העגול נוכל להוכיח בענין זה שתעשה נקודה של משהו (נקודה שאין לה שטח - עיגול קטן לאינסוף) ותקיפנה בחוטין הרבה סביב זה סיבוב אחר סיבוב עד שירחיבו ויגדל רוחב בעוגל טפח על טפח (עד שהקוטר יהיה באורך טפח ולכן הריבוע החוסם יהיה טפח על טפח); ואחר כך תחתך החוטין מן הנקודה ולמטה (ראו חלק מס&#8217; 1 באיור למטה), דהיינו מחצי רוחב עיגול ולמטה, ואחר שיחתכו יתפשטו כל החוטין מימין ומשמאל ונמצא כל חוט הולך ומאריך מחבירו משהו מכאן ומשהו מכאן עד שאתה מגיע לחוט העליון דארכו ג&#8217; טפחים שהוא חוט החיצון שהוא מסבב טפח על טפח דכל שיש ברוחבו טפח (כל עיגול שקוטרו באורך טפח) יש בהיקפו שלשה טפחים (היקפו הוא שלושה טפחים - הקירוב של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3C0;</mi>
+</math>
+ שהגמרא והתוספות משתמשים בו הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>3</mn>
+</math>
+). נמצאו החוטין הללו סדורין כענין זה:</div>
+
+<div class='plain_layout' style='text-align: center;' id='magicparlabel-716'><img style='width:50%;' src='e_9a2e6f5d42ff____________________________.png' alt='image: e_9a2e6f5d42ff____________________________.png' /></div>
+
+<div class='plain_layout' id='magicparlabel-717'>כמין רצועה רחבה באמצע חצי טפח, והיינו כנגד הנקודה, מכאן ומכאן כלה והולכת וצרה עד משהו (עד <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+, כלומר מדובר במשולש שווה שוקיים שאורך הבסיס שלו הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>3</mn>
+</math>
+ טפחים ואורך הגובה שלו הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <mn>1</mn>
+ <mn>2</mn>
+</mfrac>
+</math>
+ טפח, ראו חלק מס&#8217; 2 באיור לעיל). ואם באת לחזור ולחלק אותה באמצע היינו כנגד הנקודה תמצא שתי רצועות שכל אחת ארכה טפח ומחצה ומצד אחת רחבה חצי טפח ומצד אחת כלה עד משהו (כלומר מדובר בשני משולשים ישרי זווית שאורך אחד מניצביו הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>1</mn>
+ <mfrac>
+  <mn>1</mn>
+  <mn>2</mn>
+ </mfrac>
+</mrow>
+</math>
+ טפחים וארך האחר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <mn>1</mn>
+ <mn>2</mn>
+</mfrac>
+</math>
+ טפח, שוב החלק מס&#8217; 2), ועתה תצטרף אלו שתי הרצועות ושים הארוך כנגד הקצר את תמצא רצועה ארכה טפח ומחצה על רוחב חצי טפח (חבר את שני המשולשים זה לזה כך שייווצר מלבן שאורכי צלעותיו כאורכי הניצבים של שני המשולשים, ראו חלק מס&#8217; 3 באיור); תחלוק אותה לשלש רצועות תמצא בה שלש רצועות מחצי טפח על חצי טפח (נחלק את המלבן לשלושה ריבועים חופפים שאורך צלעותיהם הוא חצי טפח), ואילו רצועה מרובעת של טפח (ריבוע שאורך צלעותיו הוא טפח - שהוא הריבוע אליו אנו משווים את העיגול) כשתחלקנה שתי וערב תמצא בה ארבע רצועות של חצי טפח על חצי טפח הרי לך מרובע יתר על העיגול רביע.&#8221;</div>
+</div>    <div class='Boxed' style='width: 55%; '><div class='plain_layout' id='magicparlabel-721'><u><b>הסבר של דברי התוספות בשפה אינטואיטיבית</b></u></div>
+
+<div class='plain_layout' id='magicparlabel-722'>ניקח עיגול שקוטרו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>2</mn>
+ <mi>r</mi>
+</mrow>
+</math>
+ נחתוך בו רדיוס ו&#8221;נפתח&#8221; את העיגול למשולש שווה שוקיים שאורך בסיסו כאורך היקף העיגול, והמרחק בין כל שתי נקודות הנמצאות באותו הגובה בשוקיים הוא כהיקף העיגול שאורך רדיוסו הוא המרחק בין הקטע שבין שתי הנקודות לבין הקודקוד שבין שתי השוקיים. הסיבה לכך שאכן קיבלנו משולש היא ההנחה שלנו שקיים יחס ישר בין היקף המעגל לקוטרו ולרדיוסו, ולכן הפונקציה המתאימה לכל נקודה על הרדיוס את היקף המעגל המתאים היא פונקציה ליניארית.
+<br />
+א&#8221;כ שטח העיגול הוא כשטח משולש שווה שוקיים שאורך בסיסו הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>2</mn>
+ <mi>&#x3C0;</mi>
+ <mi>r</mi>
+</mrow>
+</math>
+ וגובהו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>r</mi>
+</math>
+, כלומר:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mfrac>
+  <mrow>
+   <mn>2</mn>
+   <mi>&#x3C0;</mi>
+   <mi>r</mi>
+   <mo>&#x22C5;</mo>
+   <mi>r</mi>
+  </mrow>
+  <mn>2</mn>
+ </mfrac>
+ <mo stretchy='false'>=</mo>
+ <mi>&#x3C0;</mi>
+ <msup>
+  <mi>r</mi>
+  <mn>2</mn>
+ </msup>
+</mrow>
+</math>
+</div>
+
+<div class='plain_layout' id='magicparlabel-723'> </div>
+
+<div class='plain_layout' id='magicparlabel-724'> </div>
+
+<div class='plain_layout' id='magicparlabel-725'><u><b>דברי התוספות - &#8220;<a href="https://he.wikipedia.org/wiki/%D7%A6%D7%95%D7%A8%D7%AA_%D7%94%D7%93%D7%A3">הדף צורת</a>&#8221;</b></u></div>
+
+<div class='plain_layout' style='text-align: center;' id='magicparlabel-726'><img style='width:45%;' src='e_33260cc2afe7________________.png' alt='image: e_33260cc2afe7________________.png' /></div>
+<dl class='description'>
+<dt class="description_label">מקור:</dt>
+<dd class="description_item" id='magicparlabel-727'> <a href="https://daf-yomi.com/Dafyomi_Page.aspx?vt=1&amp;massechet=289&amp;amud=15&amp;fs=0">היומי הדף פורטל</a>.</dd>
+</dl>
+</div>
+<br />
+ 
+<br />
+אם נרצה להמיר את ההוכחה של התוספות לשפה האינטואיטיבית שדיברנו בה קודם אז נאמר שאנו לוקחים &#8220;מעגל&#8221; ברדיוס <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ ומזיחים אותו לאורך רדיוס העיגול כך שהמעגל גדל בהתאם לרדיוס, הפונקציה המתארת את גודל המעגל כתלות ברדיוס היא הפונקציה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mn>2</mn>
+ <mi>&#x3C0;</mi>
+ <mi>x</mi>
+</mrow>
+</math>
+ שהשטח מתחת לגרף שלה הוא משולש ישר זווית שאורך ניצבו האחד כאורך רדיוס העיגול ואורך ניצבו האחר הוא כהיקף העיגול ושוב קיבלנו את הנוסחה:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mfrac>
+  <mrow>
+   <mn>2</mn>
+   <mi>&#x3C0;</mi>
+   <mi>r</mi>
+   <mo>&#x22C5;</mo>
+   <mi>r</mi>
+  </mrow>
+  <mn>2</mn>
+ </mfrac>
+ <mo stretchy='false'>=</mo>
+ <mi>&#x3C0;</mi>
+ <msup>
+  <mi>r</mi>
+  <mn>2</mn>
+ </msup>
+</mrow>
+</math>
+נשים לב לכך ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>&#x222B;</mo>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+ <mi>d</mi>
+ <mi>x</mi>
+ <mo stretchy='false'>=</mo>
+ <mo>&#x222B;</mo>
+ <mn>2</mn>
+ <mi>&#x3C0;</mi>
+ <mi>x</mi>
+ <mspace width="10px"/>
+ <mi>d</mi>
+ <mi>x</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>&#x3C0;</mi>
+ <msup>
+  <mi>x</mi>
+  <mn>2</mn>
+ </msup>
+ <mo stretchy='false'>+</mo>
+ <mi>C</mi>
+</mrow>
+</math>
+ ולכן הפירמול של האינטואיציה הזו הוא באמירה ששטח העיגול הוא האינטגרל:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <munderover>
+  <mo>&#x222B;</mo>
+  <mn>0</mn>
+  <mi>r</mi>
+ </munderover>
+ <mn>2</mn>
+ <mi>&#x3C0;</mi>
+ <mi>x</mi>
+ <mspace width="10px"/>
+ <mi>d</mi>
+ <mi>x</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>&#x3C0;</mi>
+ <msup>
+  <mi>r</mi>
+  <mn>2</mn>
+ </msup>
+ <mo stretchy='false'>-</mo>
+ <mi>&#x3C0;</mi>
+ <mo>&#x22C5;</mo>
+ <msup>
+  <mn>0</mn>
+  <mn>2</mn>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <mi>&#x3C0;</mi>
+ <msup>
+  <mi>r</mi>
+  <mn>2</mn>
+ </msup>
+</mrow>
+</math>
+</div>
+</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-728'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ הנה ניסיון שלי בילדותי לקשר בין <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3C0;</mi>
+</math>
+ של היקף העיגול לבין <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3C0;</mi>
+</math>
+ של שטחו: ניקח &#8220;מחוג&#8221; באורך רדיוס העיגול ו<b>נזיח</b> אותו כשאחד מקצותיו נותר קבוע במקומו והאחר מסתובב סביבו סיבוב שלם, א&#8221;כ כמו שחישבנו את שטח המלבן נקבל כעת ששטח העיגול הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>2</mn>
+ <mi>&#x3C0;</mi>
+ <mi>r</mi>
+</mrow>
+</math>
+ &#8220;פעמים&#8221; <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>r</mi>
+</math>
+, כלומר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>2</mn>
+ <mi>&#x3C0;</mi>
+ <msup>
+  <mi>r</mi>
+  <mn>2</mn>
+ </msup>
+</mrow>
+</math>
+! למה זה לא עובד? למה האינטואיציה של הוכחת התוספות הצליחה בעוד ששלי נכשלה?
+<br />
+ובכן התשובה ברורה: למה החלטתי שאורך העקומה שלאורכה אני מזיח את המחוג היא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>2</mn>
+ <mi>&#x3C0;</mi>
+ <mi>r</mi>
+</mrow>
+</math>
+? הרי בכל נקודה של המחוג אורך העקומה שונה! מכאן אנחנו למדים שהאינטואיציה עובדת באופן פשוט רק כאשר העקומה שלאורכה אנו מזיחים את הצורה המדוברת <b>מאונכת</b> לאותה צורה<div class='foot'><span class="foot_label">18</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-732'>מכיוון שהשטחים היחידים שאנחנו באמת יודעים לחשב הם של מלבנים ולפיהם הגדרנו את מושג השטח.</div>
+</div></div>; אחרת יש לבצע תיקונים, במקרה הזה התיקון הנדרש הוא חישוב ממוצע בין אורכי העקומות השונות שמרכיבות את המסלול של כל נקודה במחוג ומכיוון שאין שום סיבה להעדיף אחת מהן על פני חברתה הממוצע הוא בדיוק <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x3C0;</mi>
+ <mi>r</mi>
+</mrow>
+</math>
+ אבל זה כבר ממש לא אינטואיטיבי ולא ברור שזה עובד ולכן כדאי להישאר עם האינטואיציה של הזחה במאונך לקטע המוזח.
+<br />
+אם בכל זאת רוצים לדעת כיצד לבצע תיקון ניתן להיעזר באינטואיציה הבאה: אם ניקח מקבילית שאינה מלבן ו<b>נזיח</b> את אחת מצלעותיה לאורך אחת מהצלעות שאינה מקבילה לה נקבל את שטח המקבילית, אבל הכפלת אורכי הצלעות נותנת תשובה שגויה משום שהקטע המוזח אינו מאונך לקטע שלאורכו הוא מוזח; לכן צריך להכפיל את התשובה השגויה ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>sin</mo>
+ <mi>&#x3B1;</mi>
+</mrow>
+</math>
+ כאשר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3B1;</mi>
+</math>
+ היא אחת הזוויות במקבילית (לא משנה איזו כי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>sin</mo>
+ <mi>&#x3B1;</mi>
+ <mo stretchy='false'>=</mo>
+ <mo>sin</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>&#x3C0;</mi>
+   <mo stretchy='false'>-</mo>
+   <mi>&#x3B1;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+) כדי לקבל מהקטע השגוי את הקטע הנכון. באותה דרך ניתן לתקן כל חישוב שבו הקטע השגוי בעל זווית קבועה בינו לבין הקטע הנכון לאורך כל ההזחה, אך לא מצאתי דרך לבצע את התיקון הזה באינטואיציה שלי עם המחוג מפני שלא מצאתי את הישר הנכון.</li>
+<li class="labeling_item" id='magicparlabel-733'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ למיטיבי לכת: מיד לאחר ההסבר על הקשר בין היקף העיגול לשטחו התוספות עוברים להוכיח שמתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>1.4</mn>
+ <mo stretchy='false'>&lt;</mo>
+ <msqrt>
+  <mn>2</mn>
+ </msqrt>
+</mrow>
+</math>
+.</li>
+</ol>
+</ul>
+</section>
+<script src="../../../../tree_view.js"></script>
+</body>
+</html>

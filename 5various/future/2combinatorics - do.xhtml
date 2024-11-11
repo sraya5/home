@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="he-IL">
+<head>
+<link rel="stylesheet" type="text/css" href="../../main.css" />
+<meta name="viewport" content="width=device-width" />
+<meta name="generator" content="LyX 2.4.1" />
+<title>קומבינטוריקה - הגדרות בלבד</title>
+<script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body dir="auto">
+<section>
+<h2 class='section' id='magicparlabel-594'><span class="section_label">1</span> בעיות מנייה בסיסיות</h2>
+<ul class='nested'>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-595'>מקדם מולטינומי:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mo fence='true' stretchy='true' form='prefix'>(</mo>
+ <mfrac linethickness='0'>
+ <mrow>
+  <msub>
+   <mi>k</mi>
+   <mn>1</mn>
+  </msub>
+  <mo stretchy='false'>+</mo>
+  <msub>
+   <mi>k</mi>
+   <mn>2</mn>
+  </msub>
+  <mo stretchy='false'>+</mo>
+  <mi>&#x2026;</mi>
+  <mo stretchy='false'>+</mo>
+  <msub>
+   <mi>k</mi>
+   <mi>n</mi>
+  </msub>
+ </mrow>
+ <mrow>
+  <msub>
+   <mi>k</mi>
+   <mn>1</mn>
+  </msub>
+  <mo stretchy='false'>,</mo>
+  <msub>
+   <mi>k</mi>
+   <mn>2</mn>
+  </msub>
+  <mo stretchy='false'>,</mo>
+  <mi>&#x2026;</mi>
+  <mo stretchy='false'>,</mo>
+  <msub>
+   <mi>k</mi>
+   <mi>n</mi>
+  </msub>
+ </mrow></mfrac>
+ <mo fence='true' stretchy='true' form='postfix'>)</mo>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mrow>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <msub>
+      <mi>k</mi>
+      <mn>1</mn>
+     </msub>
+     <mo stretchy='false'>+</mo>
+     <msub>
+      <mi>k</mi>
+      <mn>2</mn>
+     </msub>
+     <mo stretchy='false'>+</mo>
+     <mi>&#x2026;</mi>
+     <mo stretchy='false'>+</mo>
+     <msub>
+      <mi>k</mi>
+      <mi>n</mi>
+     </msub>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+   <mo stretchy='false'>!</mo>
+  </mrow>
+  <mrow>
+   <msub>
+    <mi>k</mi>
+    <mn>1</mn>
+   </msub>
+   <mo stretchy='false'>!</mo>
+   <mo>&#x22C5;</mo>
+   <msub>
+    <mi>k</mi>
+    <mn>2</mn>
+   </msub>
+   <mo stretchy='false'>!</mo>
+   <mo>&#x22C5;</mo>
+   <mi>&#x2026;</mi>
+   <mo>&#x22C5;</mo>
+   <msub>
+    <mi>k</mi>
+    <mi>n</mi>
+   </msub>
+   <mo stretchy='false'>!</mo>
+  </mrow>
+ </mfrac>
+</mrow>
+</math>
+</li>
+</ol>
+</ul>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-597'><span class="section_label">2</span> נוסחאות נסיגה</h2>
+<ul class='nested'>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-598'>ניתן להגדיר את מספרי קטלן בצורות רבות, המשותף לכולן הוא שהן מקיימות את תנאי ההתחלה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>C</mi>
+  <mn>1</mn>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+ ואת נוסחת הנסיגה:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mi>C</mi>
+  <mi>n</mi>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <munderover>
+  <mo>&#x2211;</mo>
+  <mrow>
+   <mi>k</mi>
+   <mo stretchy='false'>=</mo>
+   <mn>0</mn>
+  </mrow>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>-</mo>
+   <mn>1</mn>
+  </mrow>
+ </munderover>
+ <msub>
+  <mi>C</mi>
+  <mi>k</mi>
+ </msub>
+ <mo>&#x22C5;</mo>
+ <msub>
+  <mi>C</mi>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>-</mo>
+   <mn>1</mn>
+   <mo stretchy='false'>-</mo>
+   <mi>k</mi>
+  </mrow>
+ </msub>
+</mrow>
+</math>
+כלומר כל איבר שווה לסכום המכפלות של כל אחד מן האיברים הקודמים יחד עם ה&#8221;משלים&#8221; שלו, הדוגמה שראינו בכיתה היא מספר הדרכים לעלות בסריג ריבועי מהקצה התחתון השמאלי לקצה העליון הימני מבלי לעלות מעבר לאלכסון הראשי, דוגמה נוספת היא מספר השילושים של מצולע קמור<div class='foot'><span class="foot_label">1</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-602'>מספר הדרכים לחלק אותו למשולשים ע&#8221;י בחירת חלק מאלכסוניו מבלי ששניים מהם יחתכו זה את זה.</div>
+</div></div> כאשר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>C</mi>
+ <mn>1</mn>
+</msub>
+</math>
+ הוא מספר הדרכים לעשות זאת עבור <i>משולש</i>.</li>
+<li class="enumerate_item" id='magicparlabel-603'>סדרת פיבונאצ&#8217;י: תנאי ההתחלה הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>F</mi>
+  <mn>0</mn>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+ <mo stretchy='false'>,</mo>
+ <mspace width="10px"/>
+ <msub>
+  <mi>F</mi>
+  <mn>1</mn>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+ ונוסחת הנסיגה היא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>F</mi>
+  <mi>n</mi>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mi>F</mi>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>-</mo>
+   <mn>1</mn>
+  </mrow>
+ </msub>
+ <mo stretchy='false'>+</mo>
+ <msub>
+  <mi>F</mi>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>-</mo>
+   <mn>2</mn>
+  </mrow>
+ </msub>
+</mrow>
+</math>
+.</li>
+</ol>
+</ul>
+</section>
+<script src="../../tree_view.js"></script>
+</body>
+</html>

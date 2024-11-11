@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="he-IL">
+<head>
+<link rel="stylesheet" type="text/css" href="../../main.css" />
+<meta name="viewport" content="width=device-width" />
+<meta name="generator" content="LyX 2.4.1" />
+<title>רשימות מקושרות</title>
+<script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body dir="auto">
+<section>
+<h2 class='section' id='magicparlabel-611'><span class="section_label">1</span> רשימות מקושרות</h2>
+<ul class='nested'>
+<div class='standard' id='magicparlabel-612'>רשימה מקושרת (או רשימה משורשרת) היא אוסף של איברים (nodes) שלכל אחד מהם שתי תכונות: המידע שלו ומצביע על האיבר הבא ברשימה, ההצבעה היא זו שיוצרת את ה&#8221;סדר&#8221; של הרשימה המקושרת (כל איבר בה אחרי זה שמצביע עליו), מלבדה אין שום סדר ברשימה. כדי שנוכל &#8220;לאחוז&#8221; ברשימה עלינו לשמור מצביע על &#8220;ראש&#8221; הרשימה<div class='foot'><span class="foot_label">1</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-616'>מצביע זה יקרא להלן &#8220;<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>h</mi>
+ <mi>e</mi>
+ <mi>a</mi>
+ <mi>d</mi>
+</mrow>
+</math>
+&#8221;.</div>
+</div></div> (ושוב, המצביע הזה הוא הדבר היחיד שהופך את ראש הרשימה לכזה), סוף הרשימה מוגדר להיות זה שהמצביע שלו מצביע על אובייקט שאינו חלק מהרשימה והוגדר להיות כזה שקובע את סוף הרשימה (בפייתון מקובל להשתמש ב-None).</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-617'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ המחשות טובות וגם סיכום מעולה ניתן למצוא בערך &#8220;<a href="https://he.wikipedia.org/wiki/%D7%A8%D7%A9%D7%99%D7%9E%D7%94_%D7%9E%D7%A7%D7%95%D7%A9%D7%A8%D7%AA">מקושרות רשימות</a>&#8221; בוויקיפדיה.</li>
+<li class="labeling_item" id='magicparlabel-618'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ המצביעים הם הדבר היחיד שהופך את הרשימה מאוסף של פרטים לרשימה, אם נאבד אחד מהם לא נוכל לקבל את המשך הרשימה! אחת הטעויות הנפוצות ביותר בנושא זה הוא איבוד אחד המצביעים כשמבצעים שינוי כלשהו ברשימה (דוגמאות בהמשך), טעות נוספת היא ניסיון לגשת לאיבר שעליו מצביע האיבר האחרון.</li>
+<li class="labeling_item" id='magicparlabel-619'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ כפי שנראה בהמשך רשימות מקושרות אינן יעילות כל כך לעומת רשימות רגילות, יתרונן היחיד נעוץ בכך שהן מפרידות בין הסדר הלוגי של האיברים ברשימה לבין המיקום שבו נמצאים האיברים בזיכרון, ההשלכה העיקרית של הפרדה זו היא שכשמסירים איבר מן הרשימה (או מוסיפים איבר) אין צורך להזיז את כל אלו שאחריו (<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mn>1</mn>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ לעומת <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ ברשימות רגילות), לכן רשימות מקושרות יעילות בעיקר במקרים שבהם אנחנו מסירים ומוסיפים איברים לרשימה לעיתים קרובות.</li>
+<li class="labeling_item" id='magicparlabel-620'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ רשימה מקושרת יכולה להיות מעגלית, זה קורה כאשר סוף הרשימה מצביע על תחילתה (ואז בעצם אין לרשימה סוף או התחלה).</li>
+</ol>
+<div class='standard' id='magicparlabel-621'>הרשימה עצמה היא אובייקט בעל תכונה יחידה שהיא הכתובת של ראש הרשימה בזיכרון, ניתן להוסיף לאובייקט תכונות שימושיות נוספות כגון: אורך הרשימה (יעודכן בכל פונקציה שתשנה את אורך הרשימה), מצביע על סוף הרשימה ו/או מצביע על האיבר שלפניו.</div>
+
+<div class='standard' id='magicparlabel-622'>כדי ליצור רשימה ריקה ניצור מצביע שיצביע על ראש הרשימה ונאתחל אותו להצביע על None, כדי ליצור רשימה בעלת איבר יחיד נאתחל את המצביע כך שיצביע על האיבר המתאים.</div>
+<section>
+<h3 class='subsection' id='magicparlabel-623'><span class="subsection_label">1.1</span> פעולות בסיסיות</h3>
+
+<div class='float-algorithm'><div class='plain_layout' id='magicparlabel-628'><span class='float-caption-Standard float-caption float-caption-standard'>
+<br />
+אלגוריתם 1  מציאת אורך הרשימה</span></div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-633'>נאתחל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>i</mi>
+ <mi>n</mi>
+ <mi>d</mi>
+ <mi>e</mi>
+ <mi>x</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mi>u</mi>
+ <mi>r</mi>
+ <mi>r</mi>
+ <mi>e</mi>
+ <mi>n</mi>
+ <mi>t</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mi>h</mi>
+ <mi>e</mi>
+ <mi>a</mi>
+ <mi>d</mi>
+</mrow>
+</math>
+.</li>
+<li class="enumerate_item" id='magicparlabel-634'>כל עוד המידע של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mi>u</mi>
+ <mi>r</mi>
+ <mi>r</mi>
+ <mi>e</mi>
+ <mi>n</mi>
+ <mi>t</mi>
+</mrow>
+</math>
+ אינו None:
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-635'>נוסיף ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>i</mi>
+ <mi>n</mi>
+ <mi>d</mi>
+ <mi>e</mi>
+ <mi>x</mi>
+</mrow>
+</math>
+ <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+.</li>
+<li class="itemize_item" id='magicparlabel-636'>נעדכן את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mi>u</mi>
+ <mi>u</mi>
+ <mi>r</mi>
+ <mi>e</mi>
+ <mi>n</mi>
+ <mi>t</mi>
+</mrow>
+</math>
+ כך שיהיה שווה למצביע של האיבר הבא.</li>
+</ul>
+</li><li class="enumerate_item" id='magicparlabel-637'>נחזיר את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>i</mi>
+ <mi>n</mi>
+ <mi>d</mi>
+ <mi>e</mi>
+ <mi>x</mi>
+</mrow>
+</math>
+.</li>
+</ol>
+</div>
+
+
+<div class='standard' style='text-align: left' id='magicparlabel-638'> </div>
+
+
+<div class='float-algorithm'><div class='plain_layout' id='magicparlabel-643'><span class='float-caption-Standard float-caption float-caption-standard'>
+<br />
+אלגוריתם 2  הוספת איבר</span></div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-648'>ניצור את האיבר המבוקש או נביא אותו מכל מקום שהוא, על האיבר להיות אובייקט בעל שתי תכונות: המידע שלו ומצביע (שמיועד להצביע על האיבר הבא ברשימה).</li>
+<li class="enumerate_item" id='magicparlabel-649'>נשנה את המצביע שלו כך שיצביע על האיבר שיהיה אחריו לאחר ההוספה (אם האיבר החדש נוסף בסוף הרשימה המצביע יצטרך להצביע על None).</li>
+<li class="enumerate_item" id='magicparlabel-650'>נשנה את המצביע על האיבר שיהיה לפניו כך שיצביע על האיבר החדש (אם האיבר החדש נוסף בתחילת הרשימה מדובר ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>h</mi>
+ <mi>e</mi>
+ <mi>a</mi>
+ <mi>d</mi>
+</mrow>
+</math>
+).</li>
+<li class="enumerate_item" id='magicparlabel-651'>אם אורך הרשימה הוא אחת התכונות שלה נוסיף לו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+.</li>
+</ol>
+</div>
+
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-652'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ נשים לב שיש חשיבות לסדר בין סעיפים 1 ו-2: אם נבצע אותם בסדר הפוך נאבד את המצביע על האיבר שאמור להיות אחרי האיבר החדש.</li>
+<li class="labeling_item" id='magicparlabel-653'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ באותה צורה ניתן להוסיף רשימה אחת לאחרת: משנים את המצביע של סוף הרשימה הנוספת כך שיצביע על האיבר שמיועד להיות אחריו ואת המצביע של האיבר שמיועד להיות לפני הרשימה משנים כך שיצביע על ראש הרשימה הנוספת, אם אורך הרשימה הוא אחת התכונות שלה יש להוסיף לו את אורך הרשימה הנוספת.</li>
+<li class="labeling_item" id='magicparlabel-654'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ כדי להסיר איבר מהרשימה נשנה את המצביע של האיבר שלפניו<div class='foot'><span class="foot_label">2</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-658'>אם אנו מסירים את ראש הרשימה זהו המצביע שבאמצעותו אנו &#8220;אוחזים&#8221; ברשימה כולה.</div>
+</div></div> כך שיצביע על האיבר שאחרי האיבר המוסר מן הרשימה<div class='foot'><span class="foot_label">3</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-662'>אם האיבר המוסר הוא האיבר האחרון המצביע יצטרך להצביע על<span style='font-size:small;'> </span>None.</div>
+</div></div> ובאותה צורה ניתן להסיר תת-רשימה, כמובן שגם כאן אם אורך הרשימה הוא אחד מתכונות הרשימה יש לעדכן אותו בהתאם<div class='foot'><span class="foot_label">4</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-666'>נשים לב שלעומת הוספת רשימה לאחרת בהסרת תת-רשימה איננו יודעים את אורך תת-הרשימה שאנו מסירים ולכן עלינו לעבור עליה בלולאה כדי לדעת את האורך (<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+).</div>
+</div></div>.</li>
+</ol>
+<div class='standard' style='text-align: left' id='magicparlabel-667'> </div>
+
+
+<div class='float-algorithm'><div class='plain_layout' id='magicparlabel-672'><span class='float-caption-Standard float-caption float-caption-standard'>
+<br />
+אלגוריתם 3  היפוך הסדר של רשימה</span></div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-677'>נאתחל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mi>u</mi>
+ <mi>r</mi>
+ <mi>r</mi>
+ <mi>e</mi>
+ <mi>n</mi>
+ <mi>t</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mi>h</mi>
+ <mi>e</mi>
+ <mi>a</mi>
+ <mi>d</mi>
+</mrow>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>h</mi>
+ <mi>e</mi>
+ <mi>a</mi>
+ <mi>d</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mtext>None</mtext>
+</mrow>
+</math>
+.</li>
+<li class="enumerate_item" id='magicparlabel-678'>כל עוד <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mi>u</mi>
+ <mi>r</mi>
+ <mi>r</mi>
+ <mi>e</mi>
+ <mi>n</mi>
+ <mi>t</mi>
+</mrow>
+</math>
+ אינו None:
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-679'>נגדיר את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mi>e</mi>
+ <mi>x</mi>
+ <mi>t</mi>
+</mrow>
+</math>
+ להיות האיבר שאחרי האיבר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mi>u</mi>
+ <mi>r</mi>
+ <mi>r</mi>
+ <mi>e</mi>
+ <mi>n</mi>
+ <mi>t</mi>
+</mrow>
+</math>
+.</li>
+<li class="itemize_item" id='magicparlabel-680'>&#8220;נוסיף&#8221; את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mi>u</mi>
+ <mi>r</mi>
+ <mi>r</mi>
+ <mi>e</mi>
+ <mi>n</mi>
+ <mi>t</mi>
+</mrow>
+</math>
+ לתחילת הרשימה באמצעות האלגוריתם להוספת איבר שראינו לעיל, כך <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mi>u</mi>
+ <mi>r</mi>
+ <mi>r</mi>
+ <mi>e</mi>
+ <mi>n</mi>
+ <mi>t</mi>
+</mrow>
+</math>
+ יצביע על ראש הרשימה הנוכחי ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>h</mi>
+ <mi>e</mi>
+ <mi>a</mi>
+ <mi>d</mi>
+</mrow>
+</math>
+ יצביע על <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mi>u</mi>
+ <mi>r</mi>
+ <mi>r</mi>
+ <mi>e</mi>
+ <mi>n</mi>
+ <mi>t</mi>
+</mrow>
+</math>
+ (כזכור הגדרנו בתחילת האלגוריתם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>h</mi>
+ <mi>e</mi>
+ <mi>a</mi>
+ <mi>d</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mtext>None</mtext>
+</mrow>
+</math>
+ ולכן הרשימה בעצם ריקה בתחילת הלולאה, א&#8221;כ הוספה איבר איבר בתחילת הרשימה של כל האיברים תיצור בדיוק את הפעולה המבוקשת).</li>
+<li class="itemize_item" id='magicparlabel-681'>נעדכן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mi>u</mi>
+ <mi>r</mi>
+ <mi>r</mi>
+ <mi>e</mi>
+ <mi>n</mi>
+ <mi>t</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mi>n</mi>
+ <mi>e</mi>
+ <mi>x</mi>
+ <mi>t</mi>
+</mrow>
+</math>
+.</li>
+</ul>
+</li><li class="enumerate_item" id='magicparlabel-682'>נחזיר את הרשימה.</li>
+</ol>
+</div>
+
+
+
+
+<div class='float-algorithm'><div class='plain_layout' id='magicparlabel-688'><span class='float-caption-Standard float-caption float-caption-standard'>
+<br />
+אלגוריתם 4  בדיקה אם איבר נמצא ברשימה</span></div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-693'>נאתחל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>i</mi>
+ <mi>n</mi>
+ <mi>d</mi>
+ <mi>e</mi>
+ <mi>x</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mi>u</mi>
+ <mi>r</mi>
+ <mi>r</mi>
+ <mi>e</mi>
+ <mi>n</mi>
+ <mi>t</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mi>h</mi>
+ <mi>e</mi>
+ <mi>a</mi>
+ <mi>d</mi>
+</mrow>
+</math>
+.</li>
+<li class="enumerate_item" id='magicparlabel-694'>כל עוד <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mi>u</mi>
+ <mi>r</mi>
+ <mi>r</mi>
+ <mi>e</mi>
+ <mi>n</mi>
+ <mi>t</mi>
+</mrow>
+</math>
+ אינו None:
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-695'>אם המידע של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mi>u</mi>
+ <mi>r</mi>
+ <mi>r</mi>
+ <mi>e</mi>
+ <mi>n</mi>
+ <mi>t</mi>
+</mrow>
+</math>
+ הוא האיבר המבוקש:
+<ul class='lyxitem lyxitemii'>
+<li class="itemize_item" id='magicparlabel-696'>נחזיר את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>i</mi>
+ <mi>n</mi>
+ <mi>d</mi>
+ <mi>e</mi>
+ <mi>x</mi>
+</mrow>
+</math>
+ (או רק <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtext>True</mtext>
+</math>
+).</li>
+</ul>
+</li><li class="itemize_item" id='magicparlabel-697'>אחרת:
+<ul class='lyxitem lyxitemii'>
+<li class="itemize_item" id='magicparlabel-698'>נגדיר את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mi>u</mi>
+ <mi>r</mi>
+ <mi>r</mi>
+ <mi>e</mi>
+ <mi>n</mi>
+ <mi>t</mi>
+</mrow>
+</math>
+ להיות האיבר הבא.</li>
+</ul>
+</li></ul>
+</li><li class="enumerate_item" id='magicparlabel-699'>נחזיר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtext>False</mtext>
+</math>
+.</li>
+</ol>
+</div>
+
+
+<div class='standard' style='text-align: left' id='magicparlabel-700'> </div>
+</section>
+</ul>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-701'><span class="section_label">2</span> רשימות מקושרות דו-כיווניות</h2>
+<ul class='nested'>
+<div class='standard' style='text-align: left' id='magicparlabel-702'><b>יש להשלים פרק זה.</b></div>
+</ul>
+</section>
+<script src="../../tree_view.js"></script>
+</body>
+</html>

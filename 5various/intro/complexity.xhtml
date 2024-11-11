@@ -1,0 +1,4228 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="he-IL">
+<head>
+<link rel="stylesheet" type="text/css" href="../../main.css" />
+<meta name="viewport" content="width=device-width" />
+<meta name="generator" content="LyX 2.4.1" />
+<title>סיבוכיות</title>
+<script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body dir="auto">
+<section>
+<h2 class='section' id='magicparlabel-612'><span class="section_label">1</span> הקדמה</h2>
+<ul class='nested'>
+<div class='standard' style='text-align: left' id='magicparlabel-613'><i>אלגוריתם</i> הוא עצם מופשט, סדרה של צעדים שעוצבה על מנת לבצע משימה מסוימת; <i>תכנות</i> הוא מימוש של אלגוריתם בשפה מסוימת ובדרך מסוימת. בבואנו לבדוק אם אלגוריתם מסוים הוא אלגוריתם טוב אנו מתעלמים משפות התכנות והמחשבים במסוימים שבאמצעותם ניתן להפעיל את האלגוריתם ומבוננים אך ורק באלגוריתם עצמו שכפי שציינו לעיל הוא עצם <i>מופשט</i>. אלגוריתמים נמדדים בשני דברים:</div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-614'>נכונות: האם האלגוריתם מבצע את המשימה נכון? האם הוא נותן פתרון נכון לבעיה?</li>
+<li class="enumerate_item" id='magicparlabel-615'>יעילות: האם האלגוריתם מבצע את משימתו מהר מספיק? האם הוא צורך הרבה זיכרון?</li>
+</ol>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-616'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ בקורס הזה נתמקד ביעילות של אלגוריתמים מבחינת הזמן שלוקח להם לבצע את המשימה ולא נעסוק בזיכרון או בנכונות.</li>
+<li class="labeling_item" id='magicparlabel-617'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ הסיבה לכך שלא נעסוק בנכונות היא שכל האלגוריתמים שנפגוש בהם יתנו תשובה נכונה תמיד (אם לא אז מבחינתנו הם אינם מבצעים את המשימה), לא נראה לי שנלמד על זה בקורס, אולם פעמים שאנו מוותרים על הדרישה לנכונות מוחלטת ומסתפקים בהסתברות גבוהה לפתרון נכון וזאת ע&#8221;מ לייעל את האלגוריתם, הדוגמה הקלאסית לכך היא אלגוריתמים הסתברותיים לבדיקת ראשוניות של מספר נתון.</li>
+</ol>
+<div class='standard' id='magicparlabel-618'>דרישת הנכונות פשוטה מאד אבל כיצד ניתן לקבוע אם האלגוריתם פותר את הבעיה מהר מספיק? הרי הדבר תלוי בחומרה של המחשב עליו הוא רץ, בתוכנה, בשפת התכנות ועוד הרבה משתנים אחרים (כולל הטמפרטורה בחדר!<div class='foot'><span class="foot_label">1</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-622'>מחשבים עובדים מהר יותר בקור.</div>
+</div></div>)...</div>
+
+</ul>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-624'><span class="section_label">2</span> מדידת יעילות של אלגוריתם</h2>
+<ul class='nested'>
+<div class='standard' id='magicparlabel-625'>התשובה היא שאנחנו מעוניינים למדוד את האלגוריתם שלנו <i>ביחס לאלגוריתמים אחרים</i><div class='foot'><span class="foot_label">2</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-629'>הסיבה לכך שאנחנו מודדים את האלגוריתם ביחס לאחרים היא שאת כולם ניתן להריץ על אותם מחשבים עם אותן החומרות ואותן התוכנות, לכן מה שמעניין אותנו הוא הוא באיזה אלגוריתם עלינו להשתמש והתשובה לא תהיה תלויה בכל המשתנים הללו: אם אלגוריתם אחד יהיה עדיף על חברו על מחשב מסוים הוא יהיה עדיף על כל מחשב אחר (עד כמה כל זה יהיה נכון כשיהיה לנו מחשוב קוונטי???).</div>
+</div></div>ולכן, בגלל שאלגוריתמים הם עצמים מופשטים, כל המשתנים הללו אינם מעניינים אותנו.</div>
+
+<div class='standard' id='magicparlabel-630'>טוב, אבל עכשיו בכלל אין לנו מושג כיצד למדוד את יעילות האלגוריתם, לא נשאר לנו שום דבר לעבוד איתו...</div>
+
+<div class='standard' id='magicparlabel-631'>אז זהו, שלא; כאן בא לעזרתנו רעיון יפה: נמדוד אלגוריתמים ע&#8221;פ מספר הצעדים הבסיסיים שלוקח להם לבצע את המשימה המוטלת עליהם כתלות בגודל הקלט.</div>
+
+<div class='standard' style='text-align: left' id='magicparlabel-632'><b>צעדים בסיסיים:</b></div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-633'>פעולות אריתמטיות</li>
+<li class="itemize_item" id='magicparlabel-634'>השוואת שני אובייקטים</li>
+<li class="itemize_item" id='magicparlabel-635'>השמה במשתנה (<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>c</mi>
+ <mn>3</mn>
+</msub>
+</math>
+)</li>
+<li class="itemize_item" id='magicparlabel-636'>גישה לאיבר ב-container </li>
+<li class="itemize_item" id='magicparlabel-637'>קריאה לפונקציה או החזרה מפונקציה</li>
+<li class="itemize_item" id='magicparlabel-638'>ועוד...</li>
+</ul>
+<div class='standard' style='text-align: left' id='magicparlabel-639'><b>הנחות יסוד:</b></div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-640'>כל צעד בסיסי לוקח זמן קבוע עבור קלט נתון.</li>
+<li class="itemize_item" id='magicparlabel-641'>הזמן יכול להשתנות מצעד מסוג אחד לצעד מסוג אחר.</li>
+<li class="itemize_item" id='magicparlabel-642'>הזמן תלוי גם במחשב, בחומרה, בתוכנה, בשפת התכנות ואפילו בטמפרטורה בחדר אך כפי שציינו לעיל אלו אינם מעניינים אותנו.</li>
+</ul>
+<div class='standard' id='magicparlabel-643'>לכן, מבלי להיכנס לשאלה כמה זמן בדיוק כל פעולה לוקחת אנחנו נסמן אותן בקבועים מהצורה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>c</mi>
+ <mi>i</mi>
+</msub>
+</math>
+ (וכפי שנראה בהמשך זה לא ממש מעניין אותנו כמה הם שווים):</div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-644'>פעולות אריתמטיות (<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>c</mi>
+ <mn>1</mn>
+</msub>
+</math>
+)</li>
+<li class="itemize_item" id='magicparlabel-645'>השוואה בין מספרים (<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>c</mi>
+ <mn>2</mn>
+</msub>
+</math>
+)</li>
+<li class="itemize_item" id='magicparlabel-646'>השמה במשתנה (<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>c</mi>
+ <mn>3</mn>
+</msub>
+</math>
+)</li>
+<li class="itemize_item" id='magicparlabel-647'>גישה לאיבר ב-container (<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>c</mi>
+ <mn>4</mn>
+</msub>
+</math>
+)</li>
+<li class="itemize_item" id='magicparlabel-648'>קריאה לפונקציה או החזרה מפונקציה (<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>c</mi>
+ <mn>5</mn>
+</msub>
+</math>
+)</li>
+<li class="itemize_item" id='magicparlabel-649'>ועוד...</li>
+</ul>
+</ul>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-651'><span class="section_label">3</span> דוגמאות: אלגוריתמים שונים למציאת איבר ברשימה</h2>
+<ul class='nested'>
+<div class='standard' id='magicparlabel-652'>בפרק זה נביא כמה דוגמאות שימחישו לנו מה בדיוק אנחנו מחפשים כשאנחנו רוצים למדוד יעילות של אלגוריתם, כל הדוגמאות תהיינה אלגוריתמים שמטרתם למצוא איבר (<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>o</mi>
+ <mi>b</mi>
+ <mi>j</mi>
+</mrow>
+</math>
+) ברשימה: אם הוא קיים הם יחזירו את אחד האינדקסים שבהם הוא מופיע ואם אינו מופיע ברשימה יחזירו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtext>False</mtext>
+</math>
+.</div>
+
+
+<div class='float-algorithm'><div class='plain_layout' id='magicparlabel-657'><span class='float-caption-Standard float-caption float-caption-standard'>
+<br />
+אלגוריתם 1  חיפוש ליניארי פשוט</span></div>
+
+<div class='plain_layout' id='magicparlabel-662'>הקלט הוא רשימה (<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+</mrow>
+</math>
+) והאובייקט שאנחנו מחפשים ברשימה (<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>o</mi>
+ <mi>b</mi>
+ <mi>j</mi>
+</mrow>
+</math>
+).</div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-663'>אתחל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>i</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>a</mi>
+ <mi>n</mi>
+ <mi>s</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mtext>False</mtext>
+</mrow>
+</math>
+.</li>
+<li class="enumerate_item" id='magicparlabel-664'>כל עוד <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>i</mi>
+</math>
+ קטן ממש מהאורך של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+</mrow>
+</math>
+:
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-665'>אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>o</mi>
+ <mi>b</mi>
+ <mi>j</mi>
+</mrow>
+</math>
+ שווה לאיבר ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>i</mi>
+</math>
+ ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+</mrow>
+</math>
+:
+<br />
+הגדר את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>a</mi>
+ <mi>n</mi>
+ <mi>s</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mi>i</mi>
+</mrow>
+</math>
+.</li>
+</ul>
+<div class='plain_layout' id='magicparlabel-666'>בכל מקרה הגדר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>i</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mi>i</mi>
+ <mo stretchy='false'>+</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+.</div>
+</li><li class="enumerate_item" id='magicparlabel-667'>החזר את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>a</mi>
+ <mi>n</mi>
+ <mi>s</mi>
+</mrow>
+</math>
+.</li>
+</ol>
+</div>
+
+
+<div class='standard' id='magicparlabel-668'>כאן גודל הקלט הוא אורך הרשימה ולכן אם נסמן אותו ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ אז ה&#8221;זמן&#8221; (יסומן ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>t</mi>
+</math>
+) שיקח לאלגוריתם לבצע את המשימה מקיים:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mn>2</mn>
+ <msub>
+  <mi>c</mi>
+  <mn>3</mn>
+ </msub>
+ <mo stretchy='false'>+</mo>
+ <mo>&#x22C5;</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mi>c</mi>
+    <mn>2</mn>
+   </msub>
+   <mo stretchy='false'>+</mo>
+   <msub>
+    <mi>c</mi>
+    <mn>3</mn>
+   </msub>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>+</mo>
+ <msub>
+  <mi>c</mi>
+  <mn>5</mn>
+ </msub>
+ <mo>&#x2264;</mo>
+ <mi>t</mi>
+ <mo>&#x2264;</mo>
+ <mn>2</mn>
+ <msub>
+  <mi>c</mi>
+  <mn>3</mn>
+ </msub>
+ <mo stretchy='false'>+</mo>
+ <mo>&#x22C5;</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mi>c</mi>
+    <mn>2</mn>
+   </msub>
+   <mo stretchy='false'>+</mo>
+   <mn>2</mn>
+   <msub>
+    <mi>c</mi>
+    <mn>3</mn>
+   </msub>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>+</mo>
+ <msub>
+  <mi>c</mi>
+  <mn>5</mn>
+ </msub>
+</mrow>
+</math>
+כלומר הזמן כתלות בקלט מתנהג כמו פונקציה ליניארית.</div>
+
+
+<div class='float-algorithm'><div class='plain_layout' id='magicparlabel-673'><span class='float-caption-Standard float-caption float-caption-standard'>
+<br />
+אלגוריתם 2  חיפוש ליניארי</span></div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-678'>אתחל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>i</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+.</li>
+<li class="enumerate_item" id='magicparlabel-679'>כל עוד <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>i</mi>
+</math>
+ קטן ממש מהאורך של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+</mrow>
+</math>
+:
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-680'>אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>o</mi>
+ <mi>b</mi>
+ <mi>j</mi>
+</mrow>
+</math>
+ שווה לאיבר ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>i</mi>
+</math>
+ ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+</mrow>
+</math>
+:
+<br />
+החזר את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>i</mi>
+</math>
+.</li>
+<li class="itemize_item" id='magicparlabel-681'>אחרת:
+<br />
+הגדר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>i</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mi>i</mi>
+ <mo stretchy='false'>+</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+.</li>
+</ul>
+</li><li class="enumerate_item" id='magicparlabel-682'>החזר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtext>False</mtext>
+</math>
+.</li>
+</ol>
+</div>
+
+
+<div class='standard' id='magicparlabel-683'>כעת נקבל שהזמן מקיים:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mi>c</mi>
+  <mn>3</mn>
+ </msub>
+ <mo stretchy='false'>+</mo>
+ <mn>2</mn>
+ <msub>
+  <mi>c</mi>
+  <mn>2</mn>
+ </msub>
+ <mo stretchy='false'>+</mo>
+ <msub>
+  <mi>c</mi>
+  <mn>5</mn>
+ </msub>
+ <mo>&#x2264;</mo>
+ <mi>t</mi>
+ <mo>&#x2264;</mo>
+ <msub>
+  <mi>c</mi>
+  <mn>3</mn>
+ </msub>
+ <mo stretchy='false'>+</mo>
+ <mo>&#x22C5;</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mi>c</mi>
+    <mn>2</mn>
+   </msub>
+   <mo stretchy='false'>+</mo>
+   <msub>
+    <mi>c</mi>
+    <mn>3</mn>
+   </msub>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>+</mo>
+ <msub>
+  <mi>c</mi>
+  <mn>5</mn>
+ </msub>
+</mrow>
+</math>
+ומכיוון שמה שמעניין אותנו הוא המקרה הגרוע ביותר נאמר שהזמן כתלות בגודל הקלט מתנהג כפונקציה ליניארית.</div>
+
+
+<div class='standard' id='magicparlabel-685'>כעת נעסוק במקרה שבו הרשימה כבר ממוינת לפי יחס סדר מלא כלשהו<div class='foot'><span class="foot_label">3</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-689'>לענייננו ניתן לחשוב שכל האיברים ברשימה הם מספרים והם מסודרים מהקטן לגדול.</div>
+</div></div>.</div>
+
+
+<div class='float-algorithm'><div class='plain_layout' id='magicparlabel-694'><span class='float-caption-Standard float-caption float-caption-standard'>
+<br />
+אלגוריתם 3  חיפוש &#8220;נאיבי&#8221; ברשימה ממוינת</span></div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-699'>לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>i</mi>
+</math>
+ בין <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ (כולל) לאורך הרשימה (לא כולל):
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-700'>אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>o</mi>
+ <mi>b</mi>
+ <mi>j</mi>
+</mrow>
+</math>
+ שווה לאיבר ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>i</mi>
+</math>
+ ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+</mrow>
+</math>
+:
+<br />
+החזר את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>i</mi>
+</math>
+.</li>
+<li class="itemize_item" id='magicparlabel-701'>אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>o</mi>
+ <mi>b</mi>
+ <mi>j</mi>
+</mrow>
+</math>
+ קטן מהאיבר ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>i</mi>
+</math>
+ ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+</mrow>
+</math>
+:
+<br />
+החזר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtext>False</mtext>
+</math>
+.</li>
+</ul>
+</li><li class="enumerate_item" id='magicparlabel-702'>החזר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtext>False</mtext>
+</math>
+.</li>
+</ol>
+</div>
+
+
+<div class='standard' id='magicparlabel-703'>כעת נקבל שהזמן מקיים<div class='foot'><span class="foot_label">4</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-707'>בלולאת<span style='font-size:small;'> </span>for מתבצעת השמה של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>i</mi>
+</math>
+ בתחילת כל איטרציה.</div>
+</div></div>:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msub>
+  <mi>c</mi>
+  <mn>2</mn>
+ </msub>
+ <mo stretchy='false'>+</mo>
+ <msub>
+  <mi>c</mi>
+  <mn>3</mn>
+ </msub>
+ <mo stretchy='false'>+</mo>
+ <msub>
+  <mi>c</mi>
+  <mn>5</mn>
+ </msub>
+ <mo>&#x2264;</mo>
+ <mi>t</mi>
+ <mo>&#x2264;</mo>
+ <mo>&#x22C5;</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mn>2</mn>
+   <msub>
+    <mi>c</mi>
+    <mn>2</mn>
+   </msub>
+   <mo stretchy='false'>+</mo>
+   <msub>
+    <mi>c</mi>
+    <mn>3</mn>
+   </msub>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>+</mo>
+ <msub>
+  <mi>c</mi>
+  <mn>5</mn>
+ </msub>
+</mrow>
+</math>
+ושוב, מכיוון שמה שמעניין אותנו הוא המקרה הגרוע ביותר נאמר שהזמן כתלות בגודל הקלט מתנהג כפונקציה ליניארית.</div>
+
+
+<div class='float-algorithm'><div class='plain_layout' id='magicparlabel-712'><span class='float-caption-Standard float-caption float-caption-standard'>
+<br />
+אלגוריתם 4  חיפוש בינארי ברשימה ממוינת</span></div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-717'>אתחל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>e</mi>
+ <mi>f</mi>
+ <mi>t</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>r</mi>
+ <mi>i</mi>
+ <mi>g</mi>
+ <mi>h</mi>
+ <mi>t</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mi>l</mi>
+ <mi>e</mi>
+ <mi>n</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>l</mi>
+   <mi>s</mi>
+   <mi>t</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>-</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+.</li>
+<li class="enumerate_item" id='magicparlabel-718'>כל עוד <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>e</mi>
+ <mi>f</mi>
+ <mi>t</mi>
+ <mo>&#x2264;</mo>
+ <mi>r</mi>
+ <mi>i</mi>
+ <mi>g</mi>
+ <mi>h</mi>
+ <mi>t</mi>
+</mrow>
+</math>
+:
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-719'>הגדר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>m</mi>
+ <mi>i</mi>
+ <mi>d</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>&#x230A;</mo>
+  <mfrac>
+   <mrow>
+    <mi>l</mi>
+    <mi>e</mi>
+    <mi>f</mi>
+    <mi>t</mi>
+    <mo stretchy='false'>+</mo>
+    <mi>r</mi>
+    <mi>i</mi>
+    <mi>g</mi>
+    <mi>h</mi>
+    <mi>t</mi>
+   </mrow>
+   <mn>2</mn>
+  </mfrac>
+  <mo>&#x230B;</mo>
+ </mrow>
+</mrow>
+</math>
+.</li>
+<li class="itemize_item" id='magicparlabel-720'>אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>o</mi>
+ <mi>b</mi>
+ <mi>j</mi>
+</mrow>
+</math>
+ שווה לאיבר ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>m</mi>
+ <mi>i</mi>
+ <mi>d</mi>
+</mrow>
+</math>
+ ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+</mrow>
+</math>
+:
+<br />
+החזר את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>m</mi>
+ <mi>i</mi>
+ <mi>d</mi>
+</mrow>
+</math>
+.</li>
+<li class="itemize_item" id='magicparlabel-721'>אחרת:
+<ul class='lyxitem lyxitemii'>
+<li class="itemize_item" id='magicparlabel-722'>אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>o</mi>
+ <mi>b</mi>
+ <mi>j</mi>
+</mrow>
+</math>
+ קטן מהאיבר ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>m</mi>
+ <mi>i</mi>
+ <mi>d</mi>
+</mrow>
+</math>
+:
+<br />
+הגדר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>r</mi>
+ <mi>i</mi>
+ <mi>g</mi>
+ <mi>h</mi>
+ <mi>t</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mi>m</mi>
+ <mi>i</mi>
+ <mi>d</mi>
+ <mo stretchy='false'>-</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+</li>
+<li class="itemize_item" id='magicparlabel-723'>אחרת:
+<br />
+הגדר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>e</mi>
+ <mi>f</mi>
+ <mi>t</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mi>m</mi>
+ <mi>i</mi>
+ <mi>d</mi>
+ <mo stretchy='false'>+</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+</li>
+</ul>
+</li></ul>
+</li><li class="enumerate_item" id='magicparlabel-724'>החזר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtext>False</mtext>
+</math>
+.</li>
+</ol>
+</div>
+
+
+<div class='standard' id='magicparlabel-725'>נשים לב שכאן גודל הרשימה קטן בחצי בכל איטרציה ולכן הזמן מקיים:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mn>2</mn>
+ <msub>
+  <mi>c</mi>
+  <mn>3</mn>
+ </msub>
+ <mo stretchy='false'>+</mo>
+ <msub>
+  <mi>c</mi>
+  <mn>2</mn>
+ </msub>
+ <mo stretchy='false'>+</mo>
+ <msub>
+  <mi>c</mi>
+  <mn>3</mn>
+ </msub>
+ <mo stretchy='false'>+</mo>
+ <msub>
+  <mi>c</mi>
+  <mn>2</mn>
+ </msub>
+ <mo stretchy='false'>+</mo>
+ <msub>
+  <mi>c</mi>
+  <mn>5</mn>
+ </msub>
+ <mo>&#x2264;</mo>
+ <mi>t</mi>
+ <mo>&#x2264;</mo>
+ <mn>2</mn>
+ <msub>
+  <mi>c</mi>
+  <mn>3</mn>
+ </msub>
+ <mo stretchy='false'>+</mo>
+ <msub>
+  <mo>log</mo>
+  <mn>2</mn>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mo>&#x22C5;</mo>
+   <mrow>
+    <mo>[</mo>
+    <mrow>
+     <msub>
+      <mi>c</mi>
+      <mn>2</mn>
+     </msub>
+     <mo stretchy='false'>+</mo>
+     <msub>
+      <mi>c</mi>
+      <mn>3</mn>
+     </msub>
+     <mo stretchy='false'>+</mo>
+     <mn>2</mn>
+     <msub>
+      <mi>c</mi>
+      <mn>2</mn>
+     </msub>
+     <mo stretchy='false'>+</mo>
+     <msub>
+      <mi>c</mi>
+      <mn>3</mn>
+     </msub>
+    </mrow>
+    <mo>]</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>+</mo>
+ <msub>
+  <mi>c</mi>
+  <mn>5</mn>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <mn>2</mn>
+ <msub>
+  <mi>c</mi>
+  <mn>3</mn>
+ </msub>
+ <mo stretchy='false'>+</mo>
+ <msub>
+  <mi>c</mi>
+  <mn>5</mn>
+ </msub>
+ <mo stretchy='false'>+</mo>
+ <msub>
+  <mo>log</mo>
+  <mn>2</mn>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mi>c</mi>
+    <mn>2</mn>
+   </msub>
+   <mo stretchy='false'>+</mo>
+   <msub>
+    <mi>c</mi>
+    <mn>3</mn>
+   </msub>
+   <mo stretchy='false'>+</mo>
+   <mn>2</mn>
+   <msub>
+    <mi>c</mi>
+    <mn>2</mn>
+   </msub>
+   <mo stretchy='false'>+</mo>
+   <msub>
+    <mi>c</mi>
+    <mn>3</mn>
+   </msub>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>+</mo>
+ <msub>
+  <mo>log</mo>
+  <mn>2</mn>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+כלומר הזמן מתנהג כמו לוגריתם!</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-726'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ רק כדי לסבר את האוזן עד כמה זה יעיל: נניח שלעבור על רשימה בגודל של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>256</mn>
+ <mo stretchy='false'>=</mo>
+ <msup>
+  <mn>2</mn>
+  <mn>8</mn>
+ </msup>
+</mrow>
+</math>
+ איברים לוקח לאלגוריתם דקה אז כדי לעבור על רשימה באורך של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>65</mn>
+ <mo stretchy='false'>,</mo>
+ <mn>536</mn>
+ <mo stretchy='false'>=</mo>
+ <mn>25</mn>
+ <msup>
+  <mn>6</mn>
+  <mn>2</mn>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <msup>
+  <mn>2</mn>
+  <mn>16</mn>
+ </msup>
+</mrow>
+</math>
+ יקח לאלגוריתם רק <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>2</mn>
+</math>
+ דקות...</li>
+</ol>
+</ul>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-728'><span class="section_label">4</span> מחלקות סיבוכיות</h2>
+<ul class='nested'>
+<section>
+<h3 class='subsection' id='magicparlabel-729'><span class="subsection_label">4.1</span> קצב גידול של פונקציות</h3>
+<div class='standard' id='magicparlabel-730'>את הנושא הזה כבר למדנו בקורס &#8220;<a href="https://drive.google.com/drive/folders/1j2n9CtzvU8KIHsSYqk8gSAe9h0yIH6rv?usp=share_link">בדידה מתמטיקה</a>&#8221; אך בכל זאת נחזור כאן על כמה ההגדרות וטענות.</div>
+
+<div class='standard' style='text-align: left' id='magicparlabel-731'><b>נכון לעכשיו הנושא הזה לא מופיע בסיכומים שלי ממתמטיקה בדידה.</b></div>
+<section>
+<h4 class='subsubsection' id='magicparlabel-732'><span class="subsubsection_label">4.1.1</span> הגדרות</h4>
+<div class='standard' id='magicparlabel-733'>תהיינה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mo stretchy='false'>,</mo>
+ <mi>g</mi>
+ <mo stretchy='false'>:</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>N</mi>
+ </mstyle>
+ <mo>&#x2192;</mo>
+ <msup>
+  <mstyle mathvariant='double-struck'>
+   <mi>R</mi>
+  </mstyle>
+  <mo stretchy='false'>+</mo>
+ </msup>
+</mrow>
+</math>
+<div class='foot'><span class="foot_label">5</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-737'>נזכיר: <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mstyle mathvariant='double-struck'>
+   <mi>R</mi>
+  </mstyle>
+  <mo stretchy='false'>+</mo>
+ </msup>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mn>0</mn>
+   <mo stretchy='false'>,</mo>
+   <mi>&#x221E;</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+, למעשה אין צורך בכך שהטווח יהיה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+ <mo stretchy='false'>+</mo>
+</msup>
+</math>
+ אלא עבור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>N</mi>
+ </mstyle>
+</mrow>
+</math>
+ גדול דיו מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>0</mn>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>,</mo>
+ <mi>g</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</div>
+</div></div> פונקציות<div class='foot'><span class="foot_label">6</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-741'>למעשה מדובר בסדרות ואני לא רואה שום סיבה שההגדרות לא תהיינה תקפות גם לגבי פונקציות ממשיות רגילות (<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mo stretchy='false'>:</mo>
+ <msup>
+  <mstyle mathvariant='double-struck'>
+   <mi>R</mi>
+  </mstyle>
+  <mo stretchy='false'>+</mo>
+ </msup>
+ <mo>&#x2192;</mo>
+ <msup>
+  <mstyle mathvariant='double-struck'>
+   <mi>R</mi>
+  </mstyle>
+  <mo stretchy='false'>+</mo>
+ </msup>
+</mrow>
+</math>
+).</div>
+</div></div>.</div>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-742'><span class="definition_label">‫הגדרה 4.1.</span>
+נאמר ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>g</mi>
+</math>
+ היא <u><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>O</mi>
+</math>
+ גדול של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>f</mi>
+</math>
+</u> ונסמן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>g</mi>
+ <mo>&#x2208;</mo>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>f</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+<div class='foot'><span class="foot_label">7</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-746'>בכך אנחנו למעשה מגדירים את הקבוצה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>f</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</div>
+</div></div> אם קיימים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>0</mn>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>c</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>N</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>N</mi>
+ </mstyle>
+</mrow>
+</math>
+ כך שלכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>N</mi>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>n</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>N</mi>
+ </mstyle>
+</mrow>
+</math>
+ מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2264;</mo>
+ <mi>c</mi>
+ <mo>&#x22C5;</mo>
+ <mi>g</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</div>
+</div>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-748'><span class="definition_label">‫הגדרה 4.2.</span>
+נאמר ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>g</mi>
+</math>
+ היא <u><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x1D6FA;</mi>
+</math>
+ של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>f</mi>
+</math>
+</u> ונסמן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>g</mi>
+ <mo>&#x2208;</mo>
+ <mi>&#x1D6FA;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>f</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ אם קיימים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>0</mn>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>c</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>N</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>N</mi>
+ </mstyle>
+</mrow>
+</math>
+ כך שלכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>N</mi>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>n</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>N</mi>
+ </mstyle>
+</mrow>
+</math>
+ מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mo>&#x22C5;</mo>
+ <mi>g</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2264;</mo>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</div>
+</div>
+<div class='definition'>
+<div class="definition_item" id='magicparlabel-750'><span class="definition_label">‫הגדרה 4.3.</span>
+נאמר ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>g</mi>
+</math>
+ היא <u><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x398;</mi>
+</math>
+ של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>f</mi>
+</math>
+</u> ונסמן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>g</mi>
+ <mo>&#x2208;</mo>
+ <mi>&#x398;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>f</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ אם קיימים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>0</mn>
+ <mo stretchy='false'>&lt;</mo>
+ <msub>
+  <mi>c</mi>
+  <mn>1</mn>
+ </msub>
+ <mo stretchy='false'>,</mo>
+ <msub>
+  <mi>c</mi>
+  <mn>2</mn>
+ </msub>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>N</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>N</mi>
+ </mstyle>
+</mrow>
+</math>
+ כך שלכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>N</mi>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>n</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>N</mi>
+ </mstyle>
+</mrow>
+</math>
+ מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>c</mi>
+  <mn>1</mn>
+ </msub>
+ <mo>&#x22C5;</mo>
+ <mi>g</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2264;</mo>
+ <mi>f</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2264;</mo>
+ <msub>
+  <mi>c</mi>
+  <mn>2</mn>
+ </msub>
+ <mo>&#x22C5;</mo>
+ <mi>g</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</div>
+</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-751'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ סימון נפוץ מאד לכך ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>g</mi>
+</math>
+ היא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>O</mi>
+</math>
+ גדול של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>f</mi>
+</math>
+ הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>g</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>f</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ אבל הוא בעייתי מפני שייתכן שגם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>h</mi>
+ <mo>&#x2208;</mo>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>f</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ ולמרות זאת <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>g</mi>
+ <mo>&#x2260;</mo>
+ <mi>h</mi>
+</mrow>
+</math>
+ בסתירה לטרנזיטיביות השוויון, כלומר גם מי שמשתמש בסימון השוויון אינו מתכוון באמת לכך שמה שכתוב באגף ימין הוא בדיוק מה שכתוב באגף שמאל.</li>
+</ol>
+</section>
+<section>
+<h4 class='subsubsection' id='magicparlabel-752'><span class="subsubsection_label">4.1.2</span> טענות</h4>
+<div class='claim'>
+<div class="claim_item" id='magicparlabel-753'><span class="claim_label">טענה 4.4.</span>
+תהיינה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mo stretchy='false'>,</mo>
+ <mi>g</mi>
+ <mo stretchy='false'>,</mo>
+ <mi>h</mi>
+ <mo stretchy='false'>:</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>N</mi>
+ </mstyle>
+ <mo>&#x2192;</mo>
+ <msup>
+  <mstyle mathvariant='double-struck'>
+   <mi>R</mi>
+  </mstyle>
+  <mo stretchy='false'>+</mo>
+ </msup>
+</mrow>
+</math>
+, מתקיימים כל הפסוקים הבאים:</div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-754'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x398;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>f</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mi>&#x398;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>g</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x27fa;</mo>
+ <mi>g</mi>
+ <mo>&#x2208;</mo>
+ <mi>&#x398;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>f</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</li>
+<li class="itemize_item" id='magicparlabel-755'>אם קיימים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>0</mn>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>c</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+ ו/או <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>b</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+ כך ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>c</mi>
+ <mo>&#x22C5;</mo>
+ <mi>g</mi>
+ <mo stretchy='false'>+</mo>
+ <mi>b</mi>
+</mrow>
+</math>
+ אז <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x398;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>f</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mi>&#x398;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>g</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</li>
+<li class="itemize_item" id='magicparlabel-756'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x398;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>f</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>f</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2229;</mo>
+ <mi>&#x1D6FA;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>f</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</li>
+<li class="itemize_item" id='magicparlabel-757'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mo>&#x2208;</mo>
+ <mi>&#x398;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>f</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ וממילא גם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mo>&#x2208;</mo>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>f</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mo>&#x2208;</mo>
+ <mi>&#x1D6FA;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>f</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</li>
+<li class="itemize_item" id='magicparlabel-758'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mo>&#x2208;</mo>
+ <mi>&#x1D6FA;</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>g</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x27fa;</mo>
+ <mi>g</mi>
+ <mo>&#x2208;</mo>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>f</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+, לכן נוכל בטענות הבאות רק על <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>O</mi>
+</math>
+ גדול וממילא הטענות תהיינה נכונות גם עבור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x1D6FA;</mi>
+</math>
+.</li>
+<li class="itemize_item" id='magicparlabel-759'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>g</mi>
+ <mo>&#x2208;</mo>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>f</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x27fa;</mo>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>f</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2286;</mo>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>g</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</li>
+<li class="itemize_item" id='magicparlabel-760'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>g</mi>
+ <mo>&#x2208;</mo>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>f</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x22C0;</mo>
+ <mi>f</mi>
+ <mo>&#x2208;</mo>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>h</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x21D2;</mo>
+ <mi>h</mi>
+ <mo>&#x2208;</mo>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>h</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</li>
+</ul>
+</div>
+<div class='theorem'>
+<div class="theorem_item" id='magicparlabel-761'><span class="theorem_label">משפט 4.5:</span>
+יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>P</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+ <mrow>
+  <mo>[</mo>
+  <mi>x</mi>
+  <mo>]</mo>
+ </mrow>
+</mrow>
+</math>
+ פולינום מדרגה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>k</mi>
+ <mo>&#x2208;</mo>
+ <msub>
+  <mstyle mathvariant='double-struck'>
+   <mi>N</mi>
+  </mstyle>
+  <mn>0</mn>
+ </msub>
+</mrow>
+</math>
+ כך שהמקדם של החזקה ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>k</mi>
+</math>
+ חיובי, מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>P</mi>
+ <mo>&#x2208;</mo>
+ <mi>&#x398;</mi>
+ <mrow>
+  <mo>(</mo>
+  <msup>
+   <mi>n</mi>
+   <mi>k</mi>
+  </msup>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</div>
+</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-762'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ באופן כללי כאשר מחברים פונקציות הולכים לפי זו ששואפת לאינסוף מהר יותר.</li>
+</ol>
+<div class='claim'>
+<div class="claim_item" id='magicparlabel-763'><span class="claim_label">טענה 4.6.</span>
+לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>k</mi>
+ <mo stretchy='false'>,</mo>
+ <mi>m</mi>
+ <mo>&#x2208;</mo>
+ <msub>
+  <mstyle mathvariant='double-struck'>
+   <mi>N</mi>
+  </mstyle>
+  <mn>0</mn>
+ </msub>
+</mrow>
+</math>
+ כך ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>k</mi>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>m</mi>
+</mrow>
+</math>
+ מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <msup>
+   <mi>n</mi>
+   <mi>k</mi>
+  </msup>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2286;</mo>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <msup>
+   <mi>n</mi>
+   <mi>m</mi>
+  </msup>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ ובפרט <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mi>n</mi>
+  <mi>k</mi>
+ </msup>
+ <mo>&#x2208;</mo>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <msup>
+   <mi>n</mi>
+   <mi>m</mi>
+  </msup>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</div>
+</div>
+<div class='theorem'>
+<div class="theorem_item" id='magicparlabel-764'><span class="theorem_label">משפט 4.7:</span>
+מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mn>1</mn>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2286;</mo>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msub>
+    <mo>log</mo>
+    <mi>b</mi>
+   </msub>
+   <mi>n</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2286;</mo>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <msqrt>
+   <mi>n</mi>
+  </msqrt>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2286;</mo>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2286;</mo>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <msub>
+    <mo>log</mo>
+    <mi>b</mi>
+   </msub>
+   <mi>n</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2286;</mo>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <msup>
+   <mi>n</mi>
+   <mi>k</mi>
+  </msup>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2286;</mo>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <msup>
+   <mi>a</mi>
+   <mi>n</mi>
+  </msup>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x2286;</mo>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>!</mo>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ (לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>1</mn>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>a</mi>
+ <mo stretchy='false'>,</mo>
+ <mi>b</mi>
+ <mo stretchy='false'>,</mo>
+ <mi>k</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>N</mi>
+ </mstyle>
+</mrow>
+</math>
+).</div>
+</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-765'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ לעומת זמן ריצה לוגריתמי<div class='foot'><span class="foot_label">8</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-769'>לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>1</mn>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>a</mi>
+ <mo stretchy='false'>,</mo>
+ <mi>b</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+ מתקיים לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>x</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+ השוויון <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mo>log</mo>
+  <mi>a</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mo>log</mo>
+  <mi>a</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>b</mi>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x22C5;</mo>
+ <msub>
+  <mo>log</mo>
+  <mi>b</mi>
+ </msub>
+ <mrow>
+  <mo>(</mo>
+  <mi>x</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ ולכן מדובר רק בכפל בקבוע שכמובן אינו משנה את מחלקת הסיבוכיות.</div>
+</div></div>, כל זמני הריצה הפולינומיים שדרגתם שונה וכל זמני הריצה האקספוננציאליים שבסיסם שונה - שונים זה מזה.</li>
+</ol>
+</section>
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-770'><span class="subsection_label">4.2</span> המחלקות</h3>
+<div class='standard' id='magicparlabel-771'>בגלל המשפט האחרון מחלקות הסיבוכיות המעניינות אותנו הן המחלקות שלהלן (ע&#8221;פ הסדר הרצוי).</div>
+
+<div class='standard' style='text-align: left' id='magicparlabel-772'> </div>
+
+<div class='standard' id='magicparlabel-773'>סיבוכיות טובה:</div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-774'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mn>1</mn>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ - זמן ריצה קבוע שאינו תלוי בקלט</li>
+<li class="itemize_item" id='magicparlabel-775'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mo>log</mo>
+   <mi>n</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ - זמן ריצה לוגריתמי</li>
+<li class="itemize_item" id='magicparlabel-776'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <msqrt>
+   <mi>n</mi>
+  </msqrt>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ - זמן ריצה &#8220;שורשי&#8221;</li>
+</ul>
+<div class='standard' id='magicparlabel-777'>סיבוכיות סבירה:</div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-778'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ - זמן ריצה ליניארי</li>
+<li class="itemize_item" id='magicparlabel-779'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo>log</mo>
+   <mi>n</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ זמן ריצה ליניארי-לוגריתמי</li>
+</ul>
+<div class='standard' id='magicparlabel-780'>סיבוכיות גרועה:</div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-781'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <msup>
+   <mi>n</mi>
+   <mi>k</mi>
+  </msup>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ - זמן ריצה פולינומי</li>
+</ul>
+<div class='standard' id='magicparlabel-782'>סיבוכיות נוראית:</div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-783'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <msup>
+   <mi>a</mi>
+   <mi>n</mi>
+  </msup>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ - זמן ריצה מעריכי</li>
+<li class="itemize_item" id='magicparlabel-784'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>!</mo>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ - זמן ריצה &#8220;עצרתי&#8221;</li>
+</ul>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-785'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ כשהקלט הוא יותר ממשתנה אחד אז הסיבוכיות עובדת ע&#8221;פ פונקציה בשני משתנים (כגון <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo>&#x22C5;</mo>
+   <mi>m</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+).</li>
+</ol>
+</section>
+</ul>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-787'><span class="section_label">5</span> סיבוכיות של פעולות מובנות בפייתון</h2>
+<ul class='nested'>
+<div class='standard' id='magicparlabel-788'>נסמן ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ את האורך של ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mi>o</mi>
+ <mi>n</mi>
+ <mi>t</mi>
+ <mi>a</mi>
+ <mi>i</mi>
+ <mi>n</mi>
+ <mi>e</mi>
+ <mi>r</mi>
+</mrow>
+</math>
+ המדובר.</div>
+
+
+<div class='float-table'><div class='plain_layout' style='text-align: center;' id='magicparlabel-793'><table>
+<tbody>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><b>סיבוכיות</b></td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><b>דוגמה</b></td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' ><b>פעולה</b></td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mn>1</mn>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+ <mrow>
+  <mo stretchy='false'>[</mo>
+  <mi>i</mi>
+  <mo stretchy='false'>]</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >גישה לאינדקס</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mn>1</mn>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+ <mrow>
+  <mo stretchy='false'>[</mo>
+  <mi>i</mi>
+  <mo stretchy='false'>]</mo>
+ </mrow>
+ <mspace width="10px"/>
+ <mo stretchy='false'>=</mo>
+ <mspace width="10px"/>
+ <mi>o</mi>
+ <mi>b</mi>
+ <mi>j</mi>
+ <mi>e</mi>
+ <mi>c</mi>
+ <mi>t</mi>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >השמה (הערה 1)</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mn>1</mn>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>e</mi>
+ <mi>n</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>l</mi>
+   <mi>s</mi>
+   <mi>t</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtext>len</mtext>
+</math>
+ (הערה 2)</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mn>1</mn>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+ <mn>.</mn>
+ <mi>a</mi>
+ <mi>p</mi>
+ <mi>p</mi>
+ <mi>e</mi>
+ <mi>n</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>o</mi>
+   <mi>b</mi>
+   <mi>j</mi>
+   <mi>e</mi>
+   <mi>c</mi>
+   <mi>t</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >הוספת איבר בסוף הרשימה (הערה 3)</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+ <mn>.</mn>
+ <mi>p</mi>
+ <mi>o</mi>
+ <mi>p</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>i</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtext>pop</mtext>
+</math>
+ (הערה 4)</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mn>1</mn>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+ <mn>.</mn>
+ <mi>p</mi>
+ <mi>o</mi>
+ <mi>p</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow/>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtext>pop</mtext>
+</math>
+ (הערה 5)</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mn>1</mn>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+ <mn>.</mn>
+ <mi>c</mi>
+ <mi>l</mi>
+ <mi>e</mi>
+ <mi>a</mi>
+ <mi>r</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow/>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >ניקוי הרשימה</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mfrac>
+   <mrow>
+    <mi>b</mi>
+    <mo stretchy='false'>-</mo>
+    <mi>a</mi>
+   </mrow>
+   <mi>c</mi>
+  </mfrac>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+ <mrow>
+  <mo>[</mo>
+  <mrow>
+   <mi>a</mi>
+   <mo stretchy='false'>:</mo>
+   <mi>b</mi>
+   <mo stretchy='false'>:</mo>
+   <mi>c</mi>
+  </mrow>
+  <mo>]</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtext>slice</mtext>
+</math>
+</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>l</mi>
+   <mi>e</mi>
+   <mi>n</mi>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mi>c</mi>
+     <mi>o</mi>
+     <mi>n</mi>
+     <mi>t</mi>
+     <mi>a</mi>
+     <mi>i</mi>
+     <mi>n</mi>
+     <mi>e</mi>
+     <mi>r</mi>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+ <mn>.</mn>
+ <mi>e</mi>
+ <mi>x</mi>
+ <mi>t</mi>
+ <mi>e</mi>
+ <mi>n</mi>
+ <mi>d</mi>
+ <mrow>
+  <mo stretchy='false'>(</mo>
+  <mrow>
+   <mi>c</mi>
+   <mi>o</mi>
+   <mi>n</mi>
+   <mi>t</mi>
+   <mi>a</mi>
+   <mi>i</mi>
+   <mi>n</mi>
+   <mi>e</mi>
+   <mi>r</mi>
+  </mrow>
+  <mo stretchy='false'>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtext>extend</mtext>
+</math>
+</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>l</mi>
+   <mi>e</mi>
+   <mi>n</mi>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mi>c</mi>
+     <mi>o</mi>
+     <mi>n</mi>
+     <mi>t</mi>
+     <mi>a</mi>
+     <mi>i</mi>
+     <mi>n</mi>
+     <mi>e</mi>
+     <mi>r</mi>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>i</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+ <mrow>
+  <mo stretchy='false'>(</mo>
+  <mrow>
+   <mi>c</mi>
+   <mi>o</mi>
+   <mi>n</mi>
+   <mi>t</mi>
+   <mi>a</mi>
+   <mi>i</mi>
+   <mi>n</mi>
+   <mi>e</mi>
+   <mi>r</mi>
+  </mrow>
+  <mo stretchy='false'>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >יצירת רשימה</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+ <mn>1</mn>
+ <mo stretchy='false'>=</mo>
+ <mo stretchy='false'>=</mo>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+ <mn>2</mn>
+ <mo stretchy='false'>,</mo>
+ <mspace width="10px"/>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+ <mn>1</mn>
+ <mo stretchy='false'>!</mo>
+ <mo stretchy='false'>=</mo>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+ <mn>2</mn>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >השוואת רשימות</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+ <mrow>
+  <mo>[</mo>
+  <mrow>
+   <mi>a</mi>
+   <mo stretchy='false'>:</mo>
+   <mi>b</mi>
+   <mo stretchy='false'>:</mo>
+   <mi>c</mi>
+  </mrow>
+  <mo>]</mo>
+ </mrow>
+ <mspace width="10px"/>
+ <mo stretchy='false'>=</mo>
+ <mspace width="10px"/>
+ <mi>c</mi>
+ <mi>o</mi>
+ <mi>n</mi>
+ <mi>t</mi>
+ <mi>a</mi>
+ <mi>i</mi>
+ <mi>n</mi>
+ <mi>e</mi>
+ <mi>r</mi>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >השמה ע&#8221;י <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtext>slicing</mtext>
+</math>
+ (הערה 6)</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+ <mn>.</mn>
+ <mi>i</mi>
+ <mi>n</mi>
+ <mi>s</mi>
+ <mi>e</mi>
+ <mi>r</mi>
+ <mi>t</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>i</mi>
+   <mo stretchy='false'>,</mo>
+   <mi>o</mi>
+   <mi>b</mi>
+   <mi>j</mi>
+   <mi>e</mi>
+   <mi>c</mi>
+   <mi>t</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >הוספת איבר באינדקס מסוים (הערה 4)</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>d</mi>
+ <mi>e</mi>
+ <mi>l</mi>
+ <mspace width="10px"/>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+ <mrow>
+  <mo>[</mo>
+  <mi>i</mi>
+  <mo>]</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >מחיקת איבר (הערה 4)</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+ <mn>.</mn>
+ <mi>r</mi>
+ <mi>e</mi>
+ <mi>m</mi>
+ <mi>o</mi>
+ <mi>v</mi>
+ <mi>e</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>o</mi>
+   <mi>b</mi>
+   <mi>j</mi>
+   <mi>e</mi>
+   <mi>c</mi>
+   <mi>t</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >סילוק איבר מרשימה</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>x</mi>
+ <mspace width="10px"/>
+ <mi>i</mi>
+ <mi>n</mi>
+ <mspace width="10px"/>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+ <mo stretchy='false'>,</mo>
+ <mspace width="10px"/>
+ <mi>x</mi>
+ <mspace width="10px"/>
+ <mi>n</mi>
+ <mi>o</mi>
+ <mi>t</mi>
+ <mspace width="10px"/>
+ <mi>i</mi>
+ <mi>n</mi>
+ <mspace width="10px"/>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >בדיקה אם איבר נמצא ברשימה</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+ <mn>.</mn>
+ <mi>c</mi>
+ <mi>o</mi>
+ <mi>p</mi>
+ <mi>y</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow/>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >העתקת רשימה</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>m</mi>
+ <mi>i</mi>
+ <mi>n</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>l</mi>
+   <mi>s</mi>
+   <mi>t</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>,</mo>
+ <mspace width="10px"/>
+ <mi>m</mi>
+ <mi>a</mi>
+ <mi>x</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>l</mi>
+   <mi>s</mi>
+   <mi>t</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >מציאת איבר מקסימלי/מינימלי</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+ <mn>.</mn>
+ <mi>r</mi>
+ <mi>e</mi>
+ <mi>v</mi>
+ <mi>e</mi>
+ <mi>r</mi>
+ <mi>s</mi>
+ <mi>e</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>l</mi>
+   <mi>s</mi>
+   <mi>t</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >היפוך סדר הרשימה</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mi>o</mi>
+ <mi>r</mi>
+ <mspace width="10px"/>
+ <mi>i</mi>
+ <mspace width="10px"/>
+ <mi>i</mi>
+ <mi>n</mi>
+ <mspace width="10px"/>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >מעבר על הרשימה בלולאה</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo>&#x22C5;</mo>
+   <mo>log</mo>
+   <mi>n</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+ <mn>.</mn>
+ <mi>s</mi>
+ <mi>o</mi>
+ <mi>r</mi>
+ <mi>t</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow/>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >מיון הרשימה</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; ' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>t</mi>
+   <mo>&#x22C5;</mo>
+   <mi>n</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; ' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+ <mo>&#x22C5;</mo>
+ <mi>t</mi>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; ' >הכפלת רשימה במספר</td>
+</tr>
+</tbody>
+</table>
+<span class='float-caption-Standard float-caption float-caption-standard'>
+<br />
+טבלה 1  סיבוכיות של פעולות על רשימות ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtext>tuples</mtext>
+</math>
+</span></div>
+</div>
+
+
+<div class='standard' id='magicparlabel-1081'>הערות:</div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-1082'>פייתון הולך ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>i</mi>
+ <mi>d</mi>
+</mrow>
+</math>
+ של הרשימה ומוסיף את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>i</mi>
+</math>
+ כדי להגיע למיקום המתאים.</li>
+<li class="enumerate_item" id='magicparlabel-1083'>בשפת התכנות C כחלק מהגדרת <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mi>o</mi>
+ <mi>n</mi>
+ <mi>t</mi>
+ <mi>a</mi>
+ <mi>i</mi>
+ <mi>n</mi>
+ <mi>e</mi>
+ <mi>r</mi>
+</mrow>
+</math>
+ יש לכתוב מה אורכה.</li>
+<li class="enumerate_item" id='magicparlabel-1084'>לפעמים הסיבוכיות היא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ מפני שיש להזיז את כל הרשימה ע&#8221;מ שיהיה מקום.</li>
+<li class="enumerate_item" id='magicparlabel-1085'>יש להזיז את כל האיברים שאחרי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>i</mi>
+</math>
+, לכן זה בעצם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>-</mo>
+   <mi>i</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ (משמעותי כש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>i</mi>
+</math>
+ יחסית בסוף הרשימה).</li>
+<li class="enumerate_item" id='magicparlabel-1086'>שקול ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+ <mn>.</mn>
+ <mi>p</mi>
+ <mi>o</mi>
+ <mi>p</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mn>1</mn>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</li>
+<li class="enumerate_item" id='magicparlabel-1087'>יכול להיות שזה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>+</mo>
+   <mi>l</mi>
+   <mi>e</mi>
+   <mi>n</mi>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mi>c</mi>
+     <mi>o</mi>
+     <mi>n</mi>
+     <mi>t</mi>
+     <mi>a</mi>
+     <mi>i</mi>
+     <mi>n</mi>
+     <mi>e</mi>
+     <mi>r</mi>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+?</li>
+</ol>
+
+
+<div class='float-table'><div class='plain_layout' style='text-align: center;' id='magicparlabel-1093'><table>
+<tbody>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><b>סיבוכיות</b></td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><b>דוגמה</b></td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' ><b>פעולה</b></td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mn>1</mn>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>e</mi>
+ <mi>n</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>s</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtext>len</mtext>
+</math>
+ (הערה 1)</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mn>1</mn>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>s</mi>
+ <mn>.</mn>
+ <mi>a</mi>
+ <mi>d</mi>
+ <mi>d</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>o</mi>
+   <mi>b</mi>
+   <mi>j</mi>
+   <mi>e</mi>
+   <mi>c</mi>
+   <mi>t</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >הוספת איבר לקבוצה</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mn>1</mn>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>s</mi>
+ <mn>.</mn>
+ <mi>p</mi>
+ <mi>o</mi>
+ <mi>p</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow/>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtext>pop</mtext>
+</math>
+</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mn>1</mn>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>s</mi>
+ <mn>.</mn>
+ <mi>c</mi>
+ <mi>l</mi>
+ <mi>e</mi>
+ <mi>a</mi>
+ <mi>r</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow/>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >ניקוי הקבוצה</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>l</mi>
+   <mi>e</mi>
+   <mi>n</mi>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mi>c</mi>
+     <mi>o</mi>
+     <mi>n</mi>
+     <mi>t</mi>
+     <mi>a</mi>
+     <mi>i</mi>
+     <mi>n</mi>
+     <mi>e</mi>
+     <mi>r</mi>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>s</mi>
+ <mi>e</mi>
+ <mi>t</mi>
+ <mrow>
+  <mo stretchy='false'>(</mo>
+  <mrow>
+   <mi>c</mi>
+   <mi>o</mi>
+   <mi>n</mi>
+   <mi>t</mi>
+   <mi>a</mi>
+   <mi>i</mi>
+   <mi>n</mi>
+   <mi>e</mi>
+   <mi>r</mi>
+  </mrow>
+  <mo stretchy='false'>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >יצירת קבוצה</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>s</mi>
+ <mn>1</mn>
+ <mo stretchy='false'>=</mo>
+ <mo stretchy='false'>=</mo>
+ <mi>s</mi>
+ <mn>2</mn>
+ <mo stretchy='false'>,</mo>
+ <mspace width="10px"/>
+ <mi>s</mi>
+ <mn>1</mn>
+ <mo stretchy='false'>!</mo>
+ <mo stretchy='false'>=</mo>
+ <mi>s</mi>
+ <mn>2</mn>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >השוואת קבוצות</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mn>1</mn>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>s</mi>
+ <mn>.</mn>
+ <mi>r</mi>
+ <mi>e</mi>
+ <mi>m</mi>
+ <mi>o</mi>
+ <mi>v</mi>
+ <mi>e</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>o</mi>
+   <mi>b</mi>
+   <mi>j</mi>
+   <mi>e</mi>
+   <mi>c</mi>
+   <mi>t</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>,</mo>
+ <mspace width="10px"/>
+ <mi>s</mi>
+ <mo stretchy='false'>,</mo>
+ <mi>d</mi>
+ <mi>i</mi>
+ <mi>s</mi>
+ <mi>c</mi>
+ <mi>a</mi>
+ <mi>r</mi>
+ <mi>d</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>o</mi>
+   <mi>b</mi>
+   <mi>j</mi>
+   <mi>e</mi>
+   <mi>c</mi>
+   <mi>t</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >מחיקת איבר</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mn>1</mn>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>x</mi>
+ <mspace width="10px"/>
+ <mi>i</mi>
+ <mi>n</mi>
+ <mspace width="10px"/>
+ <mi>s</mi>
+ <mo stretchy='false'>,</mo>
+ <mspace width="10px"/>
+ <mi>x</mi>
+ <mspace width="10px"/>
+ <mi>n</mi>
+ <mi>o</mi>
+ <mi>t</mi>
+ <mspace width="10px"/>
+ <mi>i</mi>
+ <mi>n</mi>
+ <mspace width="10px"/>
+ <mi>s</mi>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >בדיקה אם איבר בקבוצה</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>s</mi>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>t</mi>
+ <mo stretchy='false'>,</mo>
+ <mspace width="10px"/>
+ <mi>s</mi>
+ <mo stretchy='false'>&lt;</mo>
+ <mo stretchy='false'>=</mo>
+ <mi>t</mi>
+ <mo stretchy='false'>,</mo>
+ <mspace width="10px"/>
+ <mi>t</mi>
+ <mo stretchy='false'>&gt;</mo>
+ <mi>s</mi>
+ <mo stretchy='false'>,</mo>
+ <mspace width="10px"/>
+ <mi>t</mi>
+ <mo stretchy='false'>&gt;</mo>
+ <mo stretchy='false'>=</mo>
+ <mi>s</mi>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >בדיקת הכלה</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>+</mo>
+   <mi>l</mi>
+   <mi>e</mi>
+   <mi>n</mi>
+   <mrow>
+    <mo>(</mo>
+    <mi>t</mi>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>s</mi>
+ <mo>&#x2223;</mo>
+ <mi>t</mi>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >איחוד קבוצות</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>+</mo>
+   <mi>l</mi>
+   <mi>e</mi>
+   <mi>n</mi>
+   <mrow>
+    <mo>(</mo>
+    <mi>t</mi>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>s</mi>&amp;
+ <mi>t</mi>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >חיתוך קבוצות</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>+</mo>
+   <mi>l</mi>
+   <mi>e</mi>
+   <mi>n</mi>
+   <mrow>
+    <mo>(</mo>
+    <mi>t</mi>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>s</mi>
+ <mo stretchy='false'>-</mo>
+ <mi>t</mi>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >חיסור קבוצות</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>+</mo>
+   <mi>l</mi>
+   <mi>e</mi>
+   <mi>n</mi>
+   <mrow>
+    <mo>(</mo>
+    <mi>t</mi>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>s</mi>^
+ <mi>t</mi>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >חיסור סימטרי</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>s</mi>
+ <mn>.</mn>
+ <mi>c</mi>
+ <mi>o</mi>
+ <mi>p</mi>
+ <mi>y</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow/>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >העתקת קבוצה</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; ' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; ' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mi>o</mi>
+ <mi>r</mi>
+ <mspace width="10px"/>
+ <mi>i</mi>
+ <mspace width="10px"/>
+ <mi>i</mi>
+ <mi>n</mi>
+ <mspace width="10px"/>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; ' >מעבר על המילון בלולאה</td>
+</tr>
+</tbody>
+</table>
+<span class='float-caption-Standard float-caption float-caption-standard'>
+<br />
+טבלה 2  סיבוכיות של פעולות על קבוצות</span></div>
+</div>
+
+
+
+<div class='float-table'><div class='plain_layout' style='text-align: center;' id='magicparlabel-1301'><table>
+<tbody>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><b>סיבוכיות</b></td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><b>דוגמה</b></td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' ><b>פעולה</b></td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mn>1</mn>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>d</mi>
+ <mrow>
+  <mo stretchy='false'>[</mo>
+  <mrow>
+   <mi>k</mi>
+   <mi>e</mi>
+   <mi>y</mi>
+  </mrow>
+  <mo stretchy='false'>]</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >גישה למפתח</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mn>1</mn>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>d</mi>
+ <mrow>
+  <mo stretchy='false'>[</mo>
+  <mrow>
+   <mi>k</mi>
+   <mi>e</mi>
+   <mi>y</mi>
+  </mrow>
+  <mo stretchy='false'>]</mo>
+ </mrow>
+ <mspace width="10px"/>
+ <mo stretchy='false'>=</mo>
+ <mspace width="10px"/>
+ <mi>o</mi>
+ <mi>b</mi>
+ <mi>j</mi>
+ <mi>e</mi>
+ <mi>c</mi>
+ <mi>t</mi>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >השמה</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mn>1</mn>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>d</mi>
+ <mn>.</mn>
+ <mi>g</mi>
+ <mi>e</mi>
+ <mi>t</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>k</mi>
+   <mi>e</mi>
+   <mi>y</mi>
+   <mo stretchy='false'>,</mo>
+   <mi>o</mi>
+   <mi>b</mi>
+   <mi>j</mi>
+   <mi>e</mi>
+   <mi>c</mi>
+   <mi>t</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>,</mo>
+ <mspace width="10px"/>
+ <mi>d</mi>
+ <mo stretchy='false'>,</mo>
+ <mi>s</mi>
+ <mi>e</mi>
+ <mi>t</mi>
+ <mi>d</mi>
+ <mi>e</mi>
+ <mi>f</mi>
+ <mi>a</mi>
+ <mi>u</mi>
+ <mi>l</mi>
+ <mi>t</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow/>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtext>get</mtext>
+</math>
+ או <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtext>setdefault</mtext>
+</math>
+</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mn>1</mn>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>e</mi>
+ <mi>n</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>d</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtext>len</mtext>
+</math>
+ (הערה 1)</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mn>1</mn>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>d</mi>
+ <mn>.</mn>
+ <mi>p</mi>
+ <mi>o</mi>
+ <mi>p</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>i</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtext>pop</mtext>
+</math>
+</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mn>1</mn>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>d</mi>
+ <mn>.</mn>
+ <mi>p</mi>
+ <mi>o</mi>
+ <mi>p</mi>
+ <mi>i</mi>
+ <mi>t</mi>
+ <mi>e</mi>
+ <mi>m</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow/>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtext>popitem</mtext>
+</math>
+</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mn>1</mn>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>d</mi>
+ <mn>.</mn>
+ <mi>c</mi>
+ <mi>l</mi>
+ <mi>e</mi>
+ <mi>a</mi>
+ <mi>r</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow/>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >ניקוי המילון</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>l</mi>
+   <mi>e</mi>
+   <mi>n</mi>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mi>c</mi>
+     <mi>o</mi>
+     <mi>n</mi>
+     <mi>t</mi>
+     <mi>a</mi>
+     <mi>i</mi>
+     <mi>n</mi>
+     <mi>e</mi>
+     <mi>r</mi>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>d</mi>
+ <mi>i</mi>
+ <mi>c</mi>
+ <mi>t</mi>
+ <mrow>
+  <mo stretchy='false'>(</mo>
+  <mrow>
+   <mi>c</mi>
+   <mi>o</mi>
+   <mi>n</mi>
+   <mi>t</mi>
+   <mi>a</mi>
+   <mi>i</mi>
+   <mi>n</mi>
+   <mi>e</mi>
+   <mi>r</mi>
+  </mrow>
+  <mo stretchy='false'>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >יצירת מילון (הערה 2)</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>d</mi>
+ <mn>1</mn>
+ <mo stretchy='false'>=</mo>
+ <mo stretchy='false'>=</mo>
+ <mi>d</mi>
+ <mn>2</mn>
+ <mo stretchy='false'>,</mo>
+ <mspace width="10px"/>
+ <mi>d</mi>
+ <mn>1</mn>
+ <mo stretchy='false'>!</mo>
+ <mo stretchy='false'>=</mo>
+ <mi>d</mi>
+ <mn>2</mn>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >השוואת מילונים</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mn>1</mn>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>d</mi>
+ <mi>e</mi>
+ <mi>l</mi>
+ <mspace width="10px"/>
+ <mi>d</mi>
+ <mrow>
+  <mo>[</mo>
+  <mrow>
+   <mi>k</mi>
+   <mi>e</mi>
+   <mi>y</mi>
+  </mrow>
+  <mo>]</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >מחיקת איבר</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>d</mi>
+ <mn>.</mn>
+ <mi>k</mi>
+ <mi>e</mi>
+ <mi>y</mi>
+ <mi>s</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow/>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>,</mo>
+ <mspace width="10px"/>
+ <mi>d</mi>
+ <mn>.</mn>
+ <mi>v</mi>
+ <mi>a</mi>
+ <mi>l</mi>
+ <mi>u</mi>
+ <mi>e</mi>
+ <mi>s</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow/>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>,</mo>
+ <mspace width="10px"/>
+ <mi>d</mi>
+ <mn>.</mn>
+ <mi>i</mi>
+ <mi>t</mi>
+ <mi>e</mi>
+ <mi>m</mi>
+ <mi>s</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow/>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mtext>view</mtext>
+</math>
+</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mn>1</mn>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>x</mi>
+ <mspace width="10px"/>
+ <mi>i</mi>
+ <mi>n</mi>
+ <mspace width="10px"/>
+ <mi>d</mi>
+ <mo stretchy='false'>,</mo>
+ <mspace width="10px"/>
+ <mi>x</mi>
+ <mspace width="10px"/>
+ <mi>n</mi>
+ <mi>o</mi>
+ <mi>t</mi>
+ <mspace width="10px"/>
+ <mi>i</mi>
+ <mi>n</mi>
+ <mspace width="10px"/>
+ <mi>d</mi>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >בדיקה אם מפתח נמצא במילון</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>x</mi>
+ <mspace width="10px"/>
+ <mi>i</mi>
+ <mi>n</mi>
+ <mspace width="10px"/>
+ <mi>d</mi>
+ <mn>.</mn>
+ <mi>v</mi>
+ <mi>a</mi>
+ <mi>l</mi>
+ <mi>u</mi>
+ <mi>e</mi>
+ <mi>s</mi>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >בדיקה אם ערך נמצא במילון</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; border-bottom: 1.000000px solid' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+ <mn>.</mn>
+ <mi>c</mi>
+ <mi>o</mi>
+ <mi>p</mi>
+ <mi>y</mi>
+ <mrow>
+  <mo>(</mo>
+  <mrow/>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; border-bottom: 1.000000px solid' >העתקת מילון</td>
+</tr>
+<tr>
+<td style='text-align: center; vertical-align: top; ' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>O</mi>
+ <mrow>
+  <mo>(</mo>
+  <mi>n</mi>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</td>
+<td style='text-align: left; vertical-align: top; ' ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mi>o</mi>
+ <mi>r</mi>
+ <mspace width="10px"/>
+ <mi>i</mi>
+ <mspace width="10px"/>
+ <mi>i</mi>
+ <mi>n</mi>
+ <mspace width="10px"/>
+ <mi>l</mi>
+ <mi>s</mi>
+ <mi>t</mi>
+</mrow>
+</math>
+</td>
+<td style='text-align: right; vertical-align: top; ' >מעבר על המילון בלולאה</td>
+</tr>
+</tbody>
+</table>
+<span class='float-caption-Standard float-caption float-caption-standard'>
+<br />
+טבלה 3  סיבוכיות של פעולות על מילונים</span></div>
+</div>
+
+
+<div class='standard' id='magicparlabel-1505'>הערות:</div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-1506'>בשפת התכנות C כחלק מהגדרת <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mi>o</mi>
+ <mi>n</mi>
+ <mi>t</mi>
+ <mi>a</mi>
+ <mi>i</mi>
+ <mi>n</mi>
+ <mi>e</mi>
+ <mi>r</mi>
+</mrow>
+</math>
+ יש לכתוב מה אורכה.</li>
+<li class="enumerate_item" id='magicparlabel-1507'>כל האיברים ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mi>o</mi>
+ <mi>n</mi>
+ <mi>t</mi>
+ <mi>a</mi>
+ <mi>i</mi>
+ <mi>n</mi>
+ <mi>e</mi>
+ <mi>r</mi>
+</mrow>
+</math>
+ חייבים להיות <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>c</mi>
+ <mi>o</mi>
+ <mi>n</mi>
+ <mi>t</mi>
+ <mi>a</mi>
+ <mi>i</mi>
+ <mi>n</mi>
+ <mi>e</mi>
+ <mi>r</mi>
+ <mi>s</mi>
+</mrow>
+</math>
+ בגודל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>2</mn>
+</math>
+.</li>
+</ol>
+</ul>
+</section>
+<script src="../../tree_view.js"></script>
+</body>
+</html>

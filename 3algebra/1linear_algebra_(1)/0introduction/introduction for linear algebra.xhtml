@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="he-IL">
+<head>
+<link rel="stylesheet" type="text/css" href="../../../main.css" />
+<meta name="viewport" content="width=device-width" />
+<meta name="generator" content="LyX 2.4.1" />
+<title>הקדמה לאלגברה ליניארית</title>
+<script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body dir="auto">
+<section>
+<h2 class='section' id='magicparlabel-607'><span class="section_label">1</span> הנושא האמיתי של האלגברה הליניארית</h2>
+<ul class='nested'>
+<div class='standard' id='magicparlabel-608'>שאל אותי פעם חבר טוב &#8220;מהו הנושא של אלגברה ליניארית? על מה אנחנו מדברים בכלל? בחשבון אינפיניטסימלי זה ברור שאנחנו מדברים על המספרים הממשיים, מנסים לזקק את המחשבות שלנו אודותיהם ולהציג בצורה פורמלית את כל הידע האנושי בנושא; אבל מהו האובייקט המרכזי של אלגברה ליניארית? הרי יש יותר ממרחב וקטורי אחד...&#8221;</div>
+
+<div class='standard' id='magicparlabel-609'>תשובתי הייתה שהאובייקט המרכזי של אלגברה ליניארית הוא המרחב התלת-ממדי שבו אנו חיים; <a href="https://he.wikipedia.org/wiki/%D7%A8%D7%A0%D7%94_%D7%93%D7%A7%D7%90%D7%A8%D7%98">דקארט</a> לימד אותנו שניתן לייצג כל נקודה במישור ע&#8221;י זוג סדור של מספרים ממשיים וכמו כן כל נקודה במרחב התלת-ממדי ניתנת להצגה כשלשה סדורה של ממשיים<div class='foot'><span class="foot_label">1</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-613'>על שמו של דקארט נקראת המכפלה הקרטזית משום שהוא תיאר את המישור כ-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+ <mn>2</mn>
+</msup>
+</math>
+ ואת המרחב כ-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+ <mn>3</mn>
+</msup>
+</math>
+.</div>
+</div></div>, א&#8221;כ מבחינה מתמטית תשובה זו רוצה לומר שהאובייקט המרכזי של האלגברה הליניארית הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+ <mn>3</mn>
+</msup>
+</math>
+. נכון, אנחנו נראה עוד הרבה מרחבים וקטוריים אחרים אך המוטיבציה לעסוק בנושא באה מרצוננו להבין את המציאות שסביבנו, וכמו תמיד במתמטיקה ההגדרה המופשטת הגיעה מתוך רצון לדייק אובייקטים שלפני כן נתפסו רק בצורה אינטואיטיבית וכך ההגדרה של מרחב וקטורי מבוססת כולה על המרחב התלת-ממדי. יתרה מזאת, לדעתי האישית כדי להוכיח משפט בליניארית עלינו לשכנע את עצמנו מדוע הוא נכון במרחב התלת-ממדי ואז לפרמל את ההוכחה כך שתחול גם במרחבים וקטוריים אחרים; את השיטה הזו ביצעתי כשלמדתי את הקורס הזה והבא אחריו ולעולם לא התאכזבתי - לכל משפט באלגברה ליניארית יש משמעות שאינה טריוויאלית ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+ <mn>3</mn>
+</msup>
+</math>
+ ודרך ההוכחה זהה תמיד. בסיכומים לא תמיד אכתוב בפירוש את האינטואיציה ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+ <mn>3</mn>
+</msup>
+</math>
+ אך אני מבקש מן הקורא שיחפש אותה בכל פעם.</div>
+
+<div class='standard' id='magicparlabel-614'>כשלומדים אלגברה ליניארית בתיכון<div class='foot'><span class="foot_label">2</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-618'>כן, שמעתם נכון - לומדים אלגברה ליניארית בתיכון!
+<br />
+ב-5 יחידות מתמטיקה לומדים נושא שנקרא &#8220;וקטורים&#8221; ובו מאפיינים ישר ע&#8221;י וקטור כיוון של הישר ונקודה שעליו וכמו כן מייצגים מישור ע&#8221;י שני וקטורי כיוון הפורשים את המישור ונקודה שעליו, אנחנו ניתקל במושגים דומים גם בקורס זה. בנוסף, מי שלמד פיזיקה בתיכון ראה את המשמעות הפיזיקלית של חיבור וקטורי והמכפלה הסקלרית (שעליה נלמד בקורס הבא).</div>
+</div></div> מבדילים בין נקודות לווקטורים: נקודה היא מיקום במרחב בעוד שווקטור הוא &#8220;חץ&#8221; בעל גודל וכיוון אך אינו במוגבל למיקום מסוים, באוניברסיטה לא נבדיל ביניהם משום שהם איזומורפיים זה לזה - כל נקודה והווקטור היוצא מראשית הצירים אליה מיוצגים באותה צורה: זוג סדור או שלשה סדורה של מספרים ממשיים.</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-619'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ כאן אני רוצה להמליץ על ערוץ YouTube נהדר שמסביר בין השאר את הקשר הנ&#8221;ל בין וקטור לנקודה: לערוץ קוראים &#8220;<a href="https://www.youtube.com/@3blue1brown">3blue1brown</a>&#8221; ואת העניין הזה הוא מסביר בסרטון <a href="https://www.youtube.com/watch?v=k7RM-ot2NWY&amp;list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&amp;index=2">הזה</a><div class='foot'><span class="foot_label">3</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-623'>קצת אחרי האמצע, אבל כדאי בכל מקרה לראות את כל הסרטון.</div>
+</div></div> שהוא חלק מ<a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">הפלייליסט</a> שלו על המהות של האלגברה הליניארית (מומלץ לראות את כל הפלייליסט במקביל ללמידת שני הקורסים של האלגברה הליניארית). בנוסף, יש בערוץ זה סרטונים רבים אחרים שמסבירים את המתמטיקה (לאו דווקא ליניארית) באופן ויזואלי ובכך תורמים מאד להבנה.</li>
+</ol>
+</ul>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-625'><span class="section_label">2</span> חיבור וקטורי וכפל בסקלר</h2>
+<ul class='nested'>
+<section>
+<h3 class='subsection' id='magicparlabel-626'><span class="subsection_label">2.1</span> חיבור וקטורי וחוק החילוף</h3>
+<div class='standard' id='magicparlabel-627'>ניתן להסתכל על וקטור כהדרכה כיצד להגיע מראשית הצירים אל הנקודה, אינטואיטיבי מאד לדבר על &#8220;חיבור&#8221; של הדרכות כאלה: לך עד לנקודה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='bold'></mstyle>
+</math>
+ ע&#8221;פ הוראת הווקטור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='bold'></mstyle>
+</math>
+ ואז התייחס אליה כאילו היא ראשית הצירים ולך ע&#8221;פ הוראת הווקטור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='bold'></mstyle>
+</math>
+ עד לנקודה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='bold'></mstyle>
+</math>
+ שהיחס בינה לבין <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='bold'></mstyle>
+</math>
+ הוא כמו היחס בין <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='bold'></mstyle>
+</math>
+ לראשית הצירים. מבחינה גרפית חיבור הווקטורים נעשה ע&#8221;י הצבת &#8220;זנבו&#8221; של הווקטור האחד על &#8220;ראשו&#8221; של הווקטור האחר, והגדרת הווקטור היוצא מראשית הצירים אל הנקודה המהווה את ראשו של הראשון לאחר שהוזז (<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='bold'></mstyle>
+</math>
+) כסכומם של החיצים.</div>
+
+
+<div class='float-figure'><div class='plain_layout' style='text-align: center;' id='magicparlabel-632'><img style='width:50%;' src='e_cd61fc84dc8d_________________________1.PNG' alt='image: e_cd61fc84dc8d_________________________1.PNG' /></div>
+
+<div class='plain_layout' id='magicparlabel-633'><span class='float-caption-Standard float-caption float-caption-standard'>
+<br />
+איור 1  חיבור וקטורי</span></div>
+</div>
+
+
+<div class='standard' id='magicparlabel-638'>באיור שלעיל רואים את הווקטורים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='bold'></mstyle>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='bold'></mstyle>
+</math>
+ כששניהם יוצאים מראשית הצירים (למטה) והעתקים של שניהם כשכל אחד מההעתקים מוצב כשזנבו על המקור של רעהו, כבר כעת ניתן לראות שהסדר אינו משנה והחיבור הווקטורי הוא חילופי (קומוטטיבי).</div>
+
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-640'><span class="subsection_label">2.2</span> פירוק לרכיבים</h3>
+<div class='standard' id='magicparlabel-641'>באיור הבא ניתן לראות שאם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+</math>
+ אז <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mstyle mathvariant='bold'></mstyle>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mo stretchy='false'>+</mo>
+   <mo stretchy='false'>,</mo>
+   <mo stretchy='false'>+</mo>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+<div class='foot'><span class="foot_label">4</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-645'>שימו לב לכך ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>x</mi>
+ <mn>1</mn>
+</msub>
+</math>
+ שלילי ולכן להוסיף אותו פירושו לזוז שמאלה ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo>|</mo>
+ <msub>
+  <mi>x</mi>
+  <mn>1</mn>
+ </msub>
+ <mo>|</mo>
+</mrow>
+</math>
+.</div>
+</div></div>, כלומר התיאור שלנו את המישור כקבוצת כל הזוגות הסדורים של מספרים ממשיים נותן לנו דרך נוחה מבחינה אלגברית לתאר את החיבור הווקטורי.</div>
+
+
+<div class='float-figure'><div class='plain_layout' style='text-align: center;' id='magicparlabel-650'><img style='width:50%;' src='e_9bb040181647_________________________2.PNG' alt='image: e_9bb040181647_________________________2.PNG' /></div>
+
+<div class='plain_layout' id='magicparlabel-651'><span class='float-caption-Standard float-caption float-caption-standard'>
+<br />
+איור 2  פירוק לרכיבים</span></div>
+</div>
+
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-656'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ קצת קשה להראות זאת על דף אך אותו הדבר מתרחש במרחב התלת-ממדי.</li>
+<li class="labeling_item" id='magicparlabel-657'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ שימו לב: למרות שאולי מבחינה רעיונית נקודות וחיצים נראים שונים למדי הם מתנהגים באותה צורה מבחינה מתמטית ולכן אנחנו עומדים &#8220;לזגזג&#8221; ביניהם מבלי לאותת.</li>
+</ol>
+<div class='standard' id='magicparlabel-658'>האינטואיציה מאחורי התיאור האלגברי היא שניתן לפרק כל וקטור במישור לשני רכיבים ניצבים: אחד בכיוון ציר ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+ והשני בכיוון ציר ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>y</mi>
+</math>
+ (ובמרחב יהיה רכיב נוסף בכיוון ציר ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>z</mi>
+</math>
+), וכל פעולה שנעשית על הווקטור פועלת על כל אחד משני הרכיבים בנפרד, כך החיבור של שני וקטורים הוא בעצם חיבור של כל אחת מהקואורדינטות שלהם בנפרד.
+<br />
+מי שהרעיונות האלה נראים לו מוכרים מהתיכון אינו טועה, ב-5 יחידות מתמטיקה למדנו נושא שנקרא פשוט &#8220;וקטורים&#8221; שעסק בדיוק בזה, שם למדנו לאפיין מישורים וישרים במרחב ע&#8221;י נקודה וזוג וקטורים (מישורים) או וקטור בודד (ישרים) וגם כאן נפגוש במושגים הללו רק בשמות אחרים (תתי-מרחבים וקטוריים וישריות). מי שלמד פיזיקה בתיכון יודע שמהירות ותאוצה גם הן מאופיינות ע&#8221;י גודל וכיוון ולפיכך ניתנות לאפיון ע&#8221;י וקטורים, והיכולת שלנו לפרק את הווקטורים שלהן לרכיבים מאפשרת לנו לפשט חישובים רבים, מה שמראה (לדעתי) שהתפיסה הזו לא רק פשוטה מבחינה אלגברית אלא גם מייצגת באמת את המציאות.</div>
+
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-660'><span class="subsection_label">2.3</span> חיבור וקטורי וחוק הקיבוץ</h3>
+<div class='standard' id='magicparlabel-661'>לא מצאתי דרך לצייר את האיור הבא מבלי שהוא יהיה עמוס מדי, למרות זאת אני מקווה שברור ממנו שחיבור וקטורים במישור מקיים את חוק הקיבוץ (אסוציאטיביות) ועם קצת דמיון ניתן לראות שזהו המצב גם במרחב התלת-ממדי.</div>
+
+
+<div class='float-figure'><div class='plain_layout' style='text-align: center;' id='magicparlabel-666'><img style='width:50%;' src='e_3ccec75f4938_________________________3.PNG' alt='image: e_3ccec75f4938_________________________3.PNG' /></div>
+
+<div class='plain_layout' id='magicparlabel-667'><span class='float-caption-Standard float-caption float-caption-standard'>
+<br />
+איור 3  החיבור הווקטורי מקיים את חוק הקיבוץ</span></div>
+
+
+</div>
+
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-673'><span class="subsection_label">2.4</span> כפל בסקלר</h3>
+<div class='standard' id='magicparlabel-674'>בתיכון למדנו גם על פעולת הכפל בסקלר, מבחינה גאומטרית כפל בסקלר הוא מתיחה/כיווץ ע&#8221;פ הסקלר המתאים ואם הוא שלילי אז גם היפוך הכיוון שלו, מבחינה אלגברית אני חושב שקל להשתכנע שהכפלת כל קואורדינטה בנפרד עושה את אותה פעולה.</div>
+
+
+<div class='float-figure'><div class='plain_layout' style='text-align: center;' id='magicparlabel-679'><img style='width:30%;' src='e_87d82daba745_____________________________.png' alt='image: e_87d82daba745_____________________________.png' /></div>
+
+<div class='plain_layout' id='magicparlabel-680'><span class='float-caption-Standard float-caption float-caption-standard'>
+<br />
+איור 4  כפל בסקלר</span></div>
+</div>
+
+<dl class='description'>
+<dt class="description_label">מקור:</dt>
+<dd class="description_item" id='magicparlabel-685'> התמונה שלעיל נלקחה מ<a href="https://commons.wikimedia.org/wiki/File:Scalar_multiplication_of_vectors2.svg">וויקישיתוף</a> ומופיעה כאן ברישיון <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0</a>.</dd>
+</dl>
+</section>
+</ul>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-687'><span class="section_label">3</span> סיום</h2>
+<ul class='nested'>
+<div class='standard' id='magicparlabel-688'>לפני שנסיים הייתי רוצה שנשתכנע בעוד כמה נקודות<div class='foot'><span class="foot_label">5</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-692'>שלוש הנקודות הראשונות הן ברורות מאליהן ולצייר את שלוש האחרות כבר היה יותר מדי בשבילי...</div>
+</div></div>:</div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-693'>וקטור האפס, הווקטור שנותן את ההדרכה כיצד להגיע מראשית הצירים לראשית הצירים (גאומטרית) וזה שכל הקואורדינטות שלו הן אפסים (אלגברית) הוא איבר אדיש לחיבור הווקטורי משתי הבחינות.</li>
+<li class="enumerate_item" id='magicparlabel-694'>לכל וקטור יש וקטור נגדי - זהו הווקטור באותו האורך רק בכיוון ההפוך (גאומטרית) וזה שכל הקואורדינטות שלו הן בדיוק הנגדיות של המתאימות להן בווקטור המקורי (אלגברית).</li>
+<li class="enumerate_item" id='magicparlabel-695'>הכפלה של וקטור בסקלר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ משאירה אותו על כנו.</li>
+<li class="enumerate_item" id='magicparlabel-696'>הכפל בסקלר והכפל בממשיים מקיימים יחד את חוק הקיבוץ, כלומר לכל וקטור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>v</mi>
+</math>
+ במישור/במרחב מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>a</mi>
+   <mo>&#x22C5;</mo>
+   <mi>b</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x22C5;</mo>
+ <mi>v</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>a</mi>
+ <mo>&#x22C5;</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>b</mi>
+   <mo>&#x22C5;</mo>
+   <mi>v</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ עבור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>a</mi>
+ <mo stretchy='false'>,</mo>
+ <mi>b</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+ (שימו לב שהכפל השמאלי הוא כפל ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='double-struck'>
+ <mi>R</mi>
+</mstyle>
+</math>
+ ואילו הכפל הימני הוא כפל וקטור בסקלר).</li>
+<li class="enumerate_item" id='magicparlabel-697'>הכפל בסקלר מקיים את חוק הפילוג (דיסטריבוטיביות) ביחס לחיבור הווקטורי - לכל שני וקטורים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>v</mi>
+</math>
+ ו&#xAD;<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>w</mi>
+</math>
+ במישור/במרחב מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>a</mi>
+ <mo>&#x22C5;</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>v</mi>
+   <mo stretchy='false'>+</mo>
+   <mi>w</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mi>a</mi>
+ <mo>&#x22C5;</mo>
+ <mi>v</mi>
+ <mo stretchy='false'>+</mo>
+ <mi>a</mi>
+ <mo>&#x22C5;</mo>
+ <mi>w</mi>
+</mrow>
+</math>
+ עבור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>a</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+.</li>
+<li class="enumerate_item" id='magicparlabel-698'>הכפל בסקלר מקיים את חוק הפילוג ביחס לחיבור ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='double-struck'>
+ <mi>R</mi>
+</mstyle>
+</math>
+ לכל וקטור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>v</mi>
+</math>
+ במישור/במרחב מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>a</mi>
+   <mo stretchy='false'>+</mo>
+   <mi>b</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x22C5;</mo>
+ <mi>v</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>a</mi>
+ <mo>&#x22C5;</mo>
+ <mi>v</mi>
+ <mo stretchy='false'>+</mo>
+ <mi>b</mi>
+ <mo>&#x22C5;</mo>
+ <mi>v</mi>
+</mrow>
+</math>
+ עבור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>a</mi>
+ <mo stretchy='false'>,</mo>
+ <mi>b</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+.</li>
+</ol>
+<div class='standard' id='magicparlabel-699'>שש התכונות הללו, יחד עם החילוף והקיבוץ של החיבור הווקטורי, הן ההגדרה של מרחב וקטורי.</div>
+
+<div class='standard' style='text-align: left' id='magicparlabel-700'> </div>
+
+<div class='standard' style='text-align: left' id='magicparlabel-701'> </div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-702'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ יש כאן כמה דברים שלא נגענו בהם: במרחב התלת-ממדי ניתן למדוד זוויות בין ישרים ומישורים - נעסוק בזה בקורס הבא ובאותה הזדמנות נפרמל את מושג האורך של וקטור והמרחק בין נקודות<div class='foot'><span class="foot_label">6</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-706'>אמנם כאן הוא נקראה פשוט למדי אך ישנם מרחבים וקטוריים שבהם זה פחות פשוט מאשר במרחב התלת-ממדי.</div>
+</div></div> (מי שמכיר את <a href="https://he.wikipedia.org/wiki/%D7%9E%D7%9B%D7%A4%D7%9C%D7%94_%D7%A1%D7%A7%D7%9C%D7%A8%D7%99%D7%AA">הסקלרית המכפלה</a> כבר יודע למה לצפות), דבר נוסף שלא הזכרנו הוא צורות שאינן ישרות או מישוריות (עיגולים למשל) - התיאור האלגברי שלהן אינו ליניארי ולכן גם לא נראה אותן בשני הקורסים הללו, הלא השם שהם הוא &#8220;אלגברה ליניארית&#8221;.</li>
+</ol>
+</ul>
+</section>
+<script src="../../../tree_view.js"></script>
+</body>
+</html>

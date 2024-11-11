@@ -1,0 +1,5107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="he-IL">
+<head>
+<link rel="stylesheet" type="text/css" href="../../main.css" />
+<meta name="viewport" content="width=device-width" />
+<meta name="generator" content="LyX 2.4.1" />
+<title>הקדמה למתמטיקה אוניברסיטאית</title>
+<script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body dir="auto">
+<section>
+<h2 class='section' id='magicparlabel-612'><span class="section_label">1</span> הקדמה</h2>
+<ul class='nested'>
+<div class='standard' id='magicparlabel-613'>הקובץ הזה התחיל כקובץ בן ארבעה עמודים שנועד לרכך את הנפילה הקשה שרובנו חווים כשאנחנו מתחילים ללמוד מתמטיקה באוניברסיטה - צורת הלמידה כאן שונה מאד מהתיכון, מערבת הרבה פורמליות ולא שמה דגש מספיק על האינטואיציה. לאחר מכן כבר לא יכולתי להתאפק ופירטתי את נקודת המבט שלי בפילוסופיה של המתמטיקה בכלל ועל הקורסים אינפי&#8217; וליניארית 1 בפרט, כעת הקובץ כולל מעל עשרים עמודים...
+<br />
+מכיוון שאני לא מצפה מאף אחד לקרוא את כולם (למרות שאני די בטוח שמי שיצליח יצא נשכר), אכתוב כאן את הרעיון הכללי במשפט אחד:</div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-614'><b>המתמטיקה לא צומחת בחלל הריק, לכל הגדרה יש מושג שהיא מנסה לפרמל וכמעט לכל משפט יש הסבר אינטואיטיבי; התפקיד שלנו הוא להבין את האינטואיציות הללו וכשאנו כותבים הוכחה הדרך הכי טובה היא לפרמל את האינטואיציה שלנו.</b></div>
+
+<div class='standard' style='text-align: left' id='magicparlabel-615'> </div>
+
+<div class='standard' id='magicparlabel-616'>בפרק הראשון אפרט את התפיסה שעומדת מאחורי משפט זה, בפרק השני אנסה להציע הסבר אינטואיטיבי להגדרה הפורמלית של המספרים הממשיים כפי שהיא מוצגת באינפי&#8217; 1, ובפרק שאחריו לא אתאפק ואפתח בהסבר אינטואיטיבי למספרים המרוכבים והמרחבים הווקטוריים - הסבר שלא אסיים בקובץ זה אלא רק בסיכומים שלי מקורסי אלגברה ליניארית.</div>
+
+</ul>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-618'><span class="section_label">2</span> מה אנחנו עושים פה בכלל???</h2>
+<ul class='nested'>
+<section>
+<h3 class='subsection' id='magicparlabel-619'><span class="subsection_label">2.1</span> התחלה</h3>
+<div class='standard' id='magicparlabel-620'>איך מתנהלת הרצאה במתמטיקה? המרצה רושם הגדרה או שתיים על הלוח, הסטודנטים מבינים במה מדובר - מי יותר ומי פחות (ומי כלל לא), ואז המרצה נותן רצף של טענות והוכחותיהן; לאורך כל הוכחה הסטודנטים מנסים לעקוב אחרי כל שלב ולהבין מדוע הוא אכן מוצדק ובסופה גם מי שהצליח לעקוב אחרי כל שלב אומר לעצמו &#8220;אין מצב שהייתי חושב על זה בעצמי...&#8221;
+<br />
+שאלתם את עצמכם פעם מאיפה המרצה מביא את ההגדרה? ואת הטענות? ואת ההוכחות? אנחנו יודעים שהמרצים שלנו לא חשבו על ההגדרות, הטענות וההוכחות הללו לבדם (רובן בנות כמה מאות שנים), אז מהיכן הם כן הביאו אותן? תאמרו &#8220;מה השאלה? היו מתמטיקאים לפניהם והם אלו שכתבו את כל הנ&#8221;ל.&#8221; נכון, אבל כיצד הגיעו אותם מתמטיקאים לכל זה? האם פיה לחשה להם באוזן? האם הם קיבלו את המתמטיקה בחלום הלילה? לא ולא! המתמטיקאים הללו חשבו על ההגדרות, הטענות וההוכחות בעצמם. אבל כיצד זה קרה? האם באמת מתמטיקאים חושבים לעצמם &#8220;בואו נמציא מבנה אלגברי בעל תכונות כאלה וכאלה ונראה כיצד אנחנו ממשיכים משם&#8221;?! אני לא מאמין שזה מה שקורה וגם לא נראה לי שזה מה שקרה מבחינה היסטורית, בפסקה הבאה אני הולך להביא את דעתי האישית בשאלה &#8220;איך נכון &#8217;לעשות&#8217; מתמטיקה?&#8221; - אתם מוזמנים לחלוק עליי, ואף אשמח אם תכתבו לי על כך שכן לדעתי הפילוסופיה של המתמטיקה חשובה יותר מן המתמטיקה עצמה.
+<br />
+בעיניי הדרך הנכונה &#8220;לעשות&#8221; מתמטיקה היא לקחת טענות שאנו מחשיבים לנכונות ומצד שני לא נראה לנו שהן יכולות להיות הנחות יסוד, ואז לגזור <b>אחורה</b> את הנחות היסוד שעליהן מתבססות הטענות הראשונות. כלומר יש לנו חוש רוחני המורה לנו על קיומם הרוחני של אובייקטים מסוימים ועל נכונות של טענות כלשהן על אודותיהם, אנו רוצים לשים את האצבע על המהות של אותם אובייקטים, וזאת נעשה ע&#8221;י התבוננות בטענות שעליהם ו&#8220;הנדסה לאחור&#8221;, שכן מהות האובייקט היא המביאה לנכונות של אותן טענות עליו. כשאנו עובדים בצורה זו מה שקורה בעצם הוא שבמקום לחקור מציאות חיצונית לנו אנו חוקרים את הלך המחשבה שלנו על אודות אותה מציאות, איננו שואלים <b>האם</b> הטענות הללו נכונות אלא <b>למה</b> אנחנו חושבים שהן אכן נכונות; החלק המפתיע בגישה זו הוא שלאחר שחקרנו את עצמנו וגילינו מהן הנחות היסוד שלנו אנו יכולים להסיק מהן מסקנות חדשות שלא היו חלק ממערך הטענות המקורי, כעת, מכיוון שאלו באמת הנחות היסוד שלנו, נשתכנע שמסקנות אלו נכונות על אותם אובייקטים ובכך הרווחנו רווח כפול: הסברנו לעצמנו מדוע אנחנו חושבים כפי שחשבנו בעבר ובנוסף יש לנו מחשבות חדשות בנושא.</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-621'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ זוהי בעצם הסיבה שאני כל כך נהנה ללמוד מתמטיקה: איני חוקר מציאות זרה - אני חוקר את הלך המחשבה של האנושות, ואני עושה זאת דרך חקירת מוחי שלי!<div class='foot'><span class="foot_label">1</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-625'>אדגיש ואומר שלדעתי האובייקטים המתמטיים שאנו חוקרים אכן קיימים במציאות, אלא שבבואנו לחקור אותם איננו יכולים &#8220;לגעת&#8221; בהם באופן ישיר, תמיד מתווך לנו מוחנו את אותו חלק רוחני של המציאות (כפי שהוא מתווך לנו כל חלק אחר שלה) ולכן בעצם אנו חוקרים את מוחנו ולא את האובייקטים המתמטיים.</div>
+</div></div></li>
+</ol>
+<div class='standard' id='magicparlabel-626'>ע&#8221;פ תפיסה זו המתמטיקה אינה המצאה פרי מוחו של האדם כי אם תגלית, ניתן אולי לדון בשאלה אם התגלית היא כיצד אנחנו חושבים על אובייקטים מתמטיים או שמא התגלית היא מה נכון לומר על אותם אובייקטים; לטעמי אין הבדל גדול בין השניים: אם אני חושב מחשבה כלשהי אודות אובייקט מסוים אני אמנם מודע לכך שזוהי בסך הכל המחשבה שלי ואין ערב להיותה נכונה, אך מכיוון שאני הוא זה שחושב אותה הרי שמבחינתי היא אכן נכונה וכך נראה ומתנהג אותו אובייקט. מצד שני, יבוא אדם ויזרוק לחלל האוויר מבנה אלגברי בעל תכונות שלא נובעות מגזירה אחורנית כפי שתיארנו לעיל, ימשיך אותו אדם להסיק מסקנות מן ההגדרה ששלף ממוחו הקודח, אזי תאמר תפיסה זו שכל זה טוב ויפה אך אין שום ראיה לכך שאותו מבנה אלגברי אכן קיים במציאות הרוחנית - זוהי המצאה ממש כפי שסיפורי חדי קרן ופיות הם בדיה, ולפיכך אין בהם את אותה רמת עניין שבאובייקטים מתמטיים שעליהם מצביע אותו חוש רוחני שהזכרנו לעיל. אם נכלול המצאות כעין אלה תחת השם &#8220;מתמטיקה&#8221; נבין מדוע יש המשווים את המתמטיקה לאומנות, זוהי ספרות שלמה הכתובה בשפה מתמטית.</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-627'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ שאלה קלאסית בפילוסופיה של המתמטיקה היא מדוע המתמטיקה, שאיננה אלא פרי מחשבת האדם, כה מיטיבה להסביר את המציאות הפיזית?
+<br />
+אני חושב שהשאלה אפילו לא מתחילה, מתמטיקה אינה צומחת בחלל הריק, לייבניץ וניוטון לא היו מתמטיקאים - הם היו פיזיקאים שפתחו תחום חדש במתמטיקה בנסותם להסביר את המציאות הפיזית, המתמטיקה תמיד צומחת מן הדרישות בשטח, אפילו תחומים שנפתחו לכאורה שלא מתוך צרכים מעשיים נבנו בהשראת תחומים קודמים שכן היו כאלה. כלומר המתמטיקה תמיד צמחה, ולעולם תצמח, מתוך ניסיונו של האדם להסביר את המציאות הפיזית והרוחנית שהוא רואה, ולפיכך אין זה פלא שעבור אותו אדם נראה שהיא אכן מצליחה להסביר היטב את אותה מציאות.</li>
+<li class="labeling_item" id='magicparlabel-628'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ אתם מוזמנים לעיין ב<a href="https://he.wikipedia.org/wiki/%D7%A4%D7%99%D7%9C%D7%95%D7%A1%D7%95%D7%A4%D7%99%D7%94_%D7%A9%D7%9C_%D7%94%D7%9E%D7%AA%D7%9E%D7%98%D7%99%D7%A7%D7%94">וויקיפדיה</a> ולמצוא שיטות נוספות בפילוסופיה של המתמטיקה, השיטה שאני מציג כאן היא סוג של מה שנקרא שם &#8220;ריאליזם מתמטי או פלאטוניזם&#8221;. </li>
+</ol>
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-629'><span class="subsection_label">2.2</span> הפשטה</h3>
+<div class='standard' id='magicparlabel-630'>הסיבה לכתיבת קובץ זה, ואחת הסיבות העיקריות לכך שכתבתי את כל הסיכומים שלי, היא קושי נפוץ שמתעורר אצל סטודנטים רבים בתחילת הלימודים: המתמטיקאים מפשיטים כל דבר עד היסוד, וכשאנו הסטודנטים נתקלים בזה לראשונה, אנחנו נוטים להתמקד בהגדרה המופשטת ולשכוח את מה שלמדנו בתיכון והיה אינטואיטיבי יותר. כך נוצרת התחושה שמתמטיקאי קם יום אחד בבוקר ובדה ממוחו הקודח מבנה אלגברי, ואז שאל את עצמו "הממ... מעניין מה אפשר להגיד על המבנה האלגברי שהמצאתי בזה הרגע?".</div>
+
+<div class='standard' id='magicparlabel-631'>כפי שהסברתי לעיל לדעתי זוהי טעות: כל הגדרה מופשטת כזו נוצרה מהמושג שאותו היא מנסה להפשיט, היופי במתמטיקה הוא להבין את האינטואיציה במושג המקורי, ולראות כיצד אפשר לפרמל אותה במושג המופשט. אבל למה בכלל אנחנו מפשיטים? לפני שאנחנו עונים על השאלה ארצה לתת כמה דוגמאות להפשטה, ולהראות בהן את מה שאני מתאר כהפשטת מושג מתוכנו עד שנשארת הגדר בלבד.
+<br />
+<b>דוגמאות להפשטה</b></div>
+
+<div class='standard' id='magicparlabel-632'>חשבו רגע על המושגים חיבור, כפל, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+, עולה לכם איזשהו תוכן בראש, נכון?
+<br />
+כעת היזכרו בהגדרת שדה סדור:</div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-633'>מהם חיבור וכפל? פעולות דו-מקומיות שמקיימות <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>5</mn>
+</math>
+ פסוקים לוגיים כל אחת, כאשר אחד מהם (חוק הפילוג) משותף לשתיהן.</li>
+<li class="itemize_item" id='magicparlabel-634'>מהו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+? איבר בשדה המקיים שלכל איבר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+ בשדה, אם נפעיל עליו ועל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ פעולה מסוימת (חיבור) נקבל את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+.</li>
+<li class="itemize_item" id='magicparlabel-635'>מהו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+? איבר המקיים שלכל איבר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+ בשדה אם נפעיל עליו ועל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ פעולה אחרת (כפל) נקבל את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+.</li>
+<li class="itemize_item" id='magicparlabel-636'>למה לא הגדרנו את ההופכי של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+? כי אז: <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>0</mn>
+ <mo stretchy='false'>=</mo>
+ <mn>0</mn>
+ <mo>&#x22C5;</mo>
+ <msup>
+  <mn>0</mn>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mn>1</mn>
+  </mrow>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+, בסתירה לכך שהגדרנו את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ כאיברים שונים; הא ותו לא, לא בגלל שאין שום תוכן מאחורי המילים &#8220;חילקתי חמש סוכריות לאפס ילדים&#8221;.</li>
+<li class="itemize_item" id='magicparlabel-637'>והדוגמה שהפילה לי את האסימון בשיעור השני של אינפי&#8217; 1:
+<br />
+כשהמרצה שלנו לאינפי&#8217; 1 (רז קופרמן) הציג את אקסיומות השדה הסדור שאלתי אותו &#8220;למה באקסיומת הטריכוטומיה דרשת &#8217;או&#8217; <a href="https://he.wikipedia.org/wiki/XOR">מוציא</a>? הרי <b>המהות</b> של &#8220;היחס &#8217;קטן מ-&#8217; קובעת שגם אם היינו משתמשים ב-&#8217;או&#8217; כולל היינו מקלים את אותה התוצאה?&#8221;<div class='foot'><span class="foot_label">2</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-641'>כלומר אם אתה מבין היטב איזה תוכן עומד מאחורי המילים &#8220;קטן מ-&#8221; תדע שרק אחת משלוש האפשרויות של הטריכוטומיה יכולה להתקיים.</div>
+</div></div>, מה הוא ענה? &#8220;אין שום דבר חוץ מן ההגדרה, אם היינו משתמשים ב-&#8217;או&#8217; כולל היינו מקבלים משהו אחר, <b>אין תוכן מאחורי הסימון אלא רק מה שכתוב בהגדרה</b>&#8221;...</li>
+</ul>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-642'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ אם כל זה לא הספיק לכם בואו ניקח את זה לקצה. בספרו, &#8220;הקשר המתמטי&#8221; (ידיעות ספרים), מביא צבי ארטשטיין<div class='foot'><span class="foot_label">3</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-646'>מתמטיקאי במכון ויצמן.</div>
+</div></div> הגדרה די דומה להגדרה הבאה: מספר זוגי הוא מספר שלם שבכתיבה עשרונית ספרת היחידות שלו היא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>2</mn>
+</math>
+, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>4</mn>
+</math>
+, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>6</mn>
+</math>
+, או <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>8</mn>
+</math>
+; מבחינה פורמלית ההגדרה הזו קבילה לחלוטין (בהנחה שהכתיבה העשרונית מוגדרת). ארטשטיין לא אהב את ההגדרה שציטט מסיבותיו הוא, אך אני לא אוהב את ההגדרה הזו מסיבה אחרת: אמנם מבחינת ה<b>גידור</b> הגדרה זו עובדת היטב - אין מספר זוגי שאינו כלול בה ואין מספר אי-זוגי שמצליח להיכנס אליה, ה<b>גדר</b> אכן מונעת מעברים לא רצויים; אבל, וזה אבל גדול, ההגדרה הזו אינה הסיבה שבגללה אנחנו מתעניינים במספרים הזוגיים, ההגדרה הזו אינה מצביע על המהות של המספרים הזוגיים! מה אני כן רוצה לשמוע? מספר זוגי הוא מספר שניתן להצגה כמכפלה של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>2</mn>
+</math>
+ במספר שלם.
+<br />
+דרך אגב, לפי זה מהי ההגדרה הרצויה של המספרים האי-זוגיים? לא &#8220;קיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>k</mi>
+</math>
+ שלם כך שניתן להציג את המספר כ-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>2</mn>
+ <mi>k</mi>
+ <mo stretchy='false'>-</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+&#8221;, אלא &#8220;המספר אינו זוגי&#8221;.</li>
+</ol>
+<div class='standard' id='magicparlabel-647'>אז למה אנחנו עובדים רק עם ה<b>גדר</b> של המושגים ולא עם ה<b>מהות</b> שלהם? למה אנחנו מפשיטים?
+<br />
+יש לזה שלוש סיבות טובות ועוד אחת שמבחינה פילוסופית קצת קשה לי איתה.
+<br />
+שלוש הסיבות הטובות הן<div class='foot'><span class="foot_label">4</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-651'>לא יכולתי להתאפק: &#8220;וְשֶׁבַע הַשִׁבֳּלִים הָרֵקוֹת... יִהְיוּ שֶׁבַע שְׁנֵי רָעָב&#8221; (בראשית, מ&#8221;א, כ&#8221;ז).</div>
+</div></div>:</div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-652'>מניעת טעויות הנובעות מאינטואיציה שאינה נכונה.</li>
+<li class="enumerate_item" id='magicparlabel-653'>כאשר מפשיטים מן המושג את התוכן ונשארים רק עם ההגדרה כל הוכחה שתהיה תקפה במקרה אחד תהיה נכונה גם בכל המקרים האחרים שנכנסים לאותה הגדרה. כך לדוגמה, כאשר הוכחנו כי לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>r</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>R</mi>
+ </mstyle>
+</mrow>
+</math>
+ מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>0</mn>
+ <mo>&#x22C5;</mo>
+ <mi>r</mi>
+ <mo stretchy='false'>=</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+, הוכחנו זאת לא רק בשדה הממשיים אלא בכל שדה אחר (כגון <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mstyle mathvariant='double-struck'>
+  <mi>F</mi>
+ </mstyle>
+ <mn>2</mn>
+</msub>
+</math>
+), וזאת משום שהשתמשנו באקסיומות השדה בלבד.</li>
+<li class="enumerate_item" id='magicparlabel-654'>הפשטת מושג מן התוכן שלו שמה את האצבע על מהותו, על מה שהופך אותו למה שהוא.</li>
+</ol>
+<div class='standard' id='magicparlabel-655'>כדי להסביר את הסיבה השלישית נעבור לרגע לעניין אחר: בפילוסופיה של המתמטיקה ישנו עיקרון מקובל האומר שעדיף להניח כמה שפחות הנחות יסוד ולהסיק מהן כמה שיותר, כלומר עדיף לומר כמה שפחות בהגדרה ולהרוויח את כל התכונות האחרות של המושג ע&#8221;י מה שכבר נאמר, לדוגמה: ניתן היה להגדיר מקבילית כמרובע שאורך כל שתי צלעות נגדיות בו זהה וגם גודל כל שתי זוויות נגדיות בו שווה, אולם נהוג להגדיר מקבילית רק לפי התנאי הראשון מפני שניתן להסיק ממנו את השני<div class='foot'><span class="foot_label">5</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-659'>למעשה ניתן היה לעשות בדיוק הפוך (להגדיר לפי הזוויות), אני חושב שהסיבה להעדפה זו היא שצלעות המצולע בולטות יותר לעין האנושית מאשר זוויותיו.</div>
+</div></div>. כשאנו גוזרים את הנחות היסוד מהטענות שמבוססות עליהן נלמד בעצם איך <b>אנחנו</b> חושבים, כשנניח כמה שפחות נלמד על מה אנחנו באמת מתבססים בטענותינו; רצוני לומר שכשנפשיט אובייקט מתמטי עד הסוף נלמד כיצד <b>אנחנו</b> תופסים אותו<div class='foot'><span class="foot_label">6</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-663'>אני חושב (אם יורשה לנחתום להעיד על עיסתו) שהבאתי לכך דוגמה מעולה בהסבירי את אקסיומת השלמות בפרק השני של קובץ זה, ובקובץ ההגדרות של המספרים הממשיים.</div>
+</div></div>. כאן עליי לדייק בדבריי: אני לא טוען שכל הפשטה היא מהסיבה השלישית (הרי גם האחרות קיימות), כל אחד מוזמן לחשוב בעצמו מאיזו סיבה שיש צורך בהפשטה שלפניו (או אפילו אם יש בה צורך בכלל).</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-664'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ שימו לב: אמנם אמרתי שככל שמקטינים את מספר האקסיומות מבלי לאבד את הנובע מהן כן ייטב, אך זהו רק משום שהדבר מהווה <b>סימן</b> לכך שאנחנו בדרך הנכונה, וזאת בניגוד לתפיסה השלטת במתמטיקה שעיקרון זה הוא מהותי ולא נועד לשרת עיקרון אחר; לכן אם אראה טענה &#8220;מיותרת&#8221; מבחינה זו אך לדעתי היא ראויה לתואר &#8220;אקסיומה&#8221; לא תהיה לי בעיה להשאיר אותה על כנה<div class='foot'><span class="foot_label">7</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-668'>דוגמה בולטת לכך היא ההגדרה של תת-מרחב וקטורי: ניתן להגדיר אותו כתת-קבוצה של המרחב המכילה את וקטור האפס וסגורה לחיבור וקטורי וכפל בסקלר, לכאורה התנאי הראשון רחב מדי - אפשר להחליפו בכך שהקבוצה אינה ריקה ולקבל את אותו מושג, כך מניחים פחות מבלי לאבד טיפת רווח. למרות זאת אני מעדיף את ההגדרה הראשונה משום שלדעתי וקטור האפס הוא מהמאפיינים המהותיים של תמ&#8221;ו, ולראיה הוא מופיע בהגדרת המרחב הווקטורי (והרי כל הרעיון של תמ&#8221;ו היא שהוא מרחב בפני עצמו).</div>
+</div></div>.
+<br />
+עם זאת לא כל טענה, אינטואיטיבית ככל שתהיה, ראויה לתואר אקסיומה. נביא דוגמה לכך: בתיכון למדנו שסכום הזוויות במצולע קמור הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>180</mn>
+ <mo>&#x22C5;</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>-</mo>
+   <mn>2</mn>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ מעלות<div class='foot'><span class="foot_label">8</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-672'>כאשר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ הוא מספר הצלעות. הטענה נובעת מהעובדה שאם נבחר נקודה בתוך המצולע ונוציא ממנה ישרים לכל הקודקודים הרי שחילקנו את המצולע ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ משולשים, אך יהיה עלינו להחסיר את המעגל שסביב הנקודה (שהרי אינו חלק מזוויות המצולע).</div>
+</div></div>, אולם הטענה הזו נכונה גם עבור מצולע שאינו קמור; נוכיח את הטענה בכך שנראה כי לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>3</mn>
+ <mo>&#x2264;</mo>
+ <mi>n</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>N</mi>
+ </mstyle>
+</mrow>
+</math>
+ ולכל מצולע בעל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ צלעות ניתן לחלק את המצולע ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>-</mo>
+ <mn>2</mn>
+</mrow>
+</math>
+ משולשים, את טענת העזר הזו נוכיח באינדוקציה שלמה.
+<br />
+בסיס האינדוקציה טריוויאלי. יהי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>3</mn>
+ <mo>&#x2264;</mo>
+ <mi>n</mi>
+ <mo>&#x2208;</mo>
+ <mstyle mathvariant='double-struck'>
+  <mi>N</mi>
+ </mstyle>
+</mrow>
+</math>
+ ונניח שהלמה נכונה לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>3</mn>
+ <mo>&#x2264;</mo>
+ <mi>m</mi>
+ <mo>&#x2264;</mo>
+ <mi>n</mi>
+</mrow>
+</math>
+, <b>לכל מצולע בעל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>+</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+ צלעות קיים אלכסון העובר בתוך המצולע</b>, אלכסון זה מחלק את המצולע לשני מצולעים בעלי מספר צלעות קטן או שווה ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ ולכן הטענה נכונה עבורם; סכום הצלעות של שניהם יחד הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>+</mo>
+   <mn>1</mn>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>+</mo>
+ <mn>2</mn>
+ <mo stretchy='false'>=</mo>
+ <mi>n</mi>
+ <mo stretchy='false'>+</mo>
+ <mn>3</mn>
+</mrow>
+</math>
+<div class='foot'><span class="foot_label">9</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-676'>סופרים את הצלע המשותפת פעמיים.</div>
+</div></div> ולכן ניתן לחלק אותם ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>+</mo>
+ <mn>3</mn>
+ <mo stretchy='false'>-</mo>
+ <mn>2</mn>
+ <mo stretchy='false'>-</mo>
+ <mn>2</mn>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>+</mo>
+   <mn>1</mn>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>-</mo>
+ <mn>2</mn>
+</mrow>
+</math>
+ משולשים ומכאן שהטענה נכונה עבור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>+</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+.
+<br />
+הטענה המודגשת אינטואיטיבית מאד, למרות זאת נראה לי שהכל יסכימו שגם מבחינה אינטואיטיבית אנו רואים אותה כנובעת מתכונות המצולע ולא ככזו העומדת בפני עצמה ולכן איני רואה בה אקסיומה.</li>
+</ol>
+<div class='standard' id='magicparlabel-677'>הסיבה הרביעית להפשטה היא <b>חוסר עניין בתוכן של המושג</b>, כל עוד ה<b>גְּדֵרוֹת</b> (רבים של גָּדֵר) אינן מכילות סתירה פנימית יש לנו מבנה אלגברי מעניין וכיף לנו לשחק איתו. איפה הבעיה הפילוסופית? אי שם באמצע השמינית<div class='foot'><span class="foot_label">10</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-681'>&#8220;שמינית&#8221; היא כיתה י&#8221;ב (ראו <a href="https://he.wikipedia.org/wiki/%D7%A9%D7%9E%D7%95%D7%AA_%D7%94%D7%9B%D7%99%D7%AA%D7%95%D7%AA_%D7%91%D7%91%D7%99%D7%AA_%D7%94%D7%A1%D7%A4%D7%A8_%D7%94%D7%AA%D7%99%D7%9B%D7%95%D7%9F_%D7%91%D7%99%D7%A9%D7%A8%D7%90%D7%9C">כאן</a>), קצת הפתיע אותי שהשיטה הזו אינה מוכרת, אולם לאור הניסיון מוטב שאבהיר את דבריי.</div>
+</div></div> למדנו על מספרים מרוכבים, באה המורה וסיפרה לנו שיש שורש ריבועי למספרים שליליים וסימנו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>i</mi>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <msqrt>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mn>1</mn>
+  </mrow>
+ </msqrt>
+</mrow>
+</math>
+<div class='foot'><span class="foot_label">11</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-685'>הסימון <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msqrt>
+ <mrow>
+  <mo stretchy='false'>-</mo>
+  <mn>1</mn>
+ </mrow>
+</msqrt>
+</math>
+ אינו מוגדר היטב מפני שגם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo stretchy='false'>-</mo>
+ <mi>i</mi>
+</mrow>
+</math>
+ מקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mrow>
+   <mo>(</mo>
+   <mrow>
+    <mo stretchy='false'>-</mo>
+    <mi>i</mi>
+   </mrow>
+   <mo>)</mo>
+  </mrow>
+  <mn>2</mn>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <mo stretchy='false'>-</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+ וא&#8221;א לומר שדווקא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>i</mi>
+</math>
+ הוא החיובי מפני ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='double-struck'>
+ <mi>C</mi>
+</mstyle>
+</math>
+ אינו שדה סדור, אבל הכוונה ברורה: סימנו את אחד משני המספרים המקיימים זאת ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>i</mi>
+</math>
+ ואילו את השני (שהוא הנגדי של הראשון) סימנו ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo stretchy='false'>-</mo>
+ <mi>i</mi>
+</mrow>
+</math>
+.</div>
+</div></div>, השאלה הראשונה שעברה לי ולחבריי לכיתה הייתה &#8220;למה לא נאמר שקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>j</mi>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mn>1</mn>
+  <mn>0</mn>
+ </mfrac>
+</mrow>
+</math>
+?&#8221; (לא, אנחנו לא ניכנס לשאלה הזו כאן). וכעת הבהרה: גם בשמינית הסכמתי ש<b>אם</b> קיים שורש של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo stretchy='false'>-</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+ אז הוא אכן מתנהג כפי שלימדו אותנו, אבל... (וכאן מתחיל הדיון הפילוסופי) מי אמר שהוא אכן קיים?
+<br />
+התשובה שאני קיבלתי לזה מיועץ הלימודים של העברית היא שזה <b>לא מעניין אם השורש קיים אם לאו</b>; וכאן הבן שואל: אם לא ברור שהוא קיים, למה הוא מעניין אותי?<div class='foot'><span class="foot_label">12</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-689'>כן, אני יודע שעבור המתמטיקה המודרנית זו אינה שאלה, ואותו יועץ אכן הציג את התפיסה המקובלת, אבל לי זה עדיין מפריע.</div>
+</div></div> באותה מידה אפשר לספר סיפורי פיות וחדי קרן...</div>
+
+<div class='standard' id='magicparlabel-690'>בהקשר הזה אני מבין סוף סוף את המחלוקת אם מתמטיקה היא תגלית או המצאה ואיפה בדיוק הדמיון בינה לבין אומנות.</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-691'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ דווקא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>i</mi>
+</math>
+ הוא מושג בעל ראיה טובה לקיומו - אפשר למצוא בעזרתו פתרון למשוואות ממעלה שלישית<div class='foot'><span class="foot_label">13</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-695'>שימו לב: טיעון זה אומר שהיכולת לפתור משוואות ממעלה שלישית מהווה <b>ראיה</b> לקיומו הרוחני של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>i</mi>
+</math>
+, הוא אינו אומר שיש מקום רק למתמטיקה שימושית.</div>
+</div></div>, אך יתרה מזאת אני מאמין שהבאתי הסבר מספק יותר בפרק השלישי של קובץ זה; על כל פנים אין זה משנה לענייננו משום שהמתמטיקאים היו מחשיבים את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>i</mi>
+</math>
+ למושג מתמטי תקף גם לולא הסברים אלו.</li>
+</ol>
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-696'><span class="subsection_label">2.3</span> איזומורפיזם</h3>
+<div class='standard' id='magicparlabel-697'>וכעת למושג הזועק כאן מכל שורה ולמרות זאת לא הוזכר עד כה: ה<b><a href="https://he.wikipedia.org/wiki/%D7%90%D7%99%D7%96%D7%95%D7%9E%D7%95%D7%A8%D7%A4%D7%99%D7%96%D7%9D">איזומורפיזם</a></b>. למרות שמבחינה פורמלית האיזומורפיזם הוא מושג שנלמד רק בשנה השנייה של התואר (מבנים 1), אנו נתקלים באיזומורפיזם כבר בימים הראשונים של שנה א&#8217; שכן המושג הזה הוא נשמת אפה של המתמטיקה: הרעיון לעסוק בחיבור של מספרים במקום בחיבור של קבוצות בננות או תפוזים אומר ששני אלו מתנהגים באותה צורה ולכן אין עניין לעסוק בהם בנפרד. שימו לב - זה לא אומר שבננות ותפוזים הם אותו הדבר, אלא שמנקודת המבט של החיבור אין ביניהם שום הבדל ולכן אנחנו יכולים <b>להתייחס אליהם כאילו היו אותו הדבר</b>. כך גם אובייקטים מתמטיים שבתחילה נראו שונים ולאחר מכן התברר שהם מתנהגים באותה צורה - לדעתי עדיין אי אפשר לומר שמדובר באותו אובייקט ,אלא שמנקודת המבט הנוכחית שלנו הם מתנהגים באותה צורה, ולכן אנחנו יכולים להתייחס אליהם כאילו היו אובייקט אחד.</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-698'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ פעמים רבות במתמטיקה המודרנית משמש האיזומורפיזם לביסוס המתמטיקה על יסודות יציבים, כך לדוגמה הגדרת הנגזרת אינה מתארת את המהות של המושג הפיזיקלי &#8220;<a href="https://he.wikipedia.org/wiki/%D7%9E%D7%94%D7%99%D7%A8%D7%95%D7%AA#%D7%9E%D7%94%D7%99%D7%A8%D7%95%D7%AA_%D7%A8%D7%92%D7%A2%D7%99%D7%AA">רגעית מהירות</a>&#8221; (שממנו נוצרה הנגזרת), אלא מעגנת אותו למושג <b>אחר</b> שאותו ניתן להגדיר היטב. דוגמה נוספת היא הצורה שבה מוגדרים המספרים הטבעיים בתורת הקבוצות:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mn>0</mn>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mi>&#x2205;</mi>
+ <mo stretchy='false'>,</mo>
+ <mspace width="10px"/>
+ <mn>1</mn>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>{</mo>
+  <mi>&#x2205;</mi>
+  <mo>}</mo>
+ </mrow>
+ <mo stretchy='false'>,</mo>
+ <mspace width="10px"/>
+ <mn>2</mn>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <mrow>
+    <mo>{</mo>
+    <mi>&#x2205;</mi>
+    <mo>}</mo>
+   </mrow>
+   <mo stretchy='false'>,</mo>
+   <mi>&#x2205;</mi>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+ <mo stretchy='false'>,</mo>
+ <mspace width="10px"/>
+ <mn>3</mn>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>{</mo>
+  <mrow>
+   <mrow>
+    <mo>{</mo>
+    <mrow>
+     <mrow>
+      <mo>{</mo>
+      <mi>&#x2205;</mi>
+      <mo>}</mo>
+     </mrow>
+     <mo stretchy='false'>,</mo>
+     <mi>&#x2205;</mi>
+    </mrow>
+    <mo>}</mo>
+   </mrow>
+   <mo stretchy='false'>,</mo>
+   <mi>&#x2205;</mi>
+  </mrow>
+  <mo>}</mo>
+ </mrow>
+ <mi>&#x2026;</mi>
+</mrow>
+</math>
+</li>
+</ol>
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-699'><span class="subsection_label">2.4</span> סיום</h3>
+<div class='standard' id='magicparlabel-700'>אז למה אני כותב את כל זה? כמובן שעבור כל מתמטיקאי הפילוסופיה של המתמטיקה היא נושא מרתק, אבל אם יש נקודה אחת שאני רוצה שתצאו איתה מכאן היא החשיבות של האינטואיציה כשלומדים מתמטיקה:</div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-701'>כשהמרצה מציג הגדרה בכיתה השאלה הראשונה שלנו לא צריכה להיות &#8220;מה עושים עם ההגדרה הזו? ואילו משפטים המרצה עומד &#8217;להנחית&#8217; עלינו?&#8221; אלא &#8220;איזה מושג ההגדרה הזו מנסה לפרמל? ולמה לפרמל אותו דווקא כך ולא אחרת?&#8221;</li>
+<li class="itemize_item" id='magicparlabel-702'>כשאנחנו ניגשים לענות על שלאה בתרגיל/במבחן לא כדאי לנסות להתחיל לשחק עם האלגברה ללא תוכנית - זה יכול לעבוד במקרים מסוימים אבל בדרך כלל אני יוצא מזה עם מפח נפש, כמעט תמיד יש לנו אינטואיציה מדוע הטענה נכונה ומה שעלינו לעשות הוא לפרמל אותה מבלי לחפש בכוח קיצורי דרך אלגבריים.</li>
+</ul>
+<div class='standard' id='magicparlabel-703'>בפרק הבא אנסה להציע הסבר אינטואיטיבי להגדרה הפורמלית של המספרים הממשיים כפי שהיא מוצגת באינפי&#8217; 1, ובפרק שאחריו לא אתאפק ואפתח בהסבר אינטואיטיבי למספרים המרוכבים והמרחבים הווקטוריים - הסבר שלא אסיים בקובץ זה אלא רק בסיכומים שלי מקורסי אלגברה ליניארית.</div>
+
+</section>
+</ul>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-705'><span class="section_label">3</span> מה קורה באינפי&#8217; <span style='font-variant:small-caps;'>1?</span></h2>
+<ul class='nested'>
+<div class='standard' id='magicparlabel-706'>בפרק הקודם טענתי שכל הגדרה מופשטת נוצרת מהמושג שאותו היא מנסה להפשיט בתהליך של &#8220;הנדסה לאחור&#8221;, בפרק הזה אני רוצה להראות כיצד הדבר מתבטא בהגדרה הפורמלית של המספרים הממשיים; אני תמיד אומר שלו היו לי 200-300 שנה ולו הייתי חכם מספיק גם אני הייתי מגיע לאותה הגדרה או להגדרה דומה מאד. הפרק הזה מנסה להציע דרך שבה הייתי יכול לעשות זאת, במקרה או שלא במקרה סדר הדברים שאכתוב כאן תואם במדויק לאופן ההיסטורי שבו התגלגלו הדברים<div class='foot'><span class="foot_label">14</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-710'>אני נוטה להאמין שזה ממש לא מקרי, אבל למרות זאת אנחנו נראה שכאשר ארצה לבצע את המעבר מהישר הממשי אל המישור והמרחב התלת-ממדי, הדרך שבה אעשה זאת אינה זו שהתרחשה באופן היסטורי. נורא התאכזבתי לגלות זאת אבל אי אפשר לשכתב את ההיסטוריה...</div>
+</div></div>.</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-711'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ סדר הדברים יהיה כדלהלן: המספרים הטבעיים, המספרים הרציונליים, המספרים החיוביים, הישר הממשי והמרחב התלת-ממדי; שימו לב בכל שלב כיצד שלב זה מכליל את השלב הקודם ואינו סותר אותו.</li>
+<li class="labeling_item" id='magicparlabel-712'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ שימו לב: אנחנו לא מנסים לפתח כאן מערכת אקסיומות אלא להסביר מדוע האקסיומות שלמדנו באינפי&#8217; 1 אכן מפרמלות את מה שאנחנו רוצים, כלומר איננו עונים על השאלה &#8220;מה עושים עם ההגדרה וכיצד מראים לפיה שהטענות המבוקשות אכן מתקיימות?&#8221; אלא על השאלה &#8220;למה להגדיר דווקא כך?&#8221;</li>
+</ol>
+<section>
+<h3 class='subsection' id='magicparlabel-713'><span class="subsection_label">3.1</span> המספרים הטבעיים</h3>
+<div class='standard' id='magicparlabel-714'>ובכן, נתחיל במספרים הטבעיים: לכל ילד ברור שניתן לדבר על סלסילה שבה כדור אחד, שניים או שלושה כדורים וכו&#8217;; כפי שהזכרתי לעיל הכדורים, הבננות והשולחנות מתנהגים בדיוק באותה צורה בכל הקשור לתכונות של <b>כמות</b> החפצים בקבוצה המדוברת (הם <b>איזומורפיים</b>) וזו הסיבה לכך שאנחנו מדברים על <b>מספרים</b> ולא על עצמים מסוימים. למרות זאת, כדי שנוכל להסביר מדוע אנחנו רוצה שהטבעיים יתנהגו בצורה מסוימת אנחנו מוכרחים לדבר דווקא על עצמים. א&#8221;כ נניח שכל הכדורים בעולם זהים ונמצאים בסלסילות, ולכל סלסילה כזו נתאים מספר טבעי המציין את כמות הכדורים בסלסילה - באופן אינטואיטיבי אין דבר כזה &#8220;סלסילת כדורים שאין בה כדורים&#8221; ולכן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ אינו מספר טבעי. הדרך שבה אנו קובעים את המספר הטבעי המתאים לסלסילה הוא כדלהלן: נסדר את הכדורים בשורה ואח&#8221;כ נעבור עליהם אחד אחד כאשר עבור כל אחד מהם נאמר את המספר הבא בסדרה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>1</mn>
+ <mo stretchy='false'>,</mo>
+ <mn>2</mn>
+ <mo stretchy='false'>,</mo>
+ <mn>3</mn>
+ <mo stretchy='false'>,</mo>
+ <mi>&#x2026;</mi>
+</mrow>
+</math>
+ - כלומר יש לנו בראש את סדרת המספרים הטבעיים ואנו עוברים עליה (בראש או בפה) במקביל למעבר על פני הכדורים וכאשר נגיע לכדור האחרון נגיע גם למספר הטבעי המתאים, פעולה זו נקראת <b>מנייה</b>.</div>
+<h4 class='subsubsection_' id='magicparlabel-715'>חיבור</h4>
+<div class='standard' id='magicparlabel-716'>על המספרים הטבעיים מוגדרת פעולת <b>חיבור</b>: אם ניקח שתי סלסילות, אחת ירוקה ובה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>m</mi>
+</math>
+ כדורים ואחת כחולה ובה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ כדורים, ונעביר את כל הכדורים שבסלסילה הירוקה לסלסילה הכחולה אז המספר הטבעי המתאים לסלסילה הכחולה לאחר ההעברה הוא תוצאת החיבור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>+</mo>
+ <mi>m</mi>
+</mrow>
+</math>
+. שימו לב לכך שכל הסיפור הזה אינו סימטרי - אם היינו מעבירים את הכדורים מהסלסילה הכחולה אל הירוקה היינו מקבלים סיפור חדש שבו מספר הכדורים בסלסילה הירוקה לאחר ההעברה הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>m</mi>
+ <mo stretchy='false'>+</mo>
+ <mi>n</mi>
+</mrow>
+</math>
+, אז למה ברור לנו שמתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>+</mo>
+ <mi>m</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>m</mi>
+ <mo stretchy='false'>+</mo>
+ <mi>n</mi>
+</mrow>
+</math>
+?
+<br />
+ברור לכולנו שלאחר סידור הכדורים בשורה אין שום הבדל אם נמנה אותם מימין לשמאל או משמאל לימין (זוהי תכונה מהותית של המושג <b>כמות</b>), א&#8221;כ נסכים שלאחר כל העברת כדורים מסלסילה אחת לאחרת נסדר את הכדורים כך שבצד שמאל יהיו כל הכדורים שהיו בסלסילה השנייה לפני ההעברה ובצד ימין הכדורים מהסלסילה הראשונה; לאחר הסכם זה נקבל שהן בסיפור הראשון והן בסיפור השני מספר הכדורים בסלסילה שאינה ריקה זהה - זוהי הסיבה לכך ש<b>חיבור מספרים טבעיים צריך לקיים את חוק החילוף</b>.
+<br />
+כדי להסביר את העובדה ש<b>חיבור מספרים טבעיים צריך לקיים חוק הקיבוץ</b> נתבונן במקרה שבו יש לנו שלוש סלסילות ובהן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+, <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>m</mi>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>k</mi>
+</math>
+ כדורים בהתאמה, כעת נתפצל לשני סיפורים: בסיפור הראשון ניקח את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>m</mi>
+</math>
+ הכדורים בסלסילה השנייה ונעביר אותם לסלסילה הראשונה ואח&#8221;כ נעביר את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>k</mi>
+</math>
+ הכדורים מהסלסילה השלישית לראשונה (כעת יש בסלסילה הראשונה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>+</mo>
+   <mi>m</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>+</mo>
+ <mi>k</mi>
+</mrow>
+</math>
+ כדורים), ובסיפור השני ניקח את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>k</mi>
+</math>
+ הכדורים בסלסילה השלישית ונעביר אותם לסלסילה השנייה ואח&#8221;כ נעביר את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>m</mi>
+ <mo stretchy='false'>+</mo>
+ <mi>k</mi>
+</mrow>
+</math>
+ הכדורים מהסלסילה השנייה לראשונה (כעת יש בסלסילה הראשונה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>+</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>m</mi>
+   <mo stretchy='false'>+</mo>
+   <mi>k</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ כדורים). נוסיף סעיף קטן להסכם שלנו: אם בסלסילה מסוימת יש כדורים שהיו במקור בשתי סלסילות שונות אנו נשמור על הסדר שבו הכדורים סודרו לפי ההסכם גם כאשר נעביר את הכדורים מסלסילה זו לאחרת או להפך; במקרה שלנו זה אומר שלאחר שתי ההעברות, הכדורים שבסלסילה הראשונה מסודרים באותה צורה בשני הסיפורים: ראשית <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ כדורים שהיו בסלסילה במקור נמצאים בצד שמאל, אחריהם מגיעים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>m</mi>
+</math>
+ הכדורים מהסלסילה השנייה שנמצאים במרכז השורה, ולבסוף <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>k</mi>
+</math>
+ הכדורים מהסלסילה השלישית נמצאים בצד ימין - כלומר בשני הסיפורים יש בסלסילה הראשונה את אותו מספר כדורים ולפיכך <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>+</mo>
+   <mi>m</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>+</mo>
+ <mi>k</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>n</mi>
+ <mo stretchy='false'>+</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>m</mi>
+   <mo stretchy='false'>+</mo>
+   <mi>k</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</div>
+<h4 class='subsubsection_' id='magicparlabel-717'>כפל</h4>
+<div class='standard' id='magicparlabel-718'>נניח שיש לנו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>10</mn>
+</math>
+ סלסילות שבכל אחת מהן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>4</mn>
+</math>
+ כדורים, א&#8221;כ לאחר שנעביר את כל הכדורים לסלסילה אחת יהיו בה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mover accent='false'>
+ <mover>
+  <mrow>
+   <mn>4</mn>
+   <mo stretchy='false'>+</mo>
+   <mn>4</mn>
+   <mo stretchy='false'>+</mo>
+   <mi>&#x2026;</mi>
+   <mo stretchy='false'>+</mo>
+   <mn>4</mn>
+  </mrow>
+  <mo stretchy='true'>&#x23DE;</mo>
+ </mover>
+ <mtext>
+ <mn>10</mn>&#0160;פעמים</mtext>
+</mover>
+</math>
+ כדורים - הכתיב הזה לא כל כך נוח ולכן היינו רוצים כתיב מקוצר לפעולה זו של חיבור אותו מספר לעצמו מספר מסוים של פעמים; א&#8221;כ נסמן ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>k</mi>
+ <mo>&#x00D7;</mo>
+ <mi>n</mi>
+</mrow>
+</math>
+ את מספר הכדורים הנמצאים ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>k</mi>
+</math>
+ סלסילות כך שבכל אחת מהן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ כדורים, כלומר פירושו של הסימון &#8220;<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mo>&#x00D7;</mo>
+</math>
+&#8221; הוא <b>פעמים</b> כפי שאנו לומדים בבית הספר היסודי ו-&#8220;<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>k</mi>
+ <mo>&#x00D7;</mo>
+ <mi>n</mi>
+</mrow>
+</math>
+&#8221; הוא &#8220;<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>k</mi>
+</math>
+ <b>פעמים</b> <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+&#8221;. גם הסיפור הזה אינו סימטרי, אז למה כל כך ברור לנו ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>k</mi>
+ <mo>&#x00D7;</mo>
+ <mi>n</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>n</mi>
+ <mo>&#x00D7;</mo>
+ <mi>k</mi>
+</mrow>
+</math>
+? כפי שאתם מנחשים הסיבה היא שלאחר שנעביר את כל הכדורים לסלסילה אחת נוכל לסדר את הכדורים בטבלה שבה כל שורה מכילה את כל הכדורים שהיו במקור באותה סלסילה, כך במקרה השמאלי נקבל טבלה שבה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>k</mi>
+</math>
+ שורות שבכל אחת מהן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ כדורים ובמקרה הימני נקבל טבלה שבה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ שורות שבכל אחת מהן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>k</mi>
+</math>
+ כדורים, ואז אם נסובב את נקודת המבט שלנו ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>9</mn>
+ <msup>
+  <mn>0</mn>
+  <mo>&#x25CB;</mo>
+ </msup>
+</mrow>
+</math>
+ נקבל מכל מקרה את רעהו ולכן ברור לכולנו שבשני מקרים מספר הכדורים זהה. א&#8221;כ הסברנו מדוע <b>כפל מספרים טבעיים צריך לקיים את חוק החילוף</b>, וכדי להבין מדוע <b>כפל מספרים טבעיים צריך לקיים את חוק הקיבוץ</b> כל מה שעלינו לעשות הוא לבנות &#8220;טבלה&#8221; תלת-ממדית.
+<br />
+מהגדרה <b>כפל מספרים טבעיים מקיים את חוק הפילוג ביחס לחיבור שלהם</b>, שכן:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>k</mi>
+ <mo>&#x00D7;</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>+</mo>
+   <mi>m</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mover accent='false'>
+  <mover>
+   <mrow>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mi>n</mi>
+      <mo stretchy='false'>+</mo>
+      <mi>m</mi>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>+</mo>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mi>n</mi>
+      <mo stretchy='false'>+</mo>
+      <mi>m</mi>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>+</mo>
+    <mi>&#x2026;</mi>
+    <mo stretchy='false'>+</mo>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mi>n</mi>
+      <mo stretchy='false'>+</mo>
+      <mi>m</mi>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+   <mo stretchy='true'>&#x23DE;</mo>
+  </mover>
+  <mrow>
+   <mi>k</mi>
+   <mspace width="10px"/>
+   <mtext>פעמים</mtext>
+  </mrow>
+ </mover>
+ <mo stretchy='false'>=</mo>
+ <mover accent='false'>
+  <mover>
+   <mrow>
+    <mi>n</mi>
+    <mo stretchy='false'>+</mo>
+    <mi>n</mi>
+    <mo stretchy='false'>+</mo>
+    <mi>&#x2026;</mi>
+    <mo stretchy='false'>+</mo>
+    <mi>n</mi>
+   </mrow>
+   <mo stretchy='true'>&#x23DE;</mo>
+  </mover>
+  <mrow>
+   <mi>k</mi>
+   <mspace width="10px"/>
+   <mtext>פעמים</mtext>
+  </mrow>
+ </mover>
+ <mo stretchy='false'>+</mo>
+ <mover accent='false'>
+  <mover>
+   <mrow>
+    <mi>m</mi>
+    <mo stretchy='false'>+</mo>
+    <mi>m</mi>
+    <mo stretchy='false'>+</mo>
+    <mi>&#x2026;</mi>
+    <mo stretchy='false'>+</mo>
+    <mi>m</mi>
+   </mrow>
+   <mo stretchy='true'>&#x23DE;</mo>
+  </mover>
+  <mrow>
+   <mi>k</mi>
+   <mspace width="10px"/>
+   <mtext>פעמים</mtext>
+  </mrow>
+ </mover>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>k</mi>
+   <mo>&#x00D7;</mo>
+   <mi>n</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>+</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>k</mi>
+   <mo>&#x00D7;</mo>
+   <mi>m</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</div>
+<dl class='description'>
+<dt class="description_label">הסכמה:</dt>
+<dd class="description_item" id='magicparlabel-719'> כפל תמיד קודם לחיבור, כלומר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>k</mi>
+ <mo>&#x00D7;</mo>
+ <mi>n</mi>
+ <mo stretchy='false'>+</mo>
+ <mi>k</mi>
+ <mo>&#x00D7;</mo>
+ <mi>m</mi>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>k</mi>
+   <mo>&#x00D7;</mo>
+   <mi>n</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>+</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>k</mi>
+   <mo>&#x00D7;</mo>
+   <mi>m</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+.</dd>
+</dl>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-720'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ מהמהות של הכפל נקבל ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>1</mn>
+ <mo>&#x22C5;</mo>
+ <mi>n</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>n</mi>
+</mrow>
+</math>
+.</li>
+</ol>
+<h4 class='subsubsection_' id='magicparlabel-721'>יחס סדר</h4>
+<div class='standard' id='magicparlabel-722'>אנחנו יודעים לא רק להוסיף כדורים מסלסילה אחת לאחרת אלא גם להשוות בין כל שתי סלסילות.</div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-723'>לכל שתי סלסילות מתקיימת בדיוק אחת משלוש האפשרויות הבאות (<b>טריכוטומיה</b>):
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-724'>מספר הכדורים בסלסילה הראשונה <b>שווה</b> למספר הכדורים בשנייה, במקרה כזה נסמן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>m</mi>
+</mrow>
+</math>
+.</li>
+<li class="enumerate_item" id='magicparlabel-725'>מספר הכדורים בסלסילה הראשונה <b>קטן</b> ממספר הכדורים בשנייה, במקרה כזה נסמן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>m</mi>
+</mrow>
+</math>
+ (או <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>m</mi>
+ <mo stretchy='false'>&gt;</mo>
+ <mi>n</mi>
+</mrow>
+</math>
+).</li>
+<li class="enumerate_item" id='magicparlabel-726'>מספר הכדורים בסלסילה הראשונה <b>גדול</b> ממספר הכדורים בשנייה, במקרה כזה נסמן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>&gt;</mo>
+ <mi>m</mi>
+</mrow>
+</math>
+ (או <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>m</mi>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>n</mi>
+</mrow>
+</math>
+).</li>
+</ol>
+<div class='standard' id='magicparlabel-727'>כאשר הקביעה איזו אחת מהאפשרויות מתקיימת נעשית ע&#8221;י מניית הכדורים שבכל אחת מן הסלסילות: אם התקדמנו במנייה בסלסילה הראשונה יותר מבשנייה אז מדובר במקרה השלישי, אם המצב הפוך אז זהו המצב השני ואם שניהם אינם מתקיימים אז אנו עוסקים באפשרות הראשונה.</div>
+</li><li class="itemize_item" id='magicparlabel-728'>בנוסף, לכל שלוש סלסילות מתקיים: אם מספר הכדורים בראשונה קטן מזה שבשנייה, וזה בתורו קטן ממספר הכדורים בשלישית, אז מספר הכדורים בסלסילה הראשונה קטן ממספר הכדורים בסלסילה השלישית (<b>טרנזיטיביות</b>).</li>
+<li class="itemize_item" id='magicparlabel-729'>לבסוף, הוספה של כדורים לסלסילה מגדילה את מספר הכדורים שבה (ניתן להסיק מכאן את ה<b>הלימה לחיבור</b><div class='foot'><span class="foot_label">15</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-733'>נניח ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>m</mi>
+</mrow>
+</math>
+ ואנו מוסיפים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>k</mi>
+</math>
+ לשני האגפים )אם מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>m</mi>
+</mrow>
+</math>
+ אז ממהות השוויון נובע ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>+</mo>
+ <mi>k</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>m</mi>
+ <mo stretchy='false'>+</mo>
+ <mi>k</mi>
+</mrow>
+</math>
+(, ניתן להשתמש בחילוף ולהסתכל על זה כאילו אנו מוסיפים לשתי סלסילות שבהן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>k</mi>
+</math>
+ כדורים - לאחת אנחנו מוסיפים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>m</mi>
+</math>
+ ולאחרת <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+, את ההוספה של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>m</mi>
+</math>
+ הכדורים ניתן לבצע בשתי פעימות: קודם להוסיף <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ כדורים ואח&#8221;כ להוסיף את השאר.</div>
+</div></div>).</li>
+</ul>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-734'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ מכיוון שכפל של מספרים טבעיים הוא חיבור בלבד אין צורך לדבר עליו בנפרד, ולמעשה ניתן להוכיח שגם הכפלת מספר הכדורים בסלסילה מגדילה את מספר הכדורים אם מדובר בכפל בטבעי שונה מ-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ ואינה מקטינה אותו בכל מקרה.</li>
+</ol>
+<div class='standard' id='magicparlabel-735'>א&#8221;כ גם על הטבעיים מוגדר <b>יחס הסדר &#8220;קטן מ-&#8221;</b> והוא מקיים את התכונות הנ&#8221;ל.</div>
+<h4 class='subsubsection_' id='magicparlabel-736'>חיסור</h4>
+<div class='standard' id='magicparlabel-737'>יש לנו גם פעולת <b>חיסור</b>: נניח שיש לנו סלסילה ובה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ כדורים, אם נוציא ממנה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>m</mi>
+</math>
+ כדורים ונעביר אותם לסלסילה אחרת אז מספר הכדורים שיישאר בה הוא תוצאת החיסור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>-</mo>
+ <mi>m</mi>
+</mrow>
+</math>
+; ניתן להסתכל על פעולת החיסור גם בצורה הבאה: מספר הכדורים שהיו צריכים להיות בה כך שהמצב הנוכחי יתקבל ע&#8221;י הוספת <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>m</mi>
+</math>
+ כדורים מסלסילה אחרת הוא תוצאת החיסור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>-</mo>
+ <mi>m</mi>
+</mrow>
+</math>
+.
+<br />
+נשים לב לכך שבסלסילה צריך להיות לפחות כדור אחד<div class='foot'><span class="foot_label">16</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-741'>אחרי הוצאת הכדורים בניסוח הראשון של החיסור או לפני ההוספה בניסוח השני.</div>
+</div></div> ולכן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>-</mo>
+ <mi>m</mi>
+ <mo>&#x2265;</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+, ובנוסף, מכיוון שהוספת כדורים לסלסילה <b>מגדילה</b> את מספר הכדורים שבה פעולת החיסור על הטבעיים מוגדרת רק כאשר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>&gt;</mo>
+ <mi>m</mi>
+</mrow>
+</math>
+.</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-742'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ הסיבה לכך שקשה יותר לבצע חיסור בראש לעומת חיבור היא שפעולת החיסור במהותה היא &#8220;הנדסה לאחור&#8221; בעוד שהחיבור אינו כזה.</li>
+</ol>
+<div class='standard' id='magicparlabel-743'>אנחנו יכולים להבין כבר כעת שהחיסור צריך לקיים &#8220;חילוף&#8221; ו&#8220;קיבוץ&#8221; בצורה הבאה:</div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-744'>&#8220;חילוף&#8221; - <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>-</mo>
+   <mi>m</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>-</mo>
+ <mi>k</mi>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>-</mo>
+   <mi>k</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>-</mo>
+ <mi>m</mi>
+</mrow>
+</math>
+</li>
+<li class="itemize_item" id='magicparlabel-745'>&#8220;קיבוץ&#8221; - <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo stretchy='false'>-</mo>
+   <mi>m</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>-</mo>
+ <mi>k</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>n</mi>
+ <mo stretchy='false'>-</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>m</mi>
+   <mo stretchy='false'>+</mo>
+   <mi>k</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</li>
+</ul>
+<h4 class='subsubsection_' id='magicparlabel-746'>חילוק</h4>
+<div class='standard' id='magicparlabel-747'>בדומה לחיבור גם לכפל יש פעולה הפוכה והיא <b>חילוק</b>: נניח שיש לנו סלסילה ובה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ כדורים ואנו מעבירים את כל הכדורים שבה ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>m</mi>
+</math>
+ סלסילות, כך שלאחר ההעברה יהיה בכולן מספר שווה של כדורים, מספר הכדורים שבכל סלסילה הוא תוצאת החילוק <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo>&#x00F7;</mo>
+ <mi>m</mi>
+</mrow>
+</math>
+; ניתן להסתכל על פעולת החיסור גם בצורה הבאה: מספר הכדורים שהיו צריכים להיות בכל אחת מ-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>m</mi>
+</math>
+ סלסילות שבהן מספר שווה של כדורים, כך שהמצב הנוכחי יתקבל ע&#8221;י העברת כל הכדורים מ-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>m</mi>
+</math>
+ הסלסילות לסלסילה אחת, הוא תוצאת החילוק <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo>&#x00F7;</mo>
+ <mi>m</mi>
+</mrow>
+</math>
+.
+<br />
+כך או כך תוצאת החילוק צריכה להיות מספר טבעי המקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>m</mi>
+ <mo>&#x00D7;</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo>&#x00F7;</mo>
+   <mi>m</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mi>n</mi>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo>&#x00F7;</mo>
+   <mi>m</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x00D7;</mo>
+ <mi>m</mi>
+</mrow>
+</math>
+ וכפי שראינו לעיל נובע מזה ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo>&#x2265;</mo>
+ <mi>m</mi>
+</mrow>
+</math>
+.</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-748'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ גם פעולת החילוק מערבת &#8220;הנדסה לאחור&#8221; ולכן היא קשה יותר לביצוע בראש מאשר כפל.</li>
+</ol>
+<div class='standard' id='magicparlabel-749'>אנחנו יכולים להבין כבר כעת שהחילוק צריך לקיים &#8220;חילוף&#8221; ו&#8220;קיבוץ&#8221; בצורה דומה לחיסור:</div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-750'>&#8220;חילוף&#8221; - <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo>&#x00F7;</mo>
+   <mi>m</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x00F7;</mo>
+ <mi>k</mi>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo>&#x00F7;</mo>
+   <mi>k</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x00F7;</mo>
+ <mi>m</mi>
+</mrow>
+</math>
+</li>
+<li class="itemize_item" id='magicparlabel-751'>&#8220;קיבוץ&#8221; - <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo>&#x00F7;</mo>
+   <mi>m</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x00F7;</mo>
+ <mi>k</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>n</mi>
+ <mo>&#x00F7;</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>m</mi>
+   <mo>&#x00D7;</mo>
+   <mi>k</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</li>
+</ul>
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-753'><span class="subsection_label">3.2</span> המספרים הרציונליים</h3>
+<div class='standard' id='magicparlabel-754'>ראינו לעיל שבמספרים הטבעיים יש מגבלות על היכולת לחסר ולחלק, המגבלה על החיסור נראית טבעית מאד אך לעומתה המגבלה על החילוק נראית מלאכותית - למה שלא נוכל לחלק כל כדור לחלקים שווים וכך נוכל לחלק כל כמות של כדורים לכל כמות של סלסילות? בנוסף, המגבלה על החילוק חזקה הרבה יותר: כמעט עבור כל מספר טבעי יש יותר מספרים שניתן לחסר ממנו לעומת אלו שבהם ניתן לחלק אותו. מסיבה זו אנחנו נעבור לדבר על עוגות שנמצאות בקופסאות (הרבה יותר כיף לחשוב על חלוקה של עוגה לחלקים שווים מאשר על חלוקה של כדור); נניח שכל העוגות בעולם זהות ושהן וכל חתיכות העוגות בעולם נמצאות בקופסאות (במינוח שלנו עוגה אחת שלמה נחשבת &#8220;חתיכה&#8221; אבל לא כל חתיכה היא עוגה שלמה), ולכל קופסה כזו נתאים מספר שיציין את כמות העוגות בקופסה בצורה הבאה:</div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-755'>עוגה שלמה תקבל את המספר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>1</mn>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mn>1</mn>
+  <mn>1</mn>
+ </mfrac>
+</mrow>
+</math>
+ לכל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ טבעי.</li>
+<li class="enumerate_item" id='magicparlabel-756'>חתיכה שעבורה קיים מספר טבעי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ כך שבכל עוגה ניתן &#8220;להכניס&#8221; <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ חתיכות כאלה תקבל את המספר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <mn>1</mn>
+ <mi>n</mi>
+</mfrac>
+</math>
+.</li>
+<li class="enumerate_item" id='magicparlabel-757'>עבור כל חתיכה קיים מספר טבעי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>m</mi>
+</math>
+ כך שאם נחלק את החתיכה ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>m</mi>
+</math>
+ חלקים שווים נקבל שכל חלק כזה &#8220;נכנס&#8221; בעוגה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ פעמים<div class='foot'><span class="foot_label">17</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-761'>אחרת זהו מספר לא רציונלי ואיננו עוסקים בו כעת.</div>
+</div></div>, חתיכה כזו תקבל את המספר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <mi>m</mi>
+ <mi>n</mi>
+</mfrac>
+</math>
+.</li>
+<li class="enumerate_item" id='magicparlabel-762'>לכל קופסה, אם כל העוגות בה שלמות נתאים לה את המספר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mi>n</mi>
+  <mn>1</mn>
+ </mfrac>
+</mrow>
+</math>
+ כאשר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ הוא המספר הטבעי שהיינו מתאימים לה קודם, אם יש בה חתיכה אחת נתאים לה את המספר המתאים לחתיכה זו על פי הנ&#8221;ל, ואם יש בה יותר מחתיכה אחת נתאים לה את הסכום של כל המספרים המתאימים לכל החתיכות שבקופסה כדלהלן (כשנעסוק בחיבור מספרים רציונליים).</li>
+</ol>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-763'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ נשים לב לכמה נקודות:
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-764'>כאן &#8220;המספרים הרציונליים&#8221; הם אלו שבשפה המקובלת נקראים &#8220;המספרים הרציונליים החיוביים&#8221;.</li>
+<li class="itemize_item" id='magicparlabel-765'>כל סעיף מכליל את קודמיו.</li>
+<li class="itemize_item" id='magicparlabel-766'>בסעיף 3 ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>m</mi>
+</math>
+ אינו מוכרח להיות יחיד ובהתאמה גם ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ אינו יחיד - אנחנו נזהה את כל המספרים הללו כאותו מספר רציונלי.</li>
+<li class="itemize_item" id='magicparlabel-767'>נכון לעכשיו עוד לא הראינו שהסימון <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <mi>p</mi>
+ <mi>q</mi>
+</mfrac>
+</math>
+ קשור לחילוק (זוהי בסה&#8221;כ דרך לכתוב זוג סדור של מספרים טבעיים), למרות זאת ברור שאנחנו עומדים להגיע לשם שכן מההגדרה ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <mn>1</mn>
+ <mi>n</mi>
+</mfrac>
+</math>
+ &#8220;נכנס&#8221; בעוגה אחת <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ פעמים נובע שאם נחבר אותו לעצמו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ פעמים (כלומר נכפול אותו ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+) נקבל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+, ועל כן אם נחבר את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <mi>m</mi>
+ <mi>n</mi>
+</mfrac>
+</math>
+ לעצמו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ פעמים (שוב כפל ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+) נקבל את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>m</mi>
+</math>
+.</li>
+</ul>
+</li></ol>
+<h4 class='subsubsection_' id='magicparlabel-768'>חיבור</h4>
+<div class='standard' id='magicparlabel-769'>בהינתן שתי חתיכות עוגה שהמספרים המתאימים להן הם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <msub>
+  <mi>m</mi>
+  <mn>1</mn>
+ </msub>
+ <msub>
+  <mi>n</mi>
+  <mn>1</mn>
+ </msub>
+</mfrac>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <msub>
+  <mi>m</mi>
+  <mn>2</mn>
+ </msub>
+ <msub>
+  <mi>n</mi>
+  <mn>2</mn>
+ </msub>
+</mfrac>
+</math>
+ נרצה לקבוע מהי כמות העוגות בשתיהן יחד, ברור לכולנו שאם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>n</mi>
+  <mn>1</mn>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mi>n</mi>
+  <mn>2</mn>
+ </msub>
+</mrow>
+</math>
+ אז התשובה פשוטה:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>1</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>1</mn>
+  </msub>
+ </mfrac>
+ <mo stretchy='false'>+</mo>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>2</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>2</mn>
+  </msub>
+ </mfrac>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>1</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>1</mn>
+  </msub>
+ </mfrac>
+ <mo stretchy='false'>+</mo>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>2</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>1</mn>
+  </msub>
+ </mfrac>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mrow>
+   <msub>
+    <mi>m</mi>
+    <mn>1</mn>
+   </msub>
+   <mo stretchy='false'>+</mo>
+   <msub>
+    <mi>m</mi>
+    <mn>2</mn>
+   </msub>
+  </mrow>
+  <msub>
+   <mi>n</mi>
+   <mn>1</mn>
+  </msub>
+ </mfrac>
+</mrow>
+</math>
+משום שאנו בעצם סופרים כמה חתיכות בגודל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <mn>1</mn>
+ <msub>
+  <mi>n</mi>
+  <mn>1</mn>
+ </msub>
+</mfrac>
+</math>
+ נכנסות בשתיהן יחד; אבל מה קורה אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>n</mi>
+  <mn>1</mn>
+ </msub>
+ <mo>&#x2260;</mo>
+ <msub>
+  <mi>n</mi>
+  <mn>2</mn>
+ </msub>
+</mrow>
+</math>
+? מכיוון שאנחנו לא יכולים לחבר מספרים רציונליים שהמכנה שלהם שונה הדרך היחידה שעומדת לרשותנו היא לדאוג שהמכנה יהיה שווה, אבל איך נעשה זאת? ודאי תאמרו &#8220;מה הבעיה? עושים מכנה משותף וסיימנו&#8221;, הבעיה היא שאנחנו לא מניחים כעת מערכת אקסיומות שעליה אני יכול להסתמך ולהוכיח שהטריק של מכנה משותף אכן עובד, הפרק הזה נכתב כדי להסביר מדוע בחרנו במערכת האקסיומות הזו, ולכן אני צריך להצדיק את הרעיון מבחינה אינטואיטיבית ולשם כך אני צריך לספר לכם קודם מהו כפל של מספר רציונלי במספר טבעי. ובכן, כבר יש לנו הגדרה עבור כפל של מספרים טבעיים וניתן להכליל אותה בקלות עבור כפל של מספר טבעי במספר רציונלי: המכפלה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>k</mi>
+ <mo>&#x00D7;</mo>
+ <mfrac>
+  <mi>m</mi>
+  <mi>n</mi>
+ </mfrac>
+</mrow>
+</math>
+ היא בעצם:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mover accent='false'>
+ <mover>
+  <mrow>
+   <mfrac>
+    <mi>m</mi>
+    <mi>n</mi>
+   </mfrac>
+   <mo stretchy='false'>+</mo>
+   <mfrac>
+    <mi>m</mi>
+    <mi>n</mi>
+   </mfrac>
+   <mo stretchy='false'>+</mo>
+   <mi>&#x2026;</mi>
+   <mo stretchy='false'>+</mo>
+   <mfrac>
+    <mi>m</mi>
+    <mi>n</mi>
+   </mfrac>
+  </mrow>
+  <mo stretchy='true'>&#x23DE;</mo>
+ </mover>
+ <mrow>
+  <mi>k</mi>
+  <mspace width="10px"/>
+  <mtext>פעמים</mtext>
+ </mrow>
+</mover>
+</math>
+ושוב פירושו של הסימון &#8220;<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mo>&#x00D7;</mo>
+</math>
+&#8221; הוא <b>פעמים</b> כפי שלמדנו ביסודי ו-&#8220;<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>k</mi>
+ <mo>&#x00D7;</mo>
+ <mfrac>
+  <mi>m</mi>
+  <mi>n</mi>
+ </mfrac>
+</mrow>
+</math>
+&#8221; הוא &#8220;<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>k</mi>
+</math>
+ <b>פעמים</b> <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <mi>m</mi>
+ <mi>n</mi>
+</mfrac>
+</math>
+&#8221;.</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-770'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ שימו לב שנכון לעכשיו כפל מספר טבעי במספר רציונלי מוגדר רק כאשר המספר הטבעי נמצא משמאל והרציונלי מימין, הסיבה לכך היא שהתפקיד של המספר בצד שמאל הוא לקבוע כמה <b>פעמים</b> יש לחבר את המספר שבצד ימין. נכון אני יכול להחליט שהכפל הזה חילופי ובכך להגדיר גם את המצב ההפוך, אני לא אעשה זאת מפני שאין לזה הצדקה אינטואיטיבית כעת, וגם מפני שזה לא יעזור לנו להגדיר כפל של שני מספרים רציונליים.</li>
+<li class="labeling_item" id='magicparlabel-771'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ ושוב מהמהות של כפל במספר טבעי נקבל ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>1</mn>
+ <mo>&#x22C5;</mo>
+ <mfrac>
+  <mi>n</mi>
+  <mi>m</mi>
+ </mfrac>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mi>n</mi>
+  <mi>m</mi>
+ </mfrac>
+</mrow>
+</math>
+.</li>
+<li class="labeling_item" id='magicparlabel-772'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ כבר כעת ניתן לראות ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo>&#x00D7;</mo>
+ <mfrac>
+  <mi>m</mi>
+  <mi>n</mi>
+ </mfrac>
+ <mo stretchy='false'>=</mo>
+ <mi>m</mi>
+</mrow>
+</math>
+ ולכן הסימון <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <mi>p</mi>
+ <mi>q</mi>
+</mfrac>
+</math>
+ מייצג בעצם את החילוק <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>p</mi>
+ <mo>&#x00F7;</mo>
+ <mi>q</mi>
+</mrow>
+</math>
+.</li>
+</ol>
+<div class='standard' id='magicparlabel-773'>מסקנה ראשונה שניתן להסיק מכאן היא שמתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mfrac>
+  <mi>m</mi>
+  <mi>n</mi>
+ </mfrac>
+ <mo stretchy='false'>=</mo>
+ <mi>m</mi>
+ <mo>&#x00D7;</mo>
+ <mfrac>
+  <mn>1</mn>
+  <mi>n</mi>
+ </mfrac>
+</mrow>
+</math>
+, נשים לב לכך שמתקיים גם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mfrac>
+  <mn>1</mn>
+  <mi>n</mi>
+ </mfrac>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mi>m</mi>
+  <mrow>
+   <mi>n</mi>
+   <mo>&#x00D7;</mo>
+   <mi>m</mi>
+  </mrow>
+ </mfrac>
+</mrow>
+</math>
+ שכן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ &#8220;נכנס&#8221; <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ פעמים ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+, וגם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>m</mi>
+</math>
+ &#8220;נכנס&#8221; <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ פעמים ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo>&#x00D7;</mo>
+ <mi>m</mi>
+</mrow>
+</math>
+, וביחד עם המסקנה הראשונה נקבל שמתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mfrac>
+  <mn>1</mn>
+  <mi>n</mi>
+ </mfrac>
+ <mo stretchy='false'>=</mo>
+ <mi>m</mi>
+ <mo>&#x00D7;</mo>
+ <mfrac>
+  <mn>1</mn>
+  <mrow>
+   <mi>n</mi>
+   <mo>&#x00D7;</mo>
+   <mi>m</mi>
+  </mrow>
+ </mfrac>
+</mrow>
+</math>
+.
+<br />
+לפני שנוכל להמשיך אני רוצה שנשים לב לכך שכפל מספר טבעי במספר רציונלי מקיים את חוק הקיבוץ: מתקיים
+<br />
+<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>l</mi>
+   <mo>&#x00D7;</mo>
+   <mi>k</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x00D7;</mo>
+ <mfrac>
+  <mi>m</mi>
+  <mi>n</mi>
+ </mfrac>
+ <mo stretchy='false'>=</mo>
+ <mi>l</mi>
+ <mo>&#x00D7;</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>k</mi>
+   <mo>&#x00D7;</mo>
+   <mfrac>
+    <mi>m</mi>
+    <mi>n</mi>
+   </mfrac>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+, האינטואיציה זהה לזו שראינו עבור כפל של טבעיים.
+<br />
+וסוף סוף אנחנו יכולים להפעיל את הטריק של מכנה משותף, מתקיים:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true' columnalign='right left '>
+ <mtr>
+  <mtd>
+   <mrow>
+    <mfrac>
+     <msub>
+      <mi>m</mi>
+      <mn>1</mn>
+     </msub>
+     <msub>
+      <mi>n</mi>
+      <mn>1</mn>
+     </msub>
+    </mfrac>
+    <mo stretchy='false'>+</mo>
+    <mfrac>
+     <msub>
+      <mi>m</mi>
+      <mn>2</mn>
+     </msub>
+     <msub>
+      <mi>n</mi>
+      <mn>2</mn>
+     </msub>
+    </mfrac>
+   </mrow>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <msub>
+     <mi>m</mi>
+     <mn>1</mn>
+    </msub>
+    <mo>&#x00D7;</mo>
+    <mfrac>
+     <mn>1</mn>
+     <msub>
+      <mi>n</mi>
+      <mn>1</mn>
+     </msub>
+    </mfrac>
+    <mo stretchy='false'>+</mo>
+    <msub>
+     <mi>m</mi>
+     <mn>2</mn>
+    </msub>
+    <mo>&#x00D7;</mo>
+    <mfrac>
+     <mn>1</mn>
+     <msub>
+      <mi>n</mi>
+      <mn>2</mn>
+     </msub>
+    </mfrac>
+    <mo stretchy='false'>=</mo>
+    <msub>
+     <mi>m</mi>
+     <mn>1</mn>
+    </msub>
+    <mo>&#x00D7;</mo>
+    <mfrac>
+     <msub>
+      <mi>n</mi>
+      <mn>2</mn>
+     </msub>
+     <mrow>
+      <msub>
+       <mi>n</mi>
+       <mn>1</mn>
+      </msub>
+      <mo>&#x00D7;</mo>
+      <msub>
+       <mi>n</mi>
+       <mn>2</mn>
+      </msub>
+     </mrow>
+    </mfrac>
+    <mo stretchy='false'>+</mo>
+    <msub>
+     <mi>m</mi>
+     <mn>2</mn>
+    </msub>
+    <mo>&#x00D7;</mo>
+    <mfrac>
+     <msub>
+      <mi>n</mi>
+      <mn>1</mn>
+     </msub>
+    </mfrac>
+   </mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow/>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <msub>
+     <mi>m</mi>
+     <mn>1</mn>
+    </msub>
+    <mo>&#x00D7;</mo>
+    <mfrac>
+     <msub>
+      <mi>n</mi>
+      <mn>2</mn>
+     </msub>
+     <mrow>
+      <msub>
+       <mi>n</mi>
+       <mn>1</mn>
+      </msub>
+      <mo>&#x00D7;</mo>
+      <msub>
+       <mi>n</mi>
+       <mn>2</mn>
+      </msub>
+     </mrow>
+    </mfrac>
+    <mo stretchy='false'>+</mo>
+    <msub>
+     <mi>m</mi>
+     <mn>2</mn>
+    </msub>
+    <mo>&#x00D7;</mo>
+    <mfrac>
+     <msub>
+      <mi>n</mi>
+      <mn>1</mn>
+     </msub>
+    </mfrac>
+    <mo stretchy='false'>=</mo>
+    <msub>
+     <mi>m</mi>
+     <mn>1</mn>
+    </msub>
+    <mo>&#x00D7;</mo>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mi>n</mi>
+       <mn>2</mn>
+      </msub>
+      <mo>&#x00D7;</mo>
+      <mfrac>
+       <mn>1</mn>
+       <mrow>
+        <msub>
+         <mi>n</mi>
+         <mn>1</mn>
+        </msub>
+        <mo>&#x00D7;</mo>
+        <msub>
+         <mi>n</mi>
+         <mn>2</mn>
+        </msub>
+       </mrow>
+      </mfrac>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo stretchy='false'>+</mo>
+    <msub>
+     <mi>m</mi>
+     <mn>2</mn>
+    </msub>
+    <mo>&#x00D7;</mo>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mi>n</mi>
+       <mn>1</mn>
+      </msub>
+      <mo>&#x00D7;</mo>
+      <mfrac>
+       <mn>1</mn>
+       <mrow>
+        <msub>
+         <mi>n</mi>
+         <mn>1</mn>
+        </msub>
+        <mo>&#x00D7;</mo>
+        <msub>
+         <mi>n</mi>
+         <mn>2</mn>
+        </msub>
+       </mrow>
+      </mfrac>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+   </mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow/>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mi>m</mi>
+       <mn>1</mn>
+      </msub>
+      <mo>&#x00D7;</mo>
+      <msub>
+       <mi>n</mi>
+       <mn>2</mn>
+      </msub>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo>&#x00D7;</mo>
+    <mfrac>
+     <mn>1</mn>
+     <mrow>
+      <msub>
+       <mi>n</mi>
+       <mn>1</mn>
+      </msub>
+      <mo>&#x00D7;</mo>
+      <msub>
+       <mi>n</mi>
+       <mn>2</mn>
+      </msub>
+     </mrow>
+    </mfrac>
+    <mo stretchy='false'>+</mo>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <msub>
+       <mi>m</mi>
+       <mn>2</mn>
+      </msub>
+      <mo>&#x00D7;</mo>
+      <msub>
+       <mi>n</mi>
+       <mn>1</mn>
+      </msub>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mo>&#x00D7;</mo>
+    <mfrac>
+     <mn>1</mn>
+     <mrow>
+      <msub>
+       <mi>n</mi>
+       <mn>1</mn>
+      </msub>
+      <mo>&#x00D7;</mo>
+      <msub>
+       <mi>n</mi>
+       <mn>2</mn>
+      </msub>
+     </mrow>
+    </mfrac>
+   </mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow/>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <mfrac>
+     <mrow>
+      <msub>
+       <mi>m</mi>
+       <mn>1</mn>
+      </msub>
+      <mo>&#x00D7;</mo>
+      <msub>
+       <mi>n</mi>
+       <mn>2</mn>
+      </msub>
+     </mrow>
+     <mrow>
+      <msub>
+       <mi>n</mi>
+       <mn>1</mn>
+      </msub>
+      <mo>&#x00D7;</mo>
+      <msub>
+       <mi>n</mi>
+       <mn>2</mn>
+      </msub>
+     </mrow>
+    </mfrac>
+    <mo stretchy='false'>+</mo>
+    <mfrac>
+     <mrow>
+      <msub>
+       <mi>m</mi>
+       <mn>2</mn>
+      </msub>
+      <mo>&#x00D7;</mo>
+      <msub>
+       <mi>n</mi>
+       <mn>1</mn>
+      </msub>
+     </mrow>
+     <mrow>
+      <msub>
+       <mi>n</mi>
+       <mn>1</mn>
+      </msub>
+      <mo>&#x00D7;</mo>
+      <msub>
+       <mi>n</mi>
+       <mn>2</mn>
+      </msub>
+     </mrow>
+    </mfrac>
+    <mo stretchy='false'>=</mo>
+    <mfrac>
+     <mrow>
+      <msub>
+       <mi>m</mi>
+       <mn>1</mn>
+      </msub>
+      <mo>&#x00D7;</mo>
+      <msub>
+       <mi>n</mi>
+       <mn>2</mn>
+      </msub>
+      <mo stretchy='false'>+</mo>
+      <msub>
+       <mi>m</mi>
+       <mn>2</mn>
+      </msub>
+      <mo>&#x00D7;</mo>
+      <msub>
+       <mi>n</mi>
+       <mn>1</mn>
+      </msub>
+     </mrow>
+     <mrow>
+      <msub>
+       <mi>n</mi>
+       <mn>1</mn>
+      </msub>
+      <mo>&#x00D7;</mo>
+      <msub>
+       <mi>n</mi>
+       <mn>2</mn>
+      </msub>
+     </mrow>
+    </mfrac>
+   </mrow>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+האינטואיציה דורשת ש<b>חיבור של מספרים רציונליים יקיים את חוקי החילוף והקיבוץ</b> מאותן סיבות שדרשה זאת עבור הטבעיים.</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-774'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ מי שרוצה מוזמן לוודא שזה אכן מסתדר עם הנוסחה שהבאנו לעיל (כדי לעשות זאת יש להשתמש בכל החוקים שראינו עבור הטבעיים הן לגבי חיבור והן לגבי כפל).</li>
+</ol>
+<h4 class='subsubsection_' id='magicparlabel-775'>יחס סדר</h4>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-776'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ כעת, לאחר שהבנו מדוע הטריק של מכנה משותף צריך לעבוד, נוכל להגדיר את יחס הסדר על המספרים הרציונליים באמצעות זה של הטבעיים וכך נוכל להגדיר גם את החיסור של מספרים רציונליים.</li>
+</ol>
+<div class='standard' id='magicparlabel-777'>לאחר שהכרנו את הטריק של מכנה משותף ברור לכולנו כיצד יעבוד יחס הסדר על המספרים הרציונליים, עבור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <msub>
+  <mi>m</mi>
+  <mn>1</mn>
+ </msub>
+ <msub>
+  <mi>n</mi>
+  <mn>1</mn>
+ </msub>
+</mfrac>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <msub>
+  <mi>m</mi>
+  <mn>2</mn>
+ </msub>
+ <msub>
+  <mi>n</mi>
+  <mn>2</mn>
+ </msub>
+</mfrac>
+</math>
+ תתקיים בדיוק אחת משלוש האפשרויות הבאות:</div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-778'>אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>m</mi>
+  <mn>1</mn>
+ </msub>
+ <mo>&#x00D7;</mo>
+ <msub>
+  <mi>n</mi>
+  <mn>2</mn>
+ </msub>
+ <mo stretchy='false'>=</mo>
+ <msub>
+  <mi>m</mi>
+  <mn>2</mn>
+ </msub>
+ <mo>&#x00D7;</mo>
+ <msub>
+  <mi>n</mi>
+  <mn>1</mn>
+ </msub>
+</mrow>
+</math>
+ אז <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mfrac>
+   <msub>
+    <mi>m</mi>
+    <mn>1</mn>
+   </msub>
+   <msub>
+    <mi>n</mi>
+    <mn>1</mn>
+   </msub>
+  </mfrac>
+  <mo stretchy='false'>=</mo>
+  <mfrac>
+   <msub>
+    <mi>m</mi>
+    <mn>2</mn>
+   </msub>
+   <msub>
+    <mi>n</mi>
+    <mn>2</mn>
+   </msub>
+  </mfrac>
+ </mrow>
+</mrow>
+</math>
+.</li>
+<li class="enumerate_item" id='magicparlabel-779'>אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>m</mi>
+  <mn>1</mn>
+ </msub>
+ <mo>&#x00D7;</mo>
+ <msub>
+  <mi>n</mi>
+  <mn>2</mn>
+ </msub>
+ <mo stretchy='false'>&lt;</mo>
+ <msub>
+  <mi>m</mi>
+  <mn>2</mn>
+ </msub>
+ <mo>&#x00D7;</mo>
+ <msub>
+  <mi>n</mi>
+  <mn>1</mn>
+ </msub>
+</mrow>
+</math>
+ אז <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mfrac>
+   <msub>
+    <mi>m</mi>
+    <mn>1</mn>
+   </msub>
+   <msub>
+    <mi>n</mi>
+    <mn>1</mn>
+   </msub>
+  </mfrac>
+  <mo stretchy='false'>&lt;</mo>
+  <mfrac>
+   <msub>
+    <mi>m</mi>
+    <mn>2</mn>
+   </msub>
+   <msub>
+    <mi>n</mi>
+    <mn>2</mn>
+   </msub>
+  </mfrac>
+ </mrow>
+</mrow>
+</math>
+ (או <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mfrac>
+   <msub>
+    <mi>m</mi>
+    <mn>2</mn>
+   </msub>
+   <msub>
+    <mi>n</mi>
+    <mn>2</mn>
+   </msub>
+  </mfrac>
+  <mo stretchy='false'>&gt;</mo>
+  <mfrac>
+   <msub>
+    <mi>m</mi>
+    <mn>1</mn>
+   </msub>
+   <msub>
+    <mi>n</mi>
+    <mn>1</mn>
+   </msub>
+  </mfrac>
+ </mrow>
+</mrow>
+</math>
+).</li>
+<li class="enumerate_item" id='magicparlabel-780'>אם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>m</mi>
+  <mn>1</mn>
+ </msub>
+ <mo>&#x00D7;</mo>
+ <msub>
+  <mi>n</mi>
+  <mn>2</mn>
+ </msub>
+ <mo stretchy='false'>&gt;</mo>
+ <msub>
+  <mi>m</mi>
+  <mn>2</mn>
+ </msub>
+ <mo>&#x00D7;</mo>
+ <msub>
+  <mi>n</mi>
+  <mn>1</mn>
+ </msub>
+</mrow>
+</math>
+ אז <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mfrac>
+   <msub>
+    <mi>m</mi>
+    <mn>1</mn>
+   </msub>
+   <msub>
+    <mi>n</mi>
+    <mn>1</mn>
+   </msub>
+  </mfrac>
+  <mo stretchy='false'>&gt;</mo>
+  <mfrac>
+   <msub>
+    <mi>m</mi>
+    <mn>2</mn>
+   </msub>
+   <msub>
+    <mi>n</mi>
+    <mn>2</mn>
+   </msub>
+  </mfrac>
+ </mrow>
+</mrow>
+</math>
+ (או <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mfrac>
+   <msub>
+    <mi>m</mi>
+    <mn>2</mn>
+   </msub>
+   <msub>
+    <mi>n</mi>
+    <mn>2</mn>
+   </msub>
+  </mfrac>
+  <mo stretchy='false'>&lt;</mo>
+  <mfrac>
+   <msub>
+    <mi>m</mi>
+    <mn>1</mn>
+   </msub>
+   <msub>
+    <mi>n</mi>
+    <mn>1</mn>
+   </msub>
+  </mfrac>
+ </mrow>
+</mrow>
+</math>
+).</li>
+</ol>
+<div class='standard' id='magicparlabel-781'>וזאת מכיוון שמתקיים:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>1</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>1</mn>
+  </msub>
+ </mfrac>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mrow>
+   <msub>
+    <mi>m</mi>
+    <mn>1</mn>
+   </msub>
+   <mo>&#x00D7;</mo>
+   <msub>
+    <mi>n</mi>
+    <mn>2</mn>
+   </msub>
+  </mrow>
+  <mrow>
+   <msub>
+    <mi>n</mi>
+    <mn>1</mn>
+   </msub>
+   <mo>&#x00D7;</mo>
+   <msub>
+    <mi>n</mi>
+    <mn>2</mn>
+   </msub>
+  </mrow>
+ </mfrac>
+ <mo stretchy='false'>,</mo>
+ <mspace width="10px"/>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>2</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>2</mn>
+  </msub>
+ </mfrac>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mrow>
+   <msub>
+    <mi>m</mi>
+    <mn>2</mn>
+   </msub>
+   <mo>&#x00D7;</mo>
+   <msub>
+    <mi>n</mi>
+    <mn>1</mn>
+   </msub>
+  </mrow>
+  <mrow>
+   <msub>
+    <mi>n</mi>
+    <mn>1</mn>
+   </msub>
+   <mo>&#x00D7;</mo>
+   <msub>
+    <mi>n</mi>
+    <mn>2</mn>
+   </msub>
+  </mrow>
+ </mfrac>
+</mrow>
+</math>
+</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-782'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ ושוב, ניתן להסיק מכאן את הטרנזיטיביות וההלימה לחיבור גם עבור מספרים רציונליים.</li>
+</ol>
+<h4 class='subsubsection_' id='magicparlabel-783'>חיסור</h4>
+<div class='standard' id='magicparlabel-784'>כמו כן הטריק של המכנה המשותף מסביר לנו מדוע צריך להתקיים:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>1</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>1</mn>
+  </msub>
+ </mfrac>
+ <mo stretchy='false'>-</mo>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>2</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>2</mn>
+  </msub>
+ </mfrac>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mrow>
+   <msub>
+    <mi>m</mi>
+    <mn>1</mn>
+   </msub>
+   <mo>&#x00D7;</mo>
+   <msub>
+    <mi>n</mi>
+    <mn>2</mn>
+   </msub>
+   <mo stretchy='false'>-</mo>
+   <msub>
+    <mi>m</mi>
+    <mn>2</mn>
+   </msub>
+   <mo>&#x00D7;</mo>
+   <msub>
+    <mi>n</mi>
+    <mn>1</mn>
+   </msub>
+  </mrow>
+  <mrow>
+   <msub>
+    <mi>n</mi>
+    <mn>1</mn>
+   </msub>
+   <mo>&#x00D7;</mo>
+   <msub>
+    <mi>n</mi>
+    <mn>2</mn>
+   </msub>
+  </mrow>
+ </mfrac>
+</mrow>
+</math>
+ומכאן שהחיסור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mfrac>
+   <msub>
+    <mi>m</mi>
+    <mn>1</mn>
+   </msub>
+   <msub>
+    <mi>n</mi>
+    <mn>1</mn>
+   </msub>
+  </mfrac>
+  <mo stretchy='false'>-</mo>
+  <mfrac>
+   <msub>
+    <mi>m</mi>
+    <mn>2</mn>
+   </msub>
+   <msub>
+    <mi>n</mi>
+    <mn>2</mn>
+   </msub>
+  </mfrac>
+ </mrow>
+</mrow>
+</math>
+ מוגדר רק כאשר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>m</mi>
+  <mn>1</mn>
+ </msub>
+ <mo>&#x00D7;</mo>
+ <msub>
+  <mi>n</mi>
+  <mn>2</mn>
+ </msub>
+ <mo stretchy='false'>&gt;</mo>
+ <msub>
+  <mi>m</mi>
+  <mn>2</mn>
+ </msub>
+ <mo>&#x00D7;</mo>
+ <msub>
+  <mi>n</mi>
+  <mn>1</mn>
+ </msub>
+</mrow>
+</math>
+ וזה מסתדר היטב עם האינטואיציה שלנו לכך שהחיסור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mfrac>
+   <msub>
+    <mi>m</mi>
+    <mn>1</mn>
+   </msub>
+   <msub>
+    <mi>n</mi>
+    <mn>1</mn>
+   </msub>
+  </mfrac>
+  <mo stretchy='false'>-</mo>
+  <mfrac>
+   <msub>
+    <mi>m</mi>
+    <mn>2</mn>
+   </msub>
+   <msub>
+    <mi>n</mi>
+    <mn>2</mn>
+   </msub>
+  </mfrac>
+ </mrow>
+</mrow>
+</math>
+ יוגדר רק כאשר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mfrac>
+   <msub>
+    <mi>m</mi>
+    <mn>1</mn>
+   </msub>
+   <msub>
+    <mi>n</mi>
+    <mn>1</mn>
+   </msub>
+  </mfrac>
+  <mo stretchy='false'>&gt;</mo>
+  <mfrac>
+   <msub>
+    <mi>m</mi>
+    <mn>2</mn>
+   </msub>
+   <msub>
+    <mi>n</mi>
+    <mn>2</mn>
+   </msub>
+  </mfrac>
+ </mrow>
+</mrow>
+</math>
+.
+<br />
+ושוב, אנחנו יכולים להבין כבר כעת שהחיסור צריך לקיים &#8220;חילוף&#8221; ו&#8220;קיבוץ&#8221; בצורה הבאה:</div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-785'>&#8220;חילוף&#8221; - <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mfrac>
+    <msub>
+     <mi>m</mi>
+     <mn>1</mn>
+    </msub>
+    <msub>
+     <mi>n</mi>
+     <mn>1</mn>
+    </msub>
+   </mfrac>
+   <mo stretchy='false'>-</mo>
+   <mfrac>
+    <msub>
+     <mi>m</mi>
+     <mn>2</mn>
+    </msub>
+    <msub>
+     <mi>n</mi>
+     <mn>2</mn>
+    </msub>
+   </mfrac>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>-</mo>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>3</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>3</mn>
+  </msub>
+ </mfrac>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mfrac>
+    <msub>
+     <mi>m</mi>
+     <mn>1</mn>
+    </msub>
+    <msub>
+     <mi>n</mi>
+     <mn>1</mn>
+    </msub>
+   </mfrac>
+   <mo stretchy='false'>-</mo>
+   <mfrac>
+    <msub>
+     <mi>m</mi>
+     <mn>3</mn>
+    </msub>
+    <msub>
+     <mi>n</mi>
+     <mn>3</mn>
+    </msub>
+   </mfrac>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>-</mo>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>2</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>2</mn>
+  </msub>
+ </mfrac>
+</mrow>
+</math>
+</li>
+<li class="itemize_item" id='magicparlabel-786'>&#8220;קיבוץ&#8221; - <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mfrac>
+    <msub>
+     <mi>m</mi>
+     <mn>1</mn>
+    </msub>
+    <msub>
+     <mi>n</mi>
+     <mn>1</mn>
+    </msub>
+   </mfrac>
+   <mo stretchy='false'>-</mo>
+   <mfrac>
+    <msub>
+     <mi>m</mi>
+     <mn>2</mn>
+    </msub>
+    <msub>
+     <mi>n</mi>
+     <mn>2</mn>
+    </msub>
+   </mfrac>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>-</mo>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>3</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>3</mn>
+  </msub>
+ </mfrac>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>1</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>1</mn>
+  </msub>
+ </mfrac>
+ <mo stretchy='false'>-</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mfrac>
+    <msub>
+     <mi>m</mi>
+     <mn>2</mn>
+    </msub>
+    <msub>
+     <mi>n</mi>
+     <mn>2</mn>
+    </msub>
+   </mfrac>
+   <mo stretchy='false'>+</mo>
+   <mfrac>
+    <msub>
+     <mi>m</mi>
+     <mn>3</mn>
+    </msub>
+    <msub>
+     <mi>n</mi>
+     <mn>3</mn>
+    </msub>
+   </mfrac>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+</li>
+</ul>
+<h4 class='subsubsection_' id='magicparlabel-787'>כפל</h4>
+<div class='standard' id='magicparlabel-788'>כבר הגדרנו כפל של מספר טבעי במספר רציונלי כאשר הטבעי נמצא משמאל והרציונלי מימין, אבל מה בדבר המצב ההפוך? מה הפשר של האמירה תחבר את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>k</mi>
+</math>
+ לעצמו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <mi>m</mi>
+ <mi>n</mi>
+</mfrac>
+</math>
+ <b>פעמים</b>???
+<br />
+אני כבר שומע את אלו שקופצים ואומרים: &#8220;מה אתה עושה צרות? קבע שהכפל חילופי וחסל&#8221;, התשובה הראשונה שלי תהיה שזה נחמד מבחינה אלגברית אך כפי שאמרתי לעיל: הפרק הזה נכתב כדי להסביר מדוע אנחנו מגדירים את ההגדרות דווקא כך ולא כיצד ניתן לעבוד איתן אחרי שהוגדרו. התשובה השנייה היא שאפילו מבחינה אלגברית זה לא מספיק, מפני שאני רוצה להגדיר גם כפל של שני מספרים רציונליים זה בזה וכאן אני כבר לא יכול להסתמך על האינטואיציה שכפל הוא חיבור מספר פעמים (מי שלא מאמין שזה בלתי אפשרי מוזמן לנסות בעצמו), גם המכנה המשותף אינו עוזר מפני שבניגוד לחיבור אין לנו שום מושג כיצד כופלים שני מספרים רציונליים שהמכנה שלהם זהה.</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-789'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ הצעד הבא יהיה אחד הצעדים הדרמטיים שבפרק הזה, ולכן אני חוזר על בקשתי מתחילת הפרק שתשימו לב כיצד הוא מכליל את השלבים הקודמים.</li>
+</ol>
+<div class='standard' id='magicparlabel-790'>האינטואיציה לכפל של מספרים רציונליים היא שטחים של מלבנים (ונפחים של <a href="https://he.wikipedia.org/wiki/%D7%AA%D7%99%D7%91%D7%94_)%D7%92%D7%90%D7%95%D7%9E%D7%98%D7%A8%D7%99%D7%94(">תיבות</a>): במלבן שאורכי צלעותיו הם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>m</mi>
+</math>
+ טבעיים &#8220;נכנסים&#8221; <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo>&#x00D7;</mo>
+ <mi>m</mi>
+</mrow>
+</math>
+ ריבועים שאורך כל צלע שלהם הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+, איך אנחנו יודעים זאת? פשוט מאד: נחלק את המלבן לטבלה שבה כל תא הוא ריבוע שאורך של צלע שלו הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ (אנחנו יכולים לעשות זאת כי אורכי הצלעות טבעיים) וכבר ראינו כשעסקנו בטבעיים שבמצב כזה יש בטבלה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo>&#x00D7;</mo>
+ <mi>m</mi>
+</mrow>
+</math>
+ תאים. אבל אורכי הצלעות של מלבן לא מוכרחים להיות מספרים טבעיים - הם יכולים להיות גם מספרים רציונליים (בדיוק כמו שניתן לסכום חתיכות של עוגות ניתן לסכום חתיכות של מקלות), אז מה? נרים ידיים? אנחנו רוצים להגדיר מהו השטח של כל מלבן!
+<br />
+ובכן, נניח שיש לנו מלבן שאורכי צלעותיו הם מיודעינו משכבר הימים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <msub>
+  <mi>m</mi>
+  <mn>1</mn>
+ </msub>
+ <msub>
+  <mi>n</mi>
+  <mn>1</mn>
+ </msub>
+</mfrac>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <msub>
+  <mi>m</mi>
+  <mn>2</mn>
+ </msub>
+ <msub>
+  <mi>n</mi>
+  <mn>2</mn>
+ </msub>
+</mfrac>
+</math>
+ ונתבונן במלבן שאורכי צלעותיו הם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>m</mi>
+ <mn>1</mn>
+</msub>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msub>
+ <mi>m</mi>
+ <mn>2</mn>
+</msub>
+</math>
+: ניתן לחלק אותו לטבלה שבה כל תא יהיה מלבן שאורכי צלעותיו הם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <msub>
+  <mi>m</mi>
+  <mn>1</mn>
+ </msub>
+ <msub>
+  <mi>n</mi>
+  <mn>1</mn>
+ </msub>
+</mfrac>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <msub>
+  <mi>m</mi>
+  <mn>2</mn>
+ </msub>
+ <msub>
+  <mi>n</mi>
+  <mn>2</mn>
+ </msub>
+</mfrac>
+</math>
+, בטבלה כזו יש <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>n</mi>
+  <mn>1</mn>
+ </msub>
+ <mo>&#x00D7;</mo>
+ <msub>
+  <mi>n</mi>
+  <mn>2</mn>
+ </msub>
+</mrow>
+</math>
+ תאים ולכן היות שהשטח של המלבן כולו הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msub>
+  <mi>m</mi>
+  <mn>1</mn>
+ </msub>
+ <mo>&#x00D7;</mo>
+ <msub>
+  <mi>m</mi>
+  <mn>2</mn>
+ </msub>
+</mrow>
+</math>
+ אנחנו מצפים שהשטח של כל תא כזה יהיה:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>1</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>1</mn>
+  </msub>
+ </mfrac>
+ <mo>&#x00D7;</mo>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>2</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>2</mn>
+  </msub>
+ </mfrac>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mrow>
+   <msub>
+    <mi>m</mi>
+    <mn>1</mn>
+   </msub>
+   <mo>&#x00D7;</mo>
+   <msub>
+    <mi>m</mi>
+    <mn>2</mn>
+   </msub>
+  </mrow>
+  <mrow>
+   <msub>
+    <mi>n</mi>
+    <mn>1</mn>
+   </msub>
+   <mo>&#x00D7;</mo>
+   <msub>
+    <mi>n</mi>
+    <mn>2</mn>
+   </msub>
+  </mrow>
+ </mfrac>
+</mrow>
+</math>
+</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-791'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ מי שהמעבר למלבנים מופשטים פחות נראה לו מוזמן לדמיין שכל העוגות שלנו מלבניות ובגובה אחיד; הנקודה החשובה שיש לשים לב אליה היא שאם עד עכשיו ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ שלנו הוגדר באופן טבעי, כעת ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ שלנו הוא עוגה ריבועית שרירותית שעבורה החלטנו שאורך הצלעות שלה הוא אמת המידה שלנו ולכן היא בגודל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ על <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+.</li>
+</ol>
+<div class='standard' id='magicparlabel-792'>כדי להבין מדוע אנחנו רוצים ש<b>כפל מספרים רציונליים יקיים את חוק החילוף</b> נשים לב לכך שמלבן שאורכי צלעותיו הם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <msub>
+  <mi>m</mi>
+  <mn>1</mn>
+ </msub>
+ <msub>
+  <mi>n</mi>
+  <mn>1</mn>
+ </msub>
+</mfrac>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <msub>
+  <mi>m</mi>
+  <mn>2</mn>
+ </msub>
+ <msub>
+  <mi>n</mi>
+  <mn>2</mn>
+ </msub>
+</mfrac>
+</math>
+ חופף למלבן אורכי צלעותיו הם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <msub>
+  <mi>m</mi>
+  <mn>2</mn>
+ </msub>
+ <msub>
+  <mi>n</mi>
+  <mn>2</mn>
+ </msub>
+</mfrac>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <msub>
+  <mi>m</mi>
+  <mn>1</mn>
+ </msub>
+ <msub>
+  <mi>n</mi>
+  <mn>1</mn>
+ </msub>
+</mfrac>
+</math>
+ ולכן שטחיהם שווים, כמו כן <b>כפל מספרים רציונליים צריך לקיים את חוק הקיבוץ</b> בגלל שכפל של שלושה מספרים מתאר למעשה את הנפח של תיבה שאלו הם אורכי ה<a href="https://he.wikipedia.org/wiki/%D7%9E%D7%A7%D7%A6%D7%95%D7%A2_(%D7%92%D7%90%D7%95%D7%9E%D7%98%D7%A8%D7%99%D7%94)">מקצועות</a> שלה והתיבות המתאימות ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mfrac>
+    <msub>
+     <mi>m</mi>
+     <mn>1</mn>
+    </msub>
+    <msub>
+     <mi>n</mi>
+     <mn>1</mn>
+    </msub>
+   </mfrac>
+   <mo>&#x00D7;</mo>
+   <mfrac>
+    <msub>
+     <mi>m</mi>
+     <mn>2</mn>
+    </msub>
+    <msub>
+     <mi>n</mi>
+     <mn>2</mn>
+    </msub>
+   </mfrac>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x00D7;</mo>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>3</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>3</mn>
+  </msub>
+ </mfrac>
+</mrow>
+</math>
+ ול-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>1</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>1</mn>
+  </msub>
+ </mfrac>
+ <mo>&#x00D7;</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mfrac>
+    <msub>
+     <mi>m</mi>
+     <mn>2</mn>
+    </msub>
+    <msub>
+     <mi>n</mi>
+     <mn>2</mn>
+    </msub>
+   </mfrac>
+   <mo>&#x00D7;</mo>
+   <mfrac>
+    <msub>
+     <mi>m</mi>
+     <mn>3</mn>
+    </msub>
+    <msub>
+     <mi>n</mi>
+     <mn>3</mn>
+    </msub>
+   </mfrac>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+</mrow>
+</math>
+ חופפות אף הן. כדי להבין מדוע אנחנו רוצים ש<b>כפל מספרים רציונליים יקיים פילוג ביחס לחיבור שלהם</b> נתבונן בשני מלבנים שאורכי צלעות האחד הם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <msub>
+  <mi>m</mi>
+  <mn>1</mn>
+ </msub>
+ <msub>
+  <mi>n</mi>
+  <mn>1</mn>
+ </msub>
+</mfrac>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <msub>
+  <mi>m</mi>
+  <mn>2</mn>
+ </msub>
+ <msub>
+  <mi>n</mi>
+  <mn>2</mn>
+ </msub>
+</mfrac>
+</math>
+ ואורכי צלעות האחר הן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <msub>
+  <mi>m</mi>
+  <mn>1</mn>
+ </msub>
+ <msub>
+  <mi>n</mi>
+  <mn>1</mn>
+ </msub>
+</mfrac>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <msub>
+  <mi>m</mi>
+  <mn>2</mn>
+ </msub>
+ <msub>
+  <mi>n</mi>
+  <mn>2</mn>
+ </msub>
+</mfrac>
+</math>
+, ניתן ליצור מהם מלבן אחד שאורכי צלעותיו הם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <msub>
+  <mi>m</mi>
+  <mn>1</mn>
+ </msub>
+ <msub>
+  <mi>n</mi>
+  <mn>1</mn>
+ </msub>
+</mfrac>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>2</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>2</mn>
+  </msub>
+ </mfrac>
+ <mo stretchy='false'>+</mo>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>3</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>3</mn>
+  </msub>
+ </mfrac>
+</mrow>
+</math>
+.</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-793'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ ושוב, מי שרוצה מוזמן לוודא שחוקים אלו אכן מתקיימים עבור הנוסחה שראינו לעיל.</li>
+</ol>
+<h4 class='subsubsection_' id='magicparlabel-794'>חילוק</h4>
+<div class='standard' id='magicparlabel-795'>כשדיברנו על חילוק של מספרים טבעיים ראינו שתי אינטואיציות שקולות עבור פעולת החילוק:</div>
+<ol class='lyxenum enumi'>
+<li class="enumerate_item" id='magicparlabel-796'>&#8220;נניח שיש לנו סלסילה ובה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ כדורים ואנו מעבירים את כל הכדורים שבה ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>m</mi>
+</math>
+ סלסילות, כך שלאחר ההעברה יהיה בכולן מספר שווה של כדורים, מספר הכדורים שבכל סלסילה הוא תוצאת החילוק <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo>&#x00F7;</mo>
+ <mi>m</mi>
+</mrow>
+</math>
+.&#8221;</li>
+<li class="enumerate_item" id='magicparlabel-797'>&#8220;מספר הכדורים שהיו צריכים להיות בכל אחת מ-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>m</mi>
+</math>
+ סלסילות שבהן מספר שווה של כדורים, כך שהמצב הנוכחי יתקבל ע&#8221;י העברת כל הכדורים מ-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>m</mi>
+</math>
+ הסלסילות לסלסילה אחת, הוא תוצאת החילוק <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo>&#x00F7;</mo>
+ <mi>m</mi>
+</mrow>
+</math>
+.&#8221;</li>
+</ol>
+<div class='standard' id='magicparlabel-798'>שתי האינטואיציות הללו אינן עוזרות לנו עבור חילוק של מספרים רציונליים מפני שבשתיהן צריכות להיות <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>m</mi>
+</math>
+ סלסילות שבהן מספר שווה של כדורים, אבל אנחנו רוצים לחלק גם במספרים שאינם טבעיים - אין שום משמעות ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <mi>m</mi>
+ <mi>n</mi>
+</mfrac>
+</math>
+ סלסילות. למרות זאת ראינו ששתיהן אומרות שצריך להתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>m</mi>
+ <mo>&#x00D7;</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo>&#x00F7;</mo>
+   <mi>m</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mi>n</mi>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>n</mi>
+   <mo>&#x00F7;</mo>
+   <mi>m</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x00D7;</mo>
+ <mi>m</mi>
+</mrow>
+</math>
+, כלומר פעולת החילוק היא פעולה הפוכה לפעולת הכפל: תוצאת החילוק <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>n</mi>
+ <mo>&#x00F7;</mo>
+ <mi>m</mi>
+</mrow>
+</math>
+ היא המספר שאם נכפול אותו ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>m</mi>
+</math>
+ נקבל את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+; אם כך נרצה שאם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <mi>x</mi>
+ <mi>y</mi>
+</mfrac>
+</math>
+ היא תוצאת החילוק <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>1</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>1</mn>
+  </msub>
+ </mfrac>
+ <mo>&#x00F7;</mo>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>2</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>2</mn>
+  </msub>
+ </mfrac>
+</mrow>
+</math>
+ אז יתקיים:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>2</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>2</mn>
+  </msub>
+ </mfrac>
+ <mo>&#x00D7;</mo>
+ <mfrac>
+  <mi>x</mi>
+  <mi>y</mi>
+ </mfrac>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>1</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>1</mn>
+  </msub>
+ </mfrac>
+</mrow>
+</math>
+</div>
+
+<div class='standard' id='magicparlabel-799'>נשים לב לכך שע&#8221;פ הנוסחה הנ&#8221;ל מתקיים:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>2</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>2</mn>
+  </msub>
+ </mfrac>
+ <mo>&#x00D7;</mo>
+ <mfrac>
+  <msub>
+   <mi>n</mi>
+   <mn>2</mn>
+  </msub>
+  <msub>
+   <mi>m</mi>
+   <mn>2</mn>
+  </msub>
+ </mfrac>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mrow>
+   <msub>
+    <mi>m</mi>
+    <mn>2</mn>
+   </msub>
+   <mo>&#x00D7;</mo>
+   <msub>
+    <mi>n</mi>
+    <mn>2</mn>
+   </msub>
+  </mrow>
+  <mrow>
+   <msub>
+    <mi>n</mi>
+    <mn>2</mn>
+   </msub>
+   <mo>&#x00D7;</mo>
+   <msub>
+    <mi>m</mi>
+    <mn>2</mn>
+   </msub>
+  </mrow>
+ </mfrac>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mrow>
+   <msub>
+    <mi>n</mi>
+    <mn>2</mn>
+   </msub>
+   <mo>&#x00D7;</mo>
+   <msub>
+    <mi>m</mi>
+    <mn>2</mn>
+   </msub>
+  </mrow>
+  <mrow>
+   <msub>
+    <mi>n</mi>
+    <mn>2</mn>
+   </msub>
+   <mo>&#x00D7;</mo>
+   <msub>
+    <mi>m</mi>
+    <mn>2</mn>
+   </msub>
+  </mrow>
+ </mfrac>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mn>1</mn>
+  <mn>1</mn>
+ </mfrac>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+ולכן:</div>
+
+<div class='standard' id='magicparlabel-800'>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>2</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>2</mn>
+  </msub>
+ </mfrac>
+ <mo>&#x00D7;</mo>
+ <mfrac>
+  <mrow>
+   <msub>
+    <mi>n</mi>
+    <mn>2</mn>
+   </msub>
+   <mo>&#x00D7;</mo>
+   <msub>
+    <mi>m</mi>
+    <mn>1</mn>
+   </msub>
+  </mrow>
+  <mrow>
+   <msub>
+    <mi>m</mi>
+    <mn>2</mn>
+   </msub>
+   <mo>&#x00D7;</mo>
+   <msub>
+    <mi>n</mi>
+    <mn>1</mn>
+   </msub>
+  </mrow>
+ </mfrac>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>2</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>2</mn>
+  </msub>
+ </mfrac>
+ <mo>&#x00D7;</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mfrac>
+    <msub>
+     <mi>n</mi>
+     <mn>2</mn>
+    </msub>
+    <msub>
+     <mi>m</mi>
+     <mn>2</mn>
+    </msub>
+   </mfrac>
+   <mo>&#x00D7;</mo>
+   <mfrac>
+    <msub>
+     <mi>m</mi>
+     <mn>1</mn>
+    </msub>
+    <msub>
+     <mi>n</mi>
+     <mn>1</mn>
+    </msub>
+   </mfrac>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mfrac>
+    <msub>
+     <mi>m</mi>
+     <mn>2</mn>
+    </msub>
+    <msub>
+     <mi>n</mi>
+     <mn>2</mn>
+    </msub>
+   </mfrac>
+   <mo>&#x00D7;</mo>
+   <mfrac>
+    <msub>
+     <mi>n</mi>
+     <mn>2</mn>
+    </msub>
+    <msub>
+     <mi>m</mi>
+     <mn>2</mn>
+    </msub>
+   </mfrac>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x00D7;</mo>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>1</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>1</mn>
+  </msub>
+ </mfrac>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+ <mo>&#x00D7;</mo>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>1</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>1</mn>
+  </msub>
+ </mfrac>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>1</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>1</mn>
+  </msub>
+ </mfrac>
+</mrow>
+</math>
+א&#8221;כ מצאנו את התוצאה המבוקשת עבור החילוק<div class='foot'><span class="foot_label">18</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-804'>העובדה שקיים רק מספר רציונלי אחד שכזה נובעת מהטריכוטומיה של יחס הסדר ומהעובדה שאם נכפול במספר קטן יותר או גדול יותר נקבל מספר קטן מדי או גדול מדי בהתאמה (כן, אני יודע שלא הראיתי שניתן להסיק זאת מהאקסיומות אך את ההוכחות הללו אני משאיר לקורס אינפי&#8217;<span style='font-size:small;'> </span>1<span style='font-size:small;'> </span>עצמו).</div>
+</div></div>:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>1</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>1</mn>
+  </msub>
+ </mfrac>
+ <mo>&#x00F7;</mo>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>2</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>2</mn>
+  </msub>
+ </mfrac>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mrow>
+   <msub>
+    <mi>n</mi>
+    <mn>2</mn>
+   </msub>
+   <mo>&#x00D7;</mo>
+   <msub>
+    <mi>m</mi>
+    <mn>1</mn>
+   </msub>
+  </mrow>
+  <mrow>
+   <msub>
+    <mi>m</mi>
+    <mn>2</mn>
+   </msub>
+   <mo>&#x00D7;</mo>
+   <msub>
+    <mi>n</mi>
+    <mn>1</mn>
+   </msub>
+  </mrow>
+ </mfrac>
+</mrow>
+</math>
+ומזה נובע כי:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mstyle mathvariant='bold'>
+ <mrow>
+  <mfrac>
+  </mfrac>
+ </mrow></mstyle>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <msub>
+   <mi>n</mi>
+   <mn>2</mn>
+  </msub>
+  <msub>
+   <mi>m</mi>
+   <mn>2</mn>
+  </msub>
+ </mfrac>
+ <mo>&#x00D7;</mo>
+ <mfrac>
+  <msub>
+   <mi>m</mi>
+   <mn>1</mn>
+  </msub>
+  <msub>
+   <mi>n</mi>
+   <mn>1</mn>
+  </msub>
+ </mfrac>
+ <mo stretchy='false'>=</mo>
+ <mstyle mathvariant='bold'>
+ <mrow>
+  <mfrac>
+  </mfrac>
+ </mrow></mstyle>
+</mrow>
+</math>
+כלומר כדי לחלק במספר רציונלי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <mi>m</mi>
+ <mi>n</mi>
+</mfrac>
+</math>
+ כל מה שאנחנו צריכים לעשות הוא לכפול ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <mi>n</mi>
+ <mi>m</mi>
+</mfrac>
+</math>
+ - מספר זה ייקרא <b>ההופכי</b> של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <mi>m</mi>
+ <mi>n</mi>
+</mfrac>
+</math>
+.</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-805'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ שימו לב שבניגוד לחיסור הגדרה זו מאפשרת לנו לבצע חילוק גם כאשר המחלק גדול מהמחולק.</li>
+</ol>
+
+<div class='standard' id='magicparlabel-807'>הפעם העובדה שהחילוק מקיים &#8220;חילוף&#8221; ו&#8220;קיבוץ&#8221; כדלהלן נובעת ישירות מהחילוף והקיבוץ של כפל:</div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-808'>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true' columnalign='right left '>
+ <mtr>
+  <mtd>
+   <mstyle mathvariant='bold'>
+   <mrow>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mfrac>
+      </mfrac>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mfrac>
+    </mfrac>
+   </mrow></mstyle>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <mstyle mathvariant='bold'>
+    <mrow>
+     <mrow>
+      <mo>(</mo>
+      <mrow>
+       <mfrac>
+       </mfrac>
+      </mrow>
+      <mo>)</mo>
+     </mrow>
+     <mfrac>
+     </mfrac>
+    </mrow></mstyle>
+    <mo stretchy='false'>=</mo>
+    <mstyle mathvariant='bold'>
+    <mrow>
+     <mrow>
+      <mo>(</mo>
+      <mrow>
+       <mfrac>
+       </mfrac>
+       <mfrac>
+       </mfrac>
+      </mrow>
+      <mo>)</mo>
+     </mrow>
+    </mrow></mstyle>
+   </mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow/>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <mstyle mathvariant='bold'>
+    <mrow>
+     <mrow>
+      <mo>(</mo>
+      <mrow>
+       <mfrac>
+       </mfrac>
+       <mfrac>
+       </mfrac>
+      </mrow>
+      <mo>)</mo>
+     </mrow>
+    </mrow></mstyle>
+    <mo stretchy='false'>=</mo>
+    <mstyle mathvariant='bold'>
+    <mrow>
+     <mrow>
+      <mo>(</mo>
+      <mrow>
+       <mfrac>
+       </mfrac>
+      </mrow>
+      <mo>)</mo>
+     </mrow>
+     <mfrac>
+     </mfrac>
+    </mrow></mstyle>
+    <mo stretchy='false'>=</mo>
+    <mstyle mathvariant='bold'>
+    <mrow>
+     <mrow>
+      <mo>(</mo>
+      <mrow>
+       <mfrac>
+       </mfrac>
+      </mrow>
+      <mo>)</mo>
+     </mrow>
+     <mfrac>
+     </mfrac>
+    </mrow></mstyle>
+   </mrow>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+</li>
+<li class="itemize_item" id='magicparlabel-809'>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mtable displaystyle='true' columnalign='right left '>
+ <mtr>
+  <mtd>
+   <mstyle mathvariant='bold'>
+   <mrow>
+    <mrow>
+     <mo>(</mo>
+     <mrow>
+      <mfrac>
+      </mfrac>
+     </mrow>
+     <mo>)</mo>
+    </mrow>
+    <mfrac>
+    </mfrac>
+   </mrow></mstyle>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <mstyle mathvariant='bold'>
+    <mrow>
+     <mrow>
+      <mo>(</mo>
+      <mrow>
+       <mfrac>
+       </mfrac>
+      </mrow>
+      <mo>)</mo>
+     </mrow>
+     <mfrac>
+     </mfrac>
+    </mrow></mstyle>
+    <mo stretchy='false'>=</mo>
+    <mstyle mathvariant='bold'>
+    <mrow>
+     <mrow>
+      <mo>(</mo>
+      <mrow>
+       <mfrac>
+       </mfrac>
+       <mfrac>
+       </mfrac>
+      </mrow>
+      <mo>)</mo>
+     </mrow>
+    </mrow></mstyle>
+    <mo stretchy='false'>=</mo>
+    <mstyle mathvariant='bold'>
+    <mrow>
+     <mrow>
+      <mo>(</mo>
+      <mfrac>
+       <mrow>
+       </mrow>
+       <mrow>
+       </mrow>
+      </mfrac>
+      <mo>)</mo>
+     </mrow>
+    </mrow></mstyle>
+   </mrow>
+  </mtd>
+ </mtr>
+ <mtr>
+  <mtd>
+   <mrow/>
+  </mtd>
+  <mtd>
+   <mrow>
+    <mo stretchy='false'>=</mo>
+    <mstyle mathvariant='bold'>
+    <mrow>
+     <mrow>
+      <mo>(</mo>
+      <mfrac>
+       <mrow>
+       </mrow>
+       <mrow>
+       </mrow>
+      </mfrac>
+      <mo>)</mo>
+     </mrow>
+     <mo stretchy='false'>=</mo>
+     <mrow>
+      <mo>(</mo>
+      <mrow>
+       <mfrac>
+       </mfrac>
+       <mfrac>
+       </mfrac>
+      </mrow>
+      <mo>)</mo>
+     </mrow>
+    </mrow></mstyle>
+   </mrow>
+  </mtd>
+ </mtr>
+</mtable>
+</math>
+</li>
+</ul>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-810'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ עכשיו אפשר גם להבין מה הקשר בין הסימון של המספרים הרציונליים - &#8220;<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <mi>p</mi>
+ <mi>q</mi>
+</mfrac>
+</math>
+&#8221; - לבין פעולת החילוק, מתקיים:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>n</mi>
+ <mo>&#x00F7;</mo>
+ <mi>m</mi>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mi>n</mi>
+  <mn>1</mn>
+ </mfrac>
+ <mo>&#x00F7;</mo>
+ <mfrac>
+  <mi>m</mi>
+  <mn>1</mn>
+ </mfrac>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mrow>
+   <mn>1</mn>
+   <mo>&#x00D7;</mo>
+   <mi>n</mi>
+  </mrow>
+  <mrow>
+   <mi>m</mi>
+   <mo>&#x00D7;</mo>
+   <mn>1</mn>
+  </mrow>
+ </mfrac>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mi>n</mi>
+  <mi>m</mi>
+ </mfrac>
+</mrow>
+</math>
+א&#8221;כ מעכשיו הסימון <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <mi>p</mi>
+ <mi>q</mi>
+</mfrac>
+</math>
+ יוגדר גם עבור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>p</mi>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>q</mi>
+</math>
+ רציונליים ופירושו יהיה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>p</mi>
+ <mo>&#x00F7;</mo>
+ <mi>q</mi>
+</mrow>
+</math>
+. מכאן שאם נסמן את ההופכי של מספר רציונלי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>q</mi>
+</math>
+ ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<msup>
+ <mi>q</mi>
+ <mrow>
+  <mo stretchy='false'>-</mo>
+  <mn>1</mn>
+ </mrow>
+</msup>
+</math>
+ נקבל שמתקיים:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <msup>
+  <mi>q</mi>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mn>1</mn>
+  </mrow>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+ <mo>&#x00D7;</mo>
+ <msup>
+  <mi>q</mi>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mn>1</mn>
+  </mrow>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+ <mo>&#x00F7;</mo>
+ <mi>q</mi>
+ <mo stretchy='false'>=</mo>
+ <mfrac>
+  <mn>1</mn>
+  <mi>q</mi>
+ </mfrac>
+</mrow>
+</math>
+</li>
+</ol>
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-811'><span class="subsection_label">3.3</span> המספרים החיוביים</h3>
+<div class='standard' id='magicparlabel-812'>לכאורה הכל בסדר ואין שום סיבה להמשיך, המספרים הרציונליים מסתדרים נהדר זה עם זה ומסוגלים לתאר את כל מה שאנחנו רוצים, לא?
+<br />
+אז זהו שלא, בסעיף הקודם ראינו שהמספרים שלנו מייצגים אורכים של קטעים גאומטריים ולכן היינו רוצים שלכל קטע גאומטרי יהיה מספר המציין את אורכו, הבעיה היא שעבור קטעים רבים ניתן להראות שאף מספר רציונלי אינו יכול לייצג את האורך שלהם (בהנחה הסבירה שהרציונליים צריכים לקיים את כל מה שראינו לעיל); מה עושים?</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-813'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ הדרך הפשוטה ביותר למצוא קטעים שאורכיהם אינם רציונליים היא באמצעות משפט פיתגורס, על כן ניתן היה לחשוב שהוספת כל השורשים הריבועיים של מספרים רציונליים יחד עם כל הסכומים והמכפלות שלהם זה בזה ועם המספרים הרציונליים תפתור את הבעיה<div class='foot'><span class="foot_label">19</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-817'><b>האם הכנסת השורשים הריבועיים תכריח אותנו להכניס גם שורשים מסדר גבוה יותר ולקבל את המספרים האלגבריים?</b></div>
+</div></div>, אלא שגם זה לא יעזור שכן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3C0;</mi>
+</math>
+ אינו מספר אלגברי<div class='foot'><span class="foot_label">20</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-821'>כל מספר שניתן להצגה כמספר סופי של פעולות חיבור, חיסור, כפל, חילוק והוצאת שורש <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+-י של מספרים שלמים - הוא מספר אלגברי, אך ההפך אינו נכון: קיימים מספרים אלגבריים שאינם ניתנים להצגה בצורה כזו (ראו <a href="https://en.wikipedia.org/wiki/Algebraic_number#Numbers_defined_by_radicals">כאן</a>).</div>
+</div></div> אך לכולנו ברור שניתן לכרוך חוט סביב עיגול ואז ליישר את החוט ולקבל קטע באורך של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>2</mn>
+ <mi>&#x3C0;</mi>
+</mrow>
+</math>
+.</li>
+</ol>
+<div class='standard' id='magicparlabel-822'>מבחינה היסטורית הגילוי של המספרים האי-רציונליים הוא עתיק מאד, בעוד שההגדרה הפורמלית של המספרים הממשיים נכתבה לראשונה רק לאחר שהמתמטיקאים כבר קיבלו את מושג האפס והמספרים השליליים; למרות זאת אני מאמין שההגדרה הפורמלית מצביעה על נקודה שברורה לכל ילד. לכל ילד ברור שבהינתן שלושה קרשים ארוכים מספיק ניתן לבנות מהם משולש ישר זווית ושווה שוקיים ע&#8221;י חיתוך שלהם באורך המתאים, כלומר כל ילד בטוח שהנגר יכול לחתוך את הקרש כך שייוותר בידו קרש באורך המתאים ליתר של המשולש הנ&#8221;ל, ובכך להפריד בין החלק הרצוי לחלק המיותר. באופן דומה נוכל לכרוך חוט ארוך מספיק סביב עיגול ואז לחתוך אותו כך שיישאר בידינו חוט שאורכו שווה להיקף המעגל - גם כאן הפרדנו בין החלק הרצוי לחלק המיותר וזוהי המשמעות של אקסיומת השלמות.</div>
+
+
+<div class='standard' id='magicparlabel-824'>נדמיין קרש שקצהו האחד ניצב על הארץ &#8220;וְרֹאשׁוֹ מַגִּיעַ הַשָּׁמָיְמָה&#8221;<div class='foot'><span class="foot_label">21</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-828'>בראשית, כ&#8221;ח י&#8221;ב.</div>
+</div></div> (מכל בחינה מעשית הקרש אין-סופי בכיוון אחד), נבחר נקודה על הקרש שאינה נקודת הקצה ונתאים לה את המספר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ - בכך קבענו את המרחק שבינה לבין נקודת הקצה כאמת המידה שלנו, כל מספר טבעי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ יותאם לנקודה שמרחקה מהקצה הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>n</mi>
+</math>
+ פעמים אמת המידה שלנו, ולכל מספר רציונלי נתאים נקודה על הקרש לפי הכללים שהבאנו בתחילת הסעיף הקודם (אלא שהפעם נפעיל אותם על הקרש ביחס לאמת המידה ולא על עוגות). האינטואיציה של כולנו אומרת שלכל שתי קבוצות<div class='foot'><span class="foot_label">22</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-832'>אני לא מתכוון כאן למונח המתמטי, פשוט לא מצאתי מילה טובה יותר.</div>
+</div></div> של נקודות כאלה, כך שכל הנקודות בקבוצה האחת קרובות יותר אל הקצה לעומת כל נקודה בקבוצה האחרת<div class='foot'><span class="foot_label">23</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-836'>כלומר הנקודות שבקבוצה הראשונה נמצאות בחלק הרצוי של הקרש ואילו אלו שבשנייה נמצאות בחלק המיותר.</div>
+</div></div>, ניתן לחתוך את הקרש כך שבחלק אחד שלו (זה שקרוב לקצה) תהיינה כל הנקודות מהקבוצה הראשונה ובחלק האחר (זה שרחוק מהקצה) תהיינה כל הנקודות שבקבוצה השנייה.
+<br />
+<b>הכפל צריך לקיים חילוף, קיבוץ ופילוג ביחס לחיבור</b> ע&#8221;פ אותן אינטואיציות שהבאנו עבור הרציונליים, אלא שכעת האורכים של הקטעים יכולים להיות אי-רציונליים וכך גם שטחי המלבנים; כדי להראות ש-<b><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='bold'>
+<mn>1</mn></mstyle>
+</math>
+ צריך להיות אדיש לכפל</b> נשתמש בכך שהדבר מתקיים לכל מספר רציונלי ובעובדה שניתן להתקרב לכל נקודה אי-רציונלית ע&#8221;י נקודות רציונליות ככל שנרצה. <b>החיבור צריך לקיים חילוף</b> שכן אורכו של קרש אינו מבחין בין מדידה מימין לשמאל למדידה בכיוון ההפוך, ובנוסף <b>צריך החיבור לקיים קיבוץ</b> שכן ניתן לבצע את המדידה בשני צורות: באחת נצמיד את הקרש השני לראשון ונמדוד את אורכם המשותף ואח&#8221;כ נצמיד את הקרש השלישי, ובשנייה נצמיד את הקרש השני לשלישי ונמדוד את אורכם המשותף ואח&#8221;כ נצמיד אותם לקרש הראשון.</div>
+
+<div class='standard' id='magicparlabel-837'>א&#8221;כ נתאר את קבוצת המספרים שקיבלנו בצורה הבאה:</div>
+<ul class='lyxitem lyxitemi'>
+<li class="itemize_item" id='magicparlabel-838'>כל המספרים שלנו יותאמו לקרשים שניתן לחתוך מן הקרש האין-סופי.</li>
+<li class="itemize_item" id='magicparlabel-839'>כל קרש כזה מקבל מספר ממשי חיובי המציין את אורכו<div class='foot'><span class="foot_label">24</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-843'>אמת המידה למדידת האורך היא ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ שהוזכר בפסקה הקודמת.</div>
+</div></div>.</li>
+<li class="itemize_item" id='magicparlabel-844'>החיבור של שני מספרים כאלה נעשה ע&#8221;י הצמדת הקרשים זה לזה ומדידת אורכם המשותף, ובנוסף:
+<ul class='lyxitem lyxitemii'>
+<li class="itemize_item" id='magicparlabel-845'><b>החיבור מקיים חילוף וקיבוץ</b> כפי שתואר לעיל.</li>
+</ul>
+</li><li class="itemize_item" id='magicparlabel-846'>הכפל של כל שני מספרים כאלה נעשה ע&#8221;י שימת הקרשים המתאימים במאונך זה לזה ושטח המלבן המתאים הוא המכפלה.
+<ul class='lyxitem lyxitemii'>
+<li class="itemize_item" id='magicparlabel-847'><b>הכפל מקיים חילוף וקיבוץ</b> כפי שתואר לעיל.</li>
+<li class="itemize_item" id='magicparlabel-848'><b>הכפל מקיים פילוג ביחס לחיבור</b> כפי שתואר לעיל.</li>
+<li class="itemize_item" id='magicparlabel-849'>יש בקבוצת המספרים איבר הנקרא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mstyle mathvariant='bold'>
+<mn>1</mn></mstyle>
+</math>
+ והוא <b>אדיש לפעולת הכפל</b> - כלומר השטח של מלבן שצלעותיו הם קרש באורך <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ וקרש נוסף הוא אורך הקרש הנוסף.</li>
+</ul>
+</li><li class="itemize_item" id='magicparlabel-850'>יחס הסדר ייקבע ע&#8221;י אורכי הקרשים - קרש ארוך יותר מותאם למספר גדול יותר, ובנוסף:
+<ul class='lyxitem lyxitemii'>
+<li class="itemize_item" id='magicparlabel-851'>ניתן להשוות את האורך של כל שני קרשים (<b>טריכוטומיה</b>).</li>
+<li class="itemize_item" id='magicparlabel-852'>אם קרש א&#8217; ארוך מקרש ב&#8217; וקרש ב&#8217; ארוך מקרש ג&#8217; אז קרש א&#8217; ארוך מקרש ג&#8217; (<b>טרנזיטיביות</b>).</li>
+<li class="itemize_item" id='magicparlabel-853'>אם קרש א&#8217; ארוך מקרש ב&#8217; אז האורך של סכום הקרשים א&#8217; ו-ג&#8217; יהיה גדול מהאורך של סכום הקרשים ב&#8217; ו-ג&#8217; - כלומר הוספת אותו מספר לזוג מספרים תשמר את יחס הסדר ביניהם (<b>הלימה לחיבור</b>).</li>
+<li class="itemize_item" id='magicparlabel-854'>אם קרש א&#8217; ארוך מקרש ב&#8217; אז מלבן שצלעותיו הם קרש א&#8217; קרש ג&#8217; יהיה גדול בשטחו ממלבן שאורכי צלעותיו הם ב&#8217; ו-ג&#8217; - כלומר הכפלת שני מספרים באותו מספר תשמר את יחס הסדר ביניהם (<b>הלימה לכפל</b>).</li>
+</ul>
+</li><li class="itemize_item" id='magicparlabel-855'>לכל שתי קבוצות של נקודות על הקרש האין-סופי, כך שכל הנקודות בקבוצה האחת קרובות יותר אל הקצה לעומת כל נקודה בקבוצה האחרת<div class='foot'><span class="foot_label">25</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-859'>כלומר הנקודות שבקבוצה הראשונה נמצאות בחלק הרצוי של הקרש ואילו אלו שבשנייה נמצאות בחלק המיותר.</div>
+</div></div>, ניתן לחתוך את הקרש כך שבחלק אחד שלו (זה שקרוב לקצה) תהיינה כל הנקודות מהקבוצה הראשונה ובחלק האחר (זה שרחוק מהקצה) תהיינה כל הנקודות שבקבוצה השנייה. כלומר לכל שתי קבוצות של מספרים כך שכל המספרים בקבוצה הראשונה גדולים מכל המספרים בקבוצה השנייה קיים מספר שקטן או שווה לכל המספרים בקבוצה הראשונה וגדול או שווה לכל המספרים בקבוצה השנייה (<b>אקסיומת השלמות</b>).</li>
+</ul>
+<div class='standard' id='magicparlabel-860'>את החיסור ניתן שוב לתאר כתשובה לשאלה &#8220;איזה מספר, אם נחבר אותו ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+, נקבל את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+?&#8221; - כלומר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>b</mi>
+ <mo stretchy='false'>-</mo>
+ <mi>a</mi>
+</mrow>
+</math>
+ הוא המספר שמקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>a</mi>
+ <mo stretchy='false'>+</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>b</mi>
+   <mo stretchy='false'>-</mo>
+   <mi>a</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mi>b</mi>
+</mrow>
+</math>
+, ואילו החילוק מתואר כתשובה לשאלה &#8220;איזה מספר, אם נכפול בו את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+, נקבל את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+?&#8221; - כלומר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>b</mi>
+ <mo>&#x00F7;</mo>
+ <mi>a</mi>
+</mrow>
+</math>
+ הוא המספר שמקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>a</mi>
+ <mo>&#x00D7;</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>b</mi>
+   <mo>&#x00F7;</mo>
+   <mi>a</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mi>b</mi>
+</mrow>
+</math>
+. רגע רגע, מי אמר שקיים מספר כזה? ובכן, נציב קרש באורך <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+ במאונך לקרש האין-סופי, אנחנו יודעים שממקום מסוים ואילך כל נקודה שבה נחתוך את הקרש האין-סופי תיתן לנו קרש שעבורו שטח המלבן הנוצר עם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+ גדול מ-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+, ומצד שני כל נקודה קרובה יותר תיתן לנו קרש קצר מדי; אנחנו יודעים גם שנוכל למצוא נקודות (משני הצדדים) כך שהשטחים המתאימים ילכו ויתקרבו ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>y</mi>
+</math>
+ ככל שנרצה ולכן נקודה שנמצאת בין שתי הקבוצות הללו (וע&#8221;פ אקסיומת השלמות אכן קיימת נקודה כזו) תקיים שהשטח המתאים למלבן שלה עם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+ הוא בדיוק <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>y</mi>
+</math>
+<div class='foot'><span class="foot_label">26</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-864'>ושוב, היחידות של נקודה כזו נובעת מהטריכוטומיה של יחס הסדר.</div>
+</div></div>.</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-865'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ ניתן להגדיר את <b>ההופכי</b> של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+ כמקודם ע&#8221;י <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <msup>
+  <mi>a</mi>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mn>1</mn>
+  </mrow>
+ </msup>
+ <mo stretchy='false'>:</mo>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+ <mo>&#x00F7;</mo>
+ <mi>a</mi>
+</mrow>
+</math>
+ ואז נקבל:
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>a</mi>
+ <mo>&#x00D7;</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <msup>
+    <mi>a</mi>
+    <mrow>
+     <mo stretchy='false'>-</mo>
+     <mn>1</mn>
+    </mrow>
+   </msup>
+   <mo>&#x00D7;</mo>
+   <mi>b</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>a</mi>
+   <mo>&#x00D7;</mo>
+   <msup>
+    <mi>a</mi>
+    <mrow>
+     <mo stretchy='false'>-</mo>
+     <mn>1</mn>
+    </mrow>
+   </msup>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x00D7;</mo>
+ <mi>b</mi>
+ <mo stretchy='false'>=</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mi>a</mi>
+   <mo>&#x00D7;</mo>
+   <mrow>
+    <mo>(</mo>
+    <mrow>
+     <mn>1</mn>
+     <mo>&#x00F7;</mo>
+     <mi>a</mi>
+    </mrow>
+    <mo>)</mo>
+   </mrow>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x00D7;</mo>
+ <mi>b</mi>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+ <mo>&#x00D7;</mo>
+ <mi>b</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>b</mi>
+</mrow>
+</math>
+כלומר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>b</mi>
+ <mo>&#x00F7;</mo>
+ <mi>a</mi>
+ <mo stretchy='false'>=</mo>
+ <msup>
+  <mi>a</mi>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mn>1</mn>
+  </mrow>
+ </msup>
+ <mo>&#x00D7;</mo>
+ <mi>b</mi>
+ <mo stretchy='false'>=</mo>
+ <mi>b</mi>
+ <mo>&#x00D7;</mo>
+ <msup>
+  <mi>a</mi>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mn>1</mn>
+  </mrow>
+ </msup>
+</mrow>
+</math>
+ ושוב אנו רואים שחילוק שקול לכפל בהופכי.</li>
+<li class="labeling_item" id='magicparlabel-866'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ גם כאן אנו יכולים לראות שהחיסור והחילוק צריכים לקיים &#8220;חילוף&#8221; ו&#8220;קיבוץ&#8221; במובן שלעיל.</li>
+</ol>
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-867'><span class="subsection_label">3.4</span> אפס</h3>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-868'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ בשני השלבים הבאים לא אטרח להסביר מדוע כל האקסיומות ממשיכות להתקיים, אני מניח שזה כבר ברור.</li>
+</ol>
+<div class='standard' id='magicparlabel-869'>בשלב הקודם זיהינו כל מספר חיובי עם אורך גאומטרי על קרש אין-סופי בכיוון אחד, מה אם במקום לזהות את המספרים עם אורכים נזהה אותם עם הנקודות שאליהן מגיעים אותם אורכים על הקרש האין-סופי - לכל נקודה כזו קיים אורך אחד ויחיד ולכן איננו מאבדים מידע בשיטה זו. ננסה לפתח את הרעיון: כל נקודה תזוהה עם המספר שזוהה בעבר עם המרחק שלה מן הקצה, כדי לחבר לנקודה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+ לנקודה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+ נתבונן בדרך שיש לעבור מן הקצה עד לנקודה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+ ואז נתייחס ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+ בתור נקודת הקצה ונלך ממנה את אותה הדרך - הנקודה שהגענו אליה היא בדיוק זו שזוהתה קודם לכן עם המספר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>a</mi>
+ <mo stretchy='false'>+</mo>
+ <mi>b</mi>
+</mrow>
+</math>
+. הכפל מעט מורכב יותר: זוכרים שהבחירה של הנקודה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ הייתה שרירותית? באותה מידה היינו יכולים לבחור בנקודה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+ בתור אמת המידה שלנו, במקרה כזה המכפלה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>a</mi>
+ <mo>&#x00D7;</mo>
+ <mi>b</mi>
+</mrow>
+</math>
+ מציינת את המיקום של המספר המתאים ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+ לו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+ הייתה אמת המידה שלנו; כלומר הכפלה במספר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+ <b>מותחת</b> או <b>מכווצת</b> את הקרש שלנו כך שכל המספרים באופן שבו היו מוגדרים לו היינו בוחרים ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+ כ-&#8220;<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+&#8221; שלנו.</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-870'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ כמובן שיכולנו להגדיר את החיבור והכפל של נקודות על הקרש האין-סופי לפי האורכים המתאימים, אלא שכעת הפעולות הללו מקבלות משמעות אחרת בשפה של נקודות ולא של אורכים.</li>
+<li class="labeling_item" id='magicparlabel-871'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ מכאן והלאה (לאורך כל פרק זה) אנחנו נדבר בשפה של נקודות אבל דווקא את החיבור יהיה נוח יותר להציג כחיבור של חיצים שכן החיצים מייצגים בצורה ברורה יותר את הדרך שיש ללכת מהראשית עד לנקודה; כמובן שזה לא משנה - החצים והנקודות מתנהגים בדיוק באותה הצורה (הם <b>איזומורפיים</b>).</li>
+</ol>
+<div class='standard' id='magicparlabel-872'>אם נשים לב, נראה שיש דמיון מסוים בין פעולת הכפל וה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ לבין פעולת החיבור וקצה הקרש: בשניהם הפעולה מתחילה בכך שאנחנו מתייחסים לנקודה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+ כקצה הקרש או כ-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ ואז שואלים את עצמנו איפה נמצאת הנקודה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+ לפי ההתייחסות הזו - התשובה לשאלה היא הסכום <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>a</mi>
+ <mo stretchy='false'>+</mo>
+ <mi>b</mi>
+</mrow>
+</math>
+ או המכפלה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>a</mi>
+ <mo>&#x00D7;</mo>
+ <mi>b</mi>
+</mrow>
+</math>
+ בהתאמה. הדמיון הזה מעלה בנו את האפשרות להתייחס גם לקצה הקרש כנקודה שצריכה להיות מותאמת למספר, במיוחד כשעכשיו כל המספרים מזוהים עם נקודות ולא עם אורכים אין שום הבדל גאומטרי בין הנקודה שבקצה הקרש לכל נקודה אחרת שעליו<div class='foot'><span class="foot_label">27</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-876'>אין הבדל ביניהן כנקודות - כולן חסרות אורך ומציינות רק מיקום, זה לא אומר שאין ביניהן שום הבדל מהותי - יש הבדל כזה והוא שהנקודה שבקצה הקרש... ובכן... נמצאת בקצה הקרש בניגוד לכל נקודה אחרת שנמצאת באמצע הקרש (אנחנו נראה בהמשך מדוע זה הבדל מהותי).</div>
+</div></div>; סיבה נוספת לקבל את קצה הקרש כמספר לגיטימי היא שכל המספרים האחרים הותאמו לנקודות ע&#8221;פ המרחק שלהן מקצה הקרש והחיבור של שתי נקודות הוגדר באמצעות הליכת מרחק זה מן המחובר הראשון - כלומר המרחק של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>a</mi>
+ <mo stretchy='false'>+</mo>
+ <mi>b</mi>
+</mrow>
+</math>
+ מ-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+ הוא בדיוק <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+ שהוא המרחק של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+ מקצה הקרש, יהיה זה נוח מאוד אם נוכל לחבר את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+ לקצה הקרש ולקבל את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+ וכך ההליכה מ-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+ את המרחק של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+ מקצה הקרש תקבל תוקף חדש - אנחנו ממש נתייחס ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+ כאילו היא קצה הקרש ונפעל באותה צורה. א&#8221;כ השתכנענו שכדאי להוסיף לקבוצת המספרים שלנו מספר חדש שיותאם לקצה הקרש, נקרא למספר זה &#8220;אפס&#8221; ונסמן אותו ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+.
+<br />
+מהגדרה נקבל שלכל מספר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+ מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>a</mi>
+ <mo stretchy='false'>+</mo>
+ <mn>0</mn>
+ <mo stretchy='false'>=</mo>
+ <mn>0</mn>
+ <mo stretchy='false'>=</mo>
+ <mn>0</mn>
+ <mo stretchy='false'>+</mo>
+ <mi>a</mi>
+</mrow>
+</math>
+ וגם <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>0</mn>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>a</mi>
+</mrow>
+</math>
+, אבל מה לגבי הכפל? אם נבחר בקצה הקרש בתור ה-&#8220;<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+&#8221; שלנו אז כל המספרים האחרים יותאמו גם הם לקצה הקרש ולא נוכל למדוד שום דבר! לכן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ אינו יכול לשמש כאמת מידה וזהו ההבדל המהותי שבין <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ לכל מספר אחר: <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ מציין את ה<b><a href="https://he.wikipedia.org/wiki/%D7%A7%D7%99%D7%95%D7%9D">יש</a></b> ובעקבותיו כל מספר שאינו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ מתאים גם הוא לממשות מסוימת, ואילו <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ מציין את ה<b><a href="https://he.wikipedia.org/wiki/%D7%9C%D7%90_%D7%9B%D7%9C%D7%95%D7%9D">אין</a></b>.
+<br />
+אז מה, לא נוכל לכפול ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+? התשובה היא שדווקא ניתן להציע דרך לעשות זאת: אם נתבונן בפעולת הכפל רק כמתיחה וכיווץ של הקרש (ולא נשית את ליבנו לדרך שבה הגענו למסקנה שכך נראה הכפל), נבין שכפי שתואר לעיל הכפלה ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ צריכה לכווץ את כל הקרש לנקודה אחת. הרעיון הזה גם נראה טבעי משום שהכפלה במספרים קטנים מ-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ מכווצת את הקרש וככל שהמספר קטן יותר (כלומר קרוב יותר ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+) כך הוא &#8220;שולח&#8221; מספרים גדולים קרוב יותר ויותר אל ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+, למעשה לכל מספר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>M</mi>
+</math>
+ גדול ככל שיהיה ולכל מספר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x3B5;</mi>
+</math>
+ קטן ככל שיהיה קיים מספר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+ כך ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>0</mn>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>M</mi>
+ <mo>&#x22C5;</mo>
+ <mi>a</mi>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>&#x3B5;</mi>
+</mrow>
+</math>
+, כלומר אם נרצה שהכפלה ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ תתאים לכללים הקודמים של יחס הסדר היא צריכה להחזיר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ עבור כל מספר.
+<br />
+לא דיברנו עדיין על החילוק והחיסור, באופן טבעי החיסור והחילוק יוגדרו כתשובות לשאלות &#8220;איזה מספר, אם נחבר אותו ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+, נקבל את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+?&#8221; ו-&#8220;איזה מספר, אם נכפול בו את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+, נקבל את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+?&#8221; בהתאמה; זה אומר שכדי לחסר מנקודה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+ את הנקודה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+ נתחיל מ-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+ אלא שהפעם נלך שיש לעבור מן הקצה עד לנקודה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+ בכיוון ההפוך, וכדי לחלק מספר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+ במספר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+ ניקח את המספר שעבורו - אם נחליט שהוא ה-&#8220;<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+&#8221; החדש - הנקודה שעכשיו היא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+ תקבל את המספר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+. ההסבר על החילוק היה קצת מבלבל, נכון? הנה דרך פשוטה יותר: אם שוב נסתכל על הכפל כמתיחה וכיווץ נבין שזוהי פעולה הפיכה - עבור כל מספר לאחר המתיחה או הכיווץ אנו יודעים מאיזה מספר הוא הגיע ולכן ניתן להסיק מכאן את הפעולה ההופכית.
+<br />
+אבל... הכפלה ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ אינה פעולה הפיכה: היא מתאימה לכל המספרים את אותו המספר - את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+! לכן אנחנו לא יכולים להחזיר את הגלגל לאחור; נכון, אבל זה בסדר משום שלפי הגדרת הכפל ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ אין תשובה לשאלה &#8220;איזה מספר, אם נכפול בו את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+, נקבל את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+?&#8221; (כאשר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>b</mi>
+ <mo>&#x2260;</mo>
+ <mn>0</mn>
+</mrow>
+</math>
+) ולכן טבעי לומר שאי אפשר לחלק ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ בדיוק באותה צורה שעד עכשיו לא קיבלנו את החיסור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>b</mi>
+ <mo stretchy='false'>-</mo>
+ <mi>a</mi>
+</mrow>
+</math>
+ כאשר <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>b</mi>
+ <mo stretchy='false'>&lt;</mo>
+ <mi>a</mi>
+</mrow>
+</math>
+ משום שאז אין תשובה לשאלה &#8220;איזה מספר, אם נחבר אותו ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+, נקבל את <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+?&#8221;</div>
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-877'><span class="subsection_label">3.5</span> הישר הממשי</h3>
+<div class='standard' id='magicparlabel-878'>בואו נבצע עוד הפשטה: למה אנחנו צריכים את הקרש האין-סופי בכלל? ניקח נקודה כלשהי במרחב ונסמן אותה ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+, נבחר נקודה <b>אחרת</b> ונסמן אותה ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+, וכל הנקודות האחרות יסודרו על ה<a href="https://he.wikipedia.org/wiki/%D7%99%D7%A9%D7%A8#%D7%9E%D7%95%D7%A9%D7%92%D7%99%D7%9D_%D7%92%D7%90%D7%95%D7%9E%D7%98%D7%A8%D7%99%D7%99%D7%9D_%D7%94%D7%9E%D7%AA%D7%91%D7%A1%D7%A1%D7%99%D7%9D_%D7%A2%D7%9C_%D7%94%D7%99%D7%A9%D7%A8">קרן</a> שמתחילה בנקודה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ וממשיכה בכיוון המוגדר ע&#8221;י הדרך אל הנקודה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ (כלומר במקום קרש אין-סופי נשתמש בקרן כלשהי במרחב). כעת המספרים מציינים נקודות גאומטריות על הקרן, חיבור הוא הליכה על הקרן לכיוון החלק האין-סופי שלה, חיסור הוא הליכה בכיוון ההפוך, כפל יהיה מתיחה/כיווץ של הקרן והחילוק יהיה כיווץ/מתיחה באופן שמחזיר את הגלגל לאחור.
+<br />
+אבל רגע, הבחירה של הנקודה &#8220;אפס&#8221; הייתה שרירותית, במה חטאו הנקודות שנמצאות בכיוון ההפוך לנקודה &#8220;אחד&#8221;? למה שלא נתאים גם להן מספרים? הרעיון הזה גם יאפשר לנו לבטל את חוסר הסימטריה שבין הליכה על הקרן לכיוון החלק האין-סופי שלה לבין ההליכה בכיוון ההפוך. א&#8221;כ נתבונן בישר המכיל את הקרן: קבענו עליו נקודה שרירותית וקראנו לה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ ובחרנו בנקודה נוספת וקראנו לה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+, כל המספרים שראינו עד כה יסודרו על החלק של הישר שמהנקודה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ לכיוון הנקודה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ (חלק זה ייקרא החלק החיובי של הישר ואילו החלק השני ייקרא החלק השלילי שלו), וכל המספרים בכיוון ההפוך יקבלו את שמם מהמרחק שלהם מ-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ שהוא מספר בצד השני בתוספת סימון קטן &#8220;<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mo stretchy='false'>-</mo>
+</math>
+&#8221; שיציין את היותם בכיוון הנגדי (בעצם, מכיוון שיש סימטריה בין שני הצדדים נוכל להוסיף סימן &#8220;<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mo stretchy='false'>-</mo>
+</math>
+&#8221; לסימון של מספר שלילי כדי לקבל את המספר החיובי הנגדי).</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-879'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ שמתם לב כמה פעמים נאמרה כאן המילה &#8220;כיוון&#8221;? זה ממש לא מקרי, המשמעות היחידה של מספר שלילי היא שהוא נמצא בכיוון ההפוך; זה יכול להיות נוח כשמדברים על חובות<div class='foot'><span class="foot_label">28</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-883'>מינוס בבנק אומר שאתה חייב כסף לבנק במקום המצב הרצוי שבו הבנק חייב לך את הכסף שהפקדת.</div>
+</div></div>, אבל הנוחות המשמעותית ביותר נמצאת בפיזיקה: ניתן לייצג את כל הנקודות על ישר באמצעות מספרים, ניתן לדבר על מהירות שלילית (כלומר מהירות באותו גודל רק בכיוון ההפוך), על תאוצה שלילית (כלומר תאוטה) ועל כוחות מנוגדים שמאפסים זה את זה.</li>
+</ol>
+
+<div class='standard' id='magicparlabel-885'>את החיבור ניתן לתאר שוב כהליכה בכיוון החיובי, החידוש בעניין זה הוא שכעת החיסור ניתן לתיאור באמצעות חיבור המספר הנגדי: אנו מתייחסים ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+ כאילו היה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ והולכים ממנו את הדרך שמובילה ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo stretchy='false'>-</mo>
+ <mi>b</mi>
+</mrow>
+</math>
+ - פעולה זו שקולה להליכת הדרך מ-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ לב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>b</mi>
+</math>
+ בכיוון ההפוך! גם כפל במספר חיובי יתואר שוב כמתיחה או כיווץ - הפעם של הישר כולו וכפל ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ ייתן שוב <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ לכל מספר, והחילוק בדומה לחיסור ניתן לתיאור ככפל בהופכי; אבל מה לגבי כפל וחילוק במספר שלילי?
+<br />
+בואו ננסה להפעיל את אותו היגיון שבאמצעותו קיבלנו את הכפל בשפה של הנקודות: הבחירה של הנקודה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ הייתה שרירותית, באותה מידה יכולנו לבחור כל נקודה אחרת שאינה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+<div class='foot'><span class="foot_label">29</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-889'>שגם היא נבחרה באופן שרירותי אך לפני הבחירה ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+.</div>
+</div></div>, מה היה קורה אם היינו בוחרים בנקודה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+ שבייצוג הנוכחי היא מספר שלילי? פשוט מאד: היינו הופכים את כיוון הישר ומותחים/מכווצים אותו לפי המרחק <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+ מ-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ - כך כפל ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo stretchy='false'>-</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+ יתאים לכל מספר את הנגדי שלו, וכפל בכל מספר שלילי אחר יעשה את אותה פעולה ולאחר מכן ימתח/יכווץ אותו לפי המרחק של המספר השלילי מ-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+; <b>זאת הסיבה לכך שמינוס כפול מינוס שווה פלוס</b>. מאותה סיבה גם חילוק במספר שלילי יהיה שקול להפיכת הכיוון של הישר וחילוק במספר החיובי התואם, מכיוון שחילוק במספר חיובי שקול לכפל בהופכי שלו נקבל מזה שחילוק במספר שלילי שקול לכפל בנגדי של ההופכי המתאים (כלומר עבור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+ חיובי חילוק ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo stretchy='false'>-</mo>
+ <mi>a</mi>
+</mrow>
+</math>
+, שהוא מספר שלילי, שקול לכפל ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo stretchy='false'>-</mo>
+ <msup>
+  <mi>a</mi>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mn>1</mn>
+  </mrow>
+ </msup>
+</mrow>
+</math>
+); נשים לב לכך שע&#8221;פ הכלל &#8220;מינוס כפול מינוס שווה פלוס&#8221; הנגדי של ההופכי הוא בדיוק ההופכי של המספר השלילי שלנו (שכן עבור <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+ חיובי מתקיים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mi>a</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo>&#x00D7;</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <msup>
+    <mi>a</mi>
+    <mrow>
+     <mo stretchy='false'>-</mo>
+     <mn>1</mn>
+    </mrow>
+   </msup>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mi>a</mi>
+ <mo>&#x00D7;</mo>
+ <msup>
+  <mi>a</mi>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mn>1</mn>
+  </mrow>
+ </msup>
+ <mo stretchy='false'>=</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+ ולכן <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>1</mn>
+ <mo>&#x00F7;</mo>
+ <mrow>
+  <mo>(</mo>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mi>a</mi>
+  </mrow>
+  <mo>)</mo>
+ </mrow>
+ <mo stretchy='false'>=</mo>
+ <mo stretchy='false'>-</mo>
+ <msup>
+  <mi>a</mi>
+  <mrow>
+   <mo stretchy='false'>-</mo>
+   <mn>1</mn>
+  </mrow>
+ </msup>
+</mrow>
+</math>
+).
+<br />
+יש כאן נקודה קטנה שדורשת את תשומת ליבנו: היפוך הכיוון של הישר הופך גם את הסדר של המספרים, לכן נצטרך להגביל את ההלימה של יחס הסדר לכפל עבור כפל במספרים חיוביים בלבד<div class='foot'><span class="foot_label">30</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-893'>כפי שנראה בקורס עצמו, התכונה של היפוך הסדר עבור כפל במספר שלילי נובעת משאר האקסיומות.</div>
+</div></div>.</div>
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-894'><span class="subsection_label">3.6</span> סיכום</h3>
+<div class='standard' id='magicparlabel-895'>בסעיפים 1-2 של פרק זה ראינו מדוע התכונות הבסיסיות של המספרים הרציונליים החיוביים נובעות מחוקי החילוף, הקיבוץ והפילוג של הכפל והחיבור יחד עם הטריכוטומיה, הטרנזיטיביות וההלימה של יחס הסדר לחיבור ולכפל. בסעיף 3 ראינו למה זה לא מספיק כדי לתאר את אורכים של קטעים גאומטריים, וכיצד אקסיומת השלמות מפרמלת אמת שברורה לכל ילד ומספקת את החסר. ובסעיפים 4-5 הבאנו הצדקה להוספת האפס והמספרים השליליים לאותה קלחת.
+<br />
+זהו, אני מקווה שכעת אנחנו מבינים טוב יותר מדוע הגדרנו את המספרים הממשיים דווקא בצורה זו.</div>
+
+</section>
+</ul>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-897'><span class="section_label">4</span> ומה קורה בליניארית <span style='font-variant:small-caps;'>1?</span></h2>
+<ul class='nested'>
+<div class='standard' id='magicparlabel-898'>כמה מכם אולי שמו לב לבעיה קטנה בשאלה &#8220;מדוע להסתפק בקרן ולא לקחת את כל הישר?&#8221; - למה אנחנו מצטמצמים לישר??? למה לא לקחת את כל המישור ואפילו את כל המרחב התלת-ממדי?
+<br />
+העניין הוא שזהו שלב מתקדם יותר והיינו צריכים לעבור קודם דרך הישר הממשי, ובנוסף, התשובה לשאלה זו כבר חורגת מהתחום של אינפי&#8217; 1 ונכנסת לתחום של ליניארית 1. סיבה נוספת היא שהחלפת הישר במישור דורשת מאיתנו להיפרד לשלום מיחס הסדר ולהישאר עם שדה בלבד, והמעבר מן המישור למרחב התלת-ממדי כבר דורש מאיתנו לזנוח את הגדרת הכפל על כל הקבוצה ולעבור למרחב הווקטורי; למעשה הסיבה הזו היא שגרמה לכך שהנושאים הללו נלמדים בשני קורסים שונים.</div>
+<section>
+<h3 class='subsection' id='magicparlabel-899'><span class="subsection_label">4.1</span> המישור המרוכב</h3>
+<div class='standard' id='magicparlabel-900'>בואו נרחיב את קבוצת המספרים שלנו כך שיהיה לנו מספר שמתאים לכל נקודה במישור: נבחר נקודה שרירותית במישור ונסמן אותה ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+, ניקח נקודה נוספת ונסמן אותה ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+; כעת הגדרנו את הישר הממשי, ומה לגבי שאר הנקודות במישור?
+<br />
+התשובה היא שכמו שאת המספרים השליליים קיבלנו ע&#8221;י יצירת עותק של הקרן החיובית בכיוון ההפוך, כך נוכל לקבל את כל הנקודות במישור ע&#8221;י יצירת העתק של הקרן החיובית בכל כיוון שהוא במישור (<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>360</mn>
+</math>
+ מעלות או <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>2</mn>
+ <mi>&#x3C0;</mi>
+</mrow>
+</math>
+ רדיאנים); כעת כל נקודה במישור תאופיין ע&#8221;י המרחק שלה מ-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ והזווית שהיא יוצרת יחד עם הקרן החיובית, כלומר כל מספר מרוכב מאופיין ע&#8221;י הרדיוס המתאים לו והזווית שהוא יוצר עם החלק החיובי של ציר ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+ נגד כיוון השעון.</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-901'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ כן, שמעתם נכון: בדיוק כמו ש<b>המשמעות של מספר שלילי היא בסה&#8221;כ כיוון</b> גם <b>המשמעות של מספר מרוכב היא בסה&#8221;כ כיוון</b>, במובן הזה ההצגה הקוטבית של המספרים המרוכבים טבעית יותר מן ההצגה הקרטזית.</li>
+</ol>
+<div class='standard' id='magicparlabel-902'>ושוב, החיבור יוגדר ע&#8221;י הליכת הדרך שמובילה מ-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ ל-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>w</mi>
+</math>
+ אלא שהפעם נתחיל אותה ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>z</mi>
+</math>
+ (כלומר אנו שואלים &#8220;לו היינו בוחרים ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>z</mi>
+</math>
+ בתור ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ שלנו ומזיזים את ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ בהתאם, איפה הייתה הנקודה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>w</mi>
+</math>
+?&#8221;), ואילו הכפל יוגדר ע&#8221;י השאלה &#8220;לו היינו בוחרים ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>z</mi>
+</math>
+ בתור ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ שלנו (לאחר שה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ כבר נבחר), איפה הייתה הנקודה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>w</mi>
+</math>
+?&#8221; ולכן כפל במספר מרוכב המתאים לנקודה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>z</mi>
+</math>
+ שקול לסיבוב לפי הזווית <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>&#x2221;</mi>
+ <mn>1</mn>
+ <mspace width="10px"/>
+ <mn>0</mn>
+ <mspace width="10px"/>
+ <mi>z</mi>
+</mrow>
+</math>
+<div class='foot'><span class="foot_label">31</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-906'>כלומר הזווית הנוצרת בין הקרן שמגדירים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ לבין הקרן שמגדירים <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ ו-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>z</mi>
+</math>
+.</div>
+</div></div> ומתיחה או כיווץ לפי המרחק של <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>z</mi>
+</math>
+ מ-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+.
+<br />
+כדי שנוכל לכתוב את החיבור בצורה נוחה<div class='foot'><span class="foot_label">32</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-910'>סימון זה הוא רק בשביל הנוחות, מבחינה אינטואיטיבית ברור כיצד מתרחש החיבור גם בלעדיה.</div>
+</div></div> מבחינה אלגברית נסמן ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>i</mi>
+</math>
+ את הנקודה שמרחקה מ-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ הוא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ והזווית שהיא יוצרת עם החלק החיובי של ציר ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>x</mi>
+</math>
+ נגד כיוון השעון היא <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>90</mn>
+</math>
+ מעלות או <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac>
+ <mi>&#x3C0;</mi>
+ <mn>2</mn>
+</mfrac>
+</math>
+ רדיאנים.</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-911'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ שימו לב: הבחירה הזו לא הייתה שרירותית, זווית ישרה היא דבר מהותי ורק הבחירה אם להתייחס לזוויות נגד כיוון השעון היא שרירותית, לענייננו זה לא משנה משום שגם אם היינו בוחרים הפוך היינו מקבלים מבנה שמנהג בדיוק באותה צורה.</li>
+</ol>
+<div class='standard' id='magicparlabel-912'>כעת נוכל לאפיין כל נקודה ע&#8221;י ההיטלים שלה על הציר שפורש <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ ועל הציר שפורש <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>i</mi>
+</math>
+, ואז החיבור יעבוד קואורדינטה קואורדינטה (אינטואיציה לכך ניתן למצוא בהקדמה שלי לאלגברה ליניארית).</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-913'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ לא כתבנו כאן כיצד מוגדר יחס הסדר מפני שאי אפשר להגדיר על המרוכבים יחס סדר שיקיים את אקסיומות השדה הסדור<div class='foot'><span class="foot_label">33</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-917'>ההוכחה לכך פשוטה: מאקסיומות השדה הסדור נובע שכל ריבוע הוא מספר אי-שלילי, ומצד שני מאותן אקסיומות נובע ש-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mo stretchy='false'>-</mo>
+ <mn>1</mn>
+</mrow>
+</math>
+ שלילי...</div>
+</div></div>, להרחבה בנושא אתם מוזמנים לעיין בערכים: <a href="https://he.wikipedia.org/wiki/%D7%A8%D7%9E%D7%94_%D7%A9%D7%9C_%D7%A9%D7%93%D7%94">שדה של רמה</a>, <a href="https://he.wikipedia.org/wiki/%D7%9E%D7%A9%D7%A4%D7%98_%D7%90%D7%A8%D7%98%D7%99%D7%9F-%D7%A9%D7%A8%D7%99%D7%99%D7%A8_(%D7%A9%D7%93%D7%95%D7%AA_%D7%A1%D7%93%D7%95%D7%A8%D7%99%D7%9D)">ארטין-שרייר משפט</a>, <a href="https://he.wikipedia.org/wiki/%D7%A9%D7%93%D7%94_%D7%A1%D7%93%D7%95%D7%A8#%D7%A1%D7%93%D7%A8_%D7%95%D7%A8%D7%99%D7%91%D7%95%D7%A2%D7%99%D7%9D">סדור שדה</a>
+<br />
+ו<a href="https://he.wikipedia.org/wiki/%D7%A9%D7%93%D7%94_%D7%A1%D7%92%D7%95%D7%A8_%D7%9E%D7%9E%D7%A9%D7%99%D7%AA">ממשית סגור שדה</a> (בוויקיפדיה העברית). מסיבה זו היה ראוי לעצור בישר הממשי לפני שהתרחבנו לכל המישור.</li>
+</ol>
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-919'><span class="subsection_label">4.2</span> המרחב התלת-ממדי</h3>
+<div class='standard' id='magicparlabel-920'>נפעל באותה דרך במרחב התלת-ממדי: נבחר נקודה שרירותית ונסמן אותה ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+, ניקח נקודה נוספת ונסמן אותה ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ ו... האם אנחנו יכולים לעצור כאן ולאפיין כל נקודה במרחב ע&#8221;י שתי הבחירות הללו? לא! אנחנו חייבים לפחות עוד ציר אחד וגם אם נחייב אותו להיות בזווית ישרה עם הציר שפורש <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ עדיין תהיינה אפשרויות רבות (אין-סוף למעשה - כל זווית על המישור המאונך לציר הראשון). מסיבה זו לא תעבוד השיטה הרגילה שלנו לדמיין את הכפל <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>v</mi>
+ <mo>&#x00D7;</mo>
+ <mi>w</mi>
+</mrow>
+</math>
+ בתור התשובה לשאלה &#8220;לו היינו בוחרים ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>v</mi>
+</math>
+ בתור ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ שלנו (לאחר שה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ כבר נבחר), איפה הייתה הנקודה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>w</mi>
+</math>
+?&#8221;, שכן אין לה תשובה יחידה, הדבר תלוי בבחירת הציר השני<div class='foot'><span class="foot_label">34</span><div class="foot_inner"><div class='plain_layout' id='magicparlabel-924'>בחירת הציר השלישי הנדרש אינה שרירותית, ממש כפי שבמישור בחירת הציר השני לא הייתה שרירותית.</div>
+</div></div>; לעומת זאת החיבור כן יעבוד באותה צורה משום שהוא תלוי אך ורק בבחירת ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+.
+<br />
+כדי שבכל זאת תהיה לנו פעולת כפל כלשהי נצטרך לצמצם אותה לכפל במספרים ממשיים משום שפעולתם היא מתיחה וכיווץ בלבד ובחירת כיוון על אותו ישר לפי הסימן של המספר הכופל, כלומר עבור מספר ממשי <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+ התשובה לשאלה &#8220;לו היינו בוחרים ב-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>a</mi>
+</math>
+ בתור ה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>1</mn>
+</math>
+ שלנו (לאחר שה-<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mn>0</mn>
+</math>
+ כבר נבחר), איפה הייתה הנקודה <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>v</mi>
+</math>
+?&#8221; דווקא כן מוגדרת למרות ששני הצירים האחרים עדיין לא הוגדרו; מתברר שעבור מספרים ממשיים זה לא משנה כיצד נבחר את שני הצירים האחרים, הבאנו לעיל אינטואיציה לעובדה זו ובקורס ליניארית 1 עצמו אנחנו נראה הוכחה פורמלית לכך.</div>
+<ol class='lyxlist'>
+<li class="labeling_item" id='magicparlabel-925'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ למיטב ידיעתי אין דרך להגדיר על המרחב התלת-ממדי פעולת כפל כך שיחד עם פעולת החיבור הווקטורי יתקבל שדה, הדבר הכי קרוב לכך (שאני מכיר) הוא <a href="https://he.wikipedia.org/wiki/%D7%90%D7%9C%D7%92%D7%91%D7%A8%D7%AA_%D7%94%D7%A7%D7%95%D7%95%D7%98%D7%A8%D7%A0%D7%99%D7%95%D7%A0%D7%99%D7%9D_%D7%A9%D7%9C_%D7%94%D7%9E%D7%99%D7%9C%D7%98%D7%95%D7%9F">המילטון של הקווטרניונים אלגברת</a>.</li>
+<li class="labeling_item" id='magicparlabel-926'><span class='lyxlist'><math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mi>&#x2663;</mi>
+</math>
+</span>
+ לא כתבתי מדוע המרחבים הווקטוריים הוגדרו דווקא כך מפני שעסקתי בנושא זה בהרחבה בהקדמה שלי לאלגברה ליניארית.</li>
+</ol>
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-927'><span class="subsection_label">4.3</span> הערה היסטורית</h3>
+<div class='standard' id='magicparlabel-928'>בניגוד לפרק הקודם שבו סדר הדברים דומה מאד להתפתחות ההיסטורית של המספרים הממשיים, התיאור בפרק זה חוטא להיסטוריה והדברים התרחשו אחרת לחלוטין: המרוכבים התפתחו מתוך הצורך לפתור משוואות ממעלה שלישית והמרחבים הווקטוריים התפתחו מהצורך לפתור מערכות משוואות ליניאריות; רק אחרי שהועלה הרעיון נמצאה גם הדרך הגאומטרית והוויזואלית להצגתם.</div>
+</section>
+</ul>
+</section>
+<script src="../../tree_view.js"></script>
+</body>
+</html>
